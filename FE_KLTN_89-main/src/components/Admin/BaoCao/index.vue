@@ -29,7 +29,7 @@
                     <div class="card-body text-center">
                         <i class="fa-regular fa-file text-dark" style="font-size: 40px;"></i>
                         <h4 class="card-title mt-2  text-dark">Báo Cáo</h4>
-                        <h6 class="card-subtitle mb-2 text-body-secondary text-dark">10</h6>
+                        <h6 class="card-subtitle mb-2 text-body-secondary text-dark">9</h6>
                     </div>
                 </div>
             </div>
