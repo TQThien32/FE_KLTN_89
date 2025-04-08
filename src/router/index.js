@@ -37,14 +37,34 @@ const routes = [
     {
         path : '/hoc-vien/dang-nhap',
         component: ()=>import('../components/HocVien/DangNhap/index.vue'),
-        meta: {layout : 'auth'},
+        meta: {layout : 'Auth'},
     },
 
     {
         path : '/hoc-vien/dang-ky',
         component: ()=>import('../components/HocVien/DangKy/index.vue'),
-        meta: {layout : 'auth'},
+        meta: {layout : 'Auth'},
     },
+
+    {
+        path : '/hoc-vien/yeu-cau-cap-nft',
+        component: ()=>import('../components/HocVien/YeuCau/index.vue'),
+        meta: {layout : 'HocVien'},
+    },
+
+    {
+        path : '/hoc-vien/thong-tin-ca-nhan',
+        component: ()=>import('../components/HocVien/ThongTinCaNhan/index.vue'),
+        meta: {layout : 'HocVien'},
+    },
+
+    {
+        path : '/hoc-vien/quan-ly-vi-NFT',
+        component: ()=>import('../components/HocVien/QuanLyViNFT/index.vue'),
+        meta: {layout : 'HocVien'},
+    },
+    
+
 
     //NhaTuyenDungCoQuan
     {

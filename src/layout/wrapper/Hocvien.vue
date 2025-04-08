@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper">
         <div class="header-wrapper">
-            <Top></Top>
-            <Menu></Menu>
+            <TopHocVien></TopHocVien>
+            <MenuHocVien></MenuHocVien>
         </div>
         <div class="page-wrapper">
             <div class="page-content">
@@ -20,14 +20,14 @@ import "../../assets/plugins/metismenu/js/metisMenu.min.js";
 import "../../assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js";
 import "../../assets/js/index.js";
 import "../../assets/js/app.js";
-import Top from "../components/Top.vue";
-import Menu from "../components/Menu.vue";
+import TopHocVien from "../components/TopHocVien.vue";
+import MenuHocVien from "../components/MenuHocVien.vue";
 import Bot from "../components/Bot.vue";
 export default {
     name: "app",
     components: {
-        Top,
-        Menu,
+        TopHocVien,
+        MenuHocVien,
         Bot
     }
 }
