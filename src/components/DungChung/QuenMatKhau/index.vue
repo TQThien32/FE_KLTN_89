@@ -1,26 +1,35 @@
 <template>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header text-center">
-                        <h4>Quên Mật Khẩu</h4>
-                    </div>
+
+    <body class="bg-forgot">
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="authentication-forgot d-flex align-items-center justify-content-center">
+                <div class="card forgot-box">
                     <div class="card-body">
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" v-model="email" class="form-control"
-                                placeholder="Nhập email của bạn" required />
+                        <div class="p-4 rounded  border">
+                            <div class="text-center">
+                                <img src="../../../assets/images/icons/forgot-2.png" width="120" alt="">
+                            </div>
+                            <h4 class="mt-5 font-weight-bold">Quên Mật Khẩu</h4>
+                            <p class="text-muted">Nhập Email Mà Bạn Đã Đăng Ký Để Nhận Lại Mật Khẩu</p>
+                            <div class="my-4">
+                                <label class="form-label">Email</label>
+                                <input type="text" class="form-control form-control-lg" placeholder="example@user.com">
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-primary btn-lg">Gửi</button> <a
+                                    href="authentication-signin.html" class="btn btn-light btn-lg"><i
+                                        class="bx bx-arrow-back me-1"></i>Quay Lại Đăng Nhập</a>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Gửi</button>
-                    </div>
-                    <div class="card-footer text-center">
-                        <p class="mb-0">Quay Lại Trang Đăng Nhập? <router-link to="">Đăng Nhập</router-link></p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- end wrapper -->
+
+
+    </body>
 </template>
 
 <script>
