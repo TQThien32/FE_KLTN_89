@@ -69,6 +69,11 @@ const routes = [
         meta: {layout : 'HocVien'},
     },
     
+    {
+        path : '/hoc-vien/thanh-toan',
+        component: ()=>import('../components/HocVien/ThanhToan/index.vue'),
+        meta: {layout : 'HocVien'},
+    },
 
 
     //CoQuanXacThuc
@@ -88,6 +93,21 @@ const routes = [
         component: ()=>import('../components/CoQuanXacThuc/ThongTinCoQuan/index.vue'),
         meta: {layout : 'CoQuanXacThuc'},
     },
+    {
+        path : '/nha-tuyen-dung-co-quan/xac-minh-nft',
+        component: ()=>import('../components/CoQuanXacThuc/XacMinhNFT/index.vue'),
+        meta: {layout : 'CoQuanXacThuc'},
+    },
+    {
+        path : '/nha-tuyen-dung-co-quan/luu-nft-da-xac-minh',
+        component: ()=>import('../components/CoQuanXacThuc/LuuNFTdaXacMinh/index.vue'),
+        meta: {layout : 'CoQuanXacThuc'},
+    },
+    {
+        path : '/nha-tuyen-dung-co-quan/quan-ly-nft-gui-den',
+        component: ()=>import('../components/CoQuanXacThuc/QuanLyNFTguiDen/index.vue'),
+        meta: {layout : 'CoQuanXacThuc'},
+    },
     //ToChucCapChungChi
     {
         path : '/to-chuc-cap-chung-chi/dang-nhap',
@@ -105,7 +125,31 @@ const routes = [
         component: ()=>import('../components/ToChucCapChungChi/ThongTinToChuc/index.vue'),
         meta: {layout : 'ToChucCapChungChi'},
     },
+
+    {
+        path : '/to-chuc-cap-chung-chi/quan-ly-yeu-cau-cap',
+        component: ()=>import('../components/ToChucCapChungChi/QuanLyYeuCauCap/index.vue'),
+        meta: {layout : 'ToChucCapChungChi'},
+    },
+
+    {
+        path : '/to-chuc-cap-chung-chi/xm-thong-tin-yeu-cau',
+        component: ()=>import('../components/ToChucCapChungChi/XacMinhTTYC/index.vue'),
+        meta: {layout : 'ToChucCapChungChi'},
+    },
+
+    {
+        path : '/to-chuc-cap-chung-chi/tao-chung-chi',
+        component: ()=>import('../components/ToChucCapChungChi/TaoChungChi/index.vue'),
+        meta: {layout : 'ToChucCapChungChi'},
+    },
     
+    {
+        path : '/to-chuc-cap-chung-chi/vo-hieu-hoa-chung-chi',
+        component: ()=>import('../components/ToChucCapChungChi/VoHieuHoaChungChi/index.vue'),
+        meta: {layout : 'ToChucCapChungChi'},
+    },
+
     //DungChung
     {
         path: '/dung-chung/quen-mat-khau',

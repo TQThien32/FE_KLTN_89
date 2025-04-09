@@ -12,67 +12,39 @@
         </div>
         <nav class="navbar navbar-expand-xl w-100">
             <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
-                <li class="nav-item dropdown">
-                    <a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
-                        data-bs-toggle="dropdown">
-                        <div class="parent-icon"><i class="fa-solid fa-list"></i>
+                <li class="nav-item">
+                    <router-link to="/to-chuc-cap-chung-chi/thong-tin-to-chuc" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-user-tie"></i>
                         </div>
                         <div class="menu-title">Quản Lý Tài Khoản</div>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <router-link to="/admin/danh-sach-hoc-vien">
-                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản học viên</a>
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link to="/admin/danh-sach-to-chuc-cap-chung-chi">
-                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản tổ chức cấp chứng chỉ</a>
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link to="/admin/nha-tuyen-dung-co-quan">
-                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản cơ quan xác thực</a>
-                            </router-link>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/danh-muc" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-wallet"></i>
-                        </div>
-                        <div class="menu-title">Quản Lý Giao Dịch</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/danh-muc" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-book-open-reader"></i>
+                    <router-link to="/to-chuc-cap-chung-chi/quan-ly-yeu-cau-cap" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-code-pull-request"></i>
                         </div>
-                        <div class="menu-title">Danh Sách Chứng Chỉ Đã Cấp</div>
+                        <div class="menu-title">Quản Lý Yêu Cầu Cấp Chứng Chỉ</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/danh-muc" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-chart-column"></i>
+                    <router-link to="/to-chuc-cap-chung-chi/xm-thong-tin-yeu-cau" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-circle-check"></i>
                         </div>
-                        <div class="menu-title">Thống Kê</div>
+                        <div class="menu-title">Xác Minh Thông Tin Yêu Cầu</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/danh-muc" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-layer-group"></i>
+                    <router-link to="/to-chuc-cap-chung-chi/tao-chung-chi" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-folder-plus"></i>
                         </div>
-                        <div class="menu-title">Báo Cáo</div>
+                        <div class="menu-title">Tạo Chứng Chỉ</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/danh-muc" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-comments"></i>
+                    <router-link to="/to-chuc-cap-chung-chi/vo-hieu-hoa-chung-chi" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-ban"></i>
                         </div>
-                        <div class="menu-title">Thông Báo</div>
+                        <div class="menu-title">Vô Hiệu Hóa Chứng Chỉ</div>
                     </router-link>
                 </li>
             </ul>

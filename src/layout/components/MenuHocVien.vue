@@ -12,33 +12,12 @@
         </div>
         <nav class="navbar navbar-expand-xl w-100">
             <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
-                <li class="nav-item dropdown">
-                    <a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
-                        data-bs-toggle="dropdown">
-                        <div class="parent-icon"><i class="fa-solid fa-list"></i>
+                <li class="nav-item">
+                    <router-link to="/hoc-vien/thong-tin-ca-nhan" class="nav-link">
+                        <div class="parent-icon"><i class="fa-regular fa-user"></i>
                         </div>
                         <div class="menu-title">Quản Lý Tài Khoản</div>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <router-link to="/admin/danh-sach-hoc-vien">
-                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản học viên</a>
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link to="/admin/danh-sach-to-chuc-cap-chung-chi">
-                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản tổ chức cấp chứng chỉ</a>
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link to="/admin/nha-tuyen-dung-co-quan">
-                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản nhà tuyển dụng cơ quan xác thực</a>
-                            </router-link>
-                        </li>
-                    </ul>
+                    </router-link>
                 </li>
                 <li class="nav-item">
                     <router-link to="/hoc-vien/yeu-cau-cap-nft" class="nav-link">
@@ -52,6 +31,13 @@
                         <div class="parent-icon"><i class="fa-solid fa-wallet"></i>
                         </div>
                         <div class="menu-title">Quản Lý Ví NFT</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/hoc-vien/thanh-toan" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <div class="menu-title">Thanh Toán</div>
                     </router-link>
                 </li>
             </ul>
