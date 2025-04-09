@@ -20,8 +20,8 @@ import "../../assets/plugins/metismenu/js/metisMenu.min.js";
 import "../../assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js";
 import "../../assets/js/index.js";
 import "../../assets/js/app.js";
-import Top from "../components/Top.vue";
-import Menu from "../components/Menu.vue";
+import Top from "../components/TopHvCqTc.vue";
+import Menu from "../components/MenuCoQuanXacThuc.vue";
 import Bot from "../components/Bot.vue";
 export default {
     name: "app",

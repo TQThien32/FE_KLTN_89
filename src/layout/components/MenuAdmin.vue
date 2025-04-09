@@ -35,7 +35,7 @@
                         <li>
                             <router-link to="/admin/nha-tuyen-dung-co-quan">
                                 <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản nhà tuyển dụng cơ quan xác thực</a>
+                                    khoản cơ quan xác thực</a>
                             </router-link>
                         </li>
                     </ul>

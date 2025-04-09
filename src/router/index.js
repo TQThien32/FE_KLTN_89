@@ -6,7 +6,7 @@ const routes = [
     {
         path : '/',
         component: ()=>import('../components/Admin/DangNhap/index.vue'),
-        meta: {layout : 'auth'},
+        meta: {layout : 'Auth'},
     },
 
     {
@@ -29,7 +29,7 @@ const routes = [
 
     {
         path : '/admin/danh-sach-nha-tuyen-dung-co-quan',
-        component: ()=>import('../components/Admin/NhaTuyenDungCoQuan/index.vue'),
+        component: ()=>import('../components/Admin/CoQuanXacThuc/index.vue'),
         meta: {layout : 'Admin'},
     },
     {
@@ -71,46 +71,57 @@ const routes = [
     
 
 
-    //NhaTuyenDungCoQuan
+    //CoQuanXacThuc
     {
         path : '/nha-tuyen-dung-co-quan/dang-nhap',
-        component: ()=>import('../components/NhaTuyenDungCoQuan/DangNhap/index.vue'),
-        meta: {layout : 'auth'},
+        component: ()=>import('../components/CoQuanXacThuc/DangNhap/index.vue'),
+        meta: {layout : 'Auth'},
     },
 
     {
         path : '/nha-tuyen-dung-co-quan/dang-ky',
-        component: ()=>import('../components/NhaTuyenDungCoQuan/DangKy/index.vue'),
-        meta: {layout : 'auth'},
+        component: ()=>import('../components/CoQuanXacThuc/DangKy/index.vue'),
+        meta: {layout : 'Auth'},
     },
     {
         path : '/nha-tuyen-dung-co-quan/thong-tin-co-quan',
-        component: ()=>import('../components/NhaTuyenDungCoQuan/ThongTinCoQuan/index.vue'),
-        meta: {layout : 'NhaTuyenDungCoQuan'},
+        component: ()=>import('../components/CoQuanXacThuc/ThongTinCoQuan/index.vue'),
+        meta: {layout : 'CoQuanXacThuc'},
     },
     //ToChucCapChungChi
     {
         path : '/to-chuc-cap-chung-chi/dang-nhap',
         component: ()=>import('../components/ToChucCapChungChi/DangNhap/index.vue'),
-        meta: {layout : 'auth'},
+        meta: {layout : 'Auth'},
     },
 
     {
         path : '/to-chuc-cap-chung-chi/dang-ky',
         component: ()=>import('../components/ToChucCapChungChi/DangKy/index.vue'),
-        meta: {layout : 'auth'},
+        meta: {layout : 'Auth'},
     },
     {
         path : '/to-chuc-cap-chung-chi/thong-tin-to-chuc',
         component: ()=>import('../components/ToChucCapChungChi/ThongTinToChuc/index.vue'),
         meta: {layout : 'ToChucCapChungChi'},
     },
+    
     //DungChung
     {
         path: '/dung-chung/quen-mat-khau',
         component: ()=>import('../components/DungChung/QuenMatKhau/index.vue'),
-        meta: {layout : 'auth'},
-    }
+        meta: {layout : 'Auth'},
+    },
+    {
+        path : '/dung-chung/xem-thong-bao',
+        component: ()=>import('../components/DungChung/XemThongBao/index.vue'),
+        meta: {layout : 'Auth'},
+    },
+    {
+        path : '/dung-chung/chi-tiet-thong-bao',
+        component: ()=>import('../components/DungChung/ChiTietThongBao/index.vue'),
+        meta: {layout : 'Auth'},
+    },
 
 ]
 
