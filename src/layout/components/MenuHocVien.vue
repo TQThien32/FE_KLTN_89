@@ -49,7 +49,7 @@
                 </li>
                 <li class="nav-item">
                     <router-link to="/hoc-vien/quan-ly-vi-NFT" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-code-pull-request"></i>
+                        <div class="parent-icon"><i class="fa-solid fa-wallet"></i>
                         </div>
                         <div class="menu-title">Quản Lý Ví NFT</div>
                     </router-link>

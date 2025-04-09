@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-lg-4 col-md-12">
                 <div class="card">
-                    <div class="card-header">
-                        <h4>Gửi Yêu Cầu Cấp Chứng Chỉ</h4>
+                    <div class="card-header bg-primary">
+                        <h4 class="text-light">Gửi Yêu Cầu Cấp Chứng Chỉ</h4>
                     </div>
                     <div class="card-body">
                         <label class="mt-2" for="">Tên Học Viên</label>
@@ -20,7 +20,7 @@
                             <option value="">Tổ chức Toiec</option>
                         </select>
                         <label class="mt-2" for="">Nội Dung</label>
-                        <textarea class="mt-2 form-control" name="" id=""></textarea>
+                        <textarea class="mt-2 form-control" name="" id="" placeholder="Nhập nội dung yêu cầu"></textarea>
                     </div>
                     <div class="card-footer text-end">
                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#XNgui">Gửi</button>
@@ -29,8 +29,8 @@
             </div>
             <div class="col-lg-8 col-md-12">
                 <div class="card">
-                    <div class="card-header">
-                        <h4>Danh Sách Yêu Cầu Cấp Đã Gửi</h4>
+                    <div class="card-header bg-secondary">
+                        <h4 class="text-light">Danh Sách Yêu Cầu Cấp Đã Gửi</h4>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered table-hover">
