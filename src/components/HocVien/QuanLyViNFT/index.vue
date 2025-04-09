@@ -3,7 +3,7 @@
         <div class="card-body d-flex justify-content-between">
             <h3>Ví NFT Chứng Chỉ</h3>
             <div class="d-flex justify-content-center">
-                <h5 class="mt-1">địa chỉ ví</h5>
+                <h5 class="mt-1">....địa chỉ ví....</h5>
                 <i class="fa-solid fa-wallet ms-4 fa-2x"></i>
             </div>
         </div>
@@ -14,13 +14,71 @@
                 <div class="card">
                     <img src="..." class="card-img-top" alt="anh chung chi">
                     <div class="card-body">
-                        <p class="card-text">ID Token</p>
+                        <p class="card-text">ID NFT</p>
                         <p class="card-text">MetaData URL</p>
                         <div class="d-flex justify-content-between">
-                            <button class="btn btn-outline-primary">Kiểm tra dữ liệu</button>
-                            <button class="btn btn-outline-danger">Chia sẻ NFT</button>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#kiemtra">Kiểm tra thông tin</button>
+                            <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                            data-bs-target="#chiase">Chia sẻ NFT</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal kiểm tra dữ liệu-->
+    <div class="modal fade" id="kiemtra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Dữ liệu chứng chỉ</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><b>Tên Học Viên: </b> <span>tdrfg</span></p>
+                    <p><b>Số CCCD: </b> <span>123456</span></p>
+                    <p><b>ID NFT: </b> <span>123456</span></p>
+                    <p><b>Link Ảnh: </b> <a href="">Hình ảnh chứng chỉ</a></p>
+                    <p><b>Tên Tổ Chức Cấp Chứng Chỉ: </b> <span>ưerty</span></p>
+                    <p><b>Họ Tên Người Đại Diện Tổ Chức: </b> <span>123456</span></p>
+                    <p><b>Khóa Học: </b> <span>123456</span></p>
+                    <p><b>Số Hiệu Chứng Chỉ: </b> <span>123456</span></p>
+                    <p><b>Kết Quả: </b> <span>123456</span></p>
+                    <p><b>Ngày Cấp: </b> <span>21/12/2025</span></p>
+                    <p><b>Tình Trạng: </b> <span>Vô Hiệu Hóa</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal chia sẻ NFT-->
+    <div class="modal fade" id="chiase" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Có Xác Nhận Chia Sẻ NFT ?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label class="mt-2" for="">Tên Học Viên</label>
+                    <input class="mt-2 form-control" type="text">
+                    <label class="mt-2" for="">Số CCCD</label>
+                    <input class="mt-2 form-control" type="number">
+                    <label class="mt-2" for="">Số Điện Thoại</label>
+                    <input class="mt-2 form-control" type="number">
+                    <label class="mt-2" for="">ID NFT</label>
+                    <input class="mt-2 form-control" type="text">
+                    <label class="mt-2" for="">Email Cơ Quan Xác Thực</label>
+                    <input class="mt-2 form-control" type="email">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Chia sẻ</button>
                 </div>
             </div>
         </div>
