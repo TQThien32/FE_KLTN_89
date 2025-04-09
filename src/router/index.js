@@ -78,7 +78,11 @@ const routes = [
         component: ()=>import('../components/NhaTuyenDungCoQuan/DangKy/index.vue'),
         meta: {layout : 'auth'},
     },
-
+    {
+        path : '/nha-tuyen-dung-co-quan/thong-tin-co-quan',
+        component: ()=>import('../components/NhaTuyenDungCoQuan/ThongTinCoQuan/index.vue'),
+        meta: {layout : 'NhaTuyenDungCoQuan'},
+    },
     //ToChucCapChungChi
     {
         path : '/to-chuc-cap-chung-chi/dang-nhap',
@@ -91,7 +95,17 @@ const routes = [
         component: ()=>import('../components/ToChucCapChungChi/DangKy/index.vue'),
         meta: {layout : 'auth'},
     },
-
+    {
+        path : '/to-chuc-cap-chung-chi/thong-tin-to-chuc',
+        component: ()=>import('../components/ToChucCapChungChi/ThongTinToChuc/index.vue'),
+        meta: {layout : 'ToChucCapChungChi'},
+    },
+    //DungChung
+    {
+        path: '/dung-chung/-quen-mat-khau',
+        component: ()=>import('../components/DungChung/QuenMatKhau/index.vue'),
+        meta: {layout : 'auth'},
+    }
 
 ]
 

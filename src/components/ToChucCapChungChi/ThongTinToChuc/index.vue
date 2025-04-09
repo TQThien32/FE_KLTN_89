@@ -21,8 +21,16 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row mb-3">
+                                <col-lg-6></col-lg-6>
+                                <col-lg-6>
+                                    <p class="text-center"><b>
+                                            <h5 class="mb-0">Tổ Chức Cấp Chứng Chỉ</h5>
+                                        </b></p>
+                                </col-lg-6>
+                            </div>
+                            <div class="row mb-3">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Họ Và Tên</h6>
+                                    <h6 class="mb-0">Tên Tổ Chức</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     <input type="text" class="form-control" value="John Doe">
@@ -38,7 +46,7 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Phone</h6>
+                                    <h6 class="mb-0">Hotline</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     <input type="text" class="form-control" value="(239) 816-9029">
@@ -46,7 +54,24 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Ngày Sinh</h6>
+                                    <h6 class="mb-0">Địa Chỉ</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" value="(320) 380-4539">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row mb-3">
+                                <col-lg-6></col-lg-6>
+                                <col-lg-6>
+                                    <p class="text-center"><b>
+                                            <h5 class="mb-0">Người Đại Diện</h5>
+                                        </b></p>
+                                </col-lg-6>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Họ Và Tên</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     <input type="text" class="form-control" value="(320) 380-4539">
@@ -54,10 +79,10 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Giới Tính</h6>
+                                    <h6 class="mb-0">Số Điện Thoại</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    <input type="text" class="form-control" value="(320) 380-4539">
+                                    <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -70,7 +95,7 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Address</h6>
+                                    <h6 class="mb-0">Email</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
@@ -103,66 +128,86 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">Họ Và Tên</h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input type="text" class="form-control" value="John Doe">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">Email</h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input type="email" class="form-control" value="john@example.com">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">Số Điện Thoại</h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input type="text" class="form-control" value="(239) 816-9029">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">Ngày Sinh</h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input type="text" class="form-control" value="(239) 816-9029">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">Giới Tính</h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option value="1">Nam</option>
-                                                        <option value="2">Nữ</option>
-                                                        <option value="3">Khác</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">Số CCCD</h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input type="text" class="form-control" value="(239) 816-9029">
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">Địa Chỉ</h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input type="text" class="form-control"
-                                                        value="Bay Area, San Francisco, CA">
-                                                </div>
-                                            </div>
+                                <col-lg-6></col-lg-6>
+                                <col-lg-6>
+                                    <p class="text-center"><b>
+                                            <h5 class="mb-0">Tổ Chức Cấp Chứng Chỉ</h5>
+                                        </b></p>
+                                </col-lg-6>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Tên Tổ Chức</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" value="John Doe">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" value="john@example.com">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Hotline</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" value="(239) 816-9029">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Địa Chỉ</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" value="(320) 380-4539">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row mb-3">
+                                <col-lg-6></col-lg-6>
+                                <col-lg-6>
+                                    <p class="text-center"><b>
+                                            <h5 class="mb-0">Người Đại Diện</h5>
+                                        </b></p>
+                                </col-lg-6>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Họ Và Tên</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" value="(320) 380-4539">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Số Điện Thoại</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Số CCCD</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" value="(320) 380-4539">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
+                                </div>
+                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
