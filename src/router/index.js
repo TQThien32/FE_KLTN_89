@@ -29,7 +29,12 @@ const routes = [
 
     {
         path : '/admin/danh-sach-nha-tuyen-dung-co-quan',
-        component: ()=>import('../components/Admin/NhaTuyenDungCoQuan/indev.vue'),
+        component: ()=>import('../components/Admin/NhaTuyenDungCoQuan/index.vue'),
+        meta: {layout : 'Admin'},
+    },
+    {
+        path : '/admin/gui-thong-bao',
+        component: ()=>import('../components/Admin/GuiThongBao/index.vue'),
         meta: {layout : 'Admin'},
     },
 
@@ -57,7 +62,7 @@ const routes = [
         component: ()=>import('../components/HocVien/ThongTinCaNhan/index.vue'),
         meta: {layout : 'HocVien'},
     },
-
+    
     {
         path : '/hoc-vien/quan-ly-vi-NFT',
         component: ()=>import('../components/HocVien/QuanLyViNFT/index.vue'),
@@ -102,7 +107,7 @@ const routes = [
     },
     //DungChung
     {
-        path: '/dung-chung/-quen-mat-khau',
+        path: '/dung-chung/quen-mat-khau',
         component: ()=>import('../components/DungChung/QuenMatKhau/index.vue'),
         meta: {layout : 'auth'},
     }
