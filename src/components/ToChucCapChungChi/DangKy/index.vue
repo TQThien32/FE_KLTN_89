@@ -9,13 +9,14 @@
                                 <img src="../../assets/images/logo-img.png" width="180" alt="">
                             </div>
                             <div class="card">
+                                <div class="card-header text-center">
+                                    <h3 class="mt-2">Đăng Ký</h3>
+                                </div>
                                 <div class="card-body">
                                     <div class="border p-4 rounded">    
                                         <div class="text-center">
-                                            <h3 class="">Đăng Ký</h3>
                                             <h4>Tổ Chức Cấp Chứng Chỉ</h4>
-                                            <p>Bạn đã có tài khoản? <a href="authentication-signin.html">Đăng Nhập </a>
-                                            </p>
+                                            
                                         </div><div class="form-body">
                                             <form class="row g-3">
                                                 <div class="col-sm-12">
@@ -65,7 +66,13 @@
                                                     <div class="d-grid">
                                                         <button type="submit" class="btn btn-primary"><i
                                                                 class="bx bx-user"></i>Đăng Ký</button>
-                                                    </div>
+                                                    </div>                                                   
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="d-grid text-center">
+                                                        <label>Bạn đã có tài khoản? <a href="authentication-signin.html">Đăng Nhập </a>
+                                                        </label>
+                                                    </div>                                                   
                                                 </div>
                                             </form>
                                         </div>
