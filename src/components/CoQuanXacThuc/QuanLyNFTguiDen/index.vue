@@ -1,9 +1,8 @@
 <template>
-    <div class="card mt-4">
-        <div class="card-header text-center bg-primary">
-            <h2 class="text-light">Các NFT Được Gửi Đến</h2>
-        </div>
+    <div class="card radius-10 border border-3 border-info">
         <div class="card-body">
+            <h2 class="text-center">Các NFT Được Gửi Đến</h2>
+            <hr>
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
@@ -11,9 +10,9 @@
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Tìm theo số CCCD"
                                     aria-label="Recipient's username" aria-describedby="button-addon2"
-                                    style="border: 1px solid #0d6efd;">
-                                <button class="btn btn-outline-primary" type="button"
-                                    id="button-addon2">Tìm Kiếm</button>
+                                    style="border: 1px solid #3399FF;">
+                                <button class="btn btn-outline-primary" type="button" id="button-addon2">Tìm
+                                    Kiếm</button>
                             </div>
                         </th>
                     </tr>
@@ -31,8 +30,10 @@
                         <td>trantuan</td>
                         <td class="text-end">1234567</td>
                         <td class="text-end">213456</td>
-                        <td class="text-center">
-                            <button class="btn btn-danger">Xóa</button>
+                        <td class="text-center" >
+                            <button class="btn btn-outline-danger">
+                                Xóa
+                            </button>
                         </td>
                     </tr>
                 </tbody>
