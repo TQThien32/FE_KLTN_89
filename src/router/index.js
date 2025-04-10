@@ -28,13 +28,28 @@ const routes = [
     },
 
     {
-        path : '/admin/danh-sach-nha-tuyen-dung-co-quan',
+        path : '/admin/danh-sach-co-quan-xac-thuc',
         component: ()=>import('../components/Admin/CoQuanXacThuc/index.vue'),
         meta: {layout : 'Admin'},
     },
     {
         path : '/admin/gui-thong-bao',
         component: ()=>import('../components/Admin/GuiThongBao/index.vue'),
+        meta: {layout : 'Admin'},
+    },
+    {
+        path : '/admin/thong-ke',
+        component: ()=>import('../components/Admin/ThongKe/index.vue'),
+        meta: {layout : 'Admin'},
+    },
+    {
+        path :'/admin/bao-cao',
+        component: ()=>import('../components/Admin/BaoCao/index.vue'),
+        meta: {layout : 'Admin'},
+    },
+    {
+        path : '/admin/ds-chung-chi-da-cap',
+        component: ()=>import('../components/Admin/DSChungChiDaCap/index.vue'),
         meta: {layout : 'Admin'},
     },
 
