@@ -20,13 +20,6 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/nha-tuyen-dung-co-quan/quan-ly-nft-gui-den" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-file-import"></i>
-                        </div>
-                        <div class="menu-title">Quản Lý NFT Gửi Đến</div>
-                    </router-link>
-                </li>
-                <li class="nav-item">
                     <router-link to="/nha-tuyen-dung-co-quan/xac-minh-nft" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-clipboard-check"></i>
                         </div>

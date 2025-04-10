@@ -118,11 +118,7 @@ const routes = [
         component: ()=>import('../components/CoQuanXacThuc/LuuNFTdaXacMinh/index.vue'),
         meta: {layout : 'CoQuanXacThuc'},
     },
-    {
-        path : '/nha-tuyen-dung-co-quan/quan-ly-nft-gui-den',
-        component: ()=>import('../components/CoQuanXacThuc/QuanLyNFTguiDen/index.vue'),
-        meta: {layout : 'CoQuanXacThuc'},
-    },
+    
     //ToChucCapChungChi
     {
         path : '/to-chuc-cap-chung-chi/dang-nhap',
