@@ -29,7 +29,7 @@ const routes = [
 
     {
         path : '/admin/danh-sach-co-quan-xac-thuc',
-        component: ()=>import('../components/Admin/CoQuanXacThuc/index.vue'),
+        component: ()=>import('../components/Admin/CoQuanXacThuc/indev.vue'),
         meta: {layout : 'Admin'},
     },
     {

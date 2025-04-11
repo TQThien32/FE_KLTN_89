@@ -2,13 +2,12 @@
     <div class="d-flex justify-content-start">
         <i class="fa-solid fa-list me-2" style="font-size: 35px;"></i>
         <b>
-            <h2>QUẢN LÝ TÀI KHOẢN - TỔ CHỨC CẤP CHỨNG CHỈ</h2>
+            <h2>QUẢN LÝ TÀI KHOẢN - CƠ QUAN XÁC THỰC</h2>
         </b>
     </div>
-
-    <div class="card mt-2">
+    <div class="card">
         <div class="card-header">
-            <h4 class="mt-2">Danh Sách Tài Khoản</h4>
+            <h4>Danh Sách Tài Khoản - Cơ Quan Xác Thực</h4>
         </div>
         <div class="card-body">
             <div class="row">
@@ -19,13 +18,14 @@
                     <button class="btn btn-primary me-2"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
                 </div>
             </div>
+        
             <table class="table table-hover table-bordered mt-3">
         <thead>
             <tr>
                 <th class="align-middle text-center">STT</th>
-                <th class="align-middle text-center">Tên Tổ Chức</th>
+                <th class="align-middle text-center">Tên Cơ Quan</th>
                 <th class="align-middle text-center">Email</th>
-                <th class="align-middle text-center">Số Điện Thoại</th>
+                <th class="align-middle text-center">HotLine</th>
                 <th class="align-middle text-center">Địa Chỉ</th>
                 <th class="align-middle text-center">Chức Vụ</th>
                 <th class="align-middle text-center">Thao Tác</th>
@@ -35,35 +35,35 @@
         <tbody>
             <tr>
                 <th class="align-middle text-center">1</th>
-                <td class="align-middle text-center">Trường Xyz</td>
-                <td class="align-middle text-center">truongyz@gmail.com</td>
-                <td class="align-middle text-center">0112345678</td>
-                <td class="align-middle text-center">90 Phan Thanh</td>
-                <td class="align-middle text-center">Tổ Chức Cấp Chứng Chỉ</td>
+                <td class="align-middle text-center">Công Ty abc</td>
+                <td class="align-middle text-center">abc@gmail.com</td>
+                <td class="align-middle text-center">1112345667</td>
+                <td class="align-middle text-center">120 Nguyễn Văn Linh</td>
+                <td class="align-middle text-center">Nhà tuyển dụng, cơ quan xác thực</td>
                 <td class="align-middle text-center">
                     <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#sua">Sửa</button>
-                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#xoa1">Xóa</button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#xoa2">Xóa</button>
                 </td>
                 <td class="align-middle text-center">
                     <button class="btn btn-success">Hoạt động</button>
                 </td>
             </tr>
 
-
+            <!-- modal sửa -->
             <div class="modal fade" id="sua" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header ">
                             <h1 class="modal-title fs-5" id="staticBackdropLabel">Cập Nhật Tài Khoản</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <label>Tên Tổ Chức</label>
+                            <label>Tên Cơ Quan</label>
                             <input class="form-control mb-2" type="text">
                             <label>Email</label>
                             <input class="form-control mb-2" type="email">
-                            <label>Số Điện Thoại</label>
+                            <label>HotLine</label>
                             <input class="form-control mb-2" type="tel">
                             <label>Địa Chỉ</label>
                             <input class="form-control mb-2" type="text">
@@ -89,8 +89,8 @@
                 </div>
             </div>
 
-            <!-- modal xóa -->
-            <div class="modal fade" id="xoa1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            <!-- modal xoáTK -->
+            <div class="modal fade" id="xoa2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -121,6 +121,9 @@
     </table>
         </div>
     </div>
+
+
+
 
     
 </template>

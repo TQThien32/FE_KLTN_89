@@ -1,11 +1,11 @@
-<template>
-    <div class="wrapper">
+<template >
+    <div class="wrapper" >
         <div class="header-wrapper">
             <Top></Top>
             <Menu></Menu>
         </div>
         <div class="page-wrapper">
-            <div class="page-content">
+            <div class="page-content" >
                 <router-view></router-view>
             </div>
         </div>
