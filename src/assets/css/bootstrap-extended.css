@@ -362,6 +362,9 @@ a {
 .bg-success {
 	background-color: #15ca20 !important;
   }
+.bg-trang {
+	background-color: #ffff !important;
+  }
 
 .bg-danger {
 	background-color: #fd3550 !important;
