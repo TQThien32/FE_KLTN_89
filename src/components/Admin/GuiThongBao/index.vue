@@ -4,7 +4,7 @@
       <div class="col-md-8 col-lg-6">
       <div class="card">
         <div class="card-header text-center">
-          <h4>Gửi Thông Báo <i class="fa-regular fa-bell"></i></h4>
+          <h4 class="mt-2">Gửi Thông Báo <i class="fa-regular fa-bell"></i></h4>
         </div>
         <div class="card-body">
           <div class="mb-3">
@@ -14,7 +14,7 @@
               <option value="1">Tổ Chức Cấp Chứng Chỉ</option>
               <option value="2">Cơ Quan Xác Thực</option>
               <option value="3">Học Viên</option>
-              <option value="4">Cụ Thể</option>
+              <option value="4">Tất cả</option>
             </select>
           </div>
           <div v-show="sendType === '4'" class="mb-3">
@@ -32,9 +32,9 @@
               required></textarea>
           </div>
           <div class="d-flex justify-content-end"><button type="button" class="btn btn-danger px-5 radius-30 me-2">Hủy <i
-                class="fa-solid fa-trash-can"></i></button>
-            <button type="button" class="btn btn-primary px-5 radius-30">Gửi <i
-                class="fa-solid fa-share-from-square"></i></button>
+                class="fa-solid fa-trash-can ms-2"></i></button>
+            <button type="button" class="btn btn-primary px-5 radius-30">Gửi<i
+                class="fa-solid fa-share-from-square ms-2 "></i></button>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-header">
-          <h4>Danh Sách Thông Báo</h4>
+          <h4 class="mt-2">Danh Sách Thông Báo</h4>
         </div>
         <div class="card-body">
           <table class="table table-hover table-bordered">
@@ -62,7 +62,7 @@
                 <td class="align-middle text-center">Học Viên</td>
                 <td class="align-middle text-center">abc</td>
                 <td class="align-middle text-center">
-                  <button class="btn btn-primary">Xem Chi Tiết</button>
+                  <span class="badge bg-secondary">Xem chi tiết</span>
                 </td>
                 <td class="align-middle text-center">1/1/2025</td>
                 <td class="align-middle text-center">

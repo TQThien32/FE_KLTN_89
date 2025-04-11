@@ -1,10 +1,6 @@
 <template>
-    <div class="card">
-        <div class="card-header bg-secondary">
-            <h2 class=" text-light"><i class="fa-solid fa-layer-group"></i> Báo Cáo</h2>
-        </div>
-    </div>
-    <div class="card-body">
+    <h2 class=" text-light"><i class="fa-solid fa-layer-group"></i> Báo Cáo</h2>
+    <div class="card-body mt-3">
         <div class="row">
             <div class="col-lg-4">
                 <div class="card bg-primary">
@@ -38,7 +34,7 @@
             <div class="card-header">
                 <div class="d-flex justify-content-between">
                     <h4  class="mt-2">Danh Sách Báo Cáo</h4>
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#them">Thêm Báo Cáo</button>
+                    <button class="btn btn-chinh" data-bs-toggle="modal" data-bs-target="#them">Thêm Báo Cáo</button>
                 </div>
             </div>
             <!-- Modal thêm báo cáo -->
@@ -73,22 +69,22 @@
             <div class="card-body">
                 <table class="table table-hover table-bordered mt-3">
                     <thead>
-                        <tr>
+                        <tr class="text-center">
                             <th>STT</th>
                             <th>Tiêu Đề</th>
                             <th>Người Tạo</th>
-                            <th>Ngày Tạo</th>
-                            <th></th>
+                            <th>Thời Gian</th>
+                            <th>Nội dung</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="text-center">
                             <th class="align-middle">1</th>
                             <td class="align-middle">Báo cáo tháng 4</td>
                             <td class="align-middle">Admin</td>
-                            <td class="align-middle">1/1/2025</td>
+                            <td class="align-middle">11:12 1/1/2025</td>
                             <td class="align-middle text-center">
-                                <button class="btn btn-primary">Xem Chi Tiết</button>
+                                <button class="btn btn-chinh">Xem Chi Tiết</button>
                             </td>
                         </tr>
                     </tbody>

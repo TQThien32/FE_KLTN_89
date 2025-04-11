@@ -48,7 +48,7 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/danh-muc" class="nav-link">
+                    <router-link to="/admin/ds-chung-chi-da-cap" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-book-open-reader"></i>
                         </div>
                         <div class="menu-title">Danh Sách Chứng Chỉ Đã Cấp</div>
@@ -62,14 +62,14 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/danh-muc" class="nav-link">
+                    <router-link to="/admin/bao-cao" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-layer-group"></i>
                         </div>
                         <div class="menu-title">Báo Cáo</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/danh-muc" class="nav-link">
+                    <router-link to="/admin/gui-thong-bao" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-comments"></i>
                         </div>
                         <div class="menu-title">Thông Báo</div>

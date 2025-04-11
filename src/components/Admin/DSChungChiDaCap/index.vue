@@ -1,24 +1,18 @@
 <template>
-    <div class="card">
-        <div class="card-header bg-git primary ">
-            <h3 class="text-light"><i class="fa-solid fa-book-open-reader me-2"></i>Danh Sách Chứng Chỉ Đã Cấp</h3>
-        </div>
-        <div class="card-body">
-            <div class="container">
+    
+        <b>
+            <h2 class="text-light"><i class="fa-solid fa-book-open-reader" style="font-size: 35px;"></i> DANH SÁCH CHỨNG CHỈ ĐÃ CẤP</h2>
+        </b>
+    <div class="card mt-3">
+        
+        <div class="card-body table-responsive">
+           
                 <div class="row">
-                    <div class="col-lg-4">
-                        <select class="form-control" id="inputChon">
-                              <option value="">Tất Cả</option>
-                              <option value="">2024-2025</option>
-                              <option value="">2023-2024</option>
-                              <option value="">2022-2023</option>
-                           </select>
-                    </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-11">
                         <input type="text" class="form-control mb-2" placeholder="Tìm kiếm ...">
                     </div>
-                    <div class="col-lg-2">
-                        <button class="btn btn-primary">Tìm Kiếm</button>
+                    <div class="col-lg-1">
+                        <button class="btn btn-chinh me-2"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
                     </div>
                 </div>
                 <table class="table table-hover table-bordered mt-3">
@@ -53,7 +47,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+           
         </div>
     </div>
 </template>
