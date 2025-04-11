@@ -1,11 +1,11 @@
-<template>
-    <div class="wrapper">
+<template >
+    <div class="wrapper" >
         <div class="header-wrapper">
             <Top></Top>
             <Menu></Menu>
         </div>
         <div class="page-wrapper">
-            <div class="page-content">
+            <div class="page-content" >
                 <router-view></router-view>
             </div>
         </div>
@@ -45,4 +45,11 @@ export default {
 @import "../../assets/css/dark-theme.css";
 @import "../../assets/css/semi-dark.css";
 @import "../../assets/css/header-colors.css";
+
+.wrapper {
+    background: linear-gradient(135deg, #000000, #0e0c34);
+    min-height: 100vh; /* Đảm bảo chiếm toàn bộ chiều cao màn hình */
+    display: flex;
+    flex-direction: column;
+}
 </style>
