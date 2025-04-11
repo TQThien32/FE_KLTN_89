@@ -56,4 +56,44 @@ export default {
 
 }
 </script>
-<style></style>
+<style scoped>
+/* Nền menu chính (nav-container) */
+.nav-container {
+  background-color: #050f2d !important; /* Đổi nền menu chính thành #050f2d */
+}
+
+/* Màu chữ mặc định là trắng, padding và bo góc */
+.nav-container .nav-link,
+.nav-container .dropdown-item {
+  color: white !important;
+  border-radius: 8px;
+  padding-left: 14px;
+  padding-right: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hiệu ứng khi hover vào mục menu (chữ đen, nền trắng) */
+.nav-container .nav-link:hover,
+.nav-container .dropdown-item:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Đặt nền của dropdown menu thành #050f2d */
+.nav-container .dropdown-menu {
+  background-color: #050f2d !important;
+}
+
+/* Màu chữ trong dropdown mặc định là trắng */
+.nav-container .dropdown-menu .dropdown-item {
+  color: white !important;
+}
+
+/* Hiệu ứng khi hover vào mục dropdown */
+.nav-container .dropdown-menu .dropdown-item:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+
+</style>
