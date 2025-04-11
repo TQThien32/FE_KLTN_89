@@ -2,7 +2,7 @@
     <!-- <footer class="page-footer">
         <p class="mb-0">Copyright © 2021. All right reserved.</p>
     </footer> -->
-    <footer class="footer bg-dark text-center text-lg-start">
+    <footer class="footer text-center text-lg-start fixed-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-12 col-12">
@@ -17,24 +17,24 @@
                                 </div>
 
                             </a>
-                            <label class="mt-2">-Chứng nhận học vấn – Bảo mật tương lai bằng công nghệ NFT.</label>
+                            <label class="mt-2">Chứng nhận học vấn – Bảo mật tương lai bằng công nghệ NFT.</label>
                             <br>
-                            <label class="mt-2">-Bằng cấp số, niềm tin thực – NFT xác minh minh bạch.</label>
+                            <label class="mt-2">Bằng cấp số, niềm tin thực – NFT xác minh minh bạch.</label>
 
-                            <p class="mt-2">-An toàn, không thể làm giả – Chứng chỉ học vấn thời đại NFT.</p>
+                            <p class="mt-2">An toàn, không thể làm giả – Chứng chỉ học vấn thời đại NFT.</p>
                         </div>
                         <div class="col-sm-6 col-lg-5 col-12 footer-nav-info widget">
                             <b>
                                 <h4 class="footer-title text-light mt-3">Về chúng tôi</h4>
                             </b>
-                            <p class="text-light">1900 6750</p>
+                            <p class="text-light"><b><i class="fa-solid fa-phone"></i> SDT: </b>1900 6750</p>
 
-                            <p class="evo-in text-light"><strong>Địa chỉ: </strong>242 Tô Hiệu, Thanh Khê Tây, Đà Nẵng
+                            <p class="evo-in text-light"><strong><i class="fa-solid fa-location-dot"></i> Địa chỉ: </strong>242 Tô Hiệu, Thanh Khê Tây, Đà Nẵng
                             </p>
 
                             <p class="evo-in">
 
-                                <strong class="text-light">Email: </strong><a href="mailto:support@sapo.vn"
+                                <strong class="text-light"><i class="fa-solid fa-square-envelope"></i> Email: </strong><a href="mailto:support@sapo.vn"
                                     style="color: white;" class="login-link" title="support@sapo.vn">support@sapo.vn</a>
 
                             </p>
@@ -50,12 +50,6 @@
                             </b>
                             <div class="footer-menu">
 
-                                <a href="/to-chuc-cap-chung-chi/dang-nhap" style="color: white;" class="login-link"
-                                    title="Trang chủ" rel="nofollow">Đăng Nhập</a>
-                                <br>
-                                <a href="/to-chuc-cap-chung-chi/dang-nhap" style="color: white;" class="login-link"
-                                    title="Trang chủ" rel="nofollow">Đăng Ký</a>
-                                <br>
                                 <a href="/to-chuc-cap-chung-chi/quen-mat-khau" style="color: white;" class="login-link"
                                     title="Trang chủ" rel="nofollow">Trang chủ</a>
                                 <br>
@@ -101,6 +95,12 @@ export default {
 }
 </script>
 <style>
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
 .login-link {
     color: white;
     transition: opacity 0.3s ease;
