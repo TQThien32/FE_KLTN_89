@@ -52,7 +52,11 @@ const routes = [
         component: ()=>import('../components/Admin/DSChungChiDaCap/index.vue'),
         meta: {layout : 'Admin'},
     },
-
+    {
+        path : '/admin/quan-ly-giao-dich',
+        component: ()=>import('../components/Admin/Quanlygiaodich/index.vue'),
+        meta: {layout : 'Admin'},
+    },
     // HocVien
     {
         path : '/hoc-vien/dang-nhap',
