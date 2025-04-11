@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="card border-warning border-bottom border-top border-3 border-0">
-                            <img src="" class="card-img-top" alt="ảnh chứng chỉ">
+                            <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg" class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
                             <div class="card-body">
                                 <p class="card-text"><b>Tổ chức cấp: </b>gjk</p>
                                 <p class="card-text"><b>Khóa Học: </b>gjk</p>

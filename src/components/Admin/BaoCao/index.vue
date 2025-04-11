@@ -34,62 +34,71 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-between">
-            <h4>Danh Sách Báo Cáo</h4>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#them">Thêm Báo Cáo</button>
-        </div>
-
-        <!-- Modal thêm báo cáo -->
-        <div class="modal fade" id="them" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm Báo Cáo</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <label>Tiêu Đề</label>
-                                <input type="text" class="form-control mb-2"  id="">
-                            </div>
-                            <div class="col-lg-6">
-                                <label>Ngày Tạo</label>
-                                <input type="date" class="form-control mb-2" id="">
-                            </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-between">
+                    <h4  class="mt-2">Danh Sách Báo Cáo</h4>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#them">Thêm Báo Cáo</button>
+                </div>
+            </div>
+            <!-- Modal thêm báo cáo -->
+            <div class="modal fade" id="them" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm Báo Cáo</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <label>Nội Dung</label>
-                        <input type="text" class="form-control mb-2" style="height: 70px; font-size: 20px;" id="">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                        <button type="button" class="btn btn-primary">Tạo Báo Cáo</button>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Tiêu Đề</label>
+                                    <input type="text" class="form-control mb-2" id="">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>Ngày Tạo</label>
+                                    <input type="date" class="form-control mb-2" id="">
+                                </div>
+                            </div>
+                            <label>Nội Dung</label>
+                            <input type="text" class="form-control mb-2" style="height: 70px; font-size: 20px;" id="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                            <button type="button" class="btn btn-primary">Tạo Báo Cáo</button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="card-body">
+                <table class="table table-hover table-bordered mt-3">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tiêu Đề</th>
+                            <th>Người Tạo</th>
+                            <th>Ngày Tạo</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="align-middle">1</th>
+                            <td class="align-middle">Báo cáo tháng 4</td>
+                            <td class="align-middle">Admin</td>
+                            <td class="align-middle">1/1/2025</td>
+                            <td class="align-middle text-center">
+                                <button class="btn btn-primary">Xem Chi Tiết</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <table class="table table-hover table-bordered mt-3">
-            <thead>
-                <tr>
-                    <th>STT</th>
-                    <th>Tiêu Đề</th>
-                    <th>Người Tạo</th>
-                    <th>Ngày Tạo</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="align-middle">1</th>
-                    <td class="align-middle">Báo cáo tháng 4</td>
-                    <td class="align-middle">Admin</td>
-                    <td class="align-middle">1/1/2025</td>
-                    <td class="align-middle text-center">
-                        <button class="btn btn-primary">Xem Chi Tiết</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+
+
+
+
     </div>
 </template>
 <script>
