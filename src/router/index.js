@@ -160,6 +160,11 @@ const routes = [
         component: ()=>import('../components/ToChucCapChungChi/VoHieuHoaChungChi/index.vue'),
         meta: {layout : 'ToChucCapChungChi'},
     },
+    {
+        path : '/to-chuc-cap-chung-chi/to-chuc-upload-chung-chi-hoc-vien',
+        component: ()=>import('../components/ToChucCapChungChi/ToChucUploadChungChiHocVien/index.vue'),
+        meta: {layout : 'ToChucCapChungChi'},
+    },
 
     //DungChung
     {
