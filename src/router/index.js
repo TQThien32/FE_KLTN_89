@@ -59,7 +59,7 @@ const routes = [
     },
     {
         path : '/admin/danh-sach-chung-chi-da-cap',
-        component: ()=>import('../components/Admin/DanhSachChungChiDaCap/index.vue'),
+        component: ()=>import('../components/Admin/DSChungChiDaCap/index.vue'),
         meta: {layout : 'Admin'},
     },
     // HocVien
