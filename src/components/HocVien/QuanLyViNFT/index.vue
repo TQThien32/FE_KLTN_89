@@ -1,10 +1,10 @@
 <template>
     <div class="card">
         <div class="card-body d-flex justify-content-between">
-            <h3 class="text-primary">Ví NFT Chứng Chỉ</h3>
-            <div class="d-flex justify-content-center">
-                <h5 class="mt-1 text-success">....địa chỉ ví....</h5>
-                <i class="fa-solid fa-wallet ms-4 fa-2x"></i>
+            <h3 class="text-chinh">Ví NFT Chứng Chỉ</h3>
+            <div class="d-flex justify-content-center text-chinh">
+                <h5 class="mt-1 ">0xx3454...</h5>
+                <i class="fa-solid fa-wallet ms-4 fa-2x "></i>
             </div>
         </div>
     </div>
@@ -12,14 +12,44 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="card">
-                    <img src="..." class="card-img-top" alt="anh chung chi">
+                    <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg" class="card-img-top" alt="anh chung chi">
                     <div class="card-body">
-                        <p class="card-text">ID NFT</p>
-                        <p class="card-text">MetaData URL</p>
+                        <p class="card-text"><b class="me-3">ID NFT</b>  <span>1234556</span></p>
+                        <p class="card-text"><b class="me-3">Data URL</b>  <span>https://example.com/api/metadata/1</span></p>
                         <div class="d-flex justify-content-between">
-                            <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                            <button class="btn btn-chinh" data-bs-toggle="modal"
                                 data-bs-target="#kiemtra">Kiểm tra thông tin</button>
-                            <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                            <button class="btn btn-chinh" data-bs-toggle="modal"
+                            data-bs-target="#chiase">Chia sẻ NFT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg" class="card-img-top" alt="anh chung chi">
+                    <div class="card-body">
+                        <p class="card-text"><b class="me-3">ID NFT</b>  <span>1234556</span></p>
+                        <p class="card-text"><b class="me-3">Data URL</b>  <span>https://example.com/api/metadata/1</span></p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-chinh" data-bs-toggle="modal"
+                                data-bs-target="#kiemtra">Kiểm tra thông tin</button>
+                            <button class="btn btn-chinh" data-bs-toggle="modal"
+                            data-bs-target="#chiase">Chia sẻ NFT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg" class="card-img-top" alt="anh chung chi">
+                    <div class="card-body">
+                        <p class="card-text"><b class="me-3">ID NFT</b>  <span>1234556</span></p>
+                        <p class="card-text"><b class="me-3">Data URL</b>  <span>https://example.com/api/metadata/1</span></p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-chinh" data-bs-toggle="modal"
+                                data-bs-target="#kiemtra">Kiểm tra thông tin</button>
+                            <button class="btn btn-chinh" data-bs-toggle="modal"
                             data-bs-target="#chiase">Chia sẻ NFT</button>
                         </div>
                     </div>
@@ -37,15 +67,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p><b>Tên Học Viên: </b> <span>tdrfg</span></p>
+                    <p><b>Tên Học Viên: </b> <span>Trần Tuấn</span></p>
                     <p><b>Số CCCD: </b> <span>123456</span></p>
                     <p><b>ID NFT: </b> <span>123456</span></p>
-                    <p><b>Link Ảnh: </b> <a href="">Hình ảnh chứng chỉ</a></p>
-                    <p><b>Tên Tổ Chức Cấp Chứng Chỉ: </b> <span>ưerty</span></p>
-                    <p><b>Họ Tên Người Đại Diện Tổ Chức: </b> <span>123456</span></p>
+                    <p><b>Link Ảnh: </b> <a href="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg">https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg</a></p>
+                    <p><b>Tên Tổ Chức Cấp Chứng Chỉ: </b> <span>Toeic</span></p>
+                    <p><b>Họ Tên Người Đại Diện Tổ Chức: </b> <span>Trầm Quốc</span></p>
                     <p><b>Khóa Học: </b> <span>123456</span></p>
                     <p><b>Số Hiệu Chứng Chỉ: </b> <span>123456</span></p>
-                    <p><b>Kết Quả: </b> <span>123456</span></p>
+                    <p><b>Kết Quả: </b> <span>888</span></p>
                     <p><b>Ngày Cấp: </b> <span>21/12/2025</span></p>
                     <p><b>Tình Trạng: </b> <span>Vô Hiệu Hóa</span></p>
                 </div>
@@ -78,7 +108,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Chia sẻ</button>
+                    <button type="button" class="btn btn-chinh" data-bs-dismiss="modal">Chia sẻ</button>
                 </div>
             </div>
         </div>
