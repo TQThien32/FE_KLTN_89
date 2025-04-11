@@ -1,21 +1,21 @@
 <template>
     <div class="d-flex justify-content-start">
-        <i class="fa-solid fa-list me-2" style="font-size: 35px;"></i>
+        <i class="fa-solid fa-list me-2 text-light" style="font-size: 35px;"></i>
         <b>
-            <h2>QUẢN LÝ TÀI KHOẢN - CƠ QUAN XÁC THỰC</h2>
+            <h2 class="text-light">QUẢN LÝ TÀI KHOẢN - CƠ QUAN XÁC THỰC</h2>
         </b>
     </div>
-    <div class="card">
+    <div class="card mt-2">
         <div class="card-header">
-            <h4>Danh Sách Tài Khoản - Cơ Quan Xác Thực</h4>
+            <h4 class="mt-2">Danh Sách Tài Khoản</h4>
         </div>
-        <div class="card-body">
+        <div class="card-body table-responsive">
             <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-11">
                     <input type="text" class="form-control mb-2" placeholder="Tìm kiếm ...">
                 </div>
-                <div class="col-lg-2">
-                    <button class="btn btn-primary me-2"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
+                <div class="col-lg-1">
+                    <button class="btn btn-chinh me-2"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
                 </div>
             </div>
         
@@ -28,7 +28,7 @@
                 <th class="align-middle text-center">HotLine</th>
                 <th class="align-middle text-center">Địa Chỉ</th>
                 <th class="align-middle text-center">Chức Vụ</th>
-                <th class="align-middle text-center">Thao Tác</th>
+                <th class="align-middle text-center">Avatar</th>
                 <th class="align-middle text-center">Trạng Thái</th>
             </tr>
         </thead>
@@ -41,82 +41,15 @@
                 <td class="align-middle text-center">120 Nguyễn Văn Linh</td>
                 <td class="align-middle text-center">Nhà tuyển dụng, cơ quan xác thực</td>
                 <td class="align-middle text-center">
-                    <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#sua">Sửa</button>
-                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#xoa2">Xóa</button>
+                    <img src="https://cdn-icons-png.freepik.com/256/818/818100.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid" 
+                           alt="" style="width: 50px; height: 50px; border-radius: 50%;">
                 </td>
                 <td class="align-middle text-center">
                     <button class="btn btn-success">Hoạt động</button>
                 </td>
             </tr>
 
-            <!-- modal sửa -->
-            <div class="modal fade" id="sua" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header ">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Cập Nhật Tài Khoản</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <label>Tên Cơ Quan</label>
-                            <input class="form-control mb-2" type="text">
-                            <label>Email</label>
-                            <input class="form-control mb-2" type="email">
-                            <label>HotLine</label>
-                            <input class="form-control mb-2" type="tel">
-                            <label>Địa Chỉ</label>
-                            <input class="form-control mb-2" type="text">
-                            <label>Mật Khẩu</label>
-                            <div class="input-group" id="show_hide_password">
-                                <input type="password" class="form-control border-end-0" id="inputChoosePassword"
-                                    placeholder="Nhập lại mật khẩu"> <a href="javascript:;"
-                                    class="input-group-text bg-transparent"><i class="bx bx-hide"></i></a>
-                            </div>
-                            <label class="mt-2">Nhập Lại Mật Khẩu</label>
-                            <div class="input-group" id="show_hide_password">
-                                <input type="password" class="form-control border-end-0" id="inputChoosePassword"
-                                    placeholder="Nhập lại mật khẩu"> <a href="javascript:;"
-                                    class="input-group-text bg-transparent"><i class="bx bx-hide"></i></a>
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                            <button type="button" class="btn btn-primary">Cập Nhật</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- modal xoáTK -->
-            <div class="modal fade" id="xoa2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Xóa Tài Khoản</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="alert alert-danger" role="alert">
-                                <div class="d-flex justify-content-start ">
-                                    <i class="fa-solid fa-square-xmark me-4 mt-3" style="font-size: 40px;"></i>
-                                    <div class="text-danger me-3">
-                                        <h5><b> Bạn có chắc chắn muốn xóa tài khoản này?</b></h5>
-                                        <h6><b>Lưu ý:</b>Điều này không thể hoàn tác!</h6>
-                                    </div>
-                                    <i class="fa-solid fa-xmark me-4 mt-4" style="font-size: 25px;"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                            <button type="button" class="btn btn-danger">Xóa</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ 
         </tbody>
     </table>
         </div>

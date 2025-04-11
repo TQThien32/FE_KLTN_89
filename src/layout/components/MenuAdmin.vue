@@ -33,7 +33,7 @@
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="/admin/nha-tuyen-dung-co-quan">
+                            <router-link to="/admin/danh-sach-co-quan-xac-thuc">
                                 <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
                                     khoản cơ quan xác thực</a>
                             </router-link>

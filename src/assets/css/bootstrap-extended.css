@@ -81,7 +81,11 @@ a {
 .btn {
     letter-spacing: .5px;
 }
-
+.btn-chinh {
+	color: #fff;
+	background-color: #091b54;
+	border-color: #050f2d
+}
 .btn-primary {
 	color: #fff;
 	background-color: #008cff;
@@ -146,7 +150,7 @@ a {
 
 .btn-danger {
 	color: #fff;
-	background-color: #fd3550;
+	background-color: #e12a43;
 	border-color: #fd3550
 }
 .btn-danger:hover {
