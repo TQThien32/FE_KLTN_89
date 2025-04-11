@@ -3,8 +3,8 @@
     <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="card">
-                <div class="card-header bg-secondary">
-                    <h4 class="text-light">Danh Sách Tạo Chứng Chỉ</h4>
+                <div class="card-header">
+                    <h4>Danh Sách Tạo Chứng Chỉ</h4>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-hover">
@@ -31,7 +31,7 @@
                                 <td>K27</td>
                                 <td>500</td>
                                 <td>Ngày cấp</td>
-                                <td class="align-middle text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                <td class="align-middle text-center"><button type="button" class="btn btn-chinh" data-bs-toggle="modal"
                                         data-bs-target="#exampleSuccessModal">Tạo Chứng Chỉ</button></td>
                             </tr>
                         </tbody>
@@ -54,7 +54,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Xác minh</button>
+                                <button type="button" class="btn btn-chinh">Xác minh</button>
                             </div>
                         </div>
                     </div>
