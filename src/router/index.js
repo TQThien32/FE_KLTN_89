@@ -52,7 +52,16 @@ const routes = [
         component: ()=>import('../components/Admin/DSChungChiDaCap/index.vue'),
         meta: {layout : 'Admin'},
     },
-
+    {
+        path : '/admin/quan-ly-giao-dich',
+        component: ()=>import('../components/Admin/Quanlygiaodich/index.vue'),
+        meta: {layout : 'Admin'},
+    },
+    {
+        path : '/admin/danh-sach-chung-chi-da-cap',
+        component: ()=>import('../components/Admin/DanhSachChungChiDaCap/index.vue'),
+        meta: {layout : 'Admin'},
+    },
     // HocVien
     {
         path : '/hoc-vien/dang-nhap',
@@ -118,6 +127,7 @@ const routes = [
         component: ()=>import('../components/CoQuanXacThuc/LuuNFTdaXacMinh/index.vue'),
         meta: {layout : 'CoQuanXacThuc'},
     },
+    
     
     //ToChucCapChungChi
     {

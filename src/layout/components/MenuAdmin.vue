@@ -41,7 +41,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/danh-muc" class="nav-link">
+                    <router-link to="/admin/quan-ly-giao-dich" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-wallet"></i>
                         </div>
                         <div class="menu-title">Quản Lý Giao Dịch</div>
