@@ -12,11 +12,14 @@
          </div>
          <div class="card-body table-responsive">
             <div class="row">
-               <div class="col-lg-11">
-                  <input class="form-control" type="text" placeholder="">
+               <div class="col-lg-5">
+                  <form class="ff_fileupload_hidden" action="" method="post" enctype="multipart/form-data"><input
+                        type="hidden" name="action" value="fileuploader"><input type="file" name="files" multiple=""
+                        accept=".jpg, .png, image/jpeg, image/png"></form>
                </div>
+               <div class="col-lg-6"></div>
                <div class="col-lg-1">
-                  <button class="btn btn-chinh"><i class="fa-solid fa-magnifying-glass"></i>Tìm Kiếm</button>
+                  <button class="btn btn-chinh me-2">Tải Lên</button>
                </div>
             </div>
             <table class="table table-hover table-bordered mt-3">
