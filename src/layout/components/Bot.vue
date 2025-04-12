@@ -29,13 +29,15 @@
                             </b>
                             <p class="text-light"><b><i class="fa-solid fa-phone"></i> SDT: </b>1900 6750</p>
 
-                            <p class="evo-in text-light"><strong><i class="fa-solid fa-location-dot"></i> Địa chỉ: </strong>242 Tô Hiệu, Thanh Khê Tây, Đà Nẵng
+                            <p class="evo-in text-light"><strong><i class="fa-solid fa-location-dot"></i> Địa chỉ:
+                                </strong>242 Tô Hiệu, Thanh Khê Tây, Đà Nẵng
                             </p>
 
                             <p class="evo-in">
 
-                                <strong class="text-light"><i class="fa-solid fa-square-envelope"></i> Email: </strong><a href="mailto:support@sapo.vn"
-                                    style="color: white;" class="login-link" title="support@sapo.vn">support@sapo.vn</a>
+                                <strong class="text-light"><i class="fa-solid fa-square-envelope"></i> Email:
+                                </strong><a href="mailto:support@sapo.vn" style="color: white;" class="login-link"
+                                    title="support@sapo.vn">support@sapo.vn</a>
 
                             </p>
 
@@ -87,7 +89,7 @@
                 </svg></div>
 
         </div>
-    </footer> -->
+    </footer>
 </template>
 <script>
 export default {
@@ -96,11 +98,12 @@ export default {
 </script>
 <style>
 .footer {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 20px 0;
-  text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
 }
+
 .login-link {
     color: white;
     transition: opacity 0.3s ease;
