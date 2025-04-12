@@ -1,5 +1,5 @@
 <template>
-  <div class="card radius-10 border border-3 border-success">
+  <div class="card">
     <div class="card-body">
       <h2 class="text-center">Các NFT Đã Được Xác Minh</h2>
       <hr>
@@ -9,8 +9,8 @@
             <th colspan="5">
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Tìm theo số CCCD" aria-label="Recipient's username"
-                  aria-describedby="button-addon2" style="border: 1px solid #00CC00;">
-                <button class="btn btn-outline-success" type="button" id="button-addon2">Tìm
+                  aria-describedby="button-addon2">
+                <button class="btn btn-chinh" type="button" id="button-addon2">Tìm
                   Kiếm</button>
               </div>
             </th>

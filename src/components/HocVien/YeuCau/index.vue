@@ -10,6 +10,8 @@
                     <input class="mt-2 form-control" type="text">
                     <label class="mt-2" for="">Số CCCD</label>
                     <input class="mt-2 form-control" type="text">
+                    <label class="mt-2" for="">Số Hiệu Chứng Chỉ</label>
+                    <input class="mt-2 form-control" type="text">
                     <label class="mt-2" for="">Email</label>
                     <input class="mt-2 form-control" type="email">
                     <label class="mt-2 w-100" for="">Gửi đến</label>
@@ -36,7 +38,7 @@
                         <thead>
                             <tr class="align-middle text-center">
                                 <th>#</th>
-                                <th>Gửi đến</th>
+                                <th>Gửi Đến</th>
                                 <th>Nội Dung</th>
                                 <th>Thời Gian Gửi</th>
                             </tr>

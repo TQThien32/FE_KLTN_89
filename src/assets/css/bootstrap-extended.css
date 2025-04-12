@@ -264,7 +264,7 @@ a {
 
 .dropdown-item:focus, .dropdown-item:hover {
 	color: #1e2125;
-	background-color: #f8f9fa
+	background-color: #0f3760
 }
 .dropdown-item.active, .dropdown-item:active {
 	color: #fff;

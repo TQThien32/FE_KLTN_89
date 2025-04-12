@@ -87,7 +87,7 @@
                 </svg></div>
 
         </div>
-    </footer>
+    </footer> -->
 </template>
 <script>
 export default {
