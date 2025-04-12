@@ -30,6 +30,7 @@
                 <th class="align-middle text-center">Chức Vụ</th>
                 <th class="align-middle text-center">Avatar</th>
                 <th class="align-middle text-center">Trạng Thái</th>
+                <th class="align-middle text-center">Khác</th>
             </tr>
         </thead>
         <tbody>
@@ -46,6 +47,9 @@
                 </td>
                 <td class="align-middle text-center">
                     <button class="btn btn-success">Hoạt động</button>
+                </td>
+                <td class="align-middle text-center">
+                    <button class="btn btn-chinh">Gửi thông báo</button>
                 </td>
             </tr>
 

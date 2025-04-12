@@ -2,7 +2,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header bg-chinh">
-                <h3 class="text-chinh">Hóa Đơn Cần Thanh Toán</h3>
+                <h3 class="text-chinh mt-2">Hóa Đơn Cần Thanh Toán</h3>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -19,8 +19,7 @@
                                 </div>
                                 <hr>
                                 <div class="d-flex justify-content-end align-items-center gap-2">
-                                    <a href="javascript:;" class="btn btn-chinh"><i
-                                            class="bx bx-star"></i>Thanh Toán</a>
+                                    <a href="javascript:;" class="btn btn-chinh"><i class="fa-solid fa-credit-card" style="font-size: 15px;"></i>Thanh Toán</a>
                                 </div>
                             </div>
                         </div>
@@ -38,13 +37,11 @@
                                 </div>
                                 <hr>
                                 <div class="d-flex justify-content-end align-items-center gap-2">
-                                    <a href="javascript:;" class="btn btn-chinh"><i
-                                            class="bx bx-star"></i>Thanh Toán</a>
+                                    <a href="javascript:;" class="btn btn-chinh"><i class="fa-solid fa-credit-card" style="font-size: 15px;"></i>Thanh Toán</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
+                    </div><div class="col-lg-4">
                         <div class="card border-chinh border-bottom border-top border-3 border-0">
                             <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg" class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
                             <div class="card-body">
@@ -57,13 +54,11 @@
                                 </div>
                                 <hr>
                                 <div class="d-flex justify-content-end align-items-center gap-2">
-                                    <a href="javascript:;" class="btn btn-chinh"><i
-                                            class="bx bx-star"></i>Thanh Toán</a>
+                                    <a href="javascript:;" class="btn btn-chinh"><i class="fa-solid fa-credit-card" style="font-size: 15px;"></i>Thanh Toán</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
+                    </div><div class="col-lg-4">
                         <div class="card border-chinh border-bottom border-top border-3 border-0">
                             <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg" class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
                             <div class="card-body">
@@ -76,13 +71,11 @@
                                 </div>
                                 <hr>
                                 <div class="d-flex justify-content-end align-items-center gap-2">
-                                    <a href="javascript:;" class="btn btn-chinh"><i
-                                            class="bx bx-star"></i>Thanh Toán</a>
+                                    <a href="javascript:;" class="btn btn-chinh"><i class="fa-solid fa-credit-card" style="font-size: 15px;"></i>Thanh Toán</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
+                    </div><div class="col-lg-4">
                         <div class="card border-chinh border-bottom border-top border-3 border-0">
                             <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg" class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
                             <div class="card-body">
@@ -95,8 +88,7 @@
                                 </div>
                                 <hr>
                                 <div class="d-flex justify-content-end align-items-center gap-2">
-                                    <a href="javascript:;" class="btn btn-chinh"><i
-                                            class="bx bx-star"></i>Thanh Toán</a>
+                                    <a href="javascript:;" class="btn btn-chinh"><i class="fa-solid fa-credit-card" style="font-size: 15px;"></i>Thanh Toán</a>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +98,8 @@
         </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="container">
+        <div class="card mt-4">
         <div class="card-header bg-chinh">
             <h3 class="text-chinh">Lịch Sử Giao Dịch</h3>
         </div>
@@ -134,6 +127,7 @@
                 </tbody>
             </table>
         </div>
+    </div>
     </div>
 </template>
 <script>

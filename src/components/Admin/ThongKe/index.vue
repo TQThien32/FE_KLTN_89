@@ -1,5 +1,5 @@
 <template>
-    <h2><i class="fa-solid fa-chart-simple"></i> Thống Kê</h2>
+    <h2 class="text-white"><i class="fa-solid fa-chart-simple"></i> Thống Kê</h2>
     <div class="row mt-3">
         <div class="col-lg-6">
             <div class="card">

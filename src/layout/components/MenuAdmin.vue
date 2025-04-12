@@ -55,7 +55,7 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/danh-muc" class="nav-link">
+                    <router-link to="/admin/thong-ke" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-chart-column"></i>
                         </div>
                         <div class="menu-title">Thống Kê</div>

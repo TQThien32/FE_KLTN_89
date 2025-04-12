@@ -24,6 +24,7 @@
         <thead>
             <tr>
                 <th class="align-middle text-center">STT</th>
+                <th class="align-middle text-center">Người Gửi</th>
                 <th class="align-middle text-center">Thời Gian</th>
                 <th class="align-middle text-center">Số tiền</th>
                 <th class="align-middle text-center">Nội Dung</th>
@@ -34,6 +35,7 @@
         <tbody>
             <tr>
                 <th class="align-middle text-center">1</th>
+                <td class="align-middle text-center">Trần Quang Thiên</td>
                 <td class="align-middle text-center">11:11 20/10/2024</td>
                 <td class="align-middle text-center">200000 đ</td>
                 <td class="align-middle text-center">Giao dịch CK den NFT</td>

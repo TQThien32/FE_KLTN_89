@@ -14,7 +14,7 @@
               <option value="1">Tổ Chức Cấp Chứng Chỉ</option>
               <option value="2">Cơ Quan Xác Thực</option>
               <option value="3">Học Viên</option>
-              <option value="4">Tất cả</option>
+              <option value="4">Cụ thể</option>
             </select>
           </div>
           <div v-show="sendType === '4'" class="mb-3">

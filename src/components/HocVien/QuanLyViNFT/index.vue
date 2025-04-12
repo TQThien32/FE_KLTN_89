@@ -1,13 +1,11 @@
 <template>
-    <div class="card">
-        <div class="card-body d-flex justify-content-between">
-            <h3 class="text-chinh">Ví NFT Chứng Chỉ</h3>
-            <div class="d-flex justify-content-center text-chinh">
-                <h5 class="mt-1 ">0xx3454...</h5>
-                <i class="fa-solid fa-wallet ms-4 fa-2x "></i>
+    <div class="card-body d-flex justify-content-between">
+            <h3 class="text-white"><i class="fa-solid fa-wallet ms-4"></i> Ví NFT Chứng Chỉ</h3>
+            <div class="d-flex justify-content-center">
+                <h5 class="mt-1  text-white"><i class="fa-solid fa-file-code"></i> 0xx3454...</h5>
+                
             </div>
         </div>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
@@ -91,7 +89,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Có Xác Nhận Chia Sẻ NFT ?</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Chia Sẻ NFT</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -103,7 +101,7 @@
                     <input class="mt-2 form-control" type="number">
                     <label class="mt-2" for="">ID NFT</label>
                     <input class="mt-2 form-control" type="text">
-                    <label class="mt-2" for="">Email Cơ Quan Xác Thực</label>
+                    <label class="mt-2" for="">Cơ Quan Xác Thực</label>
                     <input class="mt-2 form-control" type="email" placeholder="Nhập email của Cơ Quan muốn xác thực NFT">
                 </div>
                 <div class="modal-footer">
