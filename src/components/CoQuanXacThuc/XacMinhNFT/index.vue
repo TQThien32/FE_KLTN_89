@@ -1,16 +1,16 @@
 <template>
-  <div class="card radius-10 border border-3 border-info">
+  <div class="card">
     <div class="card-body">
       <h2 class="text-center">Các NFT Được Gửi Đến</h2>
       <hr>
-      <table class="table table-bordered table-hover border">
+      <table class="table table-bordered table-hover">
         <thead>
           <tr>
             <th colspan="5">
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Tìm theo số CCCD" aria-label="Recipient's username"
-                  aria-describedby="button-addon2" style="border: 1px solid #3399FF;">
-                <button class="btn btn-outline-info" type="button" id="button-addon2">Tìm
+                  aria-describedby="button-addon2">
+                <button class="btn btn-chinh" type="button" id="button-addon2">Tìm
                   Kiếm</button>
               </div>
             </th>

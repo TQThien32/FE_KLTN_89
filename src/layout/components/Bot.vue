@@ -2,7 +2,7 @@
     <!-- <footer class="page-footer">
         <p class="mb-0">Copyright © 2021. All right reserved.</p>
     </footer> -->
-    <footer class="footer text-center text-lg-start fixed-bottom">
+    <!-- <footer class="footer text-center text-lg-start fixed-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-12 col-12">
@@ -87,7 +87,7 @@
                 </svg></div>
 
         </div>
-    </footer>
+    </footer> -->
 </template>
 <script>
 export default {
