@@ -107,28 +107,28 @@ const routes = [
 
     //CoQuanXacThuc
     {
-        path : '/nha-tuyen-dung-co-quan/dang-nhap',
+        path : '/co-quan-xac-thuc/dang-nhap',
         component: ()=>import('../components/CoQuanXacThuc/DangNhap/index.vue'),
         meta: {layout : 'Auth'},
     },
 
     {
-        path : '/nha-tuyen-dung-co-quan/dang-ky',
+        path : '/co-quan-xac-thuc/dang-ky',
         component: ()=>import('../components/CoQuanXacThuc/DangKy/index.vue'),
         meta: {layout : 'Auth'},
     },
     {
-        path : '/nha-tuyen-dung-co-quan/thong-tin-co-quan',
+        path : '/co-quan-xac-thuc/thong-tin-co-quan',
         component: ()=>import('../components/CoQuanXacThuc/ThongTinCoQuan/index.vue'),
         meta: {layout : 'CoQuanXacThuc'},
     },
     {
-        path : '/nha-tuyen-dung-co-quan/xac-minh-nft',
+        path : '/co-quan-xac-thuc/xac-minh-nft',
         component: ()=>import('../components/CoQuanXacThuc/XacMinhNFT/index.vue'),
         meta: {layout : 'CoQuanXacThuc'},
     },
     {
-        path : '/nha-tuyen-dung-co-quan/luu-nft-da-xac-minh',
+        path : '/co-quan-xac-thuc/luu-nft-da-xac-minh',
         component: ()=>import('../components/CoQuanXacThuc/LuuNFTdaXacMinh/index.vue'),
         meta: {layout : 'CoQuanXacThuc'},
     },

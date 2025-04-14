@@ -73,7 +73,7 @@
                                                     <label for="inputChoosePassword" class="form-label">Nhập Lại Mật Khẩu</label>
                                                     <div class="input-group" id="show_hide_password">
                                                         <input type="password" class="form-control border-end-0"
-                                                            id="inputChoosePassword" placeholder="Nhập Lại Mật Khẩu"> <a
+                                                            placeholder="Nhập Lại Mật Khẩu"> <a
                                                             href="javascript:;"
                                                             class="input-group-text bg-transparent"><i
                                                                 class="bx bx-hide"></i></a>
@@ -84,7 +84,7 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
-                                                        <button type="submit" class="btn btn-primary" v-on:click="DangKy()"><i
+                                                        <button type="button" class="btn btn-primary" v-on:click="DangKy()"><i
                                                                 class="bx bx-user"></i>Đăng Ký</button>
                                                     </div>                                                   
                                                 </div>

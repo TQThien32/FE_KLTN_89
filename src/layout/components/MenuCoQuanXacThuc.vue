@@ -13,21 +13,21 @@
         <nav class="navbar navbar-expand-xl w-100">
             <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
                 <li class="nav-item">
-                    <router-link to="/nha-tuyen-dung-co-quan/thong-tin-co-quan" class="nav-link">
+                    <router-link to="/co-quan-xac-thuc/thong-tin-co-quan" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-user-tie"></i>
                         </div>
                         <div class="menu-title">Quản Lý Tài Khoản</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/nha-tuyen-dung-co-quan/xac-minh-nft" class="nav-link">
+                    <router-link to="/co-quan-xac-thuc/xac-minh-nft" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-clipboard-check"></i>
                         </div>
                         <div class="menu-title">Xác Minh NFT Chứng Chỉ</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/nha-tuyen-dung-co-quan/luu-nft-da-xac-minh" class="nav-link">
+                    <router-link to="/co-quan-xac-thuc/luu-nft-da-xac-minh" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-list-check"></i>
                         </div>
                         <div class="menu-title">Lưu Trữ NFT Đã Xác Minh</div>
