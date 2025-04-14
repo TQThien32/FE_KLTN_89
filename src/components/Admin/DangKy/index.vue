@@ -72,9 +72,9 @@ export default {
             .post('http://127.0.0.1:8000/api/admin/dang-ky', this.admin_create)
             .then((res) => {
                 if (res.data.status) {
-                    alert(res.data.message);
+                    this.$toast.success(res.data.message)
                 } else {
-                    alert('Đăng ký thất bại.');
+                    this.$toast.error(res.data.message);
                 }
             })
     }

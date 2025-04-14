@@ -5,10 +5,20 @@ import Default from './layout/wrapper/Master.vue'
 import Admin from './layout/wrapper/Admin.vue'
 import Auth from './layout/wrapper/AuthMaster.vue'
 import Hocvien from './layout/wrapper/Hocvien.vue'
-import CoQuanXacThuc from './layout/wrapper/CoQuanXacThuc.vue'  
-import ToChucCapChungChi from './layout/wrapper/ToChucCapChungChi.vue'  
-const app = createApp(App)
+import CoQuanXacThuc from './layout/wrapper/CoQuanXacThuc.vue'
+import ToChucCapChungChi from './layout/wrapper/ToChucCapChungChi.vue'
+import { createToaster } from '@meforma/vue-toaster';
 
+
+const app = createApp(App)
+const toaster = createToaster(
+    {
+        position: 'top-right', // hoặc top-left, bottom-right, ...
+        duration: 3000,
+    }
+)
+
+app.config.globalProperties.$toast = toaster;
 app.use(router)
 app.component("default-layout", Default);
 app.component("Auth-layout", Auth);

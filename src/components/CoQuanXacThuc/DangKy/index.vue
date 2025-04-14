@@ -125,9 +125,9 @@ export default {
             .post('http://127.0.0.1:8000/api/co-quan/dang-ky', this.co_quan_create)
             .then((res)=>{
                 if(res.data.status){
-                    alert(res.data.message);
+                    this.$toast.success(res.data.message)
                 }else{
-                    alert('Đăng ký thất bại.');
+                    this.$toast.console.error('Đăng ký thất bại.');
                 }
             });
 

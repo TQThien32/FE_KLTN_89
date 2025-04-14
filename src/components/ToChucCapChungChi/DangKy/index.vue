@@ -126,9 +126,9 @@ export default {
             .post('http://127.0.0.1:8000/api/to-chuc/dang-ky', this.to_chuc_create)
             .then((res)=>{
                 if(res.data.status){
-                    alert(res.data.message);
+                    this.$toast.success(res.data.message)
                 }else{
-                    alert('Đăng ký thất bại.');
+                    this.$toast.success('Đăng ký thất bại.')
                 }
             });
 

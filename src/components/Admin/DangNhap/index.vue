@@ -18,21 +18,23 @@
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label">Tên đăng nhập</label>
 												<input type="email" class="form-control" id="inputEmailAddress"
-													placeholder="Nhập tên đăng nhập" v-model="dangNhap.email">
+													placeholder="Nhập tên đăng nhập" v-model="dang_Nhap.email">
 											</div>
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
 												<div class="input-group" id="show_hide_password">
 													<input type="password" class="form-control border-end-0"
-														id="inputChoosePassword" placeholder="Nhập mật khẩu" v-model="dangNhap.password"> <a
-														href="javascript:;" class="input-group-text bg-transparent"><i
+														id="inputChoosePassword" placeholder="Nhập mật khẩu"
+														v-model="dang_Nhap.password"> <a href="javascript:;"
+														class="input-group-text bg-transparent"><i
 															class="bx bx-hide"></i></a>
 												</div>
 											</div>
 											<div class="col-12">
 												<div class="d-grid">
-													<button type="submit" class="btn btn-primary"><i
-															class="bx bxs-lock-open" v-on:click="dangNhap()"></i>Đăng Nhập</button>
+													<button type="button" class="btn btn-primary"><i
+															class="bx bxs-lock-open" v-on:click="dangNhap()"></i>Đăng
+														Nhập</button>
 												</div>
 											</div>
 										</form>
@@ -55,17 +57,20 @@ export default {
 		return {
 			dang_Nhap: {}
 		}
-},
+	},
+	mounted() {
+
+	},
 	methods: {
 		dangNhap() {
 			axios
 				.post('http://127.0.0.1:8000/api/admin/dang-nhap', this.dang_Nhap)
 				.then((res) => {
-					if(res.data.status){
-						alert(res.data.message);
+					if (res.data.status) {
+						this.$toast.success(res.data.message)
 					}
-					else{
-						alert(res.data.message);
+					else {
+						this.$toast.console.error(res.data.message);
 					}
 				})
 		}
