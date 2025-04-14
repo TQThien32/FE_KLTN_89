@@ -23,10 +23,10 @@
                <thead>
                   <tr>
                      <th class="align-middle text-center">STT</th>
-                     <th class="align-middle text-center">Họ và tên</th>
+                     <th class="align-middle text-center">Họ Và Tên</th>
                      <th class="align-middle text-center">Email</th>
                      <th class="align-middle text-center">Số Điện Thoại</th>
-                     <th class="align-middle text-center">Số Căn Cước Công Dân</th>
+                     <th class="align-middle text-center">Số CCCD</th>
                      <th class="align-middle text-center">Địa Chỉ</th>
                      <th class="align-middle text-center">Chức Vụ</th>
                      <th class="align-middle text-center">Avatar</th>
@@ -55,15 +55,11 @@
                         <button class="btn btn-chinh">Gửi thông báo</button>
                      </td>
                   </tr>
-
-
                </tbody>
-
             </table>
          </div>
       </div>
    </div>
-
 </template>
 <script>
 export default {

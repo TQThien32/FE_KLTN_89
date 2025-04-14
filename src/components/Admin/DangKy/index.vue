@@ -19,28 +19,29 @@
 
                                         <div class="form-body">
                                             <form class="row g-3">
-                                                
+
                                                 <div class="col-12">
                                                     <label for="inputEmail" class="form-label">Email</label>
-                                                    <input type="email" class="form-control" id="inputEmail"
-                                                        placeholder="Nhập email">
+                                                    <input type="email" v-model="admin_create.email"
+                                                        class="form-control" id="inputEmail" placeholder="Nhập email">
                                                 </div>
                                                 <div class="col-12">
                                                     <label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
                                                     <div class="input-group" id="show_hide_password">
-                                                        <input type="password" class="form-control border-end-0"
-                                                            id="inputChoosePassword" placeholder="Nhập mật khẩu"> <a
-                                                            href="javascript:;"
+                                                        <input type="password" v-model="admin_create.password"
+                                                            class="form-control border-end-0" id="inputChoosePassword"
+                                                            placeholder="Nhập mật khẩu"> <a href="javascript:;"
                                                             class="input-group-text bg-transparent"><i
                                                                 class="bx bx-hide"></i></a>
                                                     </div>
-                                                </div>                                            
-                                                <div class="col-12">                                                  
+                                                </div>
+                                                <div class="col-12">
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
-                                                        <button type="submit" class="btn btn-primary"><i
-                                                                class="bx bx-user"></i>Đăng Ký</button>
+                                                        <button type="button" v-on:click="DangKy()"
+                                                            class="btn btn-primary"><i class="bx bx-user"></i>Đăng
+                                                            Ký</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -58,8 +59,26 @@
 
 </template>
 <script>
+import axios from 'axios';
 export default {
-
+    data() {
+        return {
+            admin_create: {}
+        }
+    },
+    methods: {
+    DangKy() {
+        axios
+            .post('http://127.0.0.1:8000/api/admin/dang-ky', this.admin_create)
+            .then((res) => {
+                if (res.data.status) {
+                    alert(res.data.message);
+                } else {
+                    alert('Đăng ký thất bại.');
+                }
+            })
+    }
+}
 }
 </script>
 <style></style>

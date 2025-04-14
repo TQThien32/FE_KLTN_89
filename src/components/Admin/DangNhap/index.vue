@@ -23,9 +23,10 @@
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0" id="inputChoosePassword" 
-														placeholder="Nhập mật khẩu"> <a href="javascript:;"
-														class="input-group-text bg-transparent"><i class="bx bx-hide"></i></a>
+													<input type="password" class="form-control border-end-0"
+														id="inputChoosePassword" placeholder="Nhập mật khẩu"> <a
+														href="javascript:;" class="input-group-text bg-transparent"><i
+															class="bx bx-hide"></i></a>
 												</div>
 											</div>
 											<div class="col-12">
@@ -48,7 +49,16 @@
 </template>
 <script>
 export default {
-
+	data() {
+		return {
+			dangNhap: {}
+		}
+},
+	methods: {
+		dangNhap() {
+			
+		}
+	}
 }
 </script>
 <style></style>
