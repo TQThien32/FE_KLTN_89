@@ -85,7 +85,7 @@ export default {
                 .then((res) => {
                     this.list_co_quan = res.data.data;
                 });
-
+            
         }
     }
 }

@@ -41,7 +41,7 @@
 											<div class="col-12">
 												<div class="d-grid">
 													<button type="submit" class="btn btn-primary"><i
-															class="bx bxs-lock-open"></i>Đăng Nhập</button>
+															class="bx bxs-lock-open" v-on:click="dangNhap()"></i>Đăng Nhập</button>
 												</div>
 											</div>
 										</form>
@@ -57,8 +57,28 @@
 	</div>
 </template>
 <script>
-export default {
+import axios from 'axios';
 
+export default {
+	data() {
+		return {
+			dang_Nhap: {}
+		}
+},
+	methods: {
+		dangNhap() {
+			axios
+				.post('http://127.0.0.1:8000/api/co-quan/dang-nhap', this.dang_Nhap)
+				.then((res) => {
+					if(res.data.status){
+						alert(res.data.message);
+					}
+					else{
+						alert(res.data.message);
+					}
+				})
+		}
+	}
 }
 </script>
 <style></style>
