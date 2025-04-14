@@ -21,50 +21,50 @@
                                         <div class="form-body">
                                             <form class="row g-3">
                                                 <div class="col-sm-12">
-                                                    <label for="inputTenHocien" class="form-label">Tên Tổ Chức</label>
+                                                    <label class="form-label">Tên Tổ Chức</label>
                                                     <input type="text" class="form-control" id="inputTenHocVien"
-                                                        placeholder="Nhập tên học viên" v-model="to_chuc_create.ten_to_chuc">
+                                                        placeholder="Nhập Tên Tổ Chức" v-model="to_chuc_create.ten_to_chuc">
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="inputEmail" class="form-label">Email</label>
-                                                    <input type="email" class="form-control" id="inputEmail"
-                                                        placeholder="Nhập email" v-model="to_chuc_create.email">
+                                                    <label class="form-label">Email</label>
+                                                    <input type="email" class="form-control"
+                                                        placeholder="Nhập Email" v-model="to_chuc_create.email">
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="inputSoDienThoai" class="form-label">Số Điện Thoại</label>
-                                                    <input type="tel" class="form-control" id="inputSoDienThoai"
-                                                        placeholder="Nhập số điện thoại" v-model="to_chuc_create.hotline">
+                                                    <label class="form-label">Số Điện Thoại</label>
+                                                    <input type="tel" class="form-control"
+                                                        placeholder="Nhập Số Điện Thoại" v-model="to_chuc_create.hotline">
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="inputEmailAddress" class="form-label">Địa Chỉ</label>
-                                                    <input type="text" class="form-control" id="inputDiaChi"
+                                                    <label class="form-label">Địa Chỉ</label>
+                                                    <input type="text" class="form-control"
                                                         placeholder="Nhập Địa chỉ" v-model="to_chuc_create.dia_chi">
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="input" class="form-label">Họ Tên Người Đại Diện</label>
-                                                    <input type="text" class="form-control" id="inputDiaChi"
-                                                        placeholder="Nhập Địa chỉ" v-model="to_chuc_create.ho_ten_nguoi_dai_dien">
+                                                    <label class="form-label">Họ Tên Người Đại Diện</label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Nhập Họ Tên Người Đại Diện" v-model="to_chuc_create.ho_ten_nguoi_dai_dien">
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="input" class="form-label">Số CCCD</label>
-                                                    <input type="number" class="form-control" id="inputDiaChi"
-                                                        placeholder="Nhập Địa chỉ" v-model="to_chuc_create.so_cccd">
+                                                    <label class="form-label">Số CCCD</label>
+                                                    <input type="number" class="form-control"
+                                                        placeholder="Nhập Số CCCD" v-model="to_chuc_create.so_cccd">
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="input" class="form-label">Số Điện Thoại Người Đại Diện</label>
-                                                    <input type="tel" class="form-control" id="inputDiaChi"
-                                                        placeholder="Nhập Địa chỉ" v-model="to_chuc_create.sdt_nguoi_dai_dien">
+                                                    <label class="form-label">Số Điện Thoại Người Đại Diện</label>
+                                                    <input type="tel" class="form-control"
+                                                        placeholder="Nhập Số Điện Thoại Người Đại Diện" v-model="to_chuc_create.sdt_nguoi_dai_dien">
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="inputEmail" class="form-label">Email Người Đại Diện</label>
-                                                    <input type="email" class="form-control" id="inputEmail"
-                                                        placeholder="Nhập email" v-model="to_chuc_create.email_nguoi_dai_dien">
+                                                    <label class="form-label">Email Người Đại Diện</label>
+                                                    <input type="email" class="form-control"
+                                                        placeholder="Nhập Email Người Đại Diện" v-model="to_chuc_create.email_nguoi_dai_dien">
                                                 </div>
                                                 <div class="col-12">
                                                     <label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
                                                     <div class="input-group" id="show_hide_password">
                                                         <input type="password" class="form-control border-end-0"
-                                                            id="inputChoosePassword" placeholder="Nhập mật khẩu" v-model="to_chuc_create.password"> <a
+                                                            id="inputChoosePassword" placeholder="Nhập Mật Khẩu" v-model="to_chuc_create.password"> <a
                                                             href="javascript:;"
                                                             class="input-group-text bg-transparent"><i
                                                                 class="bx bx-hide"></i></a>
@@ -74,7 +74,7 @@
                                                     <label for="inputChoosePassword" class="form-label">Nhập Lại Mật Khẩu</label>
                                                     <div class="input-group" id="show_hide_password">
                                                         <input type="password" class="form-control border-end-0"
-                                                            id="inputChoosePassword" placeholder="Nhập lại mật khẩu"> <a
+                                                            id="inputChoosePassword" placeholder="Nhập Lại Mật Khẩu"> <a
                                                             href="javascript:;"
                                                             class="input-group-text bg-transparent"><i
                                                                 class="bx bx-hide"></i></a>
