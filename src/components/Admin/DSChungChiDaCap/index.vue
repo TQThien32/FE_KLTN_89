@@ -20,13 +20,13 @@
                 <thead>
                     <tr>
                         <th class="text-center">STT</th>
+                        <th class="text-center">Mã NFT</th>
                         <th class="text-center">Tên Tổ Chức</th>
                         <th class="text-center">Tên Học Viên</th>
                         <th class="text-center">Khóa Học</th>
                         <th class="text-center">Kết Quả</th>
                         <th class="text-center">Số Hiệu Chứng Chỉ</th>
                         <th class="text-center">Hình Ảnh</th>
-                        <th class="text-center">Mã NFT</th>
                         <th class="text-center">Ngày Cấp Chứng Chỉ</th>
                         <th class="text-center">Trạng Thái</th>
                     </tr>
@@ -35,6 +35,7 @@
                     <template v-for="(value, index) in list_chung_chi" :key="index">
                         <tr>
                             <th class="align-middle text-center">{{ index + 1 }}</th>
+                            <td class="align-middle text-center">{{ value.token }}</td>
                             <td class="align-middle text-center">{{ value.ten_to_chuc }}</td>
                             <td class="align-middle text-center">{{ value.ten_hoc_vien }}</td>
                             <td class="align-middle text-center">{{ value.khoa_hoc }}</td>
@@ -44,7 +45,6 @@
                                 <img v-bind:src="value.hinh_anh"
                                     style="height: 100px;">
                             </td>
-                            <td class="align-middle text-center">{{ value.token }}</td>
                             <td class="align-middle text-center">{{ value.ngay_cap }}</td>
                             <td class="align-middle text-center">
                                 <span class="bg-success " style="padding: 10px; border-radius: 8px;">Đã Cấp</span>
