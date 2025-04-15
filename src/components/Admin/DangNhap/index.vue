@@ -32,8 +32,8 @@
 											</div>
 											<div class="col-12">
 												<div class="d-grid">
-													<button type="button" class="btn btn-primary"><i
-															class="bx bxs-lock-open" v-on:click="dangNhap()"></i>Đăng
+													<button v-on:click="dangNhap()" type="button" class="btn btn-primary"><i
+															class="bx bxs-lock-open" ></i>Đăng
 														Nhập</button>
 												</div>
 											</div>
@@ -73,7 +73,7 @@ export default {
 						localStorage.setItem('ten_admin', res.data.ten_admin);
 					}
 					else {
-						this.$toast.console.error(res.data.message);
+						this.$toast.error(res.data.message);
 					}
 				})
 		}
