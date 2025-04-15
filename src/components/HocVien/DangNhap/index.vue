@@ -23,17 +23,17 @@
 													placeholder="Nhập email">
 											</div>
 											<div class="col-12">
-												<label for="inputChoosePassword" class="form-label">Nhập Mật Khẩu</label>
+												<label for="inputChoosePassword" class="form-label">Nhập Mật
+													Khẩu</label>
 												<div class="input-group" id="show_hide_password">
 													<input type="password" class="form-control border-end-0"
-														id="inputChoosePassword"
-														placeholder="Nhập mật khẩu"> <a href="javascript:;"
-														class="input-group-text bg-transparent"><i
+														id="inputChoosePassword" placeholder="Nhập mật khẩu"> <a
+														href="javascript:;" class="input-group-text bg-transparent"><i
 															class="bx bx-hide"></i></a>
 												</div>
 											</div>
 											<div class="col-md-6">
-												
+
 											</div>
 											<div class="col-md-6 text-end"> <a
 													href="authentication-forgot-password.html">Quên mật khẩu ?</a>
@@ -41,7 +41,8 @@
 											<div class="col-12">
 												<div class="d-grid">
 													<button type="button" class="btn btn-primary"><i
-															class="bx bxs-lock-open" v-on:click="dangNhap()"></i>Đăng Nhập</button>
+															class="bx bxs-lock-open" v-on:click="dangNhap()"></i>Đăng
+														Nhập</button>
 												</div>
 											</div>
 										</form>
@@ -64,16 +65,18 @@ export default {
 		return {
 			dang_Nhap: {}
 		}
-},
+	},
 	methods: {
 		dangNhap() {
 			axios
 				.post('http://127.0.0.1:8000/api/co-quan/dang-nhap', this.dang_Nhap)
 				.then((res) => {
-					if(res.data.status){
+					if (res.data.status) {
 						this.$toast.success(res.data.message)
+						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
+						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
 					}
-					else{
+					else {
 						this.$toast.error(res.data.message)
 					}
 				})

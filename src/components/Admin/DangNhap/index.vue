@@ -67,7 +67,10 @@ export default {
 				.post('http://127.0.0.1:8000/api/admin/dang-nhap', this.dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
-						this.$toast.success(res.data.message)
+						this.$toast.success(res.data.message);
+						// this.$router.push('/admin/danh-muc');
+						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
+						localStorage.setItem('ten_admin', res.data.ten_admin);
 					}
 					else {
 						this.$toast.console.error(res.data.message);

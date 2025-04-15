@@ -72,6 +72,8 @@ export default {
 				.then((res) => {
 					if(res.data.status){
 						this.$toast.success(res.data.message)
+						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
+						localStorage.setItem('ten_co_quan', res.data.ten_co_quan);
 					}
 					else{
 						this.$toast.error(res.data.message)
