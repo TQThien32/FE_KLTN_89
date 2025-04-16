@@ -12,8 +12,8 @@ a {
 }
 
 .form-check-input:checked {
-	background-color: #008cff;
-	border-color: #008cff
+	background-color: #081927;
+	border-color: #93b2cb
 }
 
 .form-check-input[type=checkbox]:indeterminate {
