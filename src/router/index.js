@@ -152,7 +152,13 @@ const routes = [
     },
     {
         path: '/to-chuc-cap-chung-chi/thong-tin-to-chuc',
-        component: () => import('../components/ToChucCapChungChi/ThongTinToChuc/index.vue'),
+        component: () => import('../components/ToChucCapChungChi/ThongTinTaiKhoan/index.vue'),
+        meta: { layout: 'ToChucCapChungChi' },
+    },
+
+    {
+        path: '/to-chuc-cap-chung-chi/doi-mat-khau',
+        component: () => import('../components/ToChucCapChungChi/DoiMatKhau/index.vue'),
         meta: { layout: 'ToChucCapChungChi' },
     },
 
