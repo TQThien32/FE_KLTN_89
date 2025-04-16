@@ -1,26 +1,7 @@
 <template>
   <div class="container">
     <div class="main-body">
-      <!-- Tabs -->
-      <ul class="nav nav-tabs nav-primary" role="tablist">
-        <li class="nav-item" role="presentation">
-          <a class="nav-link active" data-bs-toggle="tab" href="#profile" role="tab" aria-selected="true">
-            <div class="d-flex align-items-center">
-              <div class="tab-icon"><i class="fa-solid fa-user font-18 me-1"></i></div>
-              <div class="tab-title">Thông Tin Cá Nhân</div>
-            </div>
-          </a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" data-bs-toggle="tab" href="#change-password" role="tab" aria-selected="false">
-            <div class="d-flex align-items-center">
-              <div class="tab-icon"><i class="fa-solid fa-lock font-18 me-1"></i></div>
-              <div class="tab-title">Đổi Mật Khẩu</div>
-            </div>
-          </a>
-        </li>
-      </ul>
-
+     
       <!-- Tab Content -->
       <div class="tab-content">
         <!-- Tab: Thông Tin Cá Nhân -->
@@ -201,36 +182,7 @@
           </div>
         </div>
 
-        <!-- Tab: Đổi Mật Khẩu -->
-        <div class="tab-pane fade" id="change-password" role="tabpanel">
-          <div class="row mt-3">
-            <div class="col-lg">
-              <div class="card">
-                <div class="card-body">
-
-                  <form>
-                    <div class="mb-3">
-                      <label for="currentPassword" class="form-label"><b>Mật Khẩu Hiện Tại</b></label>
-                      <input type="password" class="form-control" id="currentPassword"
-                        placeholder="Nhập mật khẩu hiện tại">
-                    </div>
-                    <div class="mb-3">
-                      <label for="newPassword" class="form-label"><b>Mật Khẩu Mới</b></label>
-                      <input type="password" class="form-control" id="newPassword" placeholder="Nhập mật khẩu mới">
-                    </div>
-                    <div class="mb-3">
-                      <label for="confirmPassword" class="form-label"><b>Xác Nhận Mật Khẩu</b></label>
-                      <input type="password" class="form-control" id="confirmPassword"
-                        placeholder="Xác nhận mật khẩu mới">
-                    </div>
-                    <div class="text-center"><button type="submit" class="btn btn btn-chinh">Đổi Mật Khẩu</button></div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+       </div>
       <!-- End Tab Content -->
     </div>
   </div>

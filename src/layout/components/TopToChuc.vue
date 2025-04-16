@@ -11,7 +11,17 @@
                    </div>
                </div>
                <div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
-               
+               <div class="search-bar flex-grow-1">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
+                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#"><i
+                                    class="fa-solid fa-house"></i> Trang chủ</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-user"></i> Giới thiệu</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-phone"></i> Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
                <div class="top-menu ms-auto">
                    <ul class="navbar-nav align-items-center">
                        <li class="nav-item mobile-search-icon">
@@ -324,7 +334,7 @@
                    </ul>
                </div>
                <div class="user-box dropdown">
-                   <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
+                   <a class="d-flex align-items-center dropdown-toggle dropdown-toggle-nocaret" href="#"
                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
                        <img src="../../assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
                        <div class="user-info ps-3">
@@ -356,4 +366,18 @@ export default {
 
 }
 </script>
-<style></style>
+<style scoped>
+
+.navbar-nav .nav-link {
+    font-size: 18px !important;
+    /* Thay đổi giá trị này để chỉnh cỡ chữ */
+}
+
+.nav-link {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-link:hover {
+    transform: scale(1.2);
+}
+</style>

@@ -329,7 +329,7 @@ a {
 .nav-container.primary-menu .nav-link.active,
 .nav-container.primary-menu .show>.nav-link {
 	color: #ffffff;
-    background-color: #0f3760;
+    background-color: #65a5e5;
 }
 
 .nav-container.primary-menu .dropdown-menu .dropdown-item.active, .nav-container.primary-menu .dropdown-menu .dropdown-item:active {
@@ -2438,7 +2438,7 @@ a {
 .chat-list .list-group-item.active {
 
 
-	background-color: rgb(13 110 253 / 0.12)
+	background-color: rgb(13 110 253 / 0.12) 
 
 
 }

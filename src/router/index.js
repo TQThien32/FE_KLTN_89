@@ -95,7 +95,11 @@ const routes = [
         component: () => import('../components/HocVien/ThongTinCaNhan/index.vue'),
         meta: { layout: 'HocVien' },
     },
-
+    {
+        path: '/hoc-vien/doi-mat-khau',
+        component: () => import('../components/HocVien/DoiMatKhau/index.vue'),
+        meta: { layout: 'HocVien' },
+    },
     {
         path: '/hoc-vien/quan-ly-vi-NFT',
         component: () => import('../components/HocVien/QuanLyViNFT/index.vue'),
