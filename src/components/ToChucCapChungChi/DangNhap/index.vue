@@ -19,13 +19,13 @@
 										<form class="row g-3">
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label">Nhập Email</label>
-												<input type="email" class="form-control" id="inputEmailAddress"
+												<input type="email" v-model="dang_Nhap.email" class="form-control" id="inputEmailAddress"
 													placeholder="Nhập email">
 											</div>
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Nhập Mật Khẩu</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0"
+													<input type="password" v-model="dang_Nhap.password" class="form-control border-end-0"
 														id="inputChoosePassword"
 														placeholder="Nhập mật khẩu"> <a href="javascript:;"
 														class="input-group-text bg-transparent"><i
@@ -40,8 +40,8 @@
 											</div>
 											<div class="col-12">
 												<div class="d-grid">
-													<button type="button" class="btn btn-primary"><i
-															class="bx bxs-lock-open" v-on:click="dangNhap()"></i>Đăng Nhập</button>
+													<button v-on:click="dangNhap()" type="button" class="btn btn-primary"><i
+															class="bx bxs-lock-open"></i>Đăng Nhập</button>
 												</div>
 											</div>
 										</form>
@@ -68,7 +68,7 @@ export default {
 	methods: {
 		dangNhap() {
 			axios
-				.post('http://127.0.0.1:8000/api/co-quan/dang-nhap', this.dang_Nhap)
+				.post('http://127.0.0.1:8000/api/to-chuc/dang-nhap', this.dang_Nhap)
 				.then((res) => {
 					if(res.data.status){
 						this.$toast.success(res.data.message);

@@ -33,15 +33,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th class="align-middle text-center">1</th>
-                <td class="align-middle text-center">Trần Quang Thiên</td>
-                <td class="align-middle text-center">11:11 20/10/2024</td>
-                <td class="align-middle text-center">200000 đ</td>
-                <td class="align-middle text-center">Giao dịch CK den NFT</td>
-                <td class="align-middle text-center">https://skfbksdbfksdfsdf.com</td>
+            <template v-for="(value, index) in list_giao_dich" :key="index">
+                <tr>
+                <th class="align-middle text-center">{{ index + 1 }}</th>
+                <td class="align-middle text-center">{{ value.ho_ten }}</td>
+                <td class="align-middle text-center">{{ value.thoi_gian }}</td>
+                <td class="align-middle text-center">{{ value.so_tien }}</td>
+                <td class="align-middle text-center">{{ value.noi_dung }}</td>
+                <td class="align-middle text-center">{{ value.MetaData_URL }}</td>
                 
             </tr>
+            </template>
 
  
         </tbody>
@@ -53,7 +55,24 @@
 </template>
 <script>
 export default {
-    
+    data() {
+        return {
+            list_giao_dich: [],
+        }
+    },
+    mounted() {
+        this.loadData();
+    },
+    methods: {
+        loadData() {
+            axios
+                .get('http://127.0.0.1:8000/api/admin/lich-su-giao-dich')
+                .then((res) => {
+                    this.list_giao_dich = res.data.data;
+                });
+
+        }
+    }
 }
 </script>
 <style >
