@@ -13,13 +13,6 @@
         <nav class="navbar navbar-expand-xl w-100">
             <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
                 <li class="nav-item">
-                    <router-link to="/to-chuc-cap-chung-chi/thong-tin-to-chuc" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-user-tie"></i>
-                        </div>
-                        <div class="menu-title">Quản Lý Tài Khoản</div>
-                    </router-link>
-                </li>
-                <li class="nav-item">
                     <router-link to="/to-chuc-cap-chung-chi/quan-ly-yeu-cau-cap" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-code-pull-request"></i>
                         </div>
