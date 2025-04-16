@@ -11,7 +11,17 @@
                     </div>
                 </div>
                 <div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
-                
+                <div class="search-bar flex-grow-1">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
+                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#"><i
+                                    class="fa-solid fa-house"></i> Trang chủ</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-user"></i> Giới thiệu</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-phone"></i> Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="top-menu ms-auto">
                     <ul class="navbar-nav align-items-center">
                         <li class="nav-item mobile-search-icon">
@@ -365,7 +375,17 @@ export default {
 
 }
 </script>
-<style>
+<style scoped>
+.navbar-nav .nav-link {
+    font-size: 18px !important;
+    /* Thay đổi giá trị này để chỉnh cỡ chữ */
+}
 
+.nav-link {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
+.nav-link:hover {
+    transform: scale(1.2);
+}
 </style>

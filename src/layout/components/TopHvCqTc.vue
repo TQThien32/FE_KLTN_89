@@ -1,24 +1,37 @@
 <template>
-     <header>
+    <header>
         <div class="topbar d-flex align-items-center">
             <nav class="navbar navbar-expand ">
                 <div class="topbar-logo-header">
                     <div class="">
-                        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid" style="height: 50px; width: 50px;" class="logo-icon" alt="logo icon">
+                        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                            style="height: 50px; width: 50px;" class="logo-icon" alt="logo icon">
                     </div>
                     <div class="">
                         <h4 class="logo-text text-dark"><b>NFT CERTIFICATE</b></h4>
                     </div>
                 </div>
                 <div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
-                
+                <div class="search-bar flex-grow-1">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
+                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#"><i
+                                    class="fa-solid fa-house"></i> Trang chủ</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-user"></i> Giới thiệu</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-phone"></i> Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="top-menu ms-auto">
                     <ul class="navbar-nav align-items-center">
                         <li class="nav-item mobile-search-icon">
                             <a class="nav-link" href="#"> <i class='bx bx-search'></i>
                             </a>
+
                         </li>
-                        
+
+
                         <li class="nav-item dropdown dropdown-large">
                             <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
@@ -358,11 +371,24 @@
                 </div>
             </nav>
         </div>
-    </header>   
+    </header>
 </template>
 <script>
 export default {
 
 }
 </script>
-<style></style>
+<style scoped>
+.navbar-nav .nav-link {
+    font-size: 18px !important;
+    /* Thay đổi giá trị này để chỉnh cỡ chữ */
+}
+
+.nav-link {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-link:hover {
+    transform: scale(1.2);
+}
+</style>

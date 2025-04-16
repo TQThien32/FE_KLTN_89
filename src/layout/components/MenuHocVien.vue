@@ -59,7 +59,7 @@ export default {
 .nav-container .nav-link,
 .nav-container .dropdown-item {
   color: white !important;
-  border-radius: 8px;
+
   padding-left: 14px;
   padding-right: 14px;
   transition: background-color 0.3s ease, color 0.3s ease;
