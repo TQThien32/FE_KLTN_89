@@ -21,6 +21,12 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
+                            <router-link to="/admin/danh-sach-nhan-vien">
+                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
+                                    khoản nhân viên</a>
+                            </router-link>
+                        </li>
+                        <li>
                             <router-link to="/admin/danh-sach-hoc-vien">
                                 <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
                                     khoản học viên</a>
