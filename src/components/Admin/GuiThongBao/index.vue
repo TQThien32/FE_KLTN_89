@@ -4,7 +4,7 @@
       <div class="col-md-8 col-lg-6">
       <div class="card">
         <div class="card-header text-center">
-          <h4 class="mt-2 text-light">Gửi Thông Báo <i class="fa-regular fa-bell"></i></h4>
+          <h4 class="mt-2">Gửi Thông Báo <i class="fa-regular fa-bell"></i></h4>
         </div>
         <div class="card-body">
           <div class="mb-3">
@@ -42,7 +42,7 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-header">
-          <h4 class="mt-2 text-light">Danh Sách Thông Báo</h4>
+          <h4 class="mt-2">Danh Sách Thông Báo</h4>
         </div>
         <div class="card-body">
           <table class="table table-hover">
@@ -82,5 +82,5 @@ export default {
 
 }
 </script>
-<style >
+<style>
 </style>
