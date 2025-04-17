@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-end">
-                    <button class="btn btn-chinh">Thêm</button>
+                    <button class="btn btn-chinh" v-on:click="addNV()">Thêm</button>
                 </div>
             </div>
         </div>

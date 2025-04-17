@@ -26,7 +26,13 @@ const routes = [
     {
         path: '/admin/thong-tin-admin',
         component: () => import('../components/Admin/ThongTinTaiKhoan/index.vue'),
-        meta: { layout: 'ToChucCapChungChi' },
+        meta: { layout: 'Admin' },
+    },
+
+    {
+        path: '/admin/doi-mat-khau',
+        component: () => import('../components/Admin/DoiMatKhau/index.vue'),
+        meta: { layout: 'Admin' },
     },
 
     {

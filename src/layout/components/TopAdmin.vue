@@ -346,7 +346,7 @@
                         <li><a class="dropdown-item" href="/admin/thong-tin-admin"><i
                                     class="bx bx-user"></i><span>Thông Tin Tài Khoản</span></a>
                         </li>
-                        <li><a class="dropdown-item" href="javascript:;"><i
+                        <li><a class="dropdown-item" href="/admin/doi-mat-khau"><i
                                     class="bx bx-cog"></i><span>Đổi Mật Khẩu</span></a>
                         </li>
                         <li><a class="dropdown-item" href="javascript:;"><i
