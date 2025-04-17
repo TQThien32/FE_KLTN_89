@@ -84,6 +84,17 @@ const routes = [
         component: () => import('../components/Admin/DSChungChiDaCap/index.vue'),
         meta: { layout: 'Admin' },
     },
+    {
+        path: '/admin/quen-mat-khau',
+        component: () => import('../components/Admin/AdminQuenMatKhau/index.vue'),
+        meta: { layout: 'Auth' },
+    },
+    {
+        path : '/lay-lai-mat-khau/:hash_reset',
+        component: ()=>import('../components/Admin/NhanLaiMatKhau/index.vue'),
+        meta : {layout : 'auth'},
+        props: true
+    },
     // HocVien
     {
         path: '/hoc-vien/dang-nhap',
@@ -124,8 +135,12 @@ const routes = [
         component: () => import('../components/HocVien/ThanhToan/index.vue'),
         meta: { layout: 'HocVien' },
     },
-
-
+    {
+        path: '/hoc-vien/quen-mat-khau',
+        component: () => import('../components/HocVien/HocVienQuenMatKhau/index.vue'),
+        meta: { layout: 'Auth' },
+    },
+   
     //CoQuanXacThuc
     {
         path: '/co-quan-xac-thuc/dang-nhap',
@@ -201,13 +216,13 @@ const routes = [
         component: () => import('../components/ToChucCapChungChi/ToChucUploadChungChiHocVien/index.vue'),
         meta: { layout: 'ToChucCapChungChi' },
     },
-
-    //DungChung
     {
-        path: '/dung-chung/quen-mat-khau',
-        component: () => import('../components/DungChung/QuenMatKhau/index.vue'),
+        path: '/to-chuc-cap-chung-chi/quen-mat-khau',
+        component: () => import('../components/ToChucCapChungChi/ToChucQuenMatKhau/index.vue'),
         meta: { layout: 'Auth' },
     },
+    //DungChung
+   
     {
         path: '/dung-chung/xem-thong-bao',
         component: () => import('../components/DungChung/XemThongBao/index.vue'),

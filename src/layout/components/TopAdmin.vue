@@ -4,7 +4,8 @@
             <nav class="navbar navbar-expand ">
                 <div class="topbar-logo-header">
                     <div class="">
-                        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid" style="height: 50px; width: 50px;" class="logo-icon" alt="logo icon">
+                        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                            style="height: 50px; width: 50px;" class="logo-icon" alt="logo icon">
                     </div>
                     <div class="">
                         <h4 class="logo-text text-dark"><b>NFT CERTIFICATE</b></h4>
@@ -16,9 +17,11 @@
                         <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#"><i
                                     class="fa-solid fa-house"></i> Trang chủ</a>
                         </li>
-                        <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-user"></i> Giới thiệu</a>
+                        <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-user"></i> Giới
+                                thiệu</a>
                         </li>
-                        <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-phone"></i> Liên hệ</a>
+                        <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-phone"></i> Liên
+                                hệ</a>
                         </li>
                     </ul>
                 </div>
@@ -28,7 +31,7 @@
                             <a class="nav-link" href="#"> <i class='bx bx-search'></i>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item dropdown dropdown-large">
                             <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
@@ -338,16 +341,16 @@
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../../assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
                         <div class="user-info ps-3">
-                            <p class="user-name mb-0">Pauline Seitz</p>
+                            <p class="user-name mb-0">{{ ten_qtv }}</p>
                             <p class="designattion mb-0">Web Designer</p>
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="/admin/thong-tin-admin"><i
-                                    class="bx bx-user"></i><span>Thông Tin Tài Khoản</span></a>
+                        <li><a class="dropdown-item" href="/admin/thong-tin-admin"><i class="bx bx-user"></i><span>Thông
+                                    Tin Tài Khoản</span></a>
                         </li>
-                        <li><a class="dropdown-item" href="javascript:;"><i
-                                    class="bx bx-cog"></i><span>Đổi Mật Khẩu</span></a>
+                        <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Đổi Mật
+                                    Khẩu</span></a>
                         </li>
                         <li><a class="dropdown-item" href="javascript:;"><i
                                     class='bx bx-home-circle'></i><span>Dashboard</span></a>
@@ -361,7 +364,7 @@
                         <li>
                             <div class="dropdown-divider mb-0"></div>
                         </li>
-                        <li><a class="dropdown-item" href="javascript:;" v-on:click="dangXuatAll()"><i
+                        <li><a class="dropdown-item" href="javascript:;" v-on:click="dangXuat()"><i
                                     class='bx bx-log-out-circle'></i><span>Đăng Xuất</span></a>
                         </li>
                     </ul>
@@ -371,24 +374,43 @@
     </header>
 </template>
 <script>
+import axios from 'axios'
+import baseRequest from '../../core/baseRequest'
 export default {
     data() {
         return {
-            ten_qtv            : '',
+            ten_qtv: '',
+            auth: false,
         }
     },
+    computed: {
+        getTenQTV() {
+            return localStorage.getItem('ten_admin');
+        },
+    },
     mounted() {
+        this.checkLogin();
         this.ten_qtv = localStorage.getItem('ten_admin')
     },
     methods: {
-        dangXuatAll(){
-            axios
-                .get('http://127.0.0.1:8000/api/admin/dang-xuat')
+        checkLogin() {
+            baseRequest
+                .post('admin/kiem-tra-chia-khoa')
                 .then((res) => {
-                    if(res.data.status) {
+                    if (res.data.status) {
+                        this.auth = true
+                    }
+                })
+        },
+        dangXuat() {
+            baseRequest
+                .get('admin/dang-xuat')
+                .then((res) => {
+                    if (res.data.status) {
                         this.$toast.success('Thông báo<br>' + res.data.message);
                         window.localStorage.removeItem('chia_khoa_so1');
                         window.localStorage.removeItem('ten_admin');
+                        this.mounted();
                         // this.$router.push('/');
                     } else {
                         this.$toast.error('Thông báo<br>' + res.data.message);

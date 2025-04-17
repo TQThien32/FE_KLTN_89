@@ -24,17 +24,17 @@
                             <label class="mt-2">Chức Vụ</label>
                             <div>
                                 <select class="mt-2 form-control" name="" id="" v-model="create_nhan_vien.chuc_vu">
-                                    <option value="">Chức Vụ</option>
-                                    <option value="">Trưởng Phòng</option>
-                                    <option value="">Phó Phòng</option>
+                                    <option value="0">Chức Vụ</option>
+                                    <option value="1">Trưởng Phòng</option>
+                                    <option value="2">Phó Phòng</option>
                                 </select>
                             </div>
                             <label class="mt-2">Giới Tính</label>
                             <div>
                                 <select class="mt-2 form-control" name="" id="" v-model="create_nhan_vien.gioi_tinh">
                                     <option value="">Giới Tính</option>
-                                    <option value="">Nam</option>
-                                    <option value="">Nữ</option>
+                                    <option value="0">Nam</option>
+                                    <option value="1">Nữ</option>
                                 </select>
                             </div>
                         </div>
@@ -46,14 +46,14 @@
                             <label class="mt-2">Nhập Lại Password</label>
                             <input class="mt-2 form-control" type="password">
                             <label class="mt-2">Ngày Sinh</label>
-                            <input class="mt-2 form-control" type="text" v-model="create_nhan_vien.ngay_sinh">
+                            <input class="mt-2 form-control" type="date" v-model="create_nhan_vien.ngay_sinh">
                             <label class="mt-2">Địa Chỉ</label>
                             <input class="mt-2 form-control" type="text" v-model="create_nhan_vien.dia_chi">
                         </div>
                     </div>
                 </div>
                 <div class="card-footer text-end">
-                    <button class="btn btn-chinh">Thêm</button>
+                    <button v-on:click="addNV()" class="btn btn-chinh">Thêm</button>
                 </div>
             </div>
         </div>
