@@ -8,7 +8,7 @@
 
     <div class="card mt-2">
         <div class="card-header">
-            <h4 class="mt-2">Danh Sách Tài Khoản</h4>
+            <h4 class="mt-2 text-light">Danh Sách Tài Khoản</h4>
         </div>
         <div class="card-body table-responsive">
             <div class="row">
@@ -19,7 +19,7 @@
                     <button class="btn btn-chinh me-2"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
                 </div>
             </div>
-            <table class="table table-hover table-bordered mt-3">
+            <table class="table table-hover mt-3">
                 <thead>
                     <tr>
                         <th class="align-middle text-center">STT</th>
@@ -87,4 +87,27 @@ export default {
     }
 }
 </script>
-<style></style>
+<style scope>
+.form-check-input {
+   width: 1.2rem;
+   height: 1.2rem;
+}
+
+.card {
+   border: 2px solid transparent;
+   color: rgb(233, 234, 235);
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+   background-color: black;
+   transform: scale(1.03);
+   box-shadow: -2px 0 0 0 #2d3375, 2px 0 0 0 #2d3375, 0 -2px 0 0 #2d3375, 0 2px 0 0 #2d3375;
+}
+
+table {
+   color: #fcf6f6 !important;
+}
+
+table tbody tr:hover {
+   background: #fbfcfd;
+   color: #50507f !important;
+}
+</style>

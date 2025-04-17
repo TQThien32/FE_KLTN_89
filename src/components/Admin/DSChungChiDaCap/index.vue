@@ -93,7 +93,7 @@ export default {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background-color: black;
     transform: scale(1.03);
-    box-shadow: -2px 0 0 0 #182af3, 2px 0 0 0 #182af3, 0 -2px 0 0 #182af3, 0  2px 0 0 #182af3;
+    box-shadow: -2px 0 0 0 #2d3375, 2px 0 0 0 #2d3375, 0 -2px 0 0 #2d3375, 0 2px 0 0 #2d3375;
 }
 
 table {
@@ -102,6 +102,6 @@ table {
 
 table tbody tr:hover {
     background: #fbfcfd;
-    color: #50507f!important; 
-  }
+    color: #50507f !important;
+}
 </style>

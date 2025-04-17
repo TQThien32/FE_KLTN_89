@@ -10,7 +10,7 @@
         <div class="col-lg-8">
             <div class="card table-responsive">
                 <div class="card-header">
-                    <h4>Thêm Tài Khoản</h4>
+                    <h4 class="text-light">Thêm Tài Khoản</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -61,7 +61,7 @@
     <div class="row mt-2">
         <div class="card table-responsive">
             <div class="card-header">
-                <h4 class="mt-2">Danh Sách Tài Khoản</h4>
+                <h4 class="mt-2 text-light">Danh Sách Tài Khoản</h4>
             </div>
             <div class="card-body table-responsive">
                 <div class="row">
@@ -72,7 +72,7 @@
                         <button class="btn btn-chinh"><i class="fa-solid fa-magnifying-glass"></i>Tìm Kiếm</button>
                     </div>
                 </div>
-                <table class="table table-hover table-bordered mt-3">
+                <table class="table table-hover mt-3">
                     <thead>
                         <tr>
                             <th class="align-middle text-center">STT</th>
@@ -125,40 +125,40 @@ import axios from 'axios';
 
 export default {
     data() {
-       return {
-          list_nhan_vien: [],
-          create_nhan_vien: {},
-       }
+        return {
+            list_nhan_vien: [],
+            create_nhan_vien: {},
+        }
     },
     mounted() {
-       this.loadData();
+        this.loadData();
     },
     methods: {
-       loadData() {
-          axios
-             .get('http://127.0.0.1:8000/api/admin/data')
-             .then((res) => {
-                this.list_nhan_vien = res.data.data;
-             });
+        loadData() {
+            axios
+                .get('http://127.0.0.1:8000/api/admin/data')
+                .then((res) => {
+                    this.list_nhan_vien = res.data.data;
+                });
 
-       },
-       addNV(){
-        axios
-             .post('http://127.0.0.1:8000/api/admin/dang-ky', this.create_nhan_vien)
-             .then((res) => {
-                if (res.data.status) {
-                    this.$toast.success(res.data.message)
-                    this.loadData();
-                } else {
-                    this.$toast.error(res.data.message);
-                }
-             });
-       }
+        },
+        addNV() {
+            axios
+                .post('http://127.0.0.1:8000/api/admin/dang-ky', this.create_nhan_vien)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success(res.data.message)
+                        this.loadData();
+                    } else {
+                        this.$toast.error(res.data.message);
+                    }
+                });
+        }
     }
 }
 </script>
 <style scope>
-    .form-check-input {
+.form-check-input {
     width: 1.2rem;
     height: 1.2rem;
 }
@@ -169,7 +169,7 @@ export default {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background-color: black;
     transform: scale(1.03);
-    box-shadow: -2px 0 0 0 #182af3, 2px 0 0 0 #182af3, 0 -2px 0 0 #182af3, 0  2px 0 0 #182af3;
+    box-shadow: -2px 0 0 0 #2d3375, 2px 0 0 0 #2d3375, 0 -2px 0 0 #2d3375, 0 2px 0 0 #2d3375;
 }
 
 table {
@@ -178,6 +178,6 @@ table {
 
 table tbody tr:hover {
     background: #fbfcfd;
-    color: #50507f!important; 
-  }
+    color: #50507f !important;
+}
 </style>

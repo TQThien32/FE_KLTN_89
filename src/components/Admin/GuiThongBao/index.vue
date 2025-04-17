@@ -4,7 +4,7 @@
       <div class="col-md-8 col-lg-6">
       <div class="card">
         <div class="card-header text-center">
-          <h4 class="mt-2">Gửi Thông Báo <i class="fa-regular fa-bell"></i></h4>
+          <h4 class="mt-2 text-light">Gửi Thông Báo <i class="fa-regular fa-bell"></i></h4>
         </div>
         <div class="card-body">
           <div class="mb-3">
@@ -42,10 +42,10 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-header">
-          <h4 class="mt-2">Danh Sách Thông Báo</h4>
+          <h4 class="mt-2 text-light">Danh Sách Thông Báo</h4>
         </div>
         <div class="card-body">
-          <table class="table table-hover table-bordered">
+          <table class="table table-hover">
             <thead>
               <tr>
                 <th class="align-middle text-center">STT</th>
@@ -82,4 +82,27 @@ export default {
 
 }
 </script>
-<style></style>
+<style scope>
+.form-check-input {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.card {
+    border: 2px solid transparent;
+    color: rgb(233, 234, 235);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: black;
+    transform: scale(1.03);
+    box-shadow: -2px 0 0 0 #2d3375, 2px 0 0 0 #2d3375, 0 -2px 0 0 #2d3375, 0 2px 0 0 #2d3375;
+}
+
+table {
+    color: #fcf6f6 !important;
+}
+
+table tbody tr:hover {
+    background: #fbfcfd;
+    color: #50507f !important;
+}
+</style>
