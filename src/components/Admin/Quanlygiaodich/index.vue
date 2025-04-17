@@ -76,26 +76,4 @@ export default {
 }
 </script>
 <style scope>
-.form-check-input {
-   width: 1.2rem;
-   height: 1.2rem;
-}
-
-.card {
-   border: 2px solid transparent;
-   color: rgb(233, 234, 235);
-   transition: transform 0.2s ease, box-shadow 0.2s ease;
-   background-color: black;
-   transform: scale(1.03);
-   box-shadow: -2px 0 0 0 #2d3375, 2px 0 0 0 #2d3375, 0 -2px 0 0 #2d3375, 0 2px 0 0 #2d3375;
-}
-
-table {
-   color: #fcf6f6 !important;
-}
-
-table tbody tr:hover {
-   background: #fbfcfd;
-   color: #50507f !important;
-}
 </style>
