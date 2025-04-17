@@ -45,7 +45,7 @@
           <h4 class="mt-2">Danh Sách Thông Báo</h4>
         </div>
         <div class="card-body">
-          <table class="table table-hover table-bordered">
+          <table class="table table-hover">
             <thead>
               <tr>
                 <th class="align-middle text-center">STT</th>
@@ -82,4 +82,5 @@ export default {
 
 }
 </script>
-<style></style>
+<style>
+</style>

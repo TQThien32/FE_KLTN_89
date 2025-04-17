@@ -10,7 +10,7 @@
         <div class="col-lg-8">
             <div class="card table-responsive">
                 <div class="card-header">
-                    <h4>Thêm Tài Khoản</h4>
+                    <h4 class="text-light">Thêm Tài Khoản</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -53,11 +53,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-end">
-<<<<<<< HEAD
-                    <button v-on:click="addNV()" class="btn btn-chinh">Thêm</button>
-=======
                     <button class="btn btn-chinh" v-on:click="addNV()">Thêm</button>
->>>>>>> a1ffa1b5f21b07ea3b10bcf31a42ea8810d9b83f
                 </div>
             </div>
         </div>
@@ -65,7 +61,7 @@
     <div class="row mt-2">
         <div class="card table-responsive">
             <div class="card-header">
-                <h4 class="mt-2">Danh Sách Tài Khoản</h4>
+                <h4 class="mt-2 text-light">Danh Sách Tài Khoản</h4>
             </div>
             <div class="card-body table-responsive">
                 <div class="row">
@@ -76,7 +72,7 @@
                         <button class="btn btn-chinh"><i class="fa-solid fa-magnifying-glass"></i>Tìm Kiếm</button>
                     </div>
                 </div>
-                <table class="table table-hover table-bordered mt-3">
+                <table class="table table-hover mt-3">
                     <thead>
                         <tr>
                             <th class="align-middle text-center">STT</th>
@@ -129,36 +125,37 @@ import axios from 'axios';
 
 export default {
     data() {
-       return {
-          list_nhan_vien: [],
-          create_nhan_vien: {},
-       }
+        return {
+            list_nhan_vien: [],
+            create_nhan_vien: {},
+        }
     },
     mounted() {
-       this.loadData();
+        this.loadData();
     },
     methods: {
-       loadData() {
-          axios
-             .get('http://127.0.0.1:8000/api/admin/data')
-             .then((res) => {
-                this.list_nhan_vien = res.data.data;
-             });
+        loadData() {
+            axios
+                .get('http://127.0.0.1:8000/api/admin/data')
+                .then((res) => {
+                    this.list_nhan_vien = res.data.data;
+                });
 
-       },
-       addNV(){
-        axios
-             .post('http://127.0.0.1:8000/api/admin/dang-ky', this.create_nhan_vien)
-             .then((res) => {
-                if (res.data.status) {
-                    this.$toast.success(res.data.message)
-                    this.loadData();
-                } else {
-                    this.$toast.error(res.data.message);
-                }
-             });
-       }
+        },
+        addNV() {
+            axios
+                .post('http://127.0.0.1:8000/api/admin/dang-ky', this.create_nhan_vien)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success(res.data.message)
+                        this.loadData();
+                    } else {
+                        this.$toast.error(res.data.message);
+                    }
+                });
+        }
     }
 }
 </script>
-<style></style>
+<style >
+</style>

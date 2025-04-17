@@ -16,7 +16,7 @@
                     <button class="btn btn-chinh me-2"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
                 </div>
             </div>
-            <table class="table table-hover table-bordered mt-3">
+            <table class="table table-hover mt-3">
                 <thead>
                     <tr>
                         <th class="text-center">STT</th>
@@ -76,9 +76,9 @@ export default {
                 .then((res) => {
                     this.list_chung_chi = res.data.data;
                 });
-
         }
     }
 }
 </script>
-<style></style>
+<style>
+</style>
