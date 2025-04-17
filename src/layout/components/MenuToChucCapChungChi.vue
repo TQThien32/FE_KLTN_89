@@ -20,13 +20,6 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/to-chuc-cap-chung-chi/xm-thong-tin-yeu-cau" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-circle-check"></i>
-                        </div>
-                        <div class="menu-title">Xác Minh Thông Tin Yêu Cầu</div>
-                    </router-link>
-                </li>
-                <li class="nav-item">
                     <router-link to="/to-chuc-cap-chung-chi/tao-chung-chi" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-folder-plus"></i>
                         </div>
