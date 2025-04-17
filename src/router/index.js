@@ -41,6 +41,13 @@ const routes = [
         component: () => import('../components/Admin/CoQuanXacThuc/indev.vue'),
         meta: { layout: 'Admin' },
     },
+
+    {
+        path: '/admin/danh-sach-nhan-vien',
+        component: () => import('../components/Admin/NhanVien/index.vue'),
+        meta: { layout: 'Admin' },
+    },
+    
     {
         path: '/admin/gui-thong-bao',
         component: () => import('../components/Admin/GuiThongBao/index.vue'),
