@@ -186,12 +186,6 @@ const routes = [
     },
 
     {
-        path: '/to-chuc-cap-chung-chi/xm-thong-tin-yeu-cau',
-        component: () => import('../components/ToChucCapChungChi/XacMinhTTYC/index.vue'),
-        meta: { layout: 'ToChucCapChungChi' },
-    },
-
-    {
         path: '/to-chuc-cap-chung-chi/tao-chung-chi',
         component: () => import('../components/ToChucCapChungChi/TaoChungChi/index.vue'),
         meta: { layout: 'ToChucCapChungChi' },
