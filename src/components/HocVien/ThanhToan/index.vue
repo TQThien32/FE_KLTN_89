@@ -14,14 +14,15 @@
             </div>
 
             <div class="col-lg-4">
-                <div class="card border-chinh border-bottom border-top border-3 border-0">
-                    <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
-                        class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
+                <div class="card border-chinh border-bottom border-top border-3 border-0">                 
                     <div class="card-body">
-                        <div class="d-flex justify-content-between ">
-                            <p class="card-text mt-2">Phí NFT: </p>
-                            <h4>1.000.000 đ</h4>
-                        </div>        
+                        <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
+                        class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
+                        <div class="d-flex justify-content-between mt-3">
+                            <p class="text-light">Phí NFT:</p>
+                            <b class="text-light">1.000.000 đ</b> 
+                        </div>
+                             
                     </div>
                     <div class="card-footer">
                         <div class=" d-flex justify-content-between align-items-center gap-2">
@@ -32,13 +33,65 @@
                                 </label>
                             </div>
                             <a data-bs-toggle="modal" data-bs-target="#ttchitiet" href="javascript:;"
-                                class="btn btn-chinh"><i class="fa-solid fa-indent " style="font-size: 15px;"></i> Thông
+                                class="btn btn-outline-light"><i class="fa-solid fa-indent " style="font-size: 15px;"></i> Thông
                                 tin chi tiết</a>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="col-lg-4">
+                <div class="card border-chinh border-bottom border-top border-3 border-0">                 
+                    <div class="card-body">
+                        <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
+                        class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
+                        <div class="d-flex justify-content-between mt-3">
+                            <p class="text-light">Phí NFT:</p>
+                            <b class="text-light">1.000.000 đ</b> 
+                        </div>
+                             
+                    </div>
+                    <div class="card-footer">
+                        <div class=" d-flex justify-content-between align-items-center gap-2">
+                            <div class="form-check ms-2">
+                                <input class="form-check-input item-check" type="checkbox" value="" id="checkDefault">
+                                <label class="form-check-label" for="checkDefault">
+
+                                </label>
+                            </div>
+                            <a data-bs-toggle="modal" data-bs-target="#ttchitiet" href="javascript:;"
+                                class="btn btn-outline-light"><i class="fa-solid fa-indent " style="font-size: 15px;"></i> Thông
+                                tin chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-chinh border-bottom border-top border-3 border-0">                 
+                    <div class="card-body">
+                        <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
+                        class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
+                        <div class="d-flex justify-content-between mt-3">
+                            <p class="text-light">Phí NFT:</p>
+                            <b class="text-light">1.000.000 đ</b> 
+                        </div>
+                             
+                    </div>
+                    <div class="card-footer">
+                        <div class=" d-flex justify-content-between align-items-center gap-2">
+                            <div class="form-check ms-2">
+                                <input class="form-check-input item-check" type="checkbox" value="" id="checkDefault">
+                                <label class="form-check-label" for="checkDefault">
+
+                                </label>
+                            </div>
+                            <a data-bs-toggle="modal" data-bs-target="#ttchitiet" href="javascript:;"
+                                class="btn btn-outline-light"><i class="fa-solid fa-indent " style="font-size: 15px;"></i> Thông
+                                tin chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -120,13 +173,14 @@ export default {
     height: 1.2rem;
 }
 .card {
-    border-radius: 1rem;
-    box-shadow: 0 0.5rem 1rem rgba(85, 8, 8, 0.1);
-    transition: transform 0.2s ease;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: black;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: scale(1.03);
+    box-shadow: -2px 0 0 0 #182af3, 2px 0 0 0 #182af3;
 }
 table tbody tr:hover {
     color: #d0cbca!important; 
