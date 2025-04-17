@@ -26,7 +26,13 @@ const routes = [
     {
         path: '/admin/thong-tin-admin',
         component: () => import('../components/Admin/ThongTinTaiKhoan/index.vue'),
-        meta: { layout: 'ToChucCapChungChi' },
+        meta: { layout: 'Admin' },
+    },
+
+    {
+        path: '/admin/doi-mat-khau',
+        component: () => import('../components/Admin/DoiMatKhau/index.vue'),
+        meta: { layout: 'Admin' },
     },
 
     {
@@ -182,12 +188,6 @@ const routes = [
     {
         path: '/to-chuc-cap-chung-chi/quan-ly-yeu-cau-cap',
         component: () => import('../components/ToChucCapChungChi/QuanLyYeuCauCap/index.vue'),
-        meta: { layout: 'ToChucCapChungChi' },
-    },
-
-    {
-        path: '/to-chuc-cap-chung-chi/xm-thong-tin-yeu-cau',
-        component: () => import('../components/ToChucCapChungChi/XacMinhTTYC/index.vue'),
         meta: { layout: 'ToChucCapChungChi' },
     },
 
