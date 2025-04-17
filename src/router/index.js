@@ -24,6 +24,12 @@ const routes = [
     },
 
     {
+        path: '/admin/thong-tin-admin',
+        component: () => import('../components/Admin/ThongTinTaiKhoan/index.vue'),
+        meta: { layout: 'ToChucCapChungChi' },
+    },
+
+    {
         path: '/admin/danh-sach-hoc-vien',
         component: () => import('../components/Admin/HocVien/index.vue'),
         meta: { layout: 'Admin' },
@@ -47,7 +53,7 @@ const routes = [
         component: () => import('../components/Admin/NhanVien/index.vue'),
         meta: { layout: 'Admin' },
     },
-    
+
     {
         path: '/admin/gui-thong-bao',
         component: () => import('../components/Admin/GuiThongBao/index.vue'),

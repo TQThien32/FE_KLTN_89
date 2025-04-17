@@ -343,11 +343,11 @@
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="javascript:;"><i
-                                    class="bx bx-user"></i><span>Profile</span></a>
+                        <li><a class="dropdown-item" href="/admin/thong-tin-admin"><i
+                                    class="bx bx-user"></i><span>Thông Tin Tài Khoản</span></a>
                         </li>
                         <li><a class="dropdown-item" href="javascript:;"><i
-                                    class="bx bx-cog"></i><span>Settings</span></a>
+                                    class="bx bx-cog"></i><span>Đổi Mật Khẩu</span></a>
                         </li>
                         <li><a class="dropdown-item" href="javascript:;"><i
                                     class='bx bx-home-circle'></i><span>Dashboard</span></a>
@@ -361,8 +361,8 @@
                         <li>
                             <div class="dropdown-divider mb-0"></div>
                         </li>
-                        <li><a class="dropdown-item" href="javascript:;"><i
-                                    class='bx bx-log-out-circle'></i><span>Logout</span></a>
+                        <li><a class="dropdown-item" href="javascript:;" v-on:click="dangXuatAll()"><i
+                                    class='bx bx-log-out-circle'></i><span>Đăng Xuất</span></a>
                         </li>
                     </ul>
                 </div>
@@ -372,7 +372,30 @@
 </template>
 <script>
 export default {
-
+    data() {
+        return {
+            ten_qtv            : '',
+        }
+    },
+    mounted() {
+        this.ten_qtv = localStorage.getItem('ten_admin')
+    },
+    methods: {
+        dangXuatAll(){
+            axios
+                .get('http://127.0.0.1:8000/api/admin/dang-xuat')
+                .then((res) => {
+                    if(res.data.status) {
+                        this.$toast.success('Thông báo<br>' + res.data.message);
+                        window.localStorage.removeItem('chia_khoa_so1');
+                        window.localStorage.removeItem('ten_admin');
+                        // this.$router.push('/');
+                    } else {
+                        this.$toast.error('Thông báo<br>' + res.data.message);
+                    }
+                })
+        },
+    },
 }
 </script>
 <style scoped>
