@@ -53,7 +53,11 @@
                     </div>
                 </div>
                 <div class="card-footer text-end">
+<<<<<<< HEAD
                     <button v-on:click="addNV()" class="btn btn-chinh">Thêm</button>
+=======
+                    <button class="btn btn-chinh" v-on:click="addNV()">Thêm</button>
+>>>>>>> a1ffa1b5f21b07ea3b10bcf31a42ea8810d9b83f
                 </div>
             </div>
         </div>
