@@ -16,14 +16,14 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <label class="mt-2">Tên Nhân Viên</label>
-                            <input class="mt-2 form-control" type="text">
+                            <input class="mt-2 form-control" type="text" v-model="create_nhan_vien.ho_ten">
                             <label class="mt-2">Số CCCD</label>
-                            <input class="mt-2 form-control" type="text">
+                            <input class="mt-2 form-control" type="text" v-model="create_nhan_vien.so_cccd">
                             <label class="mt-2">Số Điện Thoại</label>
-                            <input class="mt-2 form-control" type="tel">
+                            <input class="mt-2 form-control" type="tel" v-model="create_nhan_vien.sdt">
                             <label class="mt-2">Chức Vụ</label>
                             <div>
-                                <select class="mt-2 form-control" name="" id="">
+                                <select class="mt-2 form-control" name="" id="" v-model="create_nhan_vien.chuc_vu">
                                     <option value="">Chức Vụ</option>
                                     <option value="">Trưởng Phòng</option>
                                     <option value="">Phó Phòng</option>
@@ -31,7 +31,7 @@
                             </div>
                             <label class="mt-2">Giới Tính</label>
                             <div>
-                                <select class="mt-2 form-control" name="" id="">
+                                <select class="mt-2 form-control" name="" id="" v-model="create_nhan_vien.gioi_tinh">
                                     <option value="">Giới Tính</option>
                                     <option value="">Nam</option>
                                     <option value="">Nữ</option>
@@ -40,17 +40,20 @@
                         </div>
                         <div class="col-lg-6">
                             <label class="mt-2">Email Nhân Viên</label>
-                            <input class="mt-2 form-control" type="email">
+                            <input class="mt-2 form-control" type="email" v-model="create_nhan_vien.email">
                             <label class="mt-2">Password</label>
-                            <input class="mt-2 form-control" type="password">
+                            <input class="mt-2 form-control" type="password" v-model="create_nhan_vien.password">
                             <label class="mt-2">Nhập Lại Password</label>
                             <input class="mt-2 form-control" type="password">
                             <label class="mt-2">Ngày Sinh</label>
-                            <input class="mt-2 form-control" type="text">
+                            <input class="mt-2 form-control" type="text" v-model="create_nhan_vien.ngay_sinh">
                             <label class="mt-2">Địa Chỉ</label>
-                            <input class="mt-2 form-control" type="text">
+                            <input class="mt-2 form-control" type="text" v-model="create_nhan_vien.dia_chi">
                         </div>
                     </div>
+                </div>
+                <div class="card-footer text-end">
+                    <button class="btn btn-chinh">Thêm</button>
                 </div>
             </div>
         </div>
@@ -133,11 +136,23 @@ export default {
     methods: {
        loadData() {
           axios
-             .get('http://127.0.0.1:8000/api/nhan-vien/data')
+             .get('http://127.0.0.1:8000/api/admin/data')
              .then((res) => {
                 this.list_nhan_vien = res.data.data;
              });
 
+       },
+       addNV(){
+        axios
+             .post('http://127.0.0.1:8000/api/admin/dang-ky', this.create_nhan_vien)
+             .then((res) => {
+                if (res.data.status) {
+                    this.$toast.success(res.data.message)
+                    this.loadData();
+                } else {
+                    this.$toast.error(res.data.message);
+                }
+             });
        }
     }
 }
