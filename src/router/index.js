@@ -96,7 +96,7 @@ const routes = [
         meta: { layout: 'Auth' },
     },
     {
-        path : '/lay-lai-mat-khau/:hash_reset',
+        path : 'admin/lay-lai-mat-khau/:hash_reset',
         component: ()=>import('../components/Admin/NhanLaiMatKhau/index.vue'),
         meta : {layout : 'auth'},
         props: true
