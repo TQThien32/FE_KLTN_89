@@ -228,6 +228,13 @@ const routes = [
         component: () => import('../components/ToChucCapChungChi/ToChucQuenMatKhau/index.vue'),
         meta: { layout: 'Auth' },
     },
+    {
+        path : '/to-chuc-cap-chung-chi/lay-lai-mat-khau/:hash_reset',
+        component: ()=>import('../components/ToChucCapChungChi/NhanLaiMatKhau/index.vue'),
+        meta : {layout : 'auth'},
+        props: true
+    },
+   
     //DungChung
    
     {
