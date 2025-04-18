@@ -37,6 +37,9 @@
 														Nhập</button>
 												</div>
 											</div>
+											<div class="col-12 mt-3">
+												<a href="/admin/quen-mat-khau">Bạn quên mật khẩu? Click here</a>
+											</div>
 										</form>
 									</div>
 								</div>

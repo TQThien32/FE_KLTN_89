@@ -91,7 +91,7 @@ const routes = [
         meta: { layout: 'Auth' },
     },
     {
-        path : 'admin/lay-lai-mat-khau/:hash_reset',
+        path : '/admin/lay-lai-mat-khau/:hash_reset',
         component: ()=>import('../components/Admin/NhanLaiMatKhau/index.vue'),
         meta : {layout : 'auth'},
         props: true
@@ -140,6 +140,12 @@ const routes = [
         path: '/hoc-vien/quen-mat-khau',
         component: () => import('../components/HocVien/HocVienQuenMatKhau/index.vue'),
         meta: { layout: 'Auth' },
+    },
+    {
+        path : '/hoc-vien/lay-lai-mat-khau/:hash_reset',
+        component: ()=>import('../components/HocVien/NhanLaiMatKhau/index.vue'),
+        meta : {layout : 'auth'},
+        props: true
     },
    
     //CoQuanXacThuc

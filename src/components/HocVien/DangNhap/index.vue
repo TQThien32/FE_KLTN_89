@@ -36,7 +36,7 @@
 
 											</div>
 											<div class="col-md-6 text-end"> <a
-													href="authentication-forgot-password.html">Quên mật khẩu ?</a>
+													href="/hoc-vien/quen-mat-khau">Quên mật khẩu ?</a>
 											</div>
 											<div class="col-12">
 												<div class="d-grid">
