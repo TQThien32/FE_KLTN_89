@@ -1,5 +1,5 @@
 <template>
-	<div class="wrapper bg-login">
+	<div class="wrapper">
 		<div class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0">
 			<div class="container-fluid">
 				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
@@ -7,7 +7,7 @@
 						<div class="mb-4 text-center">
 							<img src="" width="180" alt="">
 						</div>
-						<div class="card">
+						<div class="card" style="box-shadow: none; ">
 							<div class="card-body">
 								<div class="border p-4 rounded">
 									<div class="text-center">
@@ -32,7 +32,7 @@
 											</div>
 											<div class="col-12">
 												<div class="d-grid">
-													<button v-on:click="dangNhap()" type="button" class="btn btn-primary"><i
+													<button v-on:click="dangNhap()" type="button" class="btn btn-chinh"><i
 															class="bx bxs-lock-open" ></i>Đăng
 														Nhập</button>
 												</div>

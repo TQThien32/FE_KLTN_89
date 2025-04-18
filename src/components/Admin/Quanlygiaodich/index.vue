@@ -33,7 +33,7 @@
             </tr>
         </thead>
         <tbody>
-            <template v-for="(value, index) in list_giao_dich" :key="index">
+            <!-- <template v-for="(value, index) in list_giao_dich" :key="index">
                 <tr>
                 <th class="align-middle text-center">{{ index + 1 }}</th>
                 <td class="align-middle text-center">{{ value.ho_ten }}</td>
@@ -43,7 +43,7 @@
                 <td class="align-middle text-center">{{ value.MetaData_URL }}</td>
                 
             </tr>
-            </template>
+            </template> -->
 
  
         </tbody>
@@ -55,24 +55,24 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-            list_giao_dich: [],
-        }
-    },
-    mounted() {
-        this.loadData();
-    },
-    methods: {
-        loadData() {
-            axios
-                .get('http://127.0.0.1:8000/api/admin/lich-su-giao-dich')
-                .then((res) => {
-                    this.list_giao_dich = res.data.data;
-                });
+    // data() {
+    //     return {
+    //         list_giao_dich: [],
+    //     }
+    // },
+    // mounted() {
+    //     this.loadData();
+    // },
+    // methods: {
+    //     loadData() {
+    //         axios
+    //             .get('http://127.0.0.1:8000/api/admin/lich-su-giao-dich')
+    //             .then((res) => {
+    //                 this.list_giao_dich = res.data.data;
+    //             });
 
-        }
-    }
+    //     }
+    // }
 }
 </script>
 <style>

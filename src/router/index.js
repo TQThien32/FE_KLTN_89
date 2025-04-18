@@ -11,11 +11,6 @@ const routes = [
         component: () => import('../components/Admin/DangNhap/index.vue'),
         meta: { layout: 'Auth' },
     },
-    {
-        path: '/admin/dang-ky',
-        component: () => import('../components/Admin/DangKy/index.vue'),
-        meta: { layout: 'Auth' },
-    },
 
     {
         path: '/admin/trang-chu',
