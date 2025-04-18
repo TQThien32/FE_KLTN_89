@@ -28,7 +28,7 @@
           </div>
           <div class="mb-3">
             <label for="message" class="form-label">Nội Dung</label>
-            <textarea id="message" class="form-control" rows="5" placeholder="Nhập nội dung thông báo"
+            <textarea id="message" class="form-control" rows="9" placeholder="Nhập nội dung thông báo"
               required></textarea>
           </div>
           <div class="d-flex justify-content-end"><button type="button" class="btn btn-danger px-5 radius-30 me-2">Hủy <i

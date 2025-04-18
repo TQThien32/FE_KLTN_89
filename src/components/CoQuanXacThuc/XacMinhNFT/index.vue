@@ -30,8 +30,8 @@
             <td class="text-end align-middle">1234567</td>
             <td class="text-end align-middle">213456</td>
             <td class="text-center">
-              <button class="btn btn-success me-3">Xác Minh</button>
-              <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#xoa">Xóa</button>
+              <button class="btn btn-chinh me-3">Xác Minh</button>
+              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#xoa">Xóa</button>
             </td>
           </tr>
         </tbody>
