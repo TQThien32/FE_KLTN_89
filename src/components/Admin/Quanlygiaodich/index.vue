@@ -8,7 +8,7 @@
     </div>
     <div class="card mt-2">
         <div class="card-header">
-            <h4 class="mt-2">Danh Sách Giao Dịch</h4>
+            <h4 class="mt-2 text-light">Danh Sách Giao Dịch</h4>
         </div>
         <div class="card-body table-responsive">
             <div class="row">
@@ -20,7 +20,7 @@
                 </div>
             </div>
         
-            <table class="table table-hover table-bordered mt-3">
+            <table class="table table-hover mt-3">
         <thead>
             <tr>
                 <th class="align-middle text-center">STT</th>
@@ -33,7 +33,7 @@
             </tr>
         </thead>
         <tbody>
-            <template v-for="(value, index) in list_giao_dich" :key="index">
+            <!-- <template v-for="(value, index) in list_giao_dich" :key="index">
                 <tr>
                 <th class="align-middle text-center">{{ index + 1 }}</th>
                 <td class="align-middle text-center">{{ value.ho_ten }}</td>
@@ -43,7 +43,7 @@
                 <td class="align-middle text-center">{{ value.MetaData_URL }}</td>
                 
             </tr>
-            </template>
+            </template> -->
 
  
         </tbody>
@@ -55,26 +55,25 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-            list_giao_dich: [],
-        }
-    },
-    mounted() {
-        this.loadData();
-    },
-    methods: {
-        loadData() {
-            axios
-                .get('http://127.0.0.1:8000/api/admin/lich-su-giao-dich')
-                .then((res) => {
-                    this.list_giao_dich = res.data.data;
-                });
+    // data() {
+    //     return {
+    //         list_giao_dich: [],
+    //     }
+    // },
+    // mounted() {
+    //     this.loadData();
+    // },
+    // methods: {
+    //     loadData() {
+    //         axios
+    //             .get('http://127.0.0.1:8000/api/admin/lich-su-giao-dich')
+    //             .then((res) => {
+    //                 this.list_giao_dich = res.data.data;
+    //             });
 
-        }
-    }
+    //     }
+    // }
 }
 </script>
-<style >
-    
+<style>
 </style>

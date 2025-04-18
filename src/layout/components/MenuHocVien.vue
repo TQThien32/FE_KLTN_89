@@ -24,18 +24,19 @@
                     <router-link to="/hoc-vien/quan-ly-vi-NFT" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-wallet"></i>
                         </div>
-                        <div class="menu-title">Quản Lý Ví NFT</div>
+                        <div class="menu-title">Ví NFT</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
                     <router-link to="/hoc-vien/thanh-toan" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-credit-card"></i>
+                        <div class="parent-icon"><i class="fa-solid fa-cart-shopping"></i>
                         </div>
                         <div class="menu-title">Thanh Toán</div>
                     </router-link>
                 </li>
             </ul>
         </nav>
+        
     </div>
 </template>
 <script>
@@ -46,7 +47,7 @@ export default {
 <style scoped>
 /* Nền menu chính (nav-container) */
 .nav-container {
-  background-color: #050f2d !important; /* Đổi nền menu chính thành #050f2d */
+  background-color: #000000 !important; /* Đổi nền menu chính thành #050f2d */
 }
 
 /* Màu chữ mặc định là trắng, padding và bo góc */

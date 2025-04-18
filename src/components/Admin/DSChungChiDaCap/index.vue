@@ -16,7 +16,7 @@
                     <button class="btn btn-chinh me-2"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
                 </div>
             </div>
-            <table class="table table-hover table-bordered mt-3">
+            <table class="table table-hover mt-3">
                 <thead>
                     <tr>
                         <th class="text-center">STT</th>
@@ -32,7 +32,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <template v-for="(value, index) in list_chung_chi" :key="index">
+                    <!-- <template v-for="(value, index) in list_chung_chi" :key="index">
                         <tr>
                             <th class="align-middle text-center">{{ index + 1 }}</th>
                             <td class="align-middle text-center">{{ value.token }}</td>
@@ -50,7 +50,7 @@
                                 <span class="bg-success " style="padding: 10px; border-radius: 8px;">Đã Cấp</span>
                             </td>
                         </tr>
-                    </template>
+                    </template> -->
                 </tbody>
             </table>
 
@@ -58,27 +58,27 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
+//import axios from 'axios';
 
 export default {
-    data() {
-        return {
-            list_chung_chi: [],
-        }
-    },
-    mounted() {
-        this.loadData();
-    },
-    methods: {
-        loadData() {
-            axios
-                .get('')
-                .then((res) => {
-                    this.list_chung_chi = res.data.data;
-                });
-
-        }
-    }
+    // data() {
+    //     return {
+    //         list_chung_chi: [],
+    //     }
+    // },
+    // mounted() {
+    //     this.loadData();
+    // },
+    // methods: {
+    //     loadData() {
+    //         axios
+    //             .get('')
+    //             .then((res) => {
+    //                 this.list_chung_chi = res.data.data;
+    //             });
+    //     }
+    // }
 }
 </script>
-<style></style>
+<style>
+</style>

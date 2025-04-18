@@ -8,7 +8,7 @@
    <div class="col-lg-12 mt-2">
       <div class="card table-responsive">
          <div class="card-header">
-            <h4 class="mt-2">Danh Sách Tài Khoản</h4>
+            <h4 class="mt-2 text-light">Danh Sách Tài Khoản</h4>
          </div>
          <div class="card-body table-responsive">
             <div class="row">
@@ -19,7 +19,7 @@
                   <button class="btn btn-chinh"><i class="fa-solid fa-magnifying-glass"></i>Tìm Kiếm</button>
                </div>
             </div>
-            <table class="table table-hover table-bordered mt-3">
+            <table class="table table-hover mt-3">
                <thead>
                   <tr>
                      <th class="align-middle text-center">STT</th>
@@ -87,4 +87,5 @@ export default {
    }
 }
 </script>
-<style></style>
+<style>
+</style>

@@ -337,7 +337,6 @@ a {
 .nav-container.primary-menu .nav-link.active,
 .nav-container.primary-menu .show>.nav-link {
 	color: #ffffff;
-    background-color: #65a5e5;
 }
 
 .nav-container.primary-menu .dropdown-menu .dropdown-item.active, .nav-container.primary-menu .dropdown-menu .dropdown-item:active {
@@ -5098,13 +5097,13 @@ input::placeholder {
 
 		display: flex;
 
-		align-items: start;
+		/* align-items: start;
 
 		justify-content: flex-start;
 
 		overflow-y: scroll;
 
-	    overflow-x: hidden;
+	    overflow-x: hidden; */
 
 	}
 

@@ -2,7 +2,7 @@
     <!-- <footer class="page-footer">
         <p class="mb-0">Copyright © 2021. All right reserved.</p>
     </footer> -->
-    <footer class="footer text-center text-lg-start py-3">
+    <footer class="footer text-center text-lg-start py-3 mt-5">
         <div class="row">
             <div class="col-lg-8 col-md-12 ">
                 <div class="row">
@@ -96,7 +96,7 @@ export default {
 </script>
 <style>
 .footer {
-    background-color: #000000;
+    background-color: #21063f;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
