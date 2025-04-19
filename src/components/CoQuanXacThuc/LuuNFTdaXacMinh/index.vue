@@ -10,8 +10,7 @@
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Tìm theo số CCCD" aria-label="Recipient's username"
                   aria-describedby="button-addon2">
-                <button class="btn btn-chinh" type="button" id="button-addon2">Tìm
-                  Kiếm</button>
+                <button class="btn btn-chinh" type="button" id="button-addon2">Tìm Kiếm</button>
               </div>
             </th>
           </tr>
@@ -30,11 +29,31 @@
             <td class="text-end">1234567</td>
             <td class="text-end">213456</td>
             <td class="text-center">
-              <button class="btn btn-outline-danger">
+              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalXoa">
                 Xóa
               </button>
             </td>
           </tr>
+          <!-- Modal xóa-->
+          <div class="modal fade" id="ModalXoa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Xác nhận xóa</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="alert alert-danger" role="alert">
+                    Có chắc muốn xóa ...?
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Xóa</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </tbody>
       </table>
     </div>

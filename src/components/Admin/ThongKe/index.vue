@@ -2,7 +2,7 @@
     <h2 class="text-white"><i class="fa-solid fa-chart-simple"></i> Thống Kê</h2>
     <div class="row mt-3">
         <div class="col-lg-6">
-            <div class="card">
+            <div class="card" style="box-shadow: none;">
                 <div class="card-body text-chinh">
                     <div class="d-flex justify-content-between">
                         <div>
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="card">
+            <div class="card" style="box-shadow: none;">
                 <div class="card-body text-chinh">
                     <div class="d-flex justify-content-between">
                         <div>
@@ -37,12 +37,12 @@
                 <th>Doanh Thu</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="text-white">
             <tr>
                 <th>1</th>
-                <th>1/1/2025</th>
-                <th>2</th>
-                <th>1.000.000 VND</th>
+                <td>1/1/2025</td>
+                <td>2</td>
+                <td>1.000.000 VND</td>
             </tr>
         </tbody>
     </table>

@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="row">
       <div class="col-md-8 col-lg-6">
-      <div class="card">
+      <div class="card" style="box-shadow: none;">
         <div class="card-header text-center">
           <h4 class="mt-2">Gửi Thông Báo <i class="fa-regular fa-bell"></i></h4>
         </div>
@@ -28,7 +28,7 @@
           </div>
           <div class="mb-3">
             <label for="message" class="form-label">Nội Dung</label>
-            <textarea id="message" class="form-control" rows="5" placeholder="Nhập nội dung thông báo"
+            <textarea id="message" class="form-control" rows="9" placeholder="Nhập nội dung thông báo"
               required></textarea>
           </div>
           <div class="d-flex justify-content-end"><button type="button" class="btn btn-danger px-5 radius-30 me-2">Hủy <i
@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="col-lg-6">
-      <div class="card">
+      <div class="card" style="box-shadow: none;">
         <div class="card-header">
           <h4 class="mt-2">Danh Sách Thông Báo</h4>
         </div>

@@ -4,7 +4,7 @@
         <h2 class="text-light"><i class="fa-solid fa-book-open-reader" style="font-size: 35px;"></i> DANH SÁCH CHỨNG CHỈ
             ĐÃ CẤP</h2>
     </b>
-    <div class="card mt-3">
+    <div class="card mt-3" style="box-shadow: none;">
 
         <div class="card-body table-responsive">
 
@@ -32,7 +32,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <template v-for="(value, index) in list_chung_chi" :key="index">
+                    <!-- <template v-for="(value, index) in list_chung_chi" :key="index">
                         <tr>
                             <th class="align-middle text-center">{{ index + 1 }}</th>
                             <td class="align-middle text-center">{{ value.token }}</td>
@@ -50,7 +50,7 @@
                                 <span class="bg-success " style="padding: 10px; border-radius: 8px;">Đã Cấp</span>
                             </td>
                         </tr>
-                    </template>
+                    </template> -->
                 </tbody>
             </table>
 
@@ -58,26 +58,26 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
+//import axios from 'axios';
 
 export default {
-    data() {
-        return {
-            list_chung_chi: [],
-        }
-    },
-    mounted() {
-        this.loadData();
-    },
-    methods: {
-        loadData() {
-            axios
-                .get('')
-                .then((res) => {
-                    this.list_chung_chi = res.data.data;
-                });
-        }
-    }
+    // data() {
+    //     return {
+    //         list_chung_chi: [],
+    //     }
+    // },
+    // mounted() {
+    //     this.loadData();
+    // },
+    // methods: {
+    //     loadData() {
+    //         axios
+    //             .get('')
+    //             .then((res) => {
+    //                 this.list_chung_chi = res.data.data;
+    //             });
+    //     }
+    // }
 }
 </script>
 <style>

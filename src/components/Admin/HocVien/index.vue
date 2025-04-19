@@ -6,9 +6,9 @@
       </b>
    </div>
    <div class="col-lg-12 mt-2">
-      <div class="card table-responsive">
+      <div class="card table-responsive" style="box-shadow: none;">
          <div class="card-header">
-            <h4 class="mt-2 text-light">Danh Sách Tài Khoản</h4>
+            <h4 class="mt-2">Danh Sách Tài Khoản</h4>
          </div>
          <div class="card-body table-responsive">
             <div class="row">

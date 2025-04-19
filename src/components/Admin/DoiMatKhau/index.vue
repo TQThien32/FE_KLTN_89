@@ -3,7 +3,7 @@
         <h2 class="text-light">Đổi Mật Khẩu</h2>
         <div class="row mt-3">
             <div class="col-lg">
-                <div class="card">
+                <div class="card" style="box-shadow: none;">
                     <div class="card-body">
                         <form>
                             <div class="mb-3">

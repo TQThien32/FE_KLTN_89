@@ -11,11 +11,6 @@ const routes = [
         component: () => import('../components/Admin/DangNhap/index.vue'),
         meta: { layout: 'Auth' },
     },
-    {
-        path: '/admin/dang-ky',
-        component: () => import('../components/Admin/DangKy/index.vue'),
-        meta: { layout: 'Auth' },
-    },
 
     {
         path: '/admin/trang-chu',
@@ -96,7 +91,7 @@ const routes = [
         meta: { layout: 'Auth' },
     },
     {
-        path : '/lay-lai-mat-khau/:hash_reset',
+        path : '/admin/lay-lai-mat-khau/:hash_reset',
         component: ()=>import('../components/Admin/NhanLaiMatKhau/index.vue'),
         meta : {layout : 'auth'},
         props: true
@@ -150,6 +145,12 @@ const routes = [
         path: '/hoc-vien/quen-mat-khau',
         component: () => import('../components/HocVien/HocVienQuenMatKhau/index.vue'),
         meta: { layout: 'Auth' },
+    },
+    {
+        path : '/hoc-vien/lay-lai-mat-khau/:hash_reset',
+        component: ()=>import('../components/HocVien/NhanLaiMatKhau/index.vue'),
+        meta : {layout : 'auth'},
+        props: true
     },
    
     //CoQuanXacThuc
@@ -232,6 +233,13 @@ const routes = [
         component: () => import('../components/ToChucCapChungChi/ToChucQuenMatKhau/index.vue'),
         meta: { layout: 'Auth' },
     },
+    {
+        path : '/to-chuc-cap-chung-chi/lay-lai-mat-khau/:hash_reset',
+        component: ()=>import('../components/ToChucCapChungChi/NhanLaiMatKhau/index.vue'),
+        meta : {layout : 'auth'},
+        props: true
+    },
+   
     //DungChung
    
     {
