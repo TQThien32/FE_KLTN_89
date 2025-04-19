@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
-                <div class="search-bar flex-grow-1">
+                <!-- <div class="search-bar flex-grow-1">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
                         <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#"><i
                                     class="fa-solid fa-house"></i> Trang chủ</a>
@@ -22,7 +22,7 @@
                         <li class="nav-item"> <a class="nav-link ms-3" href="#"><i class="fa-solid fa-phone"></i> Liên hệ</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="top-menu ms-auto">
                     <ul class="navbar-nav align-items-center">
                         <li class="nav-item mobile-search-icon">

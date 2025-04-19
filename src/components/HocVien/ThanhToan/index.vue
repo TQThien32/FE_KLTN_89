@@ -2,7 +2,8 @@
     <div class="container">
         <div class="d-flex justify-content-between">
             <h3 class="text-light"><i class="fa-solid fa-list"></i> Giao dịch</h3>
-            <button class="btn btn-secondary"><i class="fa-solid fa-credit-card"></i> Thanh
+            <button class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#thanhToan">
+                <i class="fa-solid fa-arrow-right"></i> Thanh
                 Toán</button>
         </div>
 
@@ -14,7 +15,7 @@
             </div>
 
             <div class="col-lg-4">
-                <div class="card border-chinh border-bottom border-top border-3 border-0">                 
+                <div class="card card-hieuung border-chinh border-bottom border-top border-3 border-0">                 
                     <div class="card-body">
                         <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
                         class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
@@ -51,8 +52,9 @@
                         <tr class="text-center text-light">
                             <th>#</th>
                             <th>Thời Gian</th>
+                            <th>Họ và Tên</th>
+                            <th>Số CCCD</th>
                             <th>Tổ Chức Cấp</th>
-                            <th>Khóa Học</th>
                             <th>Số Hiệu Chứng Chỉ</th>
                             <th>Đã Thanh Toán</th>
                         </tr>
@@ -60,11 +62,12 @@
                     <tbody >
                         <tr class="text-light text-center">
                             <th>1</th>
-                            <td>12/12/2024</td>
-                            <td>Toeic</td>
-                            <td>2024-2027</td>
+                            <td>11:12 12/12/2024</td>
+                            <td>Trần Quang Thiên</td>
+                            <td>049203006547</td>
+                            <td>Đại Học Duy Tân</td>
                             <td>12133434</td>
-                            <th>10000000</th>
+                            <th>10000000 đ</th>
                         </tr>
                     </tbody>
                 </table>
@@ -79,8 +82,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="card-text"><b>Tổ chức cấp: </b><span class="ms-3">Toeic</span></p>
+                    <p class="card-text"><b>Tổ Chức cấp: </b><span class="ms-3">Toeic</span></p>
+                    <p class="card-text"><b>Ngày Cấp : </b><span class="ms-3">30/4/1975</span></p>
                     <p class="card-text"><b>Khóa Học: </b><span class="ms-3">2024 - 2027</span></p>
+                    <p class="card-text"><b>Họ Và Tên : </b><span class="ms-3">Trần Quang Thiên</span></p>
+                    <p class="card-text"><b>Số CCCD : </b><span class="ms-3">049203006689</span></p>
+                    <p class="card-text"><b>Kết Quả: </b><span class="ms-3">Toeic</span></p>                   
                     <p class="card-text"><b>Số Hiệu Chứng Chỉ: </b><span class="ms-3">123456</span></p>
                 </div>
                 <div class="modal-footer">
@@ -89,6 +96,50 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="thanhToan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-cart-shopping"></i> Thanh Toán</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>#</th>
+                    <th>Hình Ảnh</th>                
+                    <th>Số Hiệu Chứng Chỉ</th>
+                    <th>Chi Tiết</th>
+                    <th>Giá</th>
+                    <th>Thao Tác</th>
+                </tr>
+            </thead>
+            <tbody>                
+                <tr class="text-center align-middle">
+                    <th>1</th>
+                <td><img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg" style="height: 50px;" alt=""></td>
+                <td>024-254-202</td>
+                <td><span class="badge text-bg-dark" data-bs-toggle="modal" data-bs-target="#ttchitiet">Xem chi tiết</span></td>
+                <th>100.000 đ</th>
+                <td><button class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button></td>
+                </tr>           
+        </tbody>
+        </table>
+        
+      </div>
+      <div class="modal-footer"> 
+            <div class="me-5 mt-3">
+                <p style="font-size: 18px;">Tổng Tiền: <b>250.000 đ</b></p>
+            </div>
+            <router-link to="/hoc-vien/chi-tiet-thanh-toan">
+                <button type="button" data-bs-dismiss="modal" class="btn btn-chinh">Thanh Toán</button>
+            </router-link>
+        
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -118,18 +169,17 @@ export default {
     width: 1.2rem;
     height: 1.2rem;
 }
-.card {
+.card-hieuung {
     border: 2px solid transparent;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background-color: black;
     box-shadow: none; /* bỏ viền mờ */
 }
-
-.card:hover {
+.card-hieuung:hover {
     transform: scale(1.03);
-    box-shadow: -1px 0 0 0 #57ff09, 1px 0 0 0 #57ff09;
+    box-shadow: -1px 0 0 0 #0064c8, 1px 0 0 0 #0064c8;
 }
 table tbody tr:hover {
-    color: #d0cbca!important; 
-  }
+    color: #0064c8!important; 
+}
 </style>

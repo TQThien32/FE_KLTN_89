@@ -47,7 +47,7 @@ export default {
 @import "../../assets/css/header-colors.css";
 
 .wrapper {
-    background: linear-gradient(135deg, #000000, #0e0c34);
+    background: black;
     min-height: 100vh; /* Đảm bảo chiếm toàn bộ chiều cao màn hình */
     display: flex;
     flex-direction: column;

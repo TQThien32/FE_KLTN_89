@@ -142,6 +142,11 @@ const routes = [
         meta: { layout: 'HocVien' },
     },
     {
+        path: '/hoc-vien/chi-tiet-thanh-toan',
+        component: () => import('../components/HocVien/ChiTietThanhToan/index.vue'),
+        meta: { layout: 'HocVien' },
+    },
+    {
         path: '/hoc-vien/quen-mat-khau',
         component: () => import('../components/HocVien/HocVienQuenMatKhau/index.vue'),
         meta: { layout: 'Auth' },

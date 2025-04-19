@@ -13,6 +13,28 @@
         <nav class="navbar navbar-expand-xl w-100">
             <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
                
+                
+                <li class="nav-item">
+                    <router-link to="/hoc-vien/quan-ly-vi-NFT" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-house-chimney-window"></i>
+                        </div>
+                        <div class="menu-title">Trang Chủ</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/hoc-vien/thanh-toan" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div class="menu-title">Giới Thiệu</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/hoc-vien/thanh-toan" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="menu-title">Liên Hệ</div>
+                    </router-link>
+                </li>
                 <li class="nav-item">
                     <router-link to="/hoc-vien/yeu-cau-cap-nft" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-code-pull-request"></i>
@@ -20,21 +42,18 @@
                         <div class="menu-title">Gửi Yêu Cầu</div>
                     </router-link>
                 </li>
-                <li class="nav-item">
-                    <router-link to="/hoc-vien/quan-ly-vi-NFT" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-wallet"></i>
-                        </div>
-                        <div class="menu-title">Ví NFT</div>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/hoc-vien/thanh-toan" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                        <div class="menu-title">Thanh Toán</div>
-                    </router-link>
-                </li>
             </ul>
+            <form class="d-flex nav-search me-5" style="width: 320px;">
+  <div class="input-group rounded-pill shadow-sm w-100 overflow-hidden">
+    <input type="text" class="form-control border-0" placeholder="Tìm kiếm...">
+    <button class="btn px-3" type="submit">
+      <i class="bx bx-search text-secondary"></i>
+    </button>
+  </div>
+</form>
+
+
+
         </nav>
         
     </div>
@@ -82,6 +101,9 @@ export default {
   background-color: white !important;
   color: black !important;
 }
-
+.input-group .btn {
+    border: none;
+    box-shadow: none;
+}
 
 </style>
