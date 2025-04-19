@@ -19,7 +19,7 @@
                             </div>
                             <div class="d-grid gap-2">
                                 <button type="button" class="btn btn-chinh btn-lg"
-                                    v-on:click="laylaimk()">Gửi</button> <a href="authentication-signin.html"
+                                    v-on:click="laylaimk()">Gửi</button> <a href="/admin/dang-nhap"
                                     class="btn btn-outline-secondary btn-lg"><i class="bx bx-arrow-back me-1"></i>Quay Lại Đăng
                                     Nhập</a>
                             </div>

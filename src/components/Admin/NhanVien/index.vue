@@ -8,9 +8,9 @@
     <div class="row mt-2">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            <div class="card table-responsive">
+            <div class="card table-responsive" style="box-shadow: none;">
                 <div class="card-header">
-                    <h4 class="text-light">Thêm Tài Khoản</h4>
+                    <h4>Thêm Tài Khoản</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -59,9 +59,9 @@
         </div>
     </div>
     <div class="row mt-2">
-        <div class="card table-responsive">
+        <div class="card table-responsive" style="box-shadow: none;">
             <div class="card-header">
-                <h4 class="mt-2 text-light">Danh Sách Tài Khoản</h4>
+                <h4 class="mt-2">Danh Sách Tài Khoản</h4>
             </div>
             <div class="card-body table-responsive">
                 <div class="row">

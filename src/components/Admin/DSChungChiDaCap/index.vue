@@ -4,7 +4,7 @@
         <h2 class="text-light"><i class="fa-solid fa-book-open-reader" style="font-size: 35px;"></i> DANH SÁCH CHỨNG CHỈ
             ĐÃ CẤP</h2>
     </b>
-    <div class="card mt-3">
+    <div class="card mt-3" style="box-shadow: none;">
 
         <div class="card-body table-responsive">
 

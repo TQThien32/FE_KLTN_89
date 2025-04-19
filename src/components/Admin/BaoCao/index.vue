@@ -3,7 +3,7 @@
     <div class="card-body mt-3">
         <div class="row">
             <div class="col-lg-4">
-                <div class="card bg-primary">
+                <div class="card bg-primary" style="box-shadow: none;">
                     <div class="card-body text-center">
                         <i class="fa-solid fa-user text-dark" style="font-size: 40px;"></i>
                         <h4 class="card-title mt-2  text-dark">Tài Khoản</h4>
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card bg-warning">
+                <div class="card bg-warning" style="box-shadow: none;">
                     <div class="card-body text-center">
                         <i class="fa-solid fa-book-open-reader text-dark" style="font-size: 40px;"></i>
                         <h4 class="card-title mt-2  text-dark">Chứng Chỉ</h4>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card bg-success">
+                <div class="card bg-success" style="box-shadow: none;">
                     <div class="card-body text-center">
                         <i class="fa-regular fa-file text-dark" style="font-size: 40px;"></i>
                         <h4 class="card-title mt-2  text-dark">Báo Cáo</h4>
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" style="box-shadow: none;">
             <div class="card-header">
                 <div class="d-flex justify-content-between">
                     <h4  class="mt-2">Danh Sách Báo Cáo</h4>

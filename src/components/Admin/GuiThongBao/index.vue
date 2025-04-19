@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="row">
       <div class="col-md-8 col-lg-6">
-      <div class="card">
+      <div class="card" style="box-shadow: none;">
         <div class="card-header text-center">
           <h4 class="mt-2">Gửi Thông Báo <i class="fa-regular fa-bell"></i></h4>
         </div>
@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="col-lg-6">
-      <div class="card">
+      <div class="card" style="box-shadow: none;">
         <div class="card-header">
           <h4 class="mt-2">Danh Sách Thông Báo</h4>
         </div>
