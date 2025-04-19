@@ -42,16 +42,21 @@
   <br><br>
   <hr class="mt-5">
   <br>
-  <h2 class="text-center mt-5 text-light"><b>Chào mừng bạn đến với NFT CERTIFICATE</b></h2>
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <h2 class="text-center mt-5 text-light"><b>Chào mừng bạn đến với NFT CERTIFICATE</b></h2>
 <div style="width: 40px; height: 2px; background-color: #b28b66; margin: 0 auto 20px auto;"></div>
 <p class="text-center">
   Hệ thống của chúng tôi mang đến một giải pháp hiện đại giúp xác thực bằng cấp thông qua công nghệ Blockchain và NFT.
   <br>Sinh viên, học viên có thể dễ dàng sở hữu chứng chỉ số độc quyền, không thể làm giả, có thể kiểm tra mọi lúc – mọi nơi.
   <br>Đây là bước tiến mới giúp nâng cao minh bạch, tiết kiệm thời gian và tăng tính tin cậy trong tuyển dụng và xác thực học vấn.
-  <br><br>NFT Certificate không chỉ đơn giản là một bản sao kỹ thuật số của chứng chỉ truyền thống, mà còn là minh chứng không thể thay đổi được lưu trữ trên chuỗi khối (blockchain). 
-  <br>Điều này đảm bảo rằng mọi dữ liệu liên quan đến quá trình học tập và hoàn thành khoá học đều được xác thực, an toàn và bền vững theo thời gian.
+  <br><br>NFT Certificate không chỉ đơn giản là một bản sao kỹ thuật số của chứng chỉ truyền thống, mà còn là minh chứng không thể <br> thay đổi được lưu trữ trên chuỗi khối (blockchain). 
+  <br>Điều này đảm bảo rằng mọi dữ liệu liên quan đến quá trình học tập và hoàn thành khoá học đều được xác thực,<br> an toàn và bền vững theo thời gian.
   <br>Bằng cách tích hợp công nghệ hiện đại vào lĩnh vực giáo dục, chúng tôi hướng đến việc xây dựng một hệ sinh thái học tập minh bạch – nơi mọi nỗ lực đều được ghi nhận và có thể dễ dàng chia sẻ với nhà tuyển dụng, đối tác hoặc các tổ chức giáo dục khác.
 </p>
+    </div>
+  </div>
 <br>
   <hr class="mt-5">
   <br>
@@ -114,6 +119,7 @@
   </div>
   <br><br>
   <hr class="mt-5">
+  <br>
   <div class="row mt-5">
     <div class="col-lg-5">
       <div class="image-container">
@@ -130,7 +136,7 @@
       </div>
     </div>
     <div class="col-lg-7">
-      <h2 class="custom-title"><b>Giới Thiệu</b></h2>
+      <h2 class="custom-title text-light"><b>Giới Thiệu</b></h2>
       <p class="intro-text">
         Hệ thống chứng nhận học vấn bằng NFT là một nền tảng hiện đại, cho phép xác thực chứng chỉ học tập một cách minh
         bạch, bảo mật và không thể làm giả.
@@ -144,6 +150,7 @@
       <button class="btn btn-outline-primary rounded-btn">Xem Thêm <i class="fa-solid fa-arrow-right"></i></button>
     </div>
   </div>
+  <br>
   <hr class="mt-5">
   <div class="card mt-5 bg-secondary text-light">
     <div class="card-body">
@@ -309,7 +316,7 @@ export default {
 }
 
 .custom-title {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Arial', cursive;
   font-size: 32px;
   color: #333;
 }
@@ -342,4 +349,7 @@ export default {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
+  .text-danger {
+  color: #ff0000 !important; /* đỏ đậm */
+}
 </style>
