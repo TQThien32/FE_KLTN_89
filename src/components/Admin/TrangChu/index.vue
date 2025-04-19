@@ -1,6 +1,6 @@
 <template>
   <div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner">
+    <div class="carousel-inner hover-effect">
       <div class="carousel-item active">
         <img style="height: 550px;" src="https://www.asahi.com/ads/start/articles/00403/images/photo-title.jpg"
           class="d-block w-100" alt="...">
@@ -25,21 +25,20 @@
     </button>
   </div>
   <br><br>
-  <div class="row">
-    <div class="col-lg-4">
-      <img src="https://th.bing.com/th/id/OIP.pLNrLyg3lo552n-hbedu1gHaEK?w=1024&h=576&rs=1&pid=ImgDetMain"
-        style="height: 200px; width: 100%;">
-
-    </div>
-    <div class="col-lg-4">
-      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/anh-nen-cong-nghe-hien-dai-1.jpg"
-        style="height: 200px; width: 100%;">
-    </div>
-    <div class="col-lg-4">
-      <img src="https://cdn.thuvienphapluat.vn/uploads/tintuc/2024/03/25/nen-tang-blockchain.jpg"
-        style="height: 200px; width: 100%;">
-    </div>
+  <div class="row hover-effect">
+  <div class="col-lg-4 mb-3">
+    <img src="https://th.bing.com/th/id/OIP.pLNrLyg3lo552n-hbedu1gHaEK?w=1024&h=576&rs=1&pid=ImgDetMain"
+      style="height: 200px; width: 100%;">
   </div>
+  <div class="col-lg-4 mb-3">
+    <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/anh-nen-cong-nghe-hien-dai-1.jpg"
+      style="height: 200px; width: 100%;">
+  </div>
+  <div class="col-lg-4 mb-3">
+    <img src="https://cdn.thuvienphapluat.vn/uploads/tintuc/2024/03/25/nen-tang-blockchain.jpg"
+      style="height: 200px; width: 100%;">
+  </div>
+</div>
   <br><br>
   <hr class="mt-5">
   <br>
@@ -56,8 +55,8 @@
   <hr class="mt-5">
   <br>
   <div class="row mt-5">
-    <div class="col-lg-3">
-      <h2><b>NFT CERTIFICATE</b></h2>
+    <div class="col-lg-3 text-light">
+      <h2 class="text-light"><b>NFT</b> <b class="text-primary">CERTIFICATE</b></h2>
       <p>Là một nền tảng cung cấp dịch vụ chứng nhận học vấn và bằng cấp bằng công nghệ NFT. Chúng tôi cam kết mang đến
         cho bạn những chứng chỉ học vấn chất lượng và an toàn</p>
       <p>Chúng tôi sử dụng công nghệ Blockchain để đảm bảo tính xác thực và không thể làm giả của chứng chỉ học vấn. Bạn
@@ -67,10 +66,10 @@
     <div class="col-lg-9">
       <div class="row">
         <div class="col-lg-4">
-          <h3><b>AN TOÀN - BẢO MẬT</b></h3>
-          <h3><b>KHÔNG THỂ LÀM GIẢ</b></h3>
+          <h3><b class="text-success">AN TOÀN</b> - <b class="text-danger">BẢO MẬT</b></h3>
+          <h3 class="text-light"><b>KHÔNG THỂ LÀM GIẢ</b></h3>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-8 text-light">
           <p>Chúng tôi cung cấp dịch vụ chứng nhận học vấn cho các tổ chức cấp chứng chỉ, trường học và cá nhân. Bạn có
             thể dẽ dàng tạo và quản lý chứng chỉ của mình trên nền tảng của chúng tôi</p>
         </div>
@@ -331,4 +330,15 @@ export default {
   padding: 0;
   font-size: 20px;
 }
+
+/* css 3 ảnh dưới slida */
+.hover-effect img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 10px;
+  }
+
+  .hover-effect img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
 </style>
