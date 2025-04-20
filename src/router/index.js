@@ -19,6 +19,18 @@ const routes = [
     },
 
     {
+        path: '/admin/gioi-thieu',
+        component: () => import('../components/Admin/GioiThieu/index.vue'),
+        meta: { layout: 'Admin' },
+    },
+
+    {
+        path: '/admin/lien-he',
+        component: () => import('../components/Admin/LienHe/index.vue'),
+        meta: { layout: 'Admin' },
+    },
+
+    {
         path: '/admin/thong-tin-admin',
         component: () => import('../components/Admin/ThongTinTaiKhoan/index.vue'),
         meta: { layout: 'Admin' },
