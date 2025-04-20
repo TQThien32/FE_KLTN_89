@@ -42,15 +42,21 @@
   <br><br>
   <hr class="mt-5">
   <br>
-  <h2 class="text-center mt-5"><b>Chào mừng bạn đến với NFT CERTIFICATE</b></h2>
-  <div style="width: 40px; height: 2px; background-color: #b28b66; margin: 0 auto 20px auto;"></div>
-  <p class="text-center">Hệ thống của chúng tôi mang đến một giải pháp hiện đại giúp xác thực bằng cấp thông qua công
-    nghệ Blockchain và NFT.
-    <br>Sinh viên, học viên có thể dễ dàng sở hữu chứng chỉ số độc quyền, không thể làm giả, có thể kiểm tra mọi lúc –
-    mọi nơi.
-    <br>Đây là bước tiến mới giúp nâng cao minh bạch, tiết kiệm thời gian và tăng tính tin cậy trong tuyển dụng và xác
-    thực học vấn.
-  </p>
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <h2 class="text-center mt-5 text-light"><b>Chào mừng bạn đến với NFT CERTIFICATE</b></h2>
+<div style="width: 40px; height: 2px; background-color: #b28b66; margin: 0 auto 20px auto;"></div>
+<p class="text-center">
+  Hệ thống của chúng tôi mang đến một giải pháp hiện đại giúp xác thực bằng cấp thông qua công nghệ Blockchain và NFT.
+  <br>Sinh viên, học viên có thể dễ dàng sở hữu chứng chỉ số độc quyền, không thể làm giả, có thể kiểm tra mọi lúc – mọi nơi.
+  <br>Đây là bước tiến mới giúp nâng cao minh bạch, tiết kiệm thời gian và tăng tính tin cậy trong tuyển dụng và xác thực học vấn.
+  <br><br>NFT Certificate không chỉ đơn giản là một bản sao kỹ thuật số của chứng chỉ truyền thống, mà còn là minh chứng không thể <br> thay đổi được lưu trữ trên chuỗi khối (blockchain). 
+  <br>Điều này đảm bảo rằng mọi dữ liệu liên quan đến quá trình học tập và hoàn thành khoá học đều được xác thực,<br> an toàn và bền vững theo thời gian.
+  <br>Bằng cách tích hợp công nghệ hiện đại vào lĩnh vực giáo dục, chúng tôi hướng đến việc xây dựng một hệ sinh thái học tập minh bạch – nơi mọi nỗ lực đều được ghi nhận và có thể dễ dàng chia sẻ với nhà tuyển dụng, đối tác hoặc các tổ chức giáo dục khác.
+</p>
+    </div>
+  </div>
 <br>
   <hr class="mt-5">
   <br>
@@ -113,23 +119,24 @@
   </div>
   <br><br>
   <hr class="mt-5">
+  <br>
   <div class="row mt-5">
     <div class="col-lg-5">
       <div class="image-container">
         <!-- Ảnh nền lớn -->
         <img src="https://i.pinimg.com/736x/c2/d5/fe/c2d5fe7ca7d2cb465fc648a28d8f101e.jpg" alt="Học viên 1"
-          class="main-img">
+          class="main-img" style="width: 100%;">
 
         <!-- Ảnh nền nhỏ -->
         <!-- <img src="https://i.imgur.com/mj2sQmj.jpg" alt="Học viên 2" class="overlay-img"> -->
 
         <!-- Logo -->
         <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-          alt="Certified" class="certified-badge">
+          alt="Certified" class="certified-badge" style="width: 150px;">
       </div>
     </div>
     <div class="col-lg-7">
-      <h2 class="custom-title"><b>Giới Thiệu</b></h2>
+      <h2 class="custom-title text-light"><b>Giới Thiệu</b></h2>
       <p class="intro-text">
         Hệ thống chứng nhận học vấn bằng NFT là một nền tảng hiện đại, cho phép xác thực chứng chỉ học tập một cách minh
         bạch, bảo mật và không thể làm giả.
@@ -143,6 +150,7 @@
       <button class="btn btn-outline-primary rounded-btn">Xem Thêm <i class="fa-solid fa-arrow-right"></i></button>
     </div>
   </div>
+  <br>
   <hr class="mt-5">
   <div class="card mt-5 bg-secondary text-light">
     <div class="card-body">
@@ -183,7 +191,7 @@
   
   <hr class="mt-5">
   <br>
-  <h2 class="text-center mt-5"><b>CÁC CHỨNG CHỈ ĐÃ ĐƯỢC CẤP NFT</b></h2>
+  <h2 class="text-center mt-5 text-light"><b>CÁC CHỨNG CHỈ ĐÃ ĐƯỢC CẤP NFT</b></h2>
   <div class="position-relative mt-5">
     <!-- Nút cuộn trái -->
     <button class="btn btn-outline-primary position-absolute top-50 start-0 translate-middle-y rounded-btn"
@@ -206,28 +214,28 @@
   </div>
   <br>
   <hr class="mt-5">
-  <div class="card mt-5">
+  <div class="card mt-5 bg-secondary text-light">
     <div class="card-body">
       <div class="row text-center">
     <div class="col-md-3 mb-3">
       <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="icon" width="50">
-      <h5 class="mt-2 fw-bold">Chứng chỉ số an toàn</h5>
+      <h5 class="mt-2 fw-bold mt-3 text-light">Chứng chỉ số an toàn</h5>
       <p>Chứng chỉ NFT không thể làm giả, đảm bảo xác thực tuyệt đối.</p>
     </div>
     <div class="col-md-3 mb-3">
       <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/709/709682.png" alt="icon" width="50">
-      <h5 class="mt-2 fw-bold">Truy xuất dễ dàng</h5>
+      <h5 class="mt-2 fw-bold mt-3 text-light">Truy xuất dễ dàng</h5>
       <p>Người học, tổ chức và nhà tuyển dụng có thể kiểm tra mọi lúc.</p>
     </div>
 
     <div class="col-md-3 mb-3">
       <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="icon" width="50">
-      <h5 class="mt-2 fw-bold">Lưu trữ vĩnh viễn</h5>
+      <h5 class="mt-2 fw-bold mt-3 text-light">Lưu trữ vĩnh viễn</h5>
       <p>Chứng chỉ được lưu trữ trên blockchain, không bị mất hay hư hỏng theo thời gian.</p>
     </div>
     <div class="col-md-3 mb-3">
       <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="icon" width="50">
-      <h5 class="mt-2 fw-bold">Hỗ trợ 24/7</h5>
+      <h5 class="mt-2 fw-bold mt-3 text-light">Hỗ trợ 24/7</h5>
       <p>Luôn sẵn sàng tư vấn và xử lý mọi thắc mắc về chứng chỉ.</p>
     </div>
   </div>
@@ -308,7 +316,7 @@ export default {
 }
 
 .custom-title {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Arial', cursive;
   font-size: 32px;
   color: #333;
 }
@@ -341,4 +349,7 @@ export default {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
+  .text-danger {
+  color: #ff0000 !important; /* đỏ đậm */
+}
 </style>
