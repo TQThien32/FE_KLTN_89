@@ -11,25 +11,21 @@ const routes = [
         component: () => import('../components/Admin/DangNhap/index.vue'),
         meta: { layout: 'Auth' },
     },
-
     {
         path: '/admin/trang-chu',
         component: () => import('../components/Admin/TrangChu/index.vue'),
         meta: { layout: 'Admin' },
     },
-
     {
         path: '/admin/thong-tin-admin',
         component: () => import('../components/Admin/ThongTinTaiKhoan/index.vue'),
         meta: { layout: 'Admin' },
     },
-
     {
         path: '/admin/doi-mat-khau',
         component: () => import('../components/Admin/DoiMatKhau/index.vue'),
         meta: { layout: 'Admin' },
     },
-
     {
         path: '/admin/danh-sach-hoc-vien',
         component: () => import('../components/Admin/HocVien/index.vue'),
@@ -152,7 +148,6 @@ const routes = [
         meta : {layout : 'auth'},
         props: true
     },
-   
     //CoQuanXacThuc
     {
         path: '/co-quan-xac-thuc/dang-nhap',

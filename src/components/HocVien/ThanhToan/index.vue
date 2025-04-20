@@ -34,13 +34,10 @@
                             </div>
                             
                         </div>        
-                    </div>
-                   
+                    </div>                  
                 </div>
             </div>
-
         </div>
-
     </div>
 
     <div class="container mt-5">
@@ -70,8 +67,7 @@
                             <th>10000000 đ</th>
                         </tr>
                     </tbody>
-                </table>
-           
+                </table>         
         </div>
     </div>
     <div class="modal fade" id="ttchitiet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
