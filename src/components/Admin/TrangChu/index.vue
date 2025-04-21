@@ -147,7 +147,7 @@
         Giải pháp này giúp nâng cao độ tin cậy trong tuyển dụng, học tập, đồng thời thúc đẩy quá trình chuyển đổi số
         trong lĩnh vực giáo dục.
       </p>
-      <button class="btn btn-outline-primary rounded-btn">Xem Thêm <i class="fa-solid fa-arrow-right"></i></button>
+      <router-link to="/admin/gioi-thieu"><button class="btn btn-outline-primary rounded-btn">Xem Thêm <i class="fa-solid fa-arrow-right"></i></button></router-link>
     </div>
   </div>
   <br>
