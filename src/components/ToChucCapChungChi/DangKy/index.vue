@@ -85,13 +85,13 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
-                                                        <button type="button" class="btn btn-primary" v-on:click="DangKy()"><i
+                                                        <button type="button" class="btn btn-chinh" v-on:click="DangKy()"><i
                                                                 class="bx bx-user"></i>Đăng Ký</button>
                                                     </div>                                                   
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid text-center">
-                                                        <label>Bạn đã có tài khoản? <a href="authentication-signin.html">Đăng Nhập </a>
+                                                        <label>Bạn đã có tài khoản? <a href="/to-chuc-cap-chung-chi/dang-nhap">Đăng Nhập </a>
                                                         </label>
                                                     </div>                                                   
                                                 </div>

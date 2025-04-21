@@ -28,14 +28,12 @@
                             <div class=" d-flex justify-content-between align-items-center gap-2">
                                 <a data-bs-toggle="modal" data-bs-target="#ttchitiet" href="javascript:;"
                                     class="btn btn-outline-light"><i class="fa-solid fa-indent "
-                                        style="font-size: 15px;"></i> Thông
-                                    tin chi tiết</a>
+                                        style="font-size: 15px;"></i> Thông tin chi tiết</a>
                                 <div class="form-check ms-2">
                                     <a v-on:click="themVaoThanhToan(value.id)" href="javascript:;"
                                         class="btn btn-outline-light"><i class="fa-solid fa-indent "
                                             style="font-size: 15px;"></i>Thêm vào thanh toán</a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -43,7 +41,6 @@
             </template>
         </div>
     </div>
-
     <div class="container mt-5">
         <h3 class="text-light"><i class="fa-solid fa-clock-rotate-left"></i> Lịch Sử Giao Dịch</h3>
         <hr class="text-light">
@@ -52,6 +49,7 @@
                 <thead>
                     <tr class="text-center text-light">
                         <th>#</th>
+                        <th>Mã Giao Dịch</th>
                         <th>Thời Gian</th>
                         <th>Họ và Tên</th>
                         <th>Số CCCD</th>
@@ -63,6 +61,7 @@
                 <tbody>
                     <tr class="text-light text-center">
                         <th>1</th>
+                        <td>458963215</td>
                         <td>11:12 12/12/2024</td>
                         <td>Trần Quang Thiên</td>
                         <td>049203006547</td>
@@ -82,12 +81,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="card-text"><b>Tổ Chức cấp: </b><span class="ms-3">Toeic</span></p>
+                    <p class="card-text"><b>Tổ Chức cấp: </b><span class="ms-3">Đại Học Duy Tân</span></p>
                     <p class="card-text"><b>Ngày Cấp : </b><span class="ms-3">30/4/1975</span></p>
                     <p class="card-text"><b>Khóa Học: </b><span class="ms-3">2024 - 2027</span></p>
                     <p class="card-text"><b>Họ Và Tên : </b><span class="ms-3">Trần Quang Thiên</span></p>
                     <p class="card-text"><b>Số CCCD : </b><span class="ms-3">049203006689</span></p>
-                    <p class="card-text"><b>Kết Quả: </b><span class="ms-3">Toeic</span></p>
+                    <p class="card-text"><b>Trình Độ: </b><span class="ms-3">Cử nhân</span></p>
+                    <p class="card-text"><b>Kết Quả: </b><span class="ms-3">Giỏi</span></p>
                     <p class="card-text"><b>Số Hiệu Chứng Chỉ: </b><span class="ms-3">123456</span></p>
                 </div>
                 <div class="modal-footer">

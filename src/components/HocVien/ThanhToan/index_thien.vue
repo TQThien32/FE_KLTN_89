@@ -48,6 +48,7 @@
                     <thead>
                         <tr class="text-center text-light">
                             <th>#</th>
+                            <th>Mã Giao Dịch</th>
                             <th>Thời Gian</th>
                             <th>Họ và Tên</th>
                             <th>Số CCCD</th>
@@ -59,6 +60,7 @@
                     <tbody >
                         <tr class="text-light text-center">
                             <th>1</th>
+                            <td>01286215522</td>
                             <td>11:12 12/12/2024</td>
                             <td>Trần Quang Thiên</td>
                             <td>049203006547</td>
@@ -78,12 +80,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="card-text"><b>Tổ Chức cấp: </b><span class="ms-3">Toeic</span></p>
+                    <p class="card-text"><b>Tổ Chức cấp: </b><span class="ms-3">Đại Học Duy Tân</span></p>
                     <p class="card-text"><b>Ngày Cấp : </b><span class="ms-3">30/4/1975</span></p>
                     <p class="card-text"><b>Khóa Học: </b><span class="ms-3">2024 - 2027</span></p>
                     <p class="card-text"><b>Họ Và Tên : </b><span class="ms-3">Trần Quang Thiên</span></p>
                     <p class="card-text"><b>Số CCCD : </b><span class="ms-3">049203006689</span></p>
-                    <p class="card-text"><b>Kết Quả: </b><span class="ms-3">Toeic</span></p>                   
+                    <p class="card-text"><b>Trình Độ : </b><span class="ms-3">Cử Nhân</span></p>
+                    <p class="card-text"><b>Kết Quả: </b><span class="ms-3">Giỏi</span></p>                   
                     <p class="card-text"><b>Số Hiệu Chứng Chỉ: </b><span class="ms-3">123456</span></p>
                 </div>
                 <div class="modal-footer">
