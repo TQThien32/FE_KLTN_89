@@ -14,14 +14,15 @@
                 <label class="form-check-label ms-2 text-light mb-2 me-4 mt-1" for="checkRight">Chọn tất cả</label>
             </div>
 
-            <template v-for="(value, key) in list_chung_chi" :key="index">
+            <template v-for="(value, index) in list" :key="index">
                 <div class="col-lg-4">
                     <div class="card card-hieuung border-chinh border-bottom border-top border-3 border-0">
                         <div class="card-body">
                             <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
                                 class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
 
-                            <p class="text-light mt-3" style="font-size: 16px;">Phí NFT: <b>{{ value.id }}1.000.000 đ</b>
+                            <p class="text-light mt-3" style="font-size: 16px;">Phí NFT: <b>{{ value.id }}1.000.000
+                                    đ</b>
                             </p>
 
                             <div class=" d-flex justify-content-between align-items-center gap-2">
@@ -30,8 +31,8 @@
                                         style="font-size: 15px;"></i> Thông
                                     tin chi tiết</a>
                                 <div class="form-check ms-2">
-                                    <input class="form-check-input item-check" type="checkbox" value=""
-                                        id="checkDefault">
+                                    <input v-model="value.chon_chung_chi" v-on:change="tinhTien()"
+                                        class="form-check-input item-check" type="checkbox" value="" id="checkDefault">
                                     <label class="form-check-label" for="checkDefault">
 
                                     </label>
@@ -118,29 +119,29 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="text-center align-middle">
-                                <th>1</th>
-                                <td><img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
-                                        style="height: 50px;" alt=""></td>
-                                <td>024-254-202</td>
-                                <td><span class="badge text-bg-dark" data-bs-toggle="modal"
-                                        data-bs-target="#ttchitiet">Xem
-                                        chi tiết</span></td>
-                                <th>100.000 đ</th>
-                                <td><button class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button></td>
-                            </tr>
+                            <template v-for="(value, index) in list" :key="index">
+                                <tr v-if="value.chon_chung_chi == true" class="text-center align-middle">
+                                    <th>{{ index + 1 }}</th>
+                                    <td><img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
+                                            style="height: 50px;" alt=""></td>
+                                    <td>024-254-202</td>
+                                    <td><span class="badge text-bg-dark" data-bs-toggle="modal"
+                                            data-bs-target="#ttchitiet">Xem
+                                            chi tiết</span></td>
+                                    <th>100.000 đ</th>
+                                    <td><button class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
+                                    </td>
+                                </tr>
+                            </template>
                         </tbody>
                     </table>
-
                 </div>
                 <div class="modal-footer">
                     <div class="me-5 mt-3">
-                        <p style="font-size: 18px;">Tổng Tiền: <b>250.000 đ</b></p>
+                        <p style="font-size: 18px;">Tổng Tiền: <b>{{ tong_tien }}đ</b></p>
                     </div>
-                    <router-link to="/hoc-vien/chi-tiet-thanh-toan">
-                        <button type="button" data-bs-dismiss="modal" class="btn btn-chinh">Thanh Toán</button>
-                    </router-link>
-
+                    <button v-on:click="thanhToan()" type="button" data-bs-dismiss="modal" class="btn btn-chinh">Thanh
+                        Toán</button>
                 </div>
             </div>
         </div>
@@ -155,7 +156,8 @@ import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
-            list_chung_chi: [],
+            list: [],
+            tong_tien: 0,
         }
     },
     mounted() {
@@ -164,22 +166,42 @@ export default {
     methods: {
         loadData() {
             baseRequest
-                .get('hoc_vien/chung-chi-chua-cap')
+                .get('hoc_vien/can-thanh-toan')
                 .then((res) => {
-                    this.list_chung_chi = res.data.data;
+                    this.list = res.data.data;
                 });
 
         },
-        themVaoThanhToan(id_chung_chi) {
+        tinhTien() {
+            let tmp = 0;
+            this.list.forEach((value, index) => {
+                if (value.chon_chung_chi == true) {
+                    tmp = tmp + value.so_tien;
+                }
+            });
+            this.tong_tien = tmp;
+        },
+        thanhToan() {
+            var list_chon = [];
+            this.list.forEach((value, key) => {
+                if (value.chon_chung_chi && value.chon_chung_chi == true) {
+                    list_chon.push(value);
+                }
+            });
+            var payload = {
+                'ds_chung_chi_thanh_toan': list_chon,
+            };
             baseRequest
-                .post('them-vao-thanh-toan', { id_chung_chi: id_chung_chi })
+                .post('hoc-vien/thanh-toan', payload)
                 .then((res) => {
                     if (res.data.status) {
+                        this.tong_tien = 0,
                         this.$toast.success(res.data.message)
+                           this.loadData();
                     } else {
                         this.$toast.error(res.data.message)
                     }
-                })
+                });
         }
 
     }
