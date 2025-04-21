@@ -12,39 +12,53 @@
          </div>
          <div class="card-body table-responsive">
             <div class="row">
-               <div class="col-lg-5">
-                  <form>
-                     <input type="file" multiple webkitdirectory @change="onFolderSelect" />
-                  </form>
+               <div class="col-lg-3"></div>
+               <div class="col-lg-3">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <form>
+                           <input type="file" multiple webkitdirectory @change="onFolderSelect" />
+                        </form>
+                     </div>
+                     <div class="col-lg-12 mt-3">
+                        <button style="width: 250px;" @click="uploadFolderImage" class="btn btn-chinh me-2">
+                           <span v-if="loadingFolder">Đang tải...</span>
+                           <span v-else>Upload Hình Ảnh Chứng Chỉ</span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <form class="ff_fileupload_hidden" enctype="multipart/form-data">
+                           <input type="file" @change="handleFileSelection"
+                              accept=".xls, .xlsx, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                        </form>
+                     </div>
+                     <div class="col-lg-12 mt-3"><button style="width: 250px;" class="btn btn-chinh me-2"
+                           @click="uploadFile">
+                           <span v-if="loadingFile">Đang tải...</span>
+                           <span v-else>Upload Thông Tin Chứng Chỉ</span>
+                        </button></div>
+                  </div>
                </div>
                <div class="col-lg-5">
-                  <button @click="uploadFolderImage" class="btn btn-chinh me-2">
-                     <span v-if="loadingFolder">Đang tải...</span>
-                     <span v-else>Up Folder Images</span>
-                  </button>
+
                </div>
+
                <div class="col-lg-5">
-                  <form class="ff_fileupload_hidden" enctype="multipart/form-data">
-                     <input type="file" @change="handleFileSelection"
-                        accept=".xls, .xlsx, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
-                  </form>
-               </div>
-               <div class="col-lg-5">
-                  <button class="btn btn-chinh me-2" @click="uploadFile" :disabled="!selectedFile">
-                     <span v-if="loadingFile">Đang tải...</span>
-                     <span v-else>Up File Excel</span>
-                  </button>
+
                </div>
             </div>
             <table class="table table-hover table-bordered mt-3">
                <thead>
                   <tr>
                      <th>STT</th>
-                     <th>Họ và tên</th>
+                     <th>Họ và Tên</th>
                      <th>Email</th>
                      <th>Số Điện Thoại</th>
                      <th>Số CCCD</th>
-                     <th>Địa Chỉ</th>
                      <th>Số Hiệu Chứng Chỉ</th>
                      <th>Khóa Học</th>
                      <th>Trình Độ</th>
@@ -60,14 +74,14 @@
                      <td>{{ item.email }}</td>
                      <td>{{ item.sdt }}</td>
                      <td>{{ item.so_cccd }}</td>
-                     <td>{{ item.dia_chi }}</td>
                      <td>{{ item.so_hieu_chung_chi }}</td>
                      <td>{{ item.khoa_hoc }}</td>
                      <td>{{ item.trinh_do }}</td>
                      <td>{{ item.ngay_cap }}</td>
                      <td>{{ item.ket_qua }}</td>
                      <td>
-                        <img :src="item.hinh_anh" alt="Hình ảnh" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <img v-bind:src="`http://localhost:8000/storage/uploads/images/${item.hinh_anh}`" alt="Hình ảnh"
+                           style="width: 50px; height: 50px; border-radius: 50%;">
                      </td>
                   </tr>
                </tbody>
@@ -96,7 +110,7 @@ export default {
       },
       async uploadFile() {
          if (!this.selectedFile) {
-            alert("Vui lòng chọn một tệp Excel!");
+            this.$toast.error("Chọn File Excel")
             return;
          }
 
@@ -106,10 +120,10 @@ export default {
 
          try {
             await axios.post("http://localhost:8000/api/import-excel", formData);
-            alert("Tải lên thành công!");
+            this.$toast.success("Tải Lên Thành Công")
             this.fetchData();
          } catch (error) {
-            console.error("Lỗi khi tải lên:", error);
+            this.$toast.error("Có Lỗi Xảy Ra")
          } finally {
             this.loadingFile = false;
          }
@@ -119,7 +133,7 @@ export default {
       },
       async uploadFolderImage() {
          if (!this.files.length) {
-            alert("Vui lòng chọn thư mục!");
+            this.$toast.error("Chọn Folder")
             return;
          }
 
@@ -131,9 +145,9 @@ export default {
 
          try {
             await axios.post("http://localhost:8000/api/upload-folder", formData);
-            alert("Tải thư mục thành công!");
+            this.$toast.success("Tải Lên Thành Công")
          } catch (error) {
-            console.error("Lỗi khi tải thư mục:", error);
+            this.$toast.error("Có Lỗi Xảy Ra")
          } finally {
             this.loadingFolder = false;
          }
@@ -143,7 +157,7 @@ export default {
             let response = await axios.get("http://localhost:8000/api/get-data");
             this.dataList = response.data;
          } catch (error) {
-            console.error("Lỗi khi lấy dữ liệu:", error);
+            this.$toast.success("Có Lỗi Xảy Ra")
          }
       }
    },
