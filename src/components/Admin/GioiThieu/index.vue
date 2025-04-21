@@ -77,7 +77,7 @@
                         tảng số hóa bền vững, đáng tin cậy cho mọi tổ chức giáo dục và người học trong thời đại 4.0.</b>
                 </p>
                 <h4 class="mt-5 text-light"><b>Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ, vui lòng liên hệ với chúng
-                        tôi:</b></h4> <button class="btn btn-outline-primary">Liện Hệ</button>
+                        tôi:</b></h4> <router-link to="/admin/lien-he"><button class="btn btn-outline-primary" href="index.html">Liện Hệ</button></router-link>
                         <br><br>
             </div>
         </div>
@@ -88,13 +88,7 @@
 </template>
 <script>
 export default {
-    mounted() {
-        // Thêm style nền vào body khi component được tải
-        document.body.style.backgroundImage = 'url("https://i.pinimg.com/736x/c2/d5/fe/c2d5fe7ca7d2cb465fc648a28d8f101e.jpg")';
-document.body.style.backgroundSize = 'cover';
-document.body.style.backgroundPosition = 'center';
-document.body.style.backgroundAttachment = 'fixed';
-    }
+
 }
 </script>
 <style scoped>
@@ -108,20 +102,4 @@ h4 {
     /* Màu xanh dương nhạt */
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-image: url('https://i.pinimg.com/736x/c2/d5/fe/c2d5fe7ca7d2cb465fc648a28d8f101e.jpg');
-}
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 </style>
