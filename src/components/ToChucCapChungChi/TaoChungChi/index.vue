@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col-lg-12 col-md-12">
-            <div class="card">
+            <div class="card" style="box-shadow:  none;">
                 <div class="card-header">
                     <h4>Danh Sách Tạo Chứng Chỉ</h4>
                 </div>

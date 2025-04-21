@@ -4,7 +4,7 @@
         <div class="row mt-3">
             <!-- Avatar -->
             <div class="col-lg-4">
-                <div class="card">
+                <div class="card" style="box-shadow: none;">
                     <div class="card-body text-center">
                         <img src="assets/images/avatars/avatar-2.png" alt="Avatar" class="rounded-circle p-1 bg-primary"
                             width="110">
@@ -18,7 +18,7 @@
 
             <!-- Thông Tin -->
             <div class="col-lg-8">
-                <div class="card">
+                <div class="card" style="box-shadow: none;">
                     <div class="card-body">
                         <div class="row mb-3">
                             <col-lg-6></col-lg-6>

@@ -1,143 +1,90 @@
 <template>
-  <div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner hover-effect">
-      <div class="carousel-item active">
-        <img style="height: 550px;" src="https://www.asahi.com/ads/start/articles/00403/images/photo-title.jpg"
-          class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img style="height:550px;" src="https://ifactory.com.vn/wp-content/uploads/2021/10/blockchain-la-gi.jpg"
-          class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img style="height: 550px;"
-          src="https://phongvu.vn/cong-nghe/wp-content/uploads/2024/09/130-hinh-nen-may-tinh-4k-89-1024x640.jpg"
-          class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <br><br>
-  <div class="row hover-effect">
-  <div class="col-lg-4 mb-3">
-    <img src="https://th.bing.com/th/id/OIP.pLNrLyg3lo552n-hbedu1gHaEK?w=1024&h=576&rs=1&pid=ImgDetMain"
-      style="height: 200px; width: 100%;">
-  </div>
-  <div class="col-lg-4 mb-3">
-    <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/anh-nen-cong-nghe-hien-dai-1.jpg"
-      style="height: 200px; width: 100%;">
-  </div>
-  <div class="col-lg-4 mb-3">
-    <img src="https://cdn.thuvienphapluat.vn/uploads/tintuc/2024/03/25/nen-tang-blockchain.jpg"
-      style="height: 200px; width: 100%;">
-  </div>
-</div>
-  <br><br>
-  <hr class="mt-5">
-  <br>
   <div class="row">
-    <div class="col-lg-2"></div>
+    <div class="col-lg-4 mt-3">
+      <h1 class="text-start mt-5 text-light"><b>Chào mừng bạn đến với NFT</b> <b class="text-primary">CERTIFICATE</b>
+      </h1>
+      <br>
+      <div style="width: 40px; height: 2px; background-color: #b28b66; margin: 0 auto 20px auto;"></div>
+      <p class="text-start intro-description ">Hệ thống của chúng tôi mang đến một giải pháp hiện đại giúp xác thực bằng
+        cấp thông qua công
+        nghệ Blockchain và NFT.
+        <br><br>Sinh viên, học viên có thể dễ dàng sở hữu chứng chỉ số độc quyền, không thể làm giả, có thể kiểm tra mọi
+        lúc –
+        mọi nơi.
+        <br><br>Đây là bước tiến mới giúp nâng cao minh bạch, tiết kiệm thời gian và tăng tính tin cậy trong tuyển dụng
+        và xác
+        thực học vấn.
+      </p>
+    </div>
     <div class="col-lg-8">
-      <h2 class="text-center mt-5 text-light"><b>Chào mừng bạn đến với NFT CERTIFICATE</b></h2>
-<div style="width: 40px; height: 2px; background-color: #b28b66; margin: 0 auto 20px auto;"></div>
-<p class="text-center">
-  Hệ thống của chúng tôi mang đến một giải pháp hiện đại giúp xác thực bằng cấp thông qua công nghệ Blockchain và NFT.
-  <br>Sinh viên, học viên có thể dễ dàng sở hữu chứng chỉ số độc quyền, không thể làm giả, có thể kiểm tra mọi lúc – mọi nơi.
-  <br>Đây là bước tiến mới giúp nâng cao minh bạch, tiết kiệm thời gian và tăng tính tin cậy trong tuyển dụng và xác thực học vấn.
-  <br><br>NFT Certificate không chỉ đơn giản là một bản sao kỹ thuật số của chứng chỉ truyền thống, mà còn là minh chứng không thể <br> thay đổi được lưu trữ trên chuỗi khối (blockchain). 
-  <br>Điều này đảm bảo rằng mọi dữ liệu liên quan đến quá trình học tập và hoàn thành khoá học đều được xác thực,<br> an toàn và bền vững theo thời gian.
-  <br>Bằng cách tích hợp công nghệ hiện đại vào lĩnh vực giáo dục, chúng tôi hướng đến việc xây dựng một hệ sinh thái học tập minh bạch – nơi mọi nỗ lực đều được ghi nhận và có thể dễ dàng chia sẻ với nhà tuyển dụng, đối tác hoặc các tổ chức giáo dục khác.
-</p>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img style="height: 550px;"
+              src="../../../assets/images/slide/1.png"
+              class="d-block w-100 hover-effect" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img style="height:550px;"
+              src="../../../assets/images/slide/2.png"
+              class="d-block w-100 hover-effect" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img style="height: 550px;"
+              src="../../../assets/images/slide/3.png"
+              class="d-block w-100 hover-effect" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
   </div>
-<br>
-  <hr class="mt-5">
-  <br>
-  <div class="row mt-5">
-    <div class="col-lg-3 text-light">
-      <h2 class="text-light"><b>NFT</b> <b class="text-primary">CERTIFICATE</b></h2>
-      <p>Là một nền tảng cung cấp dịch vụ chứng nhận học vấn và bằng cấp bằng công nghệ NFT. Chúng tôi cam kết mang đến
-        cho bạn những chứng chỉ học vấn chất lượng và an toàn</p>
-      <p>Chúng tôi sử dụng công nghệ Blockchain để đảm bảo tính xác thực và không thể làm giả của chứng chỉ học vấn. Bạn
-        có thể yên tâm rằng chứng chỉ của bạn sẽ được bảo vệ và không thể làm giả</p>
+  <br><br>
+  <div class="row">
+    <div class="col-lg-4">
+      <img class="hover-effect"
+        src="https://th.bing.com/th/id/OIP.pLNrLyg3lo552n-hbedu1gHaEK?w=1024&h=576&rs=1&pid=ImgDetMain"
+        style="height: 200px; width: 100%;">
 
     </div>
-    <div class="col-lg-9">
-      <div class="row">
-        <div class="col-lg-4">
-          <h3><b class="text-success">AN TOÀN</b> - <b class="text-danger">BẢO MẬT</b></h3>
-          <h3 class="text-light"><b>KHÔNG THỂ LÀM GIẢ</b></h3>
-        </div>
-        <div class="col-lg-8 text-light">
-          <p>Chúng tôi cung cấp dịch vụ chứng nhận học vấn cho các tổ chức cấp chứng chỉ, trường học và cá nhân. Bạn có
-            thể dẽ dàng tạo và quản lý chứng chỉ của mình trên nền tảng của chúng tôi</p>
-        </div>
-        <div class="col-lg-4 mt-2">
-          <div class="card">
-            <div class="card-body text-center">
-              <img
-                src="https://cdn-icons-png.freepik.com/256/7976/7976823.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-                style="height: 70px;" alt="">
-              <h4 class="card-title mt-2 ">NFT Chứng Chỉ</h4>
-              <p class="card-subtitle mb-2 text-body-secondary">Chứng chỉ độc nhất – xác thực tức thì.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mt-2">
-          <div class="card">
-            <div class="card-body text-center">
-              <img
-                src="https://cdn-icons-png.freepik.com/256/4713/4713258.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-                style="height: 70px;" alt="">
-              <h4 class="card-title mt-2 ">Gửi Yêu Cầu</h4>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Một lần gửi – mãi mãi xác thực.</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mt-2">
-          <div class="card">
-            <div class="card-body text-center">
-              <img
-                src="https://cdn-icons-png.freepik.com/256/11442/11442748.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-                style="height: 70px;" alt="">
-              <h4 class="card-title mt-2 ">Bảo Mật</h4>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Dữ liệu vĩnh viễn -riêng tư tối
-                đa.</h6>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="col-lg-4">
+      <img class="hover-effect"
+        src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/anh-nen-cong-nghe-hien-dai-1.jpg"
+        style="height: 200px; width: 100%;">
+    </div>
+    <div class="col-lg-4">
+      <img class="hover-effect" src="https://cdn.thuvienphapluat.vn/uploads/tintuc/2024/03/25/nen-tang-blockchain.jpg"
+        style="height: 200px; width: 100%;">
     </div>
   </div>
   <br><br>
   <hr class="mt-5">
   <br>
   <div class="row mt-5">
-    <div class="col-lg-5">
+    <div class="col-lg-3">
       <div class="image-container">
         <!-- Ảnh nền lớn -->
-        <img src="https://i.pinimg.com/736x/c2/d5/fe/c2d5fe7ca7d2cb465fc648a28d8f101e.jpg" alt="Học viên 1"
-          class="main-img" style="width: 100%;">
+        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+          alt="Học viên 1" class="main-img" style="width: 100%; height: 100%;">
 
         <!-- Ảnh nền nhỏ -->
         <!-- <img src="https://i.imgur.com/mj2sQmj.jpg" alt="Học viên 2" class="overlay-img"> -->
 
         <!-- Logo -->
-        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-          alt="Certified" class="certified-badge" style="width: 150px;">
+        <!-- <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+          alt="Certified" class="certified-badge"> -->
       </div>
     </div>
-    <div class="col-lg-7">
+    <div class="col-lg-8">
       <h2 class="custom-title text-light"><b>Giới Thiệu</b></h2>
-      <p class="intro-text">
+      <p class="intro-text intro-description">
         Hệ thống chứng nhận học vấn bằng NFT là một nền tảng hiện đại, cho phép xác thực chứng chỉ học tập một cách minh
         bạch, bảo mật và không thể làm giả.
         <br><br>
@@ -147,50 +94,77 @@
         Giải pháp này giúp nâng cao độ tin cậy trong tuyển dụng, học tập, đồng thời thúc đẩy quá trình chuyển đổi số
         trong lĩnh vực giáo dục.
       </p>
-      <button class="btn btn-outline-primary rounded-btn">Xem Thêm <i class="fa-solid fa-arrow-right"></i></button>
+      <br>
+      <router-link to="/admin/lien-he"><button class="btn btn-outline-primary rounded-btn" href="index.html">Xem Thêm <i
+            class="fa-solid fa-arrow-right"></i></button></router-link>
+
     </div>
   </div>
   <br>
   <hr class="mt-5">
-  <div class="card mt-5 bg-secondary text-light">
-    <div class="card-body">
-      <h3 class="text-center mt-5 text-light"><b>TIỆN ÍCH KHI SỬ DỤNG CÔNG NGHỆ CỦA CHÚNG TÔI</b></h3>
-    <div class="row mt-3">
-      <div class="col-lg-4 text-center">
-        <button class="btn btn-outline-primary mt-3 btn-circle mx-auto"
-          style="width: 70px; height: 70px; border-radius: 50%;">
-          <i class="ms-1 fa-solid fa-thumbs-up" style="font-size: 35px;"></i>
-        </button>
-        <h4 class="mt-3 text-light">Tại sao chọn chúng tôi?</h4>
-        <p>Chúng tôi áp dụng công nghệ Blockchain và NFT
-          <br>
-          hiện đại để đảm bảo chứng chỉ học vấn không thể làm giả, minh bạch và có thể xác minh toàn cầu.
-        </p>
-      </div>
-      <div class="col-lg-4 text-center">
-        <button class="btn btn-outline-primary mt-3 btn-circle mx-auto"
-          style="width: 70px; height: 70px; border-radius: 50%;"><i class="ms-1 fa-solid fa-people-group"
-            style="font-size: 35px;"></i></button>
-        <h4 class="mt-3 text-light">Chúng tôi làm gì?</h4>
-        <p>Chúng tôi cung cấp nền tảng số hóa chứng chỉ học tập dưới dạng NFT,
-          giúp sinh viên và nhà tuyển dụng xác thực thông tin một cách nhanh chóng và chính xác.</p>
-      </div>
-      <div class="col-lg-4 text-center">
-        <button class="btn btn-outline-primary mt-3 btn-circle mx-auto"
-          style="width: 70px; height: 70px; border-radius: 50%;"><i class="ms-1 fa-solid fa-gear"
-            style="font-size: 35px;"></i></button>
-        <h4 class="mt-3 text-light">Chúng tôi là ai?</h4>
-        <p>Là một đội ngũ trẻ trung, sáng tạo và đầy nhiệt huyết,
-          <br>
-          chúng tôi kết nối giáo dục với công nghệ để tạo ra <br>một hệ sinh thái chứng nhận học vấn đáng tin cậy.
-        </p>
-      </div>
+  <br>
+  <div class="row mt-5">
+    <div class="col-lg-3">
+      <h2 class="text-light"><b class="text-light">NFT</b> <b class="text-primary">CERTIFICATE</b></h2>
+      <p class="intro-description">Là một nền tảng cung cấp dịch vụ chứng nhận học vấn và bằng cấp bằng công nghệ NFT.
+        Chúng tôi cam kết mang đến
+        cho bạn những chứng chỉ học vấn chất lượng và an toàn</p>
+      <p class="intro-description">Chúng tôi sử dụng công nghệ Blockchain để đảm bảo tính xác thực và không thể làm giả
+        của chứng chỉ học vấn. Bạn
+        có thể yên tâm rằng chứng chỉ của bạn sẽ được bảo vệ và không thể làm giả</p>
+
     </div>
+    <div class="col-lg-9">
+      <div class="row">
+        <div class="col-lg-4">
+          <h3 class="text-light"><b class="text-success">AN TOÀN</b> - <b class="text-danger">BẢO MẬT</b></h3>
+          <h3 class="text-light"><b>KHÔNG THỂ LÀM GIẢ</b></h3>
+        </div>
+        <div class="col-lg-8">
+          <p class="intro-description">Chúng tôi cung cấp dịch vụ chứng nhận học vấn cho các tổ chức cấp chứng chỉ,
+            trường học và cá nhân. Bạn có
+            thể dẽ dàng tạo và quản lý chứng chỉ của mình trên nền tảng của chúng tôi</p>
+        </div>
+        <div class="col-lg-4 mt-2">
+          <div class="card card-dark">
+            <div class="card-body text-center">
+              <img
+                src="https://cdn-icons-png.freepik.com/256/7976/7976823.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                style="height: 70px;" alt="">
+              <h4 class="card-title mt-2 text-light">NFT Chứng Chỉ</h4>
+              <p class="card-subtitle mb-2 text-body-secondary text-light">Chứng chỉ độc nhất – xác thực tức thì.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-2">
+          <div class="card card-dark">
+            <div class="card-body text-center">
+              <img
+                src="https://cdn-icons-png.freepik.com/256/4713/4713258.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                style="height: 70px;" alt="">
+              <h4 class="card-title mt-2 text-light">Gửi Yêu Cầu</h4>
+              <h6 class="card-subtitle mb-2 text-body-secondary text-light">Một lần gửi – mãi mãi xác thực.</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-2">
+          <div class="card card-dark">
+            <div class="card-body text-center">
+              <img
+                src="https://cdn-icons-png.freepik.com/256/11442/11442748.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                style="height: 70px;" alt="">
+              <h4 class="card-title mt-2 text-light">Bảo Mật</h4>
+              <h6 class="card-subtitle mb-2 text-body-secondary text-light">Dữ liệu vĩnh viễn -riêng tư tối
+                đa.</h6>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
+  <br><br>
   <hr class="mt-5">
-  <br>
   <h2 class="text-center mt-5 text-light"><b>CÁC CHỨNG CHỈ ĐÃ ĐƯỢC CẤP NFT</b></h2>
   <div class="position-relative mt-5">
     <!-- Nút cuộn trái -->
@@ -212,41 +186,131 @@
       ›
     </button>
   </div>
+  <hr class="mt-5">
+  <div class="card mt-5 card-dark">
+    <div class="card-body">
+      <h3 class="text-center mt-5 text-light"><b>TIỆN ÍCH KHI SỬ DỤNG CÔNG NGHỆ CỦA CHÚNG TÔI</b></h3>
+      <div class="row mt-3">
+        <div class="col-lg-4 text-center">
+          <button class="btn btn-outline-primary mt-3 btn-circle mx-auto"
+            style="width: 70px; height: 70px; border-radius: 50%;">
+            <i class="ms-1 fa-solid fa-thumbs-up" style="font-size: 35px;"></i>
+          </button>
+          <h4 class="mt-3 text-light">Tại sao chọn chúng tôi?</h4>
+          <p class="intro-description">Chúng tôi áp dụng công nghệ Blockchain và NFT
+            <br>
+            hiện đại để đảm bảo chứng chỉ học vấn không thể làm giả, minh bạch và có thể xác minh toàn cầu.
+          </p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <button class="btn btn-outline-primary mt-3 btn-circle mx-auto"
+            style="width: 70px; height: 70px; border-radius: 50%;"><i class="ms-1 fa-solid fa-people-group"
+              style="font-size: 35px;"></i></button>
+          <h4 class="mt-3 text-light">Chúng tôi làm gì?</h4>
+          <p class="intro-description">Chúng tôi cung cấp nền tảng số hóa chứng chỉ học tập dưới dạng NFT,
+            giúp sinh viên và nhà tuyển dụng xác thực thông tin một cách nhanh chóng và chính xác.</p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <button class="btn btn-outline-primary mt-3 btn-circle mx-auto"
+            style="width: 70px; height: 70px; border-radius: 50%;"><i class="ms-1 fa-solid fa-gear"
+              style="font-size: 35px;"></i></button>
+          <h4 class="mt-3 text-light">Chúng tôi là ai?</h4>
+          <p class="intro-description">Là một đội ngũ trẻ trung, sáng tạo và đầy nhiệt huyết,
+            <br>
+            chúng tôi kết nối giáo dục với công nghệ để tạo ra <br>một hệ sinh thái chứng nhận học vấn đáng tin cậy.
+          </p>
+        </div>
+      </div>
+      <br>
+    </div>
+    <br>
+    <br>
+  </div>
+
+  <hr class="mt-5">
+  <br>
+  <h2 class="text-center mt-5 text-light"><b>TIN TỨC VÀ BÀI VIẾT</b></h2><br>
+  <div class="row mt-4">
+    <div class="col-md-3 mb-4" v-for="(article, index) in articles" :key="index">
+      <div class="card h-100 d-flex flex-column">
+        <img :src="article.image" class="card-img-top" alt="Ảnh bài viết" style="height: 185px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title equal-title">{{ article.title }}</h5>
+          <br>
+          <p class="card-text equal-text">{{ article.description }}</p>
+          <a :href="article.link" class="btn btn-outline-primary btn-sm rounded-btn mt-auto" style="width: 30%;"
+            target="_blank">Đọc
+            thêm</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <br>
   <hr class="mt-5">
-  <div class="card mt-5 bg-secondary text-light">
-    <div class="card-body">
-      <div class="row text-center">
-    <div class="col-md-3 mb-3">
-      <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="icon" width="50">
-      <h5 class="mt-2 fw-bold mt-3 text-light">Chứng chỉ số an toàn</h5>
-      <p>Chứng chỉ NFT không thể làm giả, đảm bảo xác thực tuyệt đối.</p>
+  <br>
+  <div class="row text-center mt-4">
+    <div class="col-lg-3">
+      <div class="card-body" style="border: 1px solid white; border-radius: 8px;">
+        <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="icon" width="50">
+        <h5 class="mt-2 fw-bold text-white">Chứng chỉ số an toàn</h5>
+        <p class="text-light">Chứng chỉ NFT không thể làm giả, đảm bảo xác thực tuyệt đối.</p>
+      </div>
     </div>
-    <div class="col-md-3 mb-3">
-      <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/709/709682.png" alt="icon" width="50">
-      <h5 class="mt-2 fw-bold mt-3 text-light">Truy xuất dễ dàng</h5>
-      <p>Người học, tổ chức và nhà tuyển dụng có thể kiểm tra mọi lúc.</p>
+    <div class="col-lg-3">
+      <div class="card-body" style="border: 1px solid white; border-radius: 8px;">
+        <i class="fa-solid fa-microphone mt-4" style="font-size: 50px;"></i>
+          <h5 class="mt-2 fw-bold text-white">Truy xuất dễ dàng</h5>
+          <p class="text-light">Người học, tổ chức và nhà tuyển dụng có thể kiểm tra mọi lúc.</p>
+      </div>
     </div>
-
-    <div class="col-md-3 mb-3">
-      <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="icon" width="50">
-      <h5 class="mt-2 fw-bold mt-3 text-light">Lưu trữ vĩnh viễn</h5>
-      <p>Chứng chỉ được lưu trữ trên blockchain, không bị mất hay hư hỏng theo thời gian.</p>
+    <div class="col-lg-3">
+      <div class="card-body" style="border: 1px solid white; border-radius: 8px;">
+        <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="icon" width="50">
+          <h5 class="mt-2 fw-bold text-white">Lưu trữ vĩnh viễn</h5>
+          <p class="text-light">Chứng chỉ được lưu trữ trên blockchain, không bị mất hay hư hỏng theo thời gian.</p>
+      </div>
     </div>
-    <div class="col-md-3 mb-3">
-      <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="icon" width="50">
-      <h5 class="mt-2 fw-bold mt-3 text-light">Hỗ trợ 24/7</h5>
-      <p>Luôn sẵn sàng tư vấn và xử lý mọi thắc mắc về chứng chỉ.</p>
+    <div class="col-lg-3">
+      <div class="card-body" style="border: 1px solid white; border-radius: 8px;">
+        <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="icon" width="50">
+          <h5 class="mt-2 fw-bold text-white">Hỗ trợ 24/7</h5>
+          <p class="text-light">Luôn sẵn sàng tư vấn và xử lý mọi thắc mắc về chứng chỉ.</p>
+      </div>
     </div>
   </div>
-    </div>
-  </div>
+ 
 </template>
 <script>
 
 export default {
   data() {
     return {
+      articles: [
+        {
+          title: "Nghiên cứu tình huống: Các tổ chức giáo dục sử dụng thông tin xác thực NFT và Blockchain",
+          image: "https://credly.study/images/blog/520-case-studies-nft-education.webp",
+          description: " Bài viết phân tích các nghiên cứu điển hình về việc các tổ chức giáo dục sử dụng NFT và blockchain để cấp chứng chỉ, nhằm hiểu rõ tác động sâu sắc của chúng đối với việc chứng nhận và sự tham gia của sinh viên.",
+          link: "https://credly.study/blog/case-studies-nft-credentials-education?utm_source=chatgpt.com"
+        },
+        {
+          title: "NFTCert: Đơn giản hóa việc tạo và xác minh chứng chỉ bằng Blockchain và NFT",
+          image: "https://credly.study/images/blog/520-blockchain-educational-institutions.webp",
+          description: "Nghiên cứu này trình bày phương pháp tích hợp liền mạch công nghệ blockchain và NFT vào quy trình quản lý và xác thực chứng chỉ, nhằm tạo ra một hệ thống an toàn và hiệu quả.",
+          link: "https://www.ijraset.com/research-paper/nftcert-streamlining-certificate-creation-and-verification?utm_source=chatgpt.com"
+        },
+        {
+          title: "Sử dụng Blockchain, NFT và Chứng chỉ số để có tính xác thực và bảo vệ dữ liệu vô song trong Mã nguồn: Đánh giá có hệ thống",
+          image: "https://cdn-media.sforum.vn/storage/app/media/wp-content/uploads/2023/05/nft-la-gi-thumnal.jpg",
+          description: "Nghiên cứu này khám phá cách sử dụng blockchain, NFT và chứng chỉ kỹ thuật số để cấp chứng chỉ học thuật, đồng thời đề xuất nghiên cứu tương lai về việc sử dụng các giải pháp blockchain được hỗ trợ bởi HSM để tăng cường tính toàn vẹn của chứng chỉ học thuật.",
+          link: "https://www.mdpi.com/2073-431X/14/4/131?utm_source=chatgpt.com"
+        },
+        {
+          title: "Hệ thống chia sẻ chứng chỉ sinh viên sử dụng Blockchain và NFT",
+          image: "https://media.springernature.com/w316/springer-static/cover-hires/book/978-3-031-45155-3?as=webp",
+          description: "Bài viết đề xuất một hệ thống chia sẻ chứng chỉ dựa trên blockchain, cho phép sinh viên kiểm soát và chia sẻ chứng chỉ học thuật của mình thông qua NFT. ",
+          link: "https://link.springer.com/chapter/10.1007/978-3-031-45155-3_7?utm_source=chatgpt.com"
+        }
+      ],
       imageList: [
         'https://indecalnhanh.net/wp-content/uploads/2022/06/1-4.png',
         'https://st.ielts-fighter.com/src/ielts-fighter/Anh%20up%20web/HVDC%20123.jpg',
@@ -270,8 +334,20 @@ export default {
     scrollRight() {
       this.$refs.scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
     }
+  },
+  mounted() {
+    setInterval(() => {
+      const container = this.$refs.scrollContainer;
+      if (container) {
+        // Nếu đã cuộn gần đến cuối, quay lại đầu
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+          container.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          container.scrollBy({ left: 300, behavior: 'smooth' });
+        }
+      }
+    }, 3000);
   }
-
 }
 </script>
 <style scoped>
@@ -339,17 +415,54 @@ export default {
   font-size: 20px;
 }
 
-/* css 3 ảnh dưới slida */
-.hover-effect img {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    border-radius: 10px;
-  }
+/* css phần nội dung và tiêu đề của bài báo */
+.equal-title {
+  height: 48px;
+  /* Khoảng 2 dòng tiêu đề */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* số dòng */
+  -webkit-box-orient: vertical;
+}
 
-  .hover-effect img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  .text-danger {
-  color: #ff0000 !important; /* đỏ đậm */
+/* css chữ */
+.intro-description {
+  color: #cccccc;
+  /* Màu sáng hơn, dễ đọc hơn */
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* css card */
+.card-dark {
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  background-color: #111 !important;
+  /* hoặc bg-dark */
+  transition: border-color 0.3s ease;
+  box-shadow: none;
+  /* bỏ viền mờ */
+}
+
+.card:hover {
+  border-color: white;
+}
+
+/* chuyển động của ảnh */
+.hover-effect {
+  transition: transform 0.5s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-effect:hover {
+  transform: scale(1.05) rotate(1deg);
+  /* phóng to nhẹ + xoay nhẹ */
+  filter: brightness(1.1);
+  /* sáng hơn một chút */
 }
 </style>

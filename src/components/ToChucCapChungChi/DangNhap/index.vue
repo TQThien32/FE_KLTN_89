@@ -12,7 +12,7 @@
 								<div class="border p-4 rounded">
 									<div class="text-center">
 										<h3 class="">Đăng Nhập</h3>
-										<p>Bạn chưa có tài khoản? <a href="authentication-signup.html">Đăng ký</a>
+										<p>Bạn chưa có tài khoản? <a href="/to-chuc-cap-chung-chi/dang-ky">Đăng ký</a>
 										</p>
 									</div>
 									<div class="form-body">

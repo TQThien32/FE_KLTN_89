@@ -13,6 +13,13 @@
         <nav class="navbar navbar-expand-xl w-100">
             <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
                 <li class="nav-item">
+                    <router-link to="/to-chuc-cap-chung-chi/to-chuc-upload-chung-chi-hoc-vien" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-code-pull-request"></i>
+                        </div>
+                        <div class="menu-title">UpLoad Chứng Chỉ</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
                     <router-link to="/to-chuc-cap-chung-chi/quan-ly-yeu-cau-cap" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-code-pull-request"></i>
                         </div>

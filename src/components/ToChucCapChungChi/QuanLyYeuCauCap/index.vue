@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-lg-12 col-md-12">
-            <div class="card">
+            <div class="card" style="box-shadow: none;">
                 <div class="card-header">
                     <h4>Danh Sách Yêu Cầu Cấp Gửi Đến</h4>
                 </div>
@@ -13,7 +13,7 @@
                                 <th>Họ và tên</th>
                                 <th>Số CCCD</th>
                                 <th>Email</th>
-                                <th>Nội Dung</th>
+                                <th>Số Hiệu Chứng Chỉ</th>
                                 <th>Thời Gian Gửi</th>
                                 <th>Action</th>
                             </tr>
@@ -24,7 +24,7 @@
                                 <td>Họ tên</td>
                                 <td>Số cccd</td>
                                 <td>Email</td>
-                                <td>Nội dung</td>
+                                <td>Email</td>
                                 <td>Ngày giờ gửi</td>
                                 <td class="align-middle text-center">
                                     <button type="button" class="btn btn-chinh" data-bs-toggle="modal"
@@ -44,27 +44,27 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            <div class="modal-body text-black">
-                                <div class="card-body p-5">
+                            <div class="modal-body">
+                                <div class="card-body">
                                     <form class="row g-3">
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <label for="inputFirstName" class="form-label">Họ và tên</label>
                                             <input type="email" class="form-control" id="inputFirstName">
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <label for="inputLastName" class="form-label">Số CCCD</label>
                                             <input type="password" class="form-control" id="inputLastName">
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <label for="inputEmail" class="form-label">Email</label>
                                             <input type="email" class="form-control" id="inputEmail">
                                         </div>
-                                        <div class="col-12">
-                                            <label for="inputAddress" class="form-label">Nội dung</label>
-                                            <textarea class="form-control" id="inputAddress" rows="2"></textarea>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Số Hiệu Chứng Chỉ</label>
+                                            <input type="email" class="form-control" id="inputEmail">
                                         </div>
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-chinh px-5">Truy xuất</button>
+                                            <button class="btn btn-chinh px-5">Truy xuất</button>
                                         </div>
                                         <div class="card">
                                             <div class="card-header bg-secondary">
