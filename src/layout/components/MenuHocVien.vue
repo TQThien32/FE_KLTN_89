@@ -15,21 +15,21 @@
                
                 
                 <li class="nav-item">
-                    <router-link to="/hoc-vien/quan-ly-vi-NFT" class="nav-link">
+                    <router-link to="/dung-chung/trang-chu" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-house-chimney-window"></i>
                         </div>
                         <div class="menu-title">Trang Chủ</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/hoc-vien/thanh-toan" class="nav-link">
+                    <router-link to="/dung-chung/gioi-thieu" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-circle-user"></i>
                         </div>
                         <div class="menu-title">Giới Thiệu</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/hoc-vien/thanh-toan" class="nav-link">
+                    <router-link to="/dung-chung/lien-he" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-phone"></i>
                         </div>
                         <div class="menu-title">Liên Hệ</div>

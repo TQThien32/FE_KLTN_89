@@ -11,22 +11,8 @@ const routes = [
         component: () => import('../components/Admin/DangNhap/index.vue'),
         meta: { layout: 'Auth' },
     },
-    {
-        path: '/admin/trang-chu',
-        component: () => import('../components/Admin/TrangChu/index.vue'),
-        meta: { layout: 'Admin' },
-    },
-    {
-        path: '/admin/gioi-thieu',
-        component: () => import('../components/Admin/GioiThieu/index.vue'),
-        meta: { layout: 'Admin' },
-    },
-
-    {
-        path: '/admin/lien-he',
-        component: () => import('../components/Admin/LienHe/index.vue'),
-        meta: { layout: 'Admin' },
-    },
+    
+   
 
     {
         path: '/admin/thong-tin-admin',
@@ -141,7 +127,7 @@ const routes = [
 
     {
         path: '/hoc-vien/thanh-toan',
-        component: () => import('../components/HocVien/ThanhToan/index.vue'),
+        component: () => import('../components/HocVien/ThanhToan/index_thien.vue'),
         meta: { layout: 'HocVien' },
     },
     {
@@ -259,7 +245,21 @@ const routes = [
         component: () => import('../components/DungChung/ChiTietThongBao/index.vue'),
         meta: { layout: 'Auth' },
     },
-
+    {
+        path: '/dung-chung/trang-chu',
+        component: () => import('../components/DungChung/TrangChu/index.vue'),
+        meta: { layout: 'HocVien' },
+    },
+    {
+        path: '/dung-chung/lien-he',
+        component: () => import('../components/DungChung/LienHe/index.vue'),
+        meta: { layout: 'HocVien' },
+    },
+    {
+        path: '/dung-chung/gioi-thieu',
+        component: () => import('../components/DungChung/GioiThieu/index.vue'),
+        meta: { layout: 'HocVien' },
+    },
 ]
 
 const router = createRouter({
