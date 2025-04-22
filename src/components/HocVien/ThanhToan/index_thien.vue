@@ -10,7 +10,7 @@
         <hr class="text-white">
         <div class="row">
             <div class="form-check d-flex justify-content-end">
-                <input class="form-check-input " type="checkbox" id="checkRight">
+                <input class="form-check-input" type="checkbox" id="checkRight" v-model="check_all" @change="chonTatCaChungChi">
                 <label class="form-check-label ms-2 text-light mb-2 me-4 mt-1" for="checkRight">Chọn tất cả</label>
             </div>
 
@@ -162,7 +162,8 @@ export default {
             list_chung_chi: [],
             list_lich_su_giao_dich: [],
             chi_tiet_chung_chi: {},
-            selected_chung_chi: []
+            selected_chung_chi: [],
+            check_all: false
         }
     },
     mounted() {
@@ -174,6 +175,11 @@ export default {
             return this.selected_chung_chi.reduce((tong, item) => tong + parseInt(item.so_tien), 0)
         }
     },
+    watch: {
+        selected_chung_chi(val) {
+            this.check_all = val.length === this.list_chung_chi.length;
+        }
+    },
     methods: {
         loadDataChungChi() {
             baseRequest
@@ -181,8 +187,6 @@ export default {
                 .then((res) => {
                     this.list_chung_chi = res.data.data;
                 });
-
-
         },
         loadDataLichSu() {
             baseRequest
@@ -190,8 +194,6 @@ export default {
                 .then((res) => {
                     this.list_lich_su_giao_dich = res.data.data;
                 });
-
-
         },
         themVaoThanhToan(id_chung_chi) {
             baseRequest
@@ -203,28 +205,21 @@ export default {
                         this.$toast.error(res.data.message)
                     }
                 })
+        },
+        removeItem(index) {
+            this.selected_chung_chi.splice(index, 1);
+        },
+        chonTatCaChungChi() {
+            if (this.check_all) {
+                this.selected_chung_chi = [...this.list_chung_chi];
+            } else {
+                this.selected_chung_chi = [];
+            }
         }
-
     }
 }
-
-window.onload = function () {
-    const checkAll = document.getElementById('checkRight');
-    const checkboxes = document.querySelectorAll('.item-check');
-
-    checkAll.addEventListener('change', () => {
-        checkboxes.forEach(cb => {
-            cb.checked = checkAll.checked;
-        });
-    });
-    checkboxes.forEach(cb => {
-        cb.addEventListener('change', () => {
-            const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-            checkAll.checked = allChecked;
-        });
-    });
-}
 </script>
+
 <style scoped>
 .form-check-input {
     width: 1.2rem;
