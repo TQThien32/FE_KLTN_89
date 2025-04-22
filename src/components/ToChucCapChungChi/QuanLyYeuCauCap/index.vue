@@ -19,22 +19,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th class="align-middle text-center">1</th>
-                                <td>Họ tên</td>
-                                <td>Số cccd</td>
-                                <td>Email</td>
-                                <td>Email</td>
-                                <td>Ngày giờ gửi</td>
-                                <td class="align-middle text-center">
-                                    <button type="button" class="btn btn-chinh" data-bs-toggle="modal"
-                                        data-bs-target="#exampleSuccessModal">Xác Minh</button>
-                                </td>
-                            </tr>
+                            <template v-for="(value, index) in list_yeu_cau" :key="index">
+                                <tr>
+                                    <th class="align-middle text-center">{{ index + 1 }}</th>
+                                    <td>{{ value.ho_ten }}</td>
+                                    <td>{{ value.so_cccd }}</td>
+                                    <td>{{ value.email }}</td>
+                                    <td>{{ value.so_hieu_chung_chi }}</td>
+                                    <td>{{ value.create_at }}</td>
+                                    <td class="align-middle text-center">
+                                        <button type="button" class="btn btn-chinh" data-bs-toggle="modal"
+                                            data-bs-target="#exampleSuccessModal"
+                                            v-on:click="Object.assign(hien_thi_yeu_cau, value)">Xác Minh</button>
+                                    </td>
+                                </tr>
+                            </template>
                         </tbody>
                     </table>
                 </div>
-                <!-- Model -->
+                <!-- Modal -->
                 <div class="modal fade modal-xl" id="exampleSuccessModal" tabindex="-1" aria-hidden="true"
                     style="display: none;">
                     <div class="modal-dialog modal-dialog-centered">
@@ -49,22 +52,28 @@
                                     <form class="row g-3">
                                         <div class="col-md-6">
                                             <label for="inputFirstName" class="form-label">Họ và tên</label>
-                                            <input type="email" class="form-control" id="inputFirstName">
+                                            <input type="email" class="form-control" id="inputFirstName"
+                                                v-model="hien_thi_yeu_cau.ho_ten">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="inputLastName" class="form-label">Số CCCD</label>
-                                            <input type="password" class="form-control" id="inputLastName">
+                                            <input type="password" class="form-control" id="inputLastName"
+                                                v-model="hien_thi_yeu_cau.so_cccd">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="inputEmail" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="inputEmail">
+                                            <input type="email" class="form-control" id="inputEmail"
+                                                v-model="hien_thi_yeu_cau.email">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label">Số Hiệu Chứng Chỉ</label>
-                                            <input type="email" class="form-control" id="inputEmail">
+                                            <input type="sohieucc" class="form-control" id="inputEmail"
+                                                v-model="hien_thi_yeu_cau.so_hieu_chung_chi">
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-chinh px-5">Truy xuất</button>
+                                            <button class="btn btn-chinh px-5"
+                                                v-on:click="truyXuat(hien_thi_yeu_cau.id)">Truy
+                                                xuất</button>
                                         </div>
                                         <div class="card">
                                             <div class="card-header bg-secondary">
@@ -83,15 +92,17 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>Họ tên</td>
-                                                            <td>Số cccd</td>
-                                                            <td>AH437</td>
-                                                            <td>Cao đẳng</td>
-                                                            <td>K27</td>
-                                                            <td>500</td>
-                                                            <td>Ngày cấp</td>
-                                                        </tr>
+                                                        <template v-for="(value, index) in list_chung_chi" :key="index">
+                                                            <tr>
+                                                                <td>{{ value.ho_ten }}</td>
+                                                                <td>{{ value.so_cccd }}</td>
+                                                                <td>{{ value.so_hieu_chung_chi }}</td>
+                                                                <td>{{ value.trinh_do }}</td>
+                                                                <td>{{ value.khoa_hoc }}</td>
+                                                                <td>{{ value.ket_qua }}</td>
+                                                                <td>{{ value.ngay_cap }}</td>
+                                                            </tr>
+                                                        </template>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -101,7 +112,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-chinh">Xác minh</button>
+                                <button type="button" class="btn btn-chinh">Tạo dữ liệu chứng chỉ</button>
                             </div>
                         </div>
                     </div>
@@ -111,8 +122,38 @@
     </div>
 </template>
 <script>
-export default {
+import baseRequest from '../../../core/baseRequest'
 
+export default {
+    data() {
+        return {
+            list_yeu_cau: [],
+            hien_thi_yeu_cau: {},
+            list_chung_chi: []
+        }
+    },
+    methods: {
+        load_yeu_cau() {
+            baseRequest
+                .get("get-data")
+                .then((res) => {
+                    this.list_yeu_cau = res.data.data
+                })
+        },
+        truyXuat(id) {
+            baseRequest
+                .get("to-chuc/truy-xuat-getdata/" + id)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.list_chung_chi = res.data.data;
+                        this.$toast.success(res.data.message);
+                    }
+                    else {
+                        this.$toast.error(res.data.message);
+                    }
+                })
+        }
+    },
 }
 </script>
 <style></style>
