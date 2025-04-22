@@ -166,6 +166,7 @@ export default {
                 .then((res) => {
                     this.list_chung_chi = res.data.data;
                 });
+                
 
         },
         themVaoThanhToan(id_chung_chi) {
