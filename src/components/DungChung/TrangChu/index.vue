@@ -18,29 +18,33 @@
         
     </div>
     <div class="col-lg-7">
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img style="height: 450px;"
-              src="../../../assets/images/slide/1.png"
-              class="d-block w-100 hover-effect slide-in-right" alt="...">
-          </div>
-          
-          <div class="carousel-item">
-            <img style="height: 450px;"
-              src="../../../assets/images/slide/3.png"
-              class="d-block w-100 hover-effect" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="height: 450px;" src="../../../assets/images/slide/1.png"
+        class="d-block w-100 hover-effect slide-in-right" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img style="height: 450px;" src="../../../assets/images/slide/2.png"
+        class="d-block w-100 hover-effect" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img style="height: 450px;" src="../../../assets/images/slide/3.png"
+        class="d-block w-100 hover-effect" alt="...">
+    </div>
+  </div>
+
+  <!-- Nút chuyển ảnh trái/phải vẫn giữ nguyên -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
     </div>
   </div>
   <br><br>
