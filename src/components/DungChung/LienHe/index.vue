@@ -2,7 +2,7 @@
     <br><br>
     <div class="row">
         <div class="col-lg-6">
-            <div class="card">
+            <div class="card border-top border-0 border-4 border-info">
                 <div class="card-body">
                     <label class="mt-2">Họ và tên*</label>
                     <input type="text" class="form-control mb-4 mt-2" name="" id="">
