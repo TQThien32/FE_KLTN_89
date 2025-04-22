@@ -1,8 +1,8 @@
 <template>
     <br><br>
     <div class="row">
-        <div class="col-lg-6">
-            <div class="card">
+        <div class="col-lg-6 fade-section">
+            <div class="card border-top border-0 border-4 border-info">
                 <div class="card-body">
                     <label class="mt-2">Họ và tên*</label>
                     <input type="text" class="form-control mb-4 mt-2" name="" id="">
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 slide-in-right">
             <h3 class="text-light">Liên Hệ</h3>
             <hr style="width: 50px; border-top: 3px solid #c19b6b;">
             <p class="text-light">
@@ -48,7 +48,22 @@
 </template>
 <script>
 export default {
+    mounted() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
 
+    const sections = document.querySelectorAll('.fade-section');
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  }
 }
 </script>
 <style scoped>
@@ -83,5 +98,42 @@ h2 {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     /* hiệu ứng nổi khi hover */
+}
+
+/* chuyển động khi load trang */
+.fade-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+  visibility: hidden;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.slide-delay-1 {
+  animation-delay: 0.3s;
+}
+.slide-delay-2 {
+  animation-delay: 0.6s;
+}
+.slide-delay-3 {
+  animation-delay: 0.9s;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>

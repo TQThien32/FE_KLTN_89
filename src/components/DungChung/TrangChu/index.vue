@@ -23,7 +23,7 @@
           <div class="carousel-item active">
             <img style="height: 450px;"
               src="../../../assets/images/slide/1.png"
-              class="d-block w-100 hover-effect" alt="...">
+              class="d-block w-100 hover-effect slide-in-right" alt="...">
           </div>
           
           <div class="carousel-item">
@@ -100,7 +100,7 @@
   <br>
   <hr class="mt-5">
   <br>
-  <div class="row mt-5">
+  <div class="row mt-5" id="certificate">
     <div class="col-lg-3">
       <h2 class="text-light"><b class="text-light">NFT</b> <b class="text-primary">CERTIFICATE</b></h2>
       <p class="intro-description">Là một nền tảng cung cấp dịch vụ chứng nhận học vấn và bằng cấp bằng công nghệ NFT.
@@ -330,7 +330,12 @@ export default {
     },
     scrollRight() {
       this.$refs.scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
-    }
+    },
+
+    // Load đến đầu trang giới thiệu
+    scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });  // Cuộn lên đầu trang
+        }
   },
   mounted() {
     setInterval(() => {
@@ -414,13 +419,19 @@ export default {
 
 /* css phần nội dung và tiêu đề của bài báo */
 .equal-title {
-  height: 48px;
-  /* Khoảng 2 dòng tiêu đề */
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
   overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  /* số dòng */
+  -webkit-box-orient: vertical;
+}
+.equal-text {
+  font-size: 0.9rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -461,5 +472,54 @@ export default {
   /* phóng to nhẹ + xoay nhẹ */
   filter: brightness(1.1);
   /* sáng hơn một chút */
+}
+
+
+/* Chuyển động của dòng chữ đầu trang */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.fade-delay-1 {
+  animation-delay: 0.3s;
+}
+.fade-delay-2 {
+  animation-delay: 0.6s;
+}
+.fade-delay-3 {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.slide-delay-1 {
+  animation-delay: 0.3s;
+}
+.slide-delay-2 {
+  animation-delay: 0.6s;
+}
+.slide-delay-3 {
+  animation-delay: 0.9s;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>
