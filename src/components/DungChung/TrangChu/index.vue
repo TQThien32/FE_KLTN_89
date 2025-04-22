@@ -1,16 +1,16 @@
 <template>
   <div class="row">
     <div class="col-lg-5 mt-3">
-      <h1 class="text-start mt-5 text-light"><b>Chào mừng bạn đến với </b><br><b class="text-info" style="font-size: 100px;">NFT</b>
+      <h1 class="text-start mt-5 text-light fade-in-up"><b>Chào mừng bạn đến với </b><br><b class="text-info" style="font-size: 100px;">NFT</b>
          <b style="font-size: 50px;" class="text-primary"> CERTIFICATE</b>
       </h1>
       <br>
       <div style="width: 40px; height: 2px; background-color: #b28b66; margin: 0 auto 20px auto;"></div>
-      <p class="text-start intro-description ">"Học thật, bằng thật, xác minh tức thì"</p> <hr class="text-white">
-      <p class="text-start intro-description ">"Hệ thống chứng nhận học vấn bằng NFT là một nền tảng hiện đại..."</p> 
+      <p class="text-start intro-description fade-in-up">"Học thật, bằng thật, xác minh tức thì"</p> <hr class="text-white">
+      <p class="text-start intro-description fade-in-up">"Hệ thống chứng nhận học vấn bằng NFT là một nền tảng hiện đại..."</p> 
       <div class="text-end">
-        <router-link to="/dung-chung/gioi-thieu">
-          <button class="btn btn-outline-primary rounded-pill  mt-2 me-5" style="font-size: 0.75rem;">Tìm hiểu thêm
+        <router-link to="/dung-chung/gioi-thieu" @click="scrollToTop">
+          <button class="btn btn-outline-primary rounded-pill  mt-2 me-5 fade-in-up" style="font-size: 0.75rem;">Tìm hiểu thêm
             <i class="fa-solid fa-arrow-right"></i></button>
         </router-link>
 
@@ -18,29 +18,33 @@
         
     </div>
     <div class="col-lg-7">
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img style="height: 450px;"
-              src="../../../assets/images/slide/1.png"
-              class="d-block w-100 hover-effect slide-in-right" alt="...">
-          </div>
-          
-          <div class="carousel-item">
-            <img style="height: 450px;"
-              src="../../../assets/images/slide/3.png"
-              class="d-block w-100 hover-effect" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="height: 450px;" src="../../../assets/images/slide/1.png"
+        class="d-block w-100 hover-effect slide-in-right" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img style="height: 450px;" src="../../../assets/images/slide/2.png"
+        class="d-block w-100 hover-effect" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img style="height: 450px;" src="../../../assets/images/slide/3.png"
+        class="d-block w-100 hover-effect" alt="...">
+    </div>
+  </div>
+
+  <!-- Nút chuyển ảnh trái/phải vẫn giữ nguyên -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
     </div>
   </div>
   <br><br>
@@ -92,7 +96,7 @@
         trong lĩnh vực giáo dục.
       </p>
       <br>
-      <router-link to="/dung-chung/gioi-thieu"><button class="btn btn-outline-primary rounded-btn" href="index.html">Xem Thêm <i
+      <router-link to="/dung-chung/gioi-thieu" @click="scrollToTop"><button class="btn btn-outline-primary rounded-btn" href="index.html">Xem Thêm <i
             class="fa-solid fa-arrow-right"></i></button></router-link>
 
     </div>
@@ -460,20 +464,6 @@ export default {
 .card:hover {
   border-color: white;
 }
-
-/* chuyển động của ảnh */
-.hover-effect {
-  transition: transform 0.5s ease, filter 0.3s ease;
-  cursor: pointer;
-}
-
-.hover-effect:hover {
-  transform: scale(1.05) rotate(1deg);
-  /* phóng to nhẹ + xoay nhẹ */
-  filter: brightness(1.1);
-  /* sáng hơn một chút */
-}
-
 
 /* Chuyển động của dòng chữ đầu trang */
 .fade-in-up {
