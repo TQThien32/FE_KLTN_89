@@ -1,36 +1,33 @@
 <template>
   <div class="row">
-    <div class="col-lg-4 mt-3">
-      <h1 class="text-start mt-5 text-light"><b>Chào mừng bạn đến với NFT</b> <b class="text-primary">CERTIFICATE</b>
+    <div class="col-lg-5 mt-3">
+      <h1 class="text-start mt-5 text-light"><b>Chào mừng bạn đến với </b><br><b class="text-info" style="font-size: 100px;">NFT</b>
+         <b style="font-size: 50px;" class="text-primary"> CERTIFICATE</b>
       </h1>
       <br>
       <div style="width: 40px; height: 2px; background-color: #b28b66; margin: 0 auto 20px auto;"></div>
-      <p class="text-start intro-description ">Hệ thống của chúng tôi mang đến một giải pháp hiện đại giúp xác thực bằng
-        cấp thông qua công
-        nghệ Blockchain và NFT.
-        <br><br>Sinh viên, học viên có thể dễ dàng sở hữu chứng chỉ số độc quyền, không thể làm giả, có thể kiểm tra mọi
-        lúc –
-        mọi nơi.
-        <br><br>Đây là bước tiến mới giúp nâng cao minh bạch, tiết kiệm thời gian và tăng tính tin cậy trong tuyển dụng
-        và xác
-        thực học vấn.
-      </p>
+      <p class="text-start intro-description ">"Học thật, bằng thật, xác minh tức thì"</p> <hr class="text-white">
+      <p class="text-start intro-description ">"Hệ thống chứng nhận học vấn bằng NFT là một nền tảng hiện đại..."</p> 
+      <div class="text-end">
+        <router-link to="/dung-chung/gioi-thieu">
+          <button class="btn btn-outline-primary rounded-pill  mt-2 me-5" style="font-size: 0.75rem;">Tìm hiểu thêm
+            <i class="fa-solid fa-arrow-right"></i></button>
+        </router-link>
+
+      </div>
+        
     </div>
-    <div class="col-lg-8">
+    <div class="col-lg-7">
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img style="height: 550px;"
+            <img style="height: 450px;"
               src="../../../assets/images/slide/1.png"
               class="d-block w-100 hover-effect" alt="...">
           </div>
+          
           <div class="carousel-item">
-            <img style="height:550px;"
-              src="../../../assets/images/slide/2.png"
-              class="d-block w-100 hover-effect" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img style="height: 550px;"
+            <img style="height: 450px;"
               src="../../../assets/images/slide/3.png"
               class="d-block w-100 hover-effect" alt="...">
           </div>
@@ -51,17 +48,17 @@
     <div class="col-lg-4">
       <img class="hover-effect"
         src="https://th.bing.com/th/id/OIP.pLNrLyg3lo552n-hbedu1gHaEK?w=1024&h=576&rs=1&pid=ImgDetMain"
-        style="height: 200px; width: 100%;">
+        style="height: 250px; width: 100%;">
 
     </div>
     <div class="col-lg-4">
       <img class="hover-effect"
-        src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/anh-nen-cong-nghe-hien-dai-1.jpg"
-        style="height: 200px; width: 100%;">
+        src="/src/assets/images/slide/4.png"
+        style="height: 250px; width: 100%;">
     </div>
     <div class="col-lg-4">
-      <img class="hover-effect" src="https://cdn.thuvienphapluat.vn/uploads/tintuc/2024/03/25/nen-tang-blockchain.jpg"
-        style="height: 200px; width: 100%;">
+      <img class="hover-effect" src="https://ooc.vn/wp-content/uploads/2024/12/Blockchain.jpg"
+        style="height: 250px; width: 100%;">
     </div>
   </div>
   <br><br>
@@ -95,7 +92,7 @@
         trong lĩnh vực giáo dục.
       </p>
       <br>
-      <router-link to="/admin/lien-he"><button class="btn btn-outline-primary rounded-btn" href="index.html">Xem Thêm <i
+      <router-link to="/dung-chung/gioi-thieu"><button class="btn btn-outline-primary rounded-btn" href="index.html">Xem Thêm <i
             class="fa-solid fa-arrow-right"></i></button></router-link>
 
     </div>

@@ -96,14 +96,14 @@ export default {
 </script>
 <style>
 .footer {
-    background-color: #21063f;
+    background-color: #504f4f;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
 }
 
 .login-link {
-    color: white;
+    color: rgb(255, 255, 255);
     transition: opacity 0.3s ease;
     /* Tạo hiệu ứng chuyển mờ */
 }
