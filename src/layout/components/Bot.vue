@@ -96,7 +96,7 @@ export default {
 </script>
 <style>
 .footer {
-    background-color: #504f4f;
+    background-color: #3a3a3a;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -109,6 +109,6 @@ export default {
 }
 
 .login-link:hover {
-    color: orange !important;
+    color: rgb(230, 151, 16) !important;
 }
 </style>
