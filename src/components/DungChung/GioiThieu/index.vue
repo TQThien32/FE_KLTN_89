@@ -77,7 +77,7 @@
                         tảng số hóa bền vững, đáng tin cậy cho mọi tổ chức giáo dục và người học trong thời đại 4.0.</b>
                 </p>
                 <h4 class="mt-5 text-light"><b>Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ, vui lòng liên hệ với chúng
-                        tôi:</b></h4> <router-link to="/admin/lien-he" @click="scrollToTop"><button class="btn btn-outline-primary" href="index.html">Liện Hệ</button></router-link>
+                        tôi:</b></h4> <router-link to="/dung-chung/lien-he" @click="scrollToTop"><button class="btn btn-outline-primary" href="index.html">Liện Hệ</button></router-link>
                         <br><br>
             </div>
         </div>

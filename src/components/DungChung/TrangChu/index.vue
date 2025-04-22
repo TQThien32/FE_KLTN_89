@@ -95,7 +95,7 @@
         trong lĩnh vực giáo dục.
       </p>
       <br>
-      <router-link to="/admin/lien-he"><button class="btn btn-outline-primary rounded-btn" href="index.html">Xem Thêm <i
+      <router-link to="/dung-chung/gioi-thieu" @click="scrollToTop"><button class="btn btn-outline-primary rounded-btn" href="index.html">Xem Thêm <i
             class="fa-solid fa-arrow-right"></i></button></router-link>
 
     </div>
@@ -333,7 +333,12 @@ export default {
     },
     scrollRight() {
       this.$refs.scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
-    }
+    },
+
+    // Load đến đầu trang giới thiệu
+    scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });  // Cuộn lên đầu trang
+        }
   },
   mounted() {
     setInterval(() => {
@@ -465,4 +470,5 @@ export default {
   filter: brightness(1.1);
   /* sáng hơn một chút */
 }
+
 </style>

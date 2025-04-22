@@ -31,7 +31,7 @@
                         <p class="text-light"><b><i class="fa-solid fa-phone"></i> SDT: </b>1900 6750</p>
 
                         <p class="evo-in text-light"><strong><i class="fa-solid fa-location-dot"></i> Địa chỉ:
-                            </strong>242 Tô Hiệu, Thanh Khê Tây, Đà Nẵng
+                            </strong>242 Tô Hiệu, Hòa Minh, Liên Chiểu, Thành Phố Đà Nẵng
                         </p>
 
                         <p class="evo-in">
@@ -53,14 +53,14 @@
                         </b>
                         <div class="footer-menu">
 
-                            <a href="/to-chuc-cap-chung-chi/quen-mat-khau" style="color: white;" class="login-link"
+                            <a href="/dung-chung/trang-chu" style="color: white;" class="login-link"
                                 title="Trang chủ" rel="nofollow">Trang chủ</a>
                             <br>
-                            <a href="/to-chuc-cap-chung-chi/quen-mat-khau" style="color: white;" class="login-link"
-                                title="Trang chủ" rel="nofollow">Giới thiệu</a>
+                            <a href="/dung-chung/gioi-thieu" style="color: white;" class="login-link"
+                                title="Giới Thiệu" rel="nofollow">Giới thiệu</a>
                             <br>
-                            <a href="/to-chuc-cap-chung-chi/quen-mat-khau" style="color: white;" class="login-link"
-                                title="Trang chủ" rel="nofollow">Liên hệ</a>
+                            <a href="/dung-chung/lien-he" style="color: white;" class="login-link"
+                                title="Liên Hệ" rel="nofollow">Liên hệ</a>
 
                         </div>
                     </div>
@@ -103,14 +103,12 @@ export default {
 }
 
 .login-link {
-    color: white;
-    transition: opacity 0.3s ease;
-    /* Tạo hiệu ứng chuyển mờ */
+    color: white !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Hiệu ứng khi hover */
 .login-link:hover {
-    opacity: 0.5;
-    /* Giảm độ mờ của chữ khi di chuột vào */
+    color: orange !important;
 }
 </style>
