@@ -127,7 +127,7 @@ const routes = [
 
     {
         path: '/hoc-vien/thanh-toan',
-        component: () => import('../components/HocVien/ThanhToan/index_thien.vue'),
+        component: () => import('../components/HocVien/ThanhToan/index.vue'),
         meta: { layout: 'HocVien' },
     },
     {
