@@ -7,13 +7,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <p class="card-text"><b>Họ Và Tên:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.ho_va_ten
-                            }}</span></p>
-                            <p class="card-text"><b>Số CCCD:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.cccd
-                            }}</span></p>
+                                    }}</span></p>
+                            <p class="card-text"><b>Số CCCD:</b> <span class="ms-3">{{
+                                thong_tin_nguoi_dung.cccd }}</span></p>
                         </div>
                         <div class="col-md-6">
-                            <p class="card-text"><b>Email:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.email
-                            }}</span></p>
+                            <p class="card-text"><b>Email:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.emai }}</span>
+                            </p>
                             <p class="card-text"><b>Số Điện Thoại:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.sdt
                             }}</span></p>
                         </div>
@@ -30,21 +30,21 @@
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 mt-3">
                                         <p class="card-text"><b>Tổ Chức cấp: </b><span class="ms-3">{{
-                                                value.ten_to_chuc}}</span></p>
+                                            value.ten_to_chuc }}</span></p>
                                         <p class="card-text"><b>Ngày Cấp : </b><span class="ms-3">{{
-                                                value.ngay_cap}}</span></p>
+                                            value.ngay_cap }}</span></p>
                                         <p class="card-text"><b>Khóa Học: </b><span class="ms-3">{{ value.khoa_hoc
                                                 }}</span></p>
                                         <p class="card-text"><b>Họ Và Tên : </b><span class="ms-3">{{
-                                                value.ho_va_ten}}</span></p>
+                                            value.ho_va_ten }}</span></p>
                                         <p class="card-text"><b>Số CCCD : </b><span class="ms-3">{{ value.cccd }}</span>
                                         </p>
                                         <p class="card-text"><b>Trình Độ : </b><span class="ms-3">{{
-                                                value.trinh_do}}</span></p>
+                                            value.trinh_do }}</span></p>
                                         <p class="card-text"><b>Kết Quả: </b><span class="ms-3">{{ value.ket_qua
                                                 }}</span></p>
-                                        <p class="card-text"><b>Số Hiệu Chứng Chỉ: </b><span
-                                                class="ms-3">{{ value.so_hieu }}</span></p>
+                                        <p class="card-text"><b>Số Hiệu Chứng Chỉ: </b><span class="ms-3">{{
+                                            value.so_hieu }}</span></p>
                                     </div>
                                     <div class="col-lg-7 col-md-7 mt-3">
                                         <p class="card-text"><b>Hình Ảnh: </b></p>
@@ -69,7 +69,7 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between mt-2">
                         <h4>Tổng Tiền</h4>
-                        <h4><b>250.000 đ</b></h4>
+                        <h4><b>{{ tongTien.toLocaleString('vi-VN') }} đ</b></h4>
 
                     </div>
 
@@ -89,7 +89,7 @@
 
 <script>
 
-
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -98,7 +98,13 @@ export default {
         }
     },
     mounted() {
-
+        this.loadDataChungChi();
+        this.loadDataNguoiDung();
+    },
+    computed: {
+        tongTien() {
+            return this.list_chung_chi.length * 120000;
+        }
     },
     methods: {
         loadDataChungChi() {
@@ -117,22 +123,7 @@ export default {
         },
     }
 }
-window.onload = function () {
-    const checkAll = document.getElementById('checkRight');
-    const checkboxes = document.querySelectorAll('.item-check');
 
-    checkAll.addEventListener('change', () => {
-        checkboxes.forEach(cb => {
-            cb.checked = checkAll.checked;
-        });
-    });
-    checkboxes.forEach(cb => {
-        cb.addEventListener('change', () => {
-            const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-            checkAll.checked = allChecked;
-        });
-    });
-}
 </script>
 <style scoped>
 .card-hieuung {
