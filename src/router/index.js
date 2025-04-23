@@ -290,6 +290,11 @@ const routes = [
         component: () => import('../components/KhachVangLai/DangNhap/index.vue'),
         meta: { layout: 'KhachVangLai' },
     },
+    {
+        path: '/dang-ky',
+        component: () => import('../components/KhachVangLai/DangKy/index.vue'),
+        meta: { layout: 'KhachVangLai' },
+    },
 ]
 
 const router = createRouter({

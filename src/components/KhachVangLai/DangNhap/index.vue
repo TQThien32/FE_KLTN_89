@@ -3,29 +3,29 @@
         <div class="card-body">
             <ul class="nav nav-tabs nav-primary" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" data-bs-toggle="tab" href="#primaryhome" role="tab" aria-selected="true">
+                    <a class="nav-link text-dark active" data-bs-toggle="tab" href="#primaryhome" role="tab" aria-selected="true">
                         <div class="d-flex align-items-center">
-                            <div class="tab-icon"><i class="bx bx-home font-18 me-1"></i>
+                            <div class="tab-icon"><i class="fa-solid fa-user-tie font-18 me-2"></i>
                             </div>
                             <div class="tab-title">Admin</div>
                         </div>
                     </a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" data-bs-toggle="tab" href="#primaryprofile" role="tab" aria-selected="false"
+                    <a class="nav-link text-dark" data-bs-toggle="tab" href="#primaryprofile" role="tab" aria-selected="false"
                         tabindex="-1">
                         <div class="d-flex align-items-center">
-                            <div class="tab-icon"><i class="bx bx-user-pin font-18 me-1"></i>
+                            <div class="tab-icon"><i class="fa-solid fa-people-group font-18 me-2"></i>
                             </div>
                             <div class="tab-title">Tổ Chức</div>
                         </div>
                     </a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" data-bs-toggle="tab" href="#primarycontact" role="tab" aria-selected="false"
+                    <a class="nav-link text-dark" data-bs-toggle="tab" href="#primarycontact" role="tab" aria-selected="false"
                         tabindex="-1">
                         <div class="d-flex align-items-center">
-                            <div class="tab-icon"><i class="bx bx-microphone font-18 me-1"></i>
+                            <div class="tab-icon"><i class="fa-solid fa-graduation-cap font-18 me-2"></i>
                             </div>
                             <div class="tab-title">Học Viên</div>
                         </div>
@@ -178,7 +178,7 @@
                                                 <div class="col-12">
                                                     <div class="d-grid">
                                                         <button type="button"
-                                                            class="btn btn-primary"><i class="bx bxs-lock-open"></i>Đăng
+                                                            class="btn btn-chinh"><i class="bx bxs-lock-open"></i>Đăng
                                                             Nhập</button>
                                                     </div>
                                                 </div>
