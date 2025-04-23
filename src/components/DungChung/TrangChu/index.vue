@@ -239,7 +239,7 @@
           <h5 class="card-title equal-title">{{ article.title }}</h5>
           <br>
           <p class="card-text equal-text">{{ article.description }}</p>
-          <a :href="article.link" class="btn btn-outline-primary btn-sm rounded-btn mt-auto" style="width: 30%;"
+          <a :href="article.link" class="btn btn-chinh btn-sm rounded-btn mt-auto" style="width: 30%;"
             target="_blank">Đọc
             thêm</a>
         </div>
@@ -313,17 +313,17 @@ export default {
         }
       ],
       imageList: [
-        'https://indecalnhanh.net/wp-content/uploads/2022/06/1-4.png',
-        'https://st.ielts-fighter.com/src/ielts-fighter/Anh%20up%20web/HVDC%20123.jpg',
+        'https://lambangcacloai247.com/wp-content/uploads/2022/08/lam-bang-dai-hoc-uy-tin-tphcm-1024x744.jpg',
+        'https://lambangdaihocphoithat.com/wp-content/uploads/2022/09/lam-bang-dai-hoc-su-pham-ky-thuat-tphcm-1024x766.jpg',
         'https://thaylongtoeic.com/wp-content/uploads/2023/12/anh-the-3x4-1.jpg',
-        'https://chungchitienganhtinhoc.net/wp-content/uploads/2022/12/mau-chung-chi-ielts-tuong-duong-b2.jpg',
-        'https://th.bing.com/th/id/R.a1b572e778ab802f29711627901dcdf9?rik=e9ZwOk4DQW4GSw&riu=http%3a%2f%2fst.ielts-fighter.com%2fsrc%2fielts-fighter%2fAnh+up+web%2fHVDC+123.jpg&ehk=ecxIP96dF1Zbv4p4cYtbcN2hdzE2cZI2Ic19aEYmhik%3d&risl=&pid=ImgRaw&r=0',
+        'https://vbcc.haui.edu.vn/images?sc=3838a49886&b=DA10860',
+        'https://vced.edu.vn/wp-content/uploads/2020/01/452c940dd3402b1e7251.jpg',
         'https://chungchitienganhtinhoc.net/wp-content/uploads/2022/12/mau-chung-chi-tieng-anh-b2-dh-sp-ha-noi.jpg',
         'https://lambangdaihocphoithat.com/wp-content/uploads/2021/04/lam-bang-toeic-iig.jpg',
         'https://anhnguthienan.edu.vn/wp-content/uploads/2024/10/so-hieu-chung-chi-toeic-1.jpeg',
         'https://thetoeiclab.vn/wp-content/uploads/2024/01/bang-toeic.webp',
-        'https://www.anhngumshoa.com/uploads/images/userfiles/chung-chi-toeic-co-thoi-han-bao-lau-1.png',
-        'https://trangtuyensinh.vn/wp-content/uploads/2020/10/Thoi-han-cua-bang-toeic.jpg',
+        'https://tienganhmoingay.com/media/images/uploads/2022/01/25/280122-2.PNG',
+        'https://tienganhmoingay.com/media/images/uploads/2021/12/03/031221-2.png',
         'https://nhanlambangtq.com/wp-content/uploads/2017/08/lam-bang-toeic-2022.jpg'
       ]
     }
