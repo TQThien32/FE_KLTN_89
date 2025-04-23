@@ -76,7 +76,7 @@
                 </div>
                 <div class="card-body text-center">
                     <h5>Quét mã dưới đây bằng Internet Banking </h5>
-                    <img v-bind:src="chung_chi_thanh_toan.ma_qr"alt="" style="height: 150px;">
+                    <img v-bind:src="chung_chi_thanh_toan.ma_qr" alt="" style="height: 150px;">
                     <p class="text-muted small mb-2">Lưu ý: Mã QR này sẽ hết hạn sau 24 giờ kể từ lúc tạo</p>
                     <p class="small mb-4"><b>Mã giao dịch:</b> <span class="ms-2">6491184871323425033</span></p>
                     <button type="button" class="btn btn-chinh btn-sm">Thanh toán xong, nhấn vào đây</button>
