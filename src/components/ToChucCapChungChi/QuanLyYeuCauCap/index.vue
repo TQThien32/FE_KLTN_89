@@ -57,7 +57,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="inputLastName" class="form-label">Số CCCD</label>
-                                            <input type="password" class="form-control" id="inputLastName"
+                                            <input type="text" class="form-control" id="inputLastName"
                                                 v-model="hien_thi_yeu_cau.so_cccd">
                                         </div>
                                         <div class="col-md-6">
@@ -67,11 +67,11 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label">Số Hiệu Chứng Chỉ</label>
-                                            <input type="sohieucc" class="form-control" id="inputEmail"
+                                            <input type="text" class="form-control" id=""
                                                 v-model="hien_thi_yeu_cau.so_hieu_chung_chi">
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-chinh px-5"
+                                            <button type="button" class="btn btn-chinh px-5"
                                                 v-on:click="truyXuat(hien_thi_yeu_cau.id)">Truy
                                                 xuất</button>
                                         </div>
@@ -91,18 +91,16 @@
                                                             <th>Ngày cấp</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
-                                                        <template v-for="(value, index) in list_chung_chi" :key="index">
-                                                            <tr>
-                                                                <td>{{ value.ho_ten }}</td>
-                                                                <td>{{ value.so_cccd }}</td>
-                                                                <td>{{ value.so_hieu_chung_chi }}</td>
-                                                                <td>{{ value.trinh_do }}</td>
-                                                                <td>{{ value.khoa_hoc }}</td>
-                                                                <td>{{ value.ket_qua }}</td>
-                                                                <td>{{ value.ngay_cap }}</td>
-                                                            </tr>
-                                                        </template>
+                                                    <tbody v-show="isShowResult">
+                                                        <tr>
+                                                            <td>{{ chung_chi.ho_ten }}</td>
+                                                            <td>{{ chung_chi.so_cccd }}</td>
+                                                            <td>{{ chung_chi.so_hieu_chung_chi }}</td>
+                                                            <td>{{ chung_chi.trinh_do }}</td>
+                                                            <td>{{ chung_chi.khoa_hoc }}</td>
+                                                            <td>{{ chung_chi.ket_qua }}</td>
+                                                            <td>{{ chung_chi.ngay_cap }}</td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -112,7 +110,8 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-chinh">Tạo dữ liệu chứng chỉ</button>
+                                <button type="button" v-on:click="taoChungChi()" class="btn btn-chinh">Tạo dữ liệu
+                                    chứng chỉ</button>
                             </div>
                         </div>
                     </div>
@@ -129,13 +128,19 @@ export default {
         return {
             list_yeu_cau: [],
             hien_thi_yeu_cau: {},
-            list_chung_chi: []
+            chung_chi: {},
+            isShowResult: false,
+            chung_chi_true:{}
         }
+    },
+    mounted() {
+        this.load_yeu_cau();
+
     },
     methods: {
         load_yeu_cau() {
             baseRequest
-                .get("get-data")
+                .get("get-yeu-cau-cap-data")
                 .then((res) => {
                     this.list_yeu_cau = res.data.data
                 })
@@ -145,14 +150,27 @@ export default {
                 .get("to-chuc/truy-xuat-getdata/" + id)
                 .then((res) => {
                     if (res.data.status) {
-                        this.list_chung_chi = res.data.data;
+                        this.chung_chi = res.data.data;
+                        this.isShowResult = true;
+                        this.chung_chi_true = res.data.data;
                         this.$toast.success(res.data.message);
-                    }
-                    else {
+                    } else {
+                        this.isShowResult = false;
                         this.$toast.error(res.data.message);
                     }
+                });
+        },
+        taoChungChi() {
+            baseRequest
+                .post('to-chuc/tao-chung-chi', this.chung_chi_true)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success(res.data.message)
+                    } else {
+                        this.$toast.error(res.data.message)
+                    }
                 })
-        }
+        },
     },
 }
 </script>
