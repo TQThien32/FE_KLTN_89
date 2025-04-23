@@ -268,6 +268,33 @@ const routes = [
         component: () => import('../components/DungChung/GioiThieu/index.vue'),
         meta: { layout: 'HocVien' },
     },
+
+    // Khách Vãng Lai
+    {
+        path: '/khach-vang-lai/trang-chu',
+        component: () => import('../components/KhachVangLai/TrangChu/index.vue'),
+        meta: { layout: 'KhachVangLai' },
+    },
+    {
+        path: '/khach-vang-lai/gioi-thieu',
+        component: () => import('../components/KhachVangLai/GioiThieu/index.vue'),
+        meta: { layout: 'KhachVangLai' },
+    },
+    {
+        path: '/khach-vang-lai/lien-he',
+        component: () => import('../components/KhachVangLai/LienHe/index.vue'),
+        meta: { layout: 'KhachVangLai' },
+    },
+    {
+        path: '/dang-nhap',
+        component: () => import('../components/KhachVangLai/DangNhap/index.vue'),
+        meta: { layout: 'KhachVangLai' },
+    },
+    {
+        path: '/dang-ky',
+        component: () => import('../components/KhachVangLai/DangKy/index.vue'),
+        meta: { layout: 'KhachVangLai' },
+    },
 ]
 
 const router = createRouter({
