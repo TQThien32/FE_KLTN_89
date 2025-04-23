@@ -147,7 +147,6 @@
                     <router-link to="/hoc-vien/chi-tiet-thanh-toan">
                         <button type="button" data-bs-dismiss="modal" class="btn btn-chinh">Thanh Toán</button>
                     </router-link>
-
                 </div>
             </div>
         </div>
