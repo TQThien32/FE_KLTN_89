@@ -2,7 +2,8 @@
     <div class="container">
         <div class="d-flex justify-content-between">
             <h3 class="text-light"><i class="fa-solid fa-list"></i>Chờ Thanh Toán</h3>
-            <button class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#thanhToan">
+            <button type="button" class="btn btn-secondary rounded-pill" data-bs-toggle="modal"
+                data-bs-target="#thanhToan">
                 <i class="fa-solid fa-arrow-right"></i> Thanh
                 Toán</button>
         </div>
@@ -10,37 +11,36 @@
         <hr class="text-white">
         <div class="row">
             <div class="form-check d-flex justify-content-end">
-                <input class="form-check-input" type="checkbox" id="checkRight" v-model="check_all" @change="chonTatCaChungChi">
+                <input class="form-check-input" type="checkbox" id="checkRight" v-model="check_all"
+                    @change="chonTatCaChungChi">
                 <label class="form-check-label ms-2 text-light mb-2 me-4 mt-1" for="checkRight">Chọn tất cả</label>
             </div>
 
-            <template v-for="(value, index) in list_chung_chi" :key="index">
-                <div class="col-lg-4">
-                    <div class="card card-hieuung border-chinh border-bottom border-top border-3 border-0">
-                        <div class="card-body">
-                            <img v-bind:src="value.hinh_anh" class="card-img-top" alt="ảnh chứng chỉ"
-                                style="height: 250px;">
-                            <p class="text-light mt-3" style="font-size: 16px;">Phí NFT: <b>{{ value.so_tien }} đ</b>
-                            </p>
-                            <div class=" d-flex justify-content-between align-items-center gap-2">
-                                <a data-bs-toggle="modal" data-bs-target="#ttchitiet" href="javascript:;"
-                                    class="btn btn-outline-light"><i class="fa-solid fa-indent "
-                                        style="font-size: 15px;"
-                                        v-on:click="Object.assign(chi_tiet_chung_chi, value)"></i> Thông tin chi
-                                    tiết</a>
-                                <div class="form-check ms-2">
-                                    <input class="form-check-input item-check" type="checkbox" :value="value"
-                                        v-model="selected_chung_chi">
-                                    <label class="form-check-label" for="checkDefault">
 
-                                    </label>
-                                </div>
+            <div class="col-lg-4">
+                <div class="card card-hieuung border-chinh border-bottom border-top border-3 border-0">
+                    <div class="card-body">
+                        <img v-bind:src="value.hinh_anh" class="card-img-top" alt="ảnh chứng chỉ"
+                            style="height: 250px;">
+                        <p class="text-light mt-3" style="font-size: 16px;">Phí NFT: <b>{{ value.so_tien }} đ</b>
+                        </p>
+                        <div class=" d-flex justify-content-between align-items-center gap-2">
+                            <a data-bs-toggle="modal" data-bs-target="#ttchitiet" href="javascript:;"
+                                class="btn btn-outline-light"><i class="fa-solid fa-indent " style="font-size: 15px;"
+                                    v-on:click="Object.assign(chi_tiet_chung_chi, value)"></i> Thông tin chi
+                                tiết</a>
+                            <div class="form-check ms-2">
+                                <input class="form-check-input item-check" type="checkbox" :value="value"
+                                    v-model="selected_chung_chi">
+                                <label class="form-check-label" for="checkDefault">
 
+                                </label>
                             </div>
+
                         </div>
                     </div>
                 </div>
-            </template>
+            </div>
         </div>
     </div>
 
@@ -79,7 +79,7 @@
                 </div>
                 <div class="modal-body">
                     <p class="card-text"><b>Tổ Chức cấp: </b><span class="ms-3">{{ chi_tiet_chung_chi.ten_to_chuc
-                            }}</span>
+                    }}</span>
                     </p>
                     <p class="card-text"><b>Ngày Cấp : </b><span class="ms-3">{{ chi_tiet_chung_chi.ngay_cap }}</span>
                     </p>
@@ -123,18 +123,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <template v-for="(item, index) in selected_chung_chi" :key="index">
-                                <tr class="text-center align-middle">
-                                    <th>{{ index + 1 }}</th>
-                                    <td><img :src="item.hinh_anh" style="height: 50px;" alt=""></td>
-                                    <td>{{ item.so_hieu }}</td>
-                                    <td><span class="badge text-bg-dark" data-bs-toggle="modal"
-                                            data-bs-target="#ttchitiet"
-                                            @click="Object.assign(chi_tiet_chung_chi, item)">Xem chi tiết</span></td>
-                                    <th>{{ item.so_tien }} đ</th>
-                                    <td><button class="btn btn-danger" @click="removeItem(index)"><i
-                                                class="fa-regular fa-trash-can"></i></button></td>
-                                </tr>
+                            <template v-for="(value, index) in list_thanh_toan" :key="index">
+                                <template v-for="(item, index) in selected_chung_chi" :key="index">
+                                    <tr class="text-center align-middle">
+                                        <th>{{ index + 1 }}</th>
+                                        <td><img :src="item.hinh_anh" style="height: 50px;" alt=""></td>
+                                        <td>{{ item.so_hieu }}</td>
+                                        <td><span class="badge text-bg-dark" data-bs-toggle="modal"
+                                                data-bs-target="#ttchitiet"
+                                                @click="Object.assign(chi_tiet_chung_chi, item)">Xem chi tiết</span>
+                                        </td>
+                                        <th>{{ item.so_tien }} đ</th>
+                                        <td><button class="btn btn-danger" @click="removeItem(index)"><i
+                                                    class="fa-regular fa-trash-can"></i></button></td>
+                                    </tr>
+                                </template>
                             </template>
                         </tbody>
                     </table>
@@ -159,6 +162,7 @@ import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
+            list_thanh_toan: [],
             list_chung_chi: [],
             list_lich_su_giao_dich: [],
             chi_tiet_chung_chi: {},
@@ -167,7 +171,7 @@ export default {
         }
     },
     mounted() {
-        this.loadData();
+        this.loadDataChungChi();
         this.loadDataLichSu();
     },
     computed: {
@@ -183,14 +187,14 @@ export default {
     methods: {
         loadDataChungChi() {
             baseRequest
-                .get('hoc_vien/chung-chi-chua-cap')
+                .get('hoc-vien/chung-chi-chua-cap')
                 .then((res) => {
                     this.list_chung_chi = res.data.data;
                 });
         },
         loadDataLichSu() {
             baseRequest
-                .get('hoc_vien/lich-su-giao-dich')
+                .get('hoc-vien/lich-su-giao-dich')
                 .then((res) => {
                     this.list_lich_su_giao_dich = res.data.data;
                 });
