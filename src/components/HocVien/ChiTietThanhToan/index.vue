@@ -9,20 +9,20 @@
                             <p class="card-text"><b>Họ Và Tên:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.ho_va_ten
                                     }}</span></p>
                             <p class="card-text"><b>Số CCCD:</b> <span class="ms-3">{{
-                                thong_tin_nguoi_dung.cccd }}</span></p>
+                                    thong_tin_nguoi_dung.cccd }}</span></p>
                         </div>
                         <div class="col-md-6">
                             <p class="card-text"><b>Email:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.emai }}</span>
                             </p>
                             <p class="card-text"><b>Số Điện Thoại:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.sdt
-                            }}</span></p>
+                                    }}</span></p>
                         </div>
                     </div>
 
                 </div>
             </div>
             <h4 class="text-white mt-5"><i class="fa-solid fa-circle-info"></i> Thông Tin Chứng Chỉ</h4>
-            <template v-for="(value, index) in list_chung_chi" :key="index">
+            <template v-for="(value, index) in chung_chi_thanh_toan" :key="index">
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="card card-hieuung">
@@ -30,21 +30,21 @@
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 mt-3">
                                         <p class="card-text"><b>Tổ Chức cấp: </b><span class="ms-3">{{
-                                            value.ten_to_chuc }}</span></p>
+                                                value.ten_to_chuc }}</span></p>
                                         <p class="card-text"><b>Ngày Cấp : </b><span class="ms-3">{{
-                                            value.ngay_cap }}</span></p>
+                                                value.ngay_cap }}</span></p>
                                         <p class="card-text"><b>Khóa Học: </b><span class="ms-3">{{ value.khoa_hoc
                                                 }}</span></p>
                                         <p class="card-text"><b>Họ Và Tên : </b><span class="ms-3">{{
-                                            value.ho_va_ten }}</span></p>
+                                                value.ho_va_ten }}</span></p>
                                         <p class="card-text"><b>Số CCCD : </b><span class="ms-3">{{ value.cccd }}</span>
                                         </p>
                                         <p class="card-text"><b>Trình Độ : </b><span class="ms-3">{{
-                                            value.trinh_do }}</span></p>
+                                                value.trinh_do }}</span></p>
                                         <p class="card-text"><b>Kết Quả: </b><span class="ms-3">{{ value.ket_qua
                                                 }}</span></p>
                                         <p class="card-text"><b>Số Hiệu Chứng Chỉ: </b><span class="ms-3">{{
-                                            value.so_hieu }}</span></p>
+                                                value.so_hieu }}</span></p>
                                     </div>
                                     <div class="col-lg-7 col-md-7 mt-3">
                                         <p class="card-text"><b>Hình Ảnh: </b></p>
@@ -76,8 +76,7 @@
                 </div>
                 <div class="card-body text-center">
                     <h5>Quét mã dưới đây bằng Internet Banking </h5>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Superqr.svg" alt=""
-                        style="height: 150px;">
+                    <img v-bind:src="chung_chi_thanh_toan.ma_qr" alt="" style="height: 150px;">
                     <p class="text-muted small mb-2">Lưu ý: Mã QR này sẽ hết hạn sau 24 giờ kể từ lúc tạo</p>
                     <p class="small mb-4"><b>Mã giao dịch:</b> <span class="ms-2">6491184871323425033</span></p>
                     <button type="button" class="btn btn-chinh btn-sm">Thanh toán xong, nhấn vào đây</button>
@@ -85,6 +84,11 @@
             </div>
         </div>
     </div>
+    <!-- <div class="card">
+        <div class="card-body">
+            <img v-bind:src="chung_chi_thanh_toan.ma_qr" alt="">
+        </div>
+    </div> -->
 </template>
 
 <script>
@@ -94,7 +98,7 @@ export default {
     data() {
         return {
             thong_tin_nguoi_dung: {},
-            list_chung_chi: []
+            chung_chi_thanh_toan: {}
         }
     },
     mounted() {
@@ -103,15 +107,15 @@ export default {
     },
     computed: {
         tongTien() {
-            return this.list_chung_chi.length * 120000;
+            return this.chung_chi_thanh_toan.length * 120000;
         }
     },
     methods: {
         loadDataChungChi() {
             baseRequest
-                .get('chi-tiet-don-hang/data')
+                .get('hoc-vien/thanh-toan-co-qr')
                 .then((res) => {
-                    this.list_chung_chi = res.data.data;
+                    this.chung_chi_thanh_toan = res.data.data;
                 });
         },
         loadDataNguoiDung() {

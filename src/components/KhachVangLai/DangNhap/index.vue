@@ -27,7 +27,7 @@
                         <div class="d-flex align-items-center">
                             <div class="tab-icon"><i class="fa-solid fa-graduation-cap font-18 me-2"></i>
                             </div>
-                            <div class="tab-title">Học Viên</div>
+                            <div class="tab-title">Người Dùng</div>
                         </div>
                     </a>
                 </li>
@@ -44,7 +44,7 @@
                                 <div class="card-body">
                                     <div class="border p-4 rounded">
                                         <div class="text-center">
-                                            <h3 class="">Đăng Nhập</h3>
+                                            <h3 class="">Đăng Nhập - Admin</h3>
                                         </div>
                                         <div class="form-body mt-3">
                                             <form class="row g-3">
@@ -93,8 +93,8 @@
                                 <div class="card-body">
                                     <div class="border p-4 rounded">
                                         <div class="text-center">
-                                            <h3 class="">Đăng Nhập</h3>
-                                            <p>Bạn chưa có tài khoản? <a href="/to-chuc-cap-chung-chi/dang-ky">Đăng
+                                            <h3 class="">Đăng Nhập - Tổ Chức</h3>
+                                            <p>Bạn chưa có tài khoản? <a href="/dang-ky">Đăng
                                                     ký</a>
                                             </p>
                                         </div>
@@ -147,7 +147,7 @@
                                 <div class="card-body">
                                     <div class="border p-4 rounded">
                                         <div class="text-center">
-                                            <h3 class="">Đăng Nhập</h3>
+                                            <h3 class="">Đăng Nhập - Người Dùng</h3>
                                             <p>Bạn chưa có tài khoản? <a href="/hoc-vien/dang-ky">Đăng ký</a>
                                             </p>
                                         </div>

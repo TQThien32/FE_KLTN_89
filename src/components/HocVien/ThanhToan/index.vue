@@ -22,7 +22,7 @@
                                 class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
 
                             <p class="text-light mt-3" style="font-size: 16px;">Phí NFT:
-                                <b>{{ value.so_hieu_chung_chi }}1.000.000 đ</b>
+                                <b>{{ value.so_hieu_chung_chi }}1.000.000đ</b>
                             </p>
 
                             <div class=" d-flex justify-content-between align-items-center gap-2">
@@ -116,18 +116,22 @@
                                 <th>Thao Tác</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr class="text-center align-middle">
-                                <th>1</th>
-                                <td><img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
-                                        style="height: 50px;" alt=""></td>
-                                <td>024-254-202</td>
-                                <td><span class="badge text-bg-dark" data-bs-toggle="modal"
-                                        data-bs-target="#ttchitiet">Xem
-                                        chi tiết</span></td>
-                                <th>100.000 đ</th>
-                                <td><button class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button></td>
-                            </tr>
+                        <tbody v-show="isShowResult">
+                            <template v-for="(value, index) in list_chi_tiet_don_hang" :key="index">
+                                <tr class="text-center align-middle">
+                                    <th>{{ index + 1 }}</th>
+                                    <td><img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
+                                            style="height: 50px;" alt=""></td>
+                                    <td>{{ value.so_hieu_chung_chi }}</td>
+                                    <td><span class="badge text-bg-dark" data-bs-toggle="modal"
+                                            data-bs-target="#ttchitiet">Xem
+                                            chi tiết</span></td>
+                                    <th>100.000 đ</th>
+                                    <td><button type="button" v-on:click="xoaDonChiTiet(value.id)"
+                                            class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
+                                    </td>
+                                </tr>
+                            </template>
                         </tbody>
                     </table>
 
@@ -136,9 +140,10 @@
                     <div class="me-5 mt-3">
                         <p style="font-size: 18px;">Tổng Tiền: <b>250.000 đ</b></p>
                     </div>
-                    <router-link to="/hoc-vien/chi-tiet-thanh-toan">
-                        <button type="button" data-bs-dismiss="modal" class="btn btn-chinh">Thanh Toán</button>
-                    </router-link>
+                    <!-- <router-link to="/hoc-vien/chi-tiet-thanh-toan"> -->
+                    <button v-on:click="thanhToan()" type="button" data-bs-dismiss="modal" class="btn btn-chinh">Thanh
+                        Toán</button>
+                    <!-- </router-link> -->
 
                 </div>
             </div>
@@ -154,33 +159,73 @@ export default {
     data() {
         return {
             list_chung_chi: [],
+            list_chi_tiet_don_hang: [],
+            isShowResult: true,
         }
     },
     mounted() {
         this.loadData();
+        this.loadDataChiTietDonHang();
     },
     methods: {
         loadData() {
             baseRequest
-                .get('hoc_vien/chung-chi-chua-cap')
+                .get('hoc-vien/chung-chi-chua-cap')
                 .then((res) => {
                     this.list_chung_chi = res.data.data;
                 });
-                
 
+        },
+        loadDataChiTietDonHang() {
+            baseRequest
+                .get('hoc-vien/can-thanh-toan')
+                .then((res) => {
+                    this.list_chi_tiet_don_hang = res.data.data;
+                });
         },
         themVaoThanhToan(id_chung_chi) {
             baseRequest
-                .post('them-vao-thanh-toan',{id_chung_chi:id_chung_chi})
+                .post('them-vao-thanh-toan', { id_chung_chi: id_chung_chi })
                 .then((res) => {
                     if (res.data.status) {
-                        this.$toast.success(res.data.message)
+                        this.$toast.success(res.data.message);
+                        this.loadData();
+                        this.loadDataChiTietDonHang();
                     } else {
                         this.$toast.error(res.data.message)
                     }
                 })
+        },
+        xoaDonChiTiet(id) {
+            baseRequest
+                .post('hoc-vien/xoa-don-chi-tiet', { id })
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success(res.data.message)
+                        this.loadData();
+                        this.loadDataChiTietDonHang();
+                    } else {
+                        this.$toast.error(res.data.message)
+                    }
+                })
+        },
+        thanhToan() {
+            const dsId = this.list_chi_tiet_don_hang;
+            var payload = {
+                'ds_chung_chi_thanh_toan': dsId,
+            };
+            baseRequest
+                .post('hoc-vien/thanh-toan', payload)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.tong_tien = 0,
+                            this.$toast.success(res.data.message)
+                        this.loadData();
+                    } else {
+                        this.$toast.error(res.data.message)
+                    }
+                });
         }
-
     }
 }
 window.onload = function () {

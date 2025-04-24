@@ -21,7 +21,7 @@
       <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true" data-bs-interval="3000">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img style="height: 450px;" src="../../../assets/images/slide/1.png"
+      <img style="height: 450px;" src="../../../assets/images/slide/3.png"
         class="d-block w-100 hover-effect slide-in-right" alt="...">
     </div>
     <div class="carousel-item">
@@ -29,7 +29,7 @@
         class="d-block w-100 hover-effect" alt="...">
     </div>
     <div class="carousel-item">
-      <img style="height: 450px;" src="../../../assets/images/slide/3.png"
+      <img style="height: 450px;" src="../../../assets/images/slide/1.png"
         class="d-block w-100 hover-effect" alt="...">
     </div>
   </div>
@@ -249,7 +249,7 @@
   <br>
   <hr class="mt-5">
   <br>
-  <div class="row text-center mt-4">
+  <!-- <div class="row text-center mt-4">
     <div class="col-lg-3">
       <div class="card-body" style="border: 1px solid white; border-radius: 8px;">
         <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="icon" width="50">
@@ -278,7 +278,7 @@
           <p class="text-light">Luôn sẵn sàng tư vấn và xử lý mọi thắc mắc về chứng chỉ.</p>
       </div>
     </div>
-  </div>
+  </div> -->
  
 </template>
 <script>
