@@ -32,133 +32,85 @@
                        <li class="nav-item dropdown dropdown-large">
                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
                                role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
-                                   class="alert-count">7</span>
+                                   class="alert-count">2</span>
                                <i class='bx bx-bell'></i>
                            </a>
-                           <div class="dropdown-menu dropdown-menu-end">
-                               <a href="javascript:;">
-                                   <div class="msg-header">
-                                       <p class="msg-header-title">Notifications</p>
-                                       <p class="msg-header-clear ms-auto">Marks all as read</p>
-                                   </div>
-                               </a>
-                               <div class="header-notifications-list">
-                                   <a class="dropdown-item" href="javascript:;">
-                                       <div class="d-flex align-items-center">
-                                           <div class="notify bg-light-primary text-primary"><i
-                                                   class="bx bx-group"></i>
-                                           </div>
-                                           <div class="flex-grow-1">
-                                               <h6 class="msg-name">New Customers<span class="msg-time float-end">14
-                                                       Sec
-                                                       ago</span></h6>
-                                               <p class="msg-info">5 new user registered</p>
-                                           </div>
-                                       </div>
-                                   </a>
-                                   <a class="dropdown-item" href="javascript:;">
-                                       <div class="d-flex align-items-center">
-                                           <div class="notify bg-light-danger text-danger"><i
-                                                   class="bx bx-cart-alt"></i>
-                                           </div>
-                                           <div class="flex-grow-1">
-                                               <h6 class="msg-name">New Orders <span class="msg-time float-end">2 min
-                                                       ago</span></h6>
-                                               <p class="msg-info">You have recived new orders</p>
-                                           </div>
-                                       </div>
-                                   </a>
-                                   <a class="dropdown-item" href="javascript:;">
-                                       <div class="d-flex align-items-center">
-                                           <div class="notify bg-light-success text-success"><i class="bx bx-file"></i>
-                                           </div>
-                                           <div class="flex-grow-1">
-                                               <h6 class="msg-name">24 PDF File<span class="msg-time float-end">19 min
-                                                       ago</span></h6>
-                                               <p class="msg-info">The pdf files generated</p>
-                                           </div>
-                                       </div>
-                                   </a>
-                                   <a class="dropdown-item" href="javascript:;">
-                                       <div class="d-flex align-items-center">
-                                           <div class="notify bg-light-warning text-warning"><i class="bx bx-send"></i>
-                                           </div>
-                                           <div class="flex-grow-1">
-                                               <h6 class="msg-name">Time Response <span class="msg-time float-end">28
-                                                       min
-                                                       ago</span></h6>
-                                               <p class="msg-info">5.1 min avarage time response</p>
-                                           </div>
-                                       </div>
-                                   </a>
-                                   <a class="dropdown-item" href="javascript:;">
-                                       <div class="d-flex align-items-center">
-                                           <div class="notify bg-light-info text-info"><i
-                                                   class="bx bx-home-circle"></i>
-                                           </div>
-                                           <div class="flex-grow-1">
-                                               <h6 class="msg-name">New Product Approved <span
-                                                       class="msg-time float-end">2 hrs ago</span></h6>
-                                               <p class="msg-info">Your new product has approved</p>
-                                           </div>
-                                       </div>
-                                   </a>
-                                   <a class="dropdown-item" href="javascript:;">
-                                       <div class="d-flex align-items-center">
-                                           <div class="notify bg-light-danger text-danger"><i
-                                                   class="bx bx-message-detail"></i>
-                                           </div>
-                                           <div class="flex-grow-1">
-                                               <h6 class="msg-name">New Comments <span class="msg-time float-end">4 hrs
-                                                       ago</span></h6>
-                                               <p class="msg-info">New customer comments recived</p>
-                                           </div>
-                                       </div>
-                                   </a>
-                                   <a class="dropdown-item" href="javascript:;">
-                                       <div class="d-flex align-items-center">
-                                           <div class="notify bg-light-success text-success"><i
-                                                   class='bx bx-check-square'></i>
-                                           </div>
-                                           <div class="flex-grow-1">
-                                               <h6 class="msg-name">Your item is shipped <span
-                                                       class="msg-time float-end">5 hrs
-                                                       ago</span></h6>
-                                               <p class="msg-info">Successfully shipped your item</p>
-                                           </div>
-                                       </div>
-                                   </a>
-                                   <a class="dropdown-item" href="javascript:;">
-                                       <div class="d-flex align-items-center">
-                                           <div class="notify bg-light-primary text-primary"><i
-                                                   class='bx bx-user-pin'></i>
-                                           </div>
-                                           <div class="flex-grow-1">
-                                               <h6 class="msg-name">New 24 authors<span class="msg-time float-end">1
-                                                       day
-                                                       ago</span></h6>
-                                               <p class="msg-info">24 new authors joined last week</p>
-                                           </div>
-                                       </div>
-                                   </a>
-                                   <a class="dropdown-item" href="javascript:;">
-                                       <div class="d-flex align-items-center">
-                                           <div class="notify bg-light-warning text-warning"><i
-                                                   class='bx bx-door-open'></i>
-                                           </div>
-                                           <div class="flex-grow-1">
-                                               <h6 class="msg-name">Defense Alerts <span class="msg-time float-end">2
-                                                       weeks
-                                                       ago</span></h6>
-                                               <p class="msg-info">45% less alerts last 4 weeks</p>
-                                           </div>
-                                       </div>
-                                   </a>
-                               </div>
-                               <a href="javascript:;">
-                                   <div class="text-center msg-footer">View All Notifications</div>
-                               </a>
-                           </div>
+                           <div class="dropdown-menu dropdown-menu-end dropdown-wide">
+                                <a href="javascript:;">
+                                    <div class="msg-header">
+                                        <p class="msg-header-title"><b>Thông báo</b></p>
+                                        <a href="/to-chuc-cap-chung-chi/xem-thong-bao" class="ms-auto">Xem tất cả</a>
+                                    </div>
+                                </a>
+                                <div class="header-notifications-list">
+                                    <a class="dropdown-item" href="javascript:;">
+                                        <div class="d-flex align-items-center w-100">
+                                            <a href="/to-chuc-cap-chung-chi/xem-thong-bao/chi-tiet-thong-bao" class="w-100 text-decoration-none">
+                                                <div class="d-flex align-items-start py-2 w-100">
+                                                    <!-- Tiêu đề -->
+                                                    <div class="me-2" style="width: 100px;">
+                                                        <p class="mb-0 text-dark"><b>Wordpress</b></p>
+                                                    </div>
+                                                    <!-- Nội dung -->
+                                                    <div class="me-2 flex-grow-1">
+                                                        <p class="mb-0 text-muted text-truncate"
+                                                            style="max-width: 400px;">
+                                                            It is a long established fact that a reader will be
+                                                            distracted by the readable...
+                                                        </p>
+                                                    </div>
+                                                    <!-- Thời gian -->
+                                                    <div style="width: 80px;" class="text-end">
+                                                        <p class="mb-0 email-time">5:56 PM</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </a>
+
+                                    <a class="dropdown-item" href="javascript:;">
+                                        <div class="d-flex align-items-center w-100">
+                                            <a href="app-emailread.html" class="w-100 text-decoration-none">
+                                                <div class="d-flex align-items-start py-2 w-100">
+                                                    <!-- Tiêu đề -->
+                                                    <div class="me-2" style="width: 100px;">
+                                                        <p class="mb-0 text-dark"><b>Locanto</b></p>
+                                                    </div>
+                                                    <!-- Nội dung -->
+                                                    <div class="me-2 flex-grow-1">
+                                                        <p class="mb-0 text-muted text-truncate"
+                                                            style="max-width: 400px;">
+                                                            It is a long established fact that a reader will be
+                                                            distracted by the readable...
+                                                        </p>
+                                                    </div>
+                                                    <!-- Thời gian -->
+                                                    <div style="width: 80px;" class="text-end">
+                                                        <p class="mb-0 email-time">5:56 PM</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </a>
+                                    
+                                    <!-- <a class="dropdown-item" href="javascript:;">
+                                        <div class="d-flex align-items-center">
+                                            <a href="app-emailread.html">
+                                                <div class="d-md-flex align-items-center email-message py-1">
+                                                    <p class="mb-0 text-dark me-3"><b>Locanto</b>
+                                                    </p>
+                                                    <p class="mb-0 me-2">The point of using Lorem Ipsum is that it has a
+                                                        more-or-less normal...</p>
+
+                                                    <div style="width: 70px;" class="text-end">
+                                                        <p class="mb-0 email-time ">5:54 PM</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </a> -->
+                                </div>
+                            </div>
                        </li>
                        <li class="nav-item dropdown dropdown-large">
                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
@@ -379,5 +331,34 @@ export default {
 
 .nav-link:hover {
     transform: scale(1.2);
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px !important;
+    /* Thay đổi giá trị này để chỉnh cỡ chữ */
+}
+
+.nav-link {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-link:hover {
+    transform: scale(1.2);
+}
+
+
+.dropdown-wide {
+    min-width: 600px;
+    /* hoặc 500px, 600px tùy bạn */
+    max-width: 100%;
+    /* tránh bị tràn */
+}
+
+.email-message p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 425px;
+    /* Hoặc chiều rộng phù hợp */
 }
 </style>

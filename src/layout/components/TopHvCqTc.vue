@@ -40,13 +40,13 @@
                                 <a href="javascript:;">
                                     <div class="msg-header">
                                         <p class="msg-header-title"><b>Thông báo</b></p>
-                                        <a href="/dung-chung/xem-thong-bao" class="ms-auto">Xem tất cả</a>
+                                        <a href="/hoc-vien/xem-thong-bao" class="ms-auto">Xem tất cả</a>
                                     </div>
                                 </a>
                                 <div class="header-notifications-list">
                                     <a class="dropdown-item" href="javascript:;">
                                         <div class="d-flex align-items-center w-100">
-                                            <a href="app-emailread.html" class="w-100 text-decoration-none">
+                                            <a href="/hoc-vien/xem-thong-bao/chi-tiet-thong-bao" class="w-100 text-decoration-none">
                                                 <div class="d-flex align-items-start py-2 w-100">
                                                     <!-- Tiêu đề -->
                                                     <div class="me-2" style="width: 100px;">
@@ -71,7 +71,7 @@
 
                                     <a class="dropdown-item" href="javascript:;">
                                         <div class="d-flex align-items-center w-100">
-                                            <a href="app-emailread.html" class="w-100 text-decoration-none">
+                                            <a href="/hoc-vien/xem-thong-bao/chi-tiet-thong-bao" class="w-100 text-decoration-none">
                                                 <div class="d-flex align-items-start py-2 w-100">
                                                     <!-- Tiêu đề -->
                                                     <div class="me-2" style="width: 100px;">

@@ -151,8 +151,18 @@ const routes = [
         meta : {layout : 'auth'},
         props: true
     },
-
-   
+    {
+        path : '/hoc-vien/xem-thong-bao',
+        component: ()=>import('../components/HocVien/XemThongBao/index.vue'),
+        meta : {layout : 'HocVien'},
+        props: true
+    },
+    {
+        path : '/hoc-vien/xem-thong-bao/chi-tiet-thong-bao',
+        component: ()=>import('../components/HocVien/XemThongBao/chitietthongbao.vue'),
+        meta : {layout : 'HocVien'},
+        props: true
+    },
 
     //CoQuanXacThuc
     {
@@ -238,6 +248,18 @@ const routes = [
         path : '/to-chuc-cap-chung-chi/lay-lai-mat-khau/:hash_reset',
         component: ()=>import('../components/ToChucCapChungChi/NhanLaiMatKhau/index.vue'),
         meta : {layout : 'auth'},
+        props: true
+    },
+    {
+        path : '/to-chuc-cap-chung-chi/xem-thong-bao',
+        component: ()=>import('../components/ToChucCapChungChi/XemThongBao/index.vue'),
+        meta : {layout : 'ToChucCapChungChi'},
+        props: true
+    },
+    {
+        path : '/to-chuc-cap-chung-chi/xem-thong-bao/chi-tiet-thong-bao',
+        component: ()=>import('../components/ToChucCapChungChi/XemThongBao/chitietthongbao.vue'),
+        meta : {layout : 'ToChucCapChungChi'},
         props: true
     },
    
