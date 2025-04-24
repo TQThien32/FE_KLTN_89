@@ -219,7 +219,9 @@ export default {
                 .then((res) => {
                     if (res.data.status) {
                         this.tong_tien = 0,
-                            this.$toast.success(res.data.message)
+                            this.$toast.success(res.data.message);
+                        localStorage.setItem('mathanhtoan', JSON.stringify(res.data.data));
+                        this.$router.push('/hoc-vien/chi-tiet-thanh-toan');
                         this.loadData();
                     } else {
                         this.$toast.error(res.data.message)

@@ -145,7 +145,7 @@ export default {
          });
 
          try {
-            await baseRequest.post("http://localhost:8000/api/upload-folder", formData);
+            await baseRequest.post("upload-folder", formData);
             this.$toast.success("Tải Lên Thành Công")
          } catch (error) {
             this.$toast.error("Có Lỗi Xảy Ra")
@@ -155,7 +155,7 @@ export default {
       },
       async fetchData() {
          try {
-            let response = await baseRequest.get("http://localhost:8000/api/get-data");
+            let response = await baseRequest.get("get-data");
             this.dataList = response.data;
          } catch (error) {
             // this.$toast.error("Có Lỗi Xảy Ra")

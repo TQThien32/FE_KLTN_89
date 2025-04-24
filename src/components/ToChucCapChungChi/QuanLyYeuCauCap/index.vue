@@ -110,7 +110,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                <button type="button" v-on:click="taoChungChi()" class="btn btn-chinh">Tạo dữ liệu
+                                <button type="button" v-on:click="taoChungChi()" data-bs-dismiss="modal" class="btn btn-chinh">Tạo dữ liệu
                                     chứng chỉ</button>
                             </div>
                         </div>
@@ -158,6 +158,7 @@ export default {
                         this.isShowResult = false;
                         this.$toast.error(res.data.message);
                     }
+                    this.load_yeu_cau();
                 });
         },
         taoChungChi() {
