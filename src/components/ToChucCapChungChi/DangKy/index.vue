@@ -162,7 +162,7 @@ export default {
         DangKy() {
             this.errorMessage = '';
             if (this.to_chuc_create.password !== this.confirmPassword) {
-                this.errorMessage = 'Nhập Lại Mật Khẩu không được trùng với Mật Khẩu!';
+                this.errorMessage = 'Nhập Lại Mật Khẩu phải trùng với Mật Khẩu!';
             }
             else {
                 baseRequest

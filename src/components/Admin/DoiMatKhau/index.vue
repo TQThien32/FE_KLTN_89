@@ -13,13 +13,27 @@
                             </div>
                             <div class="mb-3">
                                 <label for="newPassword" class="form-label"><b>Mật Khẩu Mới</b></label>
-                                <input type="password" class="form-control" id="newPassword"
-                                    placeholder="Nhập mật khẩu mới" v-model="update_mk.update_password" required>
+                                <div class="input-group" id="password_group">
+                                    <input :type="showPassword ? 'text' : 'password'" class="form-control border-end-0"
+                                        id="inputChoosePassword" placeholder="Nhập Mật Khẩu"
+                                        v-model="update_mk.update_password" required>
+                                    <a href="javascript:;" class="input-group-text bg-transparent"
+                                        @click="togglePassword">
+                                        <i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
+                                    </a>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label for="confirmPassword" class="form-label"><b>Xác Nhận Mật Khẩu</b></label>
-                                <input type="password" class="form-control" id="confirmPassword"
-                                    placeholder="Xác nhận mật khẩu mới" v-model="confirmPassword" required>
+                                <div class="input-group" id="confirm_password_group">
+                                    <input :type="showConfirmPassword ? 'text' : 'password'"
+                                        class="form-control border-end-0" placeholder="Nhập Lại Mật Khẩu"
+                                        v-model="confirmPassword" required>
+                                    <a href="javascript:;" class="input-group-text bg-transparent"
+                                        @click="toggleConfirmPassword">
+                                        <i :class="showConfirmPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
+                                    </a>
+                                </div><br>
                                     <span v-if="errorMessage" style="color:red">{{ errorMessage }}</span><br>
                             </div>
                             <div class="text-center"><button type="button" class="btn btn btn-chinh" v-on:click="doi_mk()">Đổi Mật
@@ -42,14 +56,22 @@ export default {
             update_mk: {
                 password : '',
                 update_password : '',
-            }
+            },
+            showPassword: false,
+            showConfirmPassword: false
         }
     },
     methods: {
+        togglePassword() {
+            this.showPassword = !this.showPassword;
+        },
+        toggleConfirmPassword() {
+            this.showConfirmPassword = !this.showConfirmPassword;
+        },
         doi_mk(){
             this.errorMessage = '';
             if (this.update_mk.update_password !== this.confirmPassword) {
-                this.errorMessage = 'Xác Nhận Mật Khẩu không được trùng với Mật Khẩu Mới!';
+                this.errorMessage = 'Xác Nhận Mật Khẩu phải trùng với Mật Khẩu Mới!';
             }
             else{
                 baseRequest

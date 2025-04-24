@@ -71,7 +71,7 @@ export default {
         doi_mk() {
             this.errorMessage = '';
             if (this.update_mk.update_password !== this.confirmPassword) {
-                this.errorMessage = 'Xác Nhận Mật Khẩu không được trùng với Mật Khẩu Mới!';
+                this.errorMessage = 'Xác Nhận Mật Khẩu phải trùng với Mật Khẩu Mới!';
             }
             else {
                 baseRequest
