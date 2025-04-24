@@ -64,7 +64,7 @@
    </div>
 </template>
 <script>
-import axios from 'axios';
+import baseRequest from '../../../core/baseRequest';
 
 export default {
    data() {
@@ -77,8 +77,8 @@ export default {
    },
    methods: {
       loadData() {
-         axios
-            .get('http://127.0.0.1:8000/api/hoc-vien/data')
+         baseRequest
+            .get('hoc-vien/data')
             .then((res) => {
                this.list_hoc_vien = res.data.data;
             });
