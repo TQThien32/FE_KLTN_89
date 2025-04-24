@@ -233,7 +233,43 @@
 </template>
 <script>
 export default {
+    data() {
+        return {
+            hoc_vien_create : {},
+            to_chuc_create: {
+                ten_to_chuc: '',
+                email: '',
+                hotline: '',
+                dia_chi: '',
+                ho_ten_nguoi_dai_dien: '',
+                so_cccd: '',
+                sdt_nguoi_dai_dien: '',
+                email_nguoi_dai_dien: '',
+                password: ''
+            },
+            confirmPassword: '',
+            errorMessage: '',
+            showPassword: false,
+            showConfirmPassword: false
+        }
+    },
+    mounted() {
 
+    },
+    methods: {
+        DangKy(){
+            axios
+            .post('http://127.0.0.1:8000/api/hoc-vien/dang-ky', this.hoc_vien_create)
+            .then((res)=>{
+                if(res.data.status){
+                    this.$toast.success(res.data.message)
+                }else{
+                    this.$toast.error('Đăng ký thất bại.')
+                }
+            });
+
+        }
+    }
 }
 </script>
 <style></style>

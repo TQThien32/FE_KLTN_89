@@ -233,7 +233,7 @@
   <h2 class="text-center mt-5 text-light"><b>TIN TỨC VÀ BÀI VIẾT</b></h2><br>
   <div class="row mt-4">
     <div class="col-md-3 mb-4" v-for="(article, index) in articles" :key="index">
-      <div class="card h-100 d-flex flex-column">
+      <div class="card h-100 d-flex flex-column" style="box-shadow: none;">
         <img :src="article.image" class="card-img-top" alt="Ảnh bài viết" style="height: 185px; object-fit: cover;">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title equal-title">{{ article.title }}</h5>
@@ -462,7 +462,7 @@ export default {
 }
 
 .card:hover {
-  border-color: white;
+  border-color: rgb(255, 255, 255);
 }
 
 /* Chuyển động của dòng chữ đầu trang */
