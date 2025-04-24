@@ -39,17 +39,38 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <label class="mt-2">Email Nhân Viên</label>
+                            <div>
+                                <label class="mt-2">Email Nhân Viên</label>
                             <input class="mt-2 form-control" type="email" v-model="create_nhan_vien.email">
+                            </div>
                             <label class="mt-2">Password</label>
-                            <input class="mt-2 form-control" type="password" v-model="create_nhan_vien.password">
+                            <div class="input-group" id="password_group">
+                                <input :type="showPassword ? 'text' : 'password'" class="form-control border-end-0 mt-2"
+                                    id="inputChoosePassword" placeholder="Nhập Mật Khẩu"
+                                    v-model="create_nhan_vien.password" required>
+                                <a href="javascript:;" class="input-group-text bg-transparent" @click="togglePassword">
+                                    <i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
+                                </a>
+                            </div>
                             <label class="mt-2">Nhập Lại Password</label>
-                            <input class="mt-2 form-control" type="password">
+                            <div class="input-group" id="confirm_password_group">
+                                <input :type="showConfirmPassword ? 'text' : 'password'"
+                                    class="form-control border-end-0 mt-2" placeholder="Nhập Lại Mật Khẩu"
+                                    v-model="confirmPassword" required>
+                                <a href="javascript:;" class="input-group-text bg-transparent"
+                                    @click="toggleConfirmPassword">
+                                    <i :class="showConfirmPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
+                                </a>
+                            </div>
+                            <span v-if="errorMessage" style="color:red">{{ errorMessage }} <br></span>
                             <label class="mt-2">Ngày Sinh</label>
                             <input class="mt-2 form-control" type="date" v-model="create_nhan_vien.ngay_sinh">
                             <label class="mt-2">Địa Chỉ</label>
                             <input class="mt-2 form-control" type="text" v-model="create_nhan_vien.dia_chi">
                         </div>
+                    </div>
+                    <div class="row mt-1">
+                        
                     </div>
                 </div>
                 <div class="card-footer text-end">
@@ -121,41 +142,67 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
+
+import baseRequest from '../../../core/baseRequest';
 
 export default {
     data() {
         return {
             list_nhan_vien: [],
-            create_nhan_vien: {},
+            create_nhan_vien: {
+                ho_ten: '',
+                so_cccd: '',
+                sdt: '',
+                chuc_vu: '',
+                gioi_tinh: '',
+                email: '',
+                password: '',
+                ngay_sinh: '',
+                dia_chi: '',
+            },
+            confirmPassword: '',
+            errorMessage: '',
+            showPassword: false,
+            showConfirmPassword: false
         }
     },
     mounted() {
         this.loadData();
     },
     methods: {
+        togglePassword() {
+            this.showPassword = !this.showPassword;
+        },
+        toggleConfirmPassword() {
+            this.showConfirmPassword = !this.showConfirmPassword;
+        },
         loadData() {
-            axios
-                .get('http://127.0.0.1:8000/api/admin/data')
+            baseRequest
+                .get('admin/data')
                 .then((res) => {
                     this.list_nhan_vien = res.data.data;
                 });
 
         },
         addNV() {
-            axios
-                .post('http://127.0.0.1:8000/api/admin/dang-ky', this.create_nhan_vien)
-                .then((res) => {
-                    if (res.data.status) {
-                        this.$toast.success(res.data.message)
-                        this.loadData();
-                    } else {
-                        this.$toast.error(res.data.message);
-                    }
-                });
+            this.errorMessage = '';
+            if (this.list_nhan_vien.password !== this.confirmPassword) {
+                this.errorMessage = 'Nhập Lại Mật Khẩu phải trùng với Mật Khẩu!';
+            }
+            else {
+                baseRequest
+                    .post('admin/dang-ky', this.create_nhan_vien)
+                    .then((res) => {
+                        if (res.data.status) {
+                            this.$toast.success(res.data.message)
+                            this.loadData();
+                        } else {
+                            this.$toast.error(res.data.message);
+                        }
+                    });
+            }
         }
     }
 }
 </script>
-<style >
-</style>
+<style></style>

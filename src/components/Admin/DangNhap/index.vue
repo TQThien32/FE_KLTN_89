@@ -22,18 +22,20 @@
 											</div>
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
-												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0"
-														id="inputChoosePassword" placeholder="Nhập mật khẩu"
-														v-model="dang_Nhap.password"> <a href="javascript:;"
-														class="input-group-text bg-transparent"><i
-															class="bx bx-hide"></i></a>
+												<div class="input-group" id="password_group">
+													<input :type="showPassword ? 'text' : 'password'"
+														class="form-control border-end-0" id="inputChoosePassword"
+														placeholder="Nhập Mật Khẩu" v-model="dang_Nhap.password">
+													<a href="javascript:;" class="input-group-text bg-transparent"
+														@click="togglePassword">
+														<i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
+													</a>
 												</div>
 											</div>
 											<div class="col-12">
 												<div class="d-grid">
-													<button v-on:click="dangNhap()" type="button" class="btn btn-chinh"><i
-															class="bx bxs-lock-open" ></i>Đăng
+													<button v-on:click="dangNhap()" type="button"
+														class="btn btn-chinh"><i class="bx bxs-lock-open"></i>Đăng
 														Nhập</button>
 												</div>
 											</div>
@@ -53,21 +55,25 @@
 	</div>
 </template>
 <script>
-import axios from 'axios';
+import baseRequest from '../../../core/baseRequest';
 
 export default {
 	data() {
 		return {
-			dang_Nhap: {}
+			dang_Nhap: {},
+			showPassword: false,
 		}
 	},
 	mounted() {
 
 	},
 	methods: {
+		togglePassword() {
+            this.showPassword = !this.showPassword;
+        },
 		dangNhap() {
-			axios
-				.post('http://127.0.0.1:8000/api/admin/dang-nhap', this.dang_Nhap)
+			baseRequest
+				.post('admin/dang-nhap', this.dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
 						this.$toast.success(res.data.message);
