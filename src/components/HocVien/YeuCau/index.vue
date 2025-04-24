@@ -48,7 +48,7 @@
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bxs-user'></i></span>
                         <input type="text" class="form-control border-start-0" id="inputLastName1"
-                            placeholder="#Nguyen Van A" />
+                            placeholder="#Nguyen Van A" v-model="create_yeu_cau.ho_ten">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -56,7 +56,7 @@
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bx-barcode'></i></span>
                         <input type="text" class="form-control border-start-0" id="inputLastName2"
-                            placeholder="#049203..." />
+                            placeholder="#049203..." v-model="create_yeu_cau.so_cccd">
                     </div>
                 </div>
                 <div class="col-6">
@@ -64,7 +64,7 @@
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bxs-file-doc'></i></span>
                         <input type="text" class="form-control border-start-0" id="inputPhoneNo"
-                            placeholder="#598424" />
+                            placeholder="#598424" v-model="create_yeu_cau.so_hieu_chung_chi">
                     </div>
                 </div>
                 <div class="col-6">
@@ -72,7 +72,7 @@
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bxs-message'></i></span>
                         <input type="text" class="form-control border-start-0" id="inputEmailAddress"
-                            placeholder="#abc@gmail.com" />
+                            placeholder="#abc@gmail.com" v-model="create_yeu_cau.email">
                     </div>
                 </div>
                 <hr>
@@ -82,20 +82,18 @@
                     <h5 class="mb-0 ">Thông Tin Tổ Chức</h5>
                 </div>
                 <div class="col-6">
-                    <label for="inputEmailAddress" class="form-label">Gửi Đến</label>
+                    <label class="form-label">Gửi Đến</label>
                     <div class="input-group">
                         <span class="input-group-text bg-white text-dark ">
                             <i class='bx bxs-building-house'></i>
                         </span>
-                        <select class="form-select bg-white text-dark ">
-                            <option value="">Trường Đại Học Duy Tân</option>
-                            <option value="">Trung tâm bồi dưỡng nghiệp vụ Liên Chiểu</option>
-                            <option value="">Tổ chức Giáo dục IIG Đà Nẵng</option>
+                        <select class="form-select bg-white text-dark " v-model="create_yeu_cau.id_to_chuc">
+                            <template v-for="(value, index) in ten_to_chuc" :key="index">
+                                <option value="{{ value.id }}">{{ value.ten_to_chuc }}</option>
+                            </template>
                         </select>
                     </div>
                 </div>
-
-
             </form>
             <div class="col-12 text-end">
                 <button class="btn btn-info me-5" data-bs-toggle="modal" data-bs-target="#gui">Gửi Yêu Cầu</button>
@@ -119,16 +117,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="text-light text-center">
-                        <th>1</th>
-                        <td>Đại Học Duy Tân</td>
-                        <td>11:12 30/4/2025</td>
-                        <td><span class="badge text-bg-light hover-zoom" data-bs-toggle="modal"
-                                data-bs-target="#xemct">Xem chi
-                                tiết</span></td>
-                        <td><span class="badge text-bg-warning ">Chờ thanh toán</span></td>
-
-                    </tr>
+                    <template v-for="(value, index) in list_yeu_cau" :key="index">
+                        <tr class="text-light text-center">
+                            <th>{{ index + 1 }}</th>
+                            <td>{{ value.ten_to_chuc }}</td>
+                            <td>{{ value.create_at }}</td>
+                            <td><span class="badge text-bg-light hover-zoom" data-bs-toggle="modal"
+                                    data-bs-target="#xemct" v-on:click="Object.assign(ct_yc, value)">Xem chi
+                                    tiết</span></td>
+                            <td>
+                                <span v-if="value.trang_thai == 0" class="badge text-bg-warning ">Đang chờ phê duyệt</span>
+                                <span v-else-if="value.trang_thai == 1" class="badge text-bg-success ">Yêu cầu chấp thuận</span>
+                                <span v-else class="badge text-bg-danger ">Không có thông tin</span>
+                            </td>
+                        </tr>
+                    </template>
                 </tbody>
             </table>
         </div>
@@ -146,26 +149,28 @@
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <label class="form-label fw-bold">Họ và tên:</label>
-                                <div class="form-control bg-white">Nguyễn Văn A</div>
+                                <div class="form-control bg-white">{{ ct_yc.ho_ten }}</div>
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label fw-bold">CCCD:</label>
-                                <div class="form-control bg-white">123456789012</div>
+                                <div class="form-control bg-white">{{ ct_yc.so_cccd }}</div>
                             </div>
                             <div class="col-md-4">
                                 <label class="form-label fw-bold">Email:</label>
-                                <div class="form-control bg-white">nguyenvana@example.com</div>
+                                <div class="form-control bg-white">{{ ct_yc.email }}</div>
                             </div>
                         </div>
 
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">Số hiệu chứng chỉ:</label>
-                                <div class="form-control bg-white">ABC-2025-001</div>
+                                <div class="form-control bg-white">{{ ct_yc.so_hieu_chung_chi }}</div>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">Gửi đến:</label>
-                                <div class="form-control bg-white">Trường Đại Học Duy Tân</div>
+                                <template v-for="(value, index) in ten_to_chuc" :key="index">
+                                    <div v-if="value.id == ct_yc.id" class="form-control bg-white">{{ value.ten_to_chuc }}</div>
+                                </template>
                             </div>
                         </div>
                     </div>
@@ -182,7 +187,6 @@
     <div class="modal fade" id="gui" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-
                 <div class="modal-body">
                     <div class="alert alert-danger border-0 bg-info alert-dismissible fade show py-2 mt-2">
                         <div class="d-flex align-items-center">
@@ -199,15 +203,63 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-info">Gửi</button>
+                    <button type="button" class="btn btn-info" v-on:click="add_yeu_cau()">Gửi</button>
                 </div>
             </div>
         </div>
     </div>
 </template>
 <script>
-export default {
+import baseRequest from '../../../core/baseRequest';
 
+export default {
+    data() {
+        return {
+            list_yeu_cau : [],
+            create_yeu_cau : {},
+            ten_to_chuc : [],
+            ct_yc : {}
+        }
+    },
+    mounted() {
+        this.loadData();
+        this.loadTenTC();
+    },
+    methods: {
+        loadData(){
+            baseRequest
+                .get('link load ds yêu cầu')
+                .then((res) => {
+                    this.list_yeu_cau = res.data.data;
+                })
+        },
+        loadTenTC(){
+            baseRequest
+                .get('link load select tên tổ c')
+                .then((res) => {
+                    this.ten_to_chuc = res.data.data;
+                })
+        },
+        add_yeu_cau(){
+            baseRequest
+                .post('link gửi yêu cầu', this.create_yeu_cau)
+                .then((res) => {
+                    if(res.data.status){
+                        this.$toast.success(res.data.message);
+                        this.create_yeu_cau = {
+                            ho_ten: '',
+                            so_cccd: '',
+                            so_hieu_chung_chi: '',
+                            email: '',
+                            id_to_chuc: 1,
+                        };
+                        this.loadData();
+                    }
+                    else
+                    this.$toast.error(res.data.message);
+                })
+        }
+    },
 }
 </script>
 <style scoped>
