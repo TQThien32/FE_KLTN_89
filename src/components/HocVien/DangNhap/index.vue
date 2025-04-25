@@ -75,6 +75,8 @@ export default {
 						this.$toast.success(res.data.message)
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
+                        this.$router.push('/hoc-vien/chi-tiet-thanh-toan');
+
 					}
 					else {
 						this.$toast.error(res.data.message)

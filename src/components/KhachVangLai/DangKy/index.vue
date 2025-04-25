@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <ul class="nav nav-tabs nav-primary" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link text-dark" data-bs-toggle="tab" href="#primaryprofile" role="tab"
+                            <a class="nav-link text-dark active" data-bs-toggle="tab" href="#primaryprofile" role="tab"
                                 aria-selected="false" tabindex="-1">
                                 <div class="d-flex align-items-center">
                                     <div class="tab-icon"><i class="fa-solid fa-people-group font-18 me-2"></i>
@@ -27,13 +27,13 @@
                         </li>
                     </ul>
                     <div class="tab-content py-3">
-                        <div class="tab-pane fade" id="primaryprofile" role="tabpanel">
+                        <div class="tab-pane fade active show" id="primaryprofile" role="tabpanel">
                             <!-- Tổ chức -->
                             <div class="row ">
                                 <div class="col mx-auto">
-                                    <div class="my-4 text-center">
+                                    <div class=" text-center">
                                         <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-                                            width="180" alt="">
+                                            width="120" alt="">
                                     </div>
                                     <div class="card">
                                         <div class="card-body">
@@ -58,7 +58,7 @@
                                                                 placeholder="Nhập Email" v-model="create_to_chuc.email">
                                                         </div>
                                                         <div class="col-12">
-                                                            <label class="form-label">Số Điện Thoại</label>
+                                                            <label class="form-label">Hotline</label>
                                                             <input type="tel" class="form-control"
                                                                 placeholder="Nhập Số Điện Thoại"
                                                                 v-model="create_to_chuc.hotline">
@@ -143,14 +143,7 @@
                                                                     Ký</button>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12">
-                                                            <div class="d-grid text-center">
-                                                                <label>Bạn đã có tài khoản? <a
-                                                                        href="/to-chuc-cap-chung-chi/dang-nhap">Đăng
-                                                                        Nhập </a>
-                                                                </label>
-                                                            </div>
-                                                        </div>
+                                                        
                                                     </form>
                                                 </div>
                                             </div>
@@ -163,9 +156,9 @@
                             <!-- Học Viên nè -->
                             <div class="row ">
                                 <div class="col mx-auto">
-                                    <div class="my-4 text-center">
+                                    <div class=" text-center">
                                         <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-                                            width="180" alt="">
+                                            width="120" alt="">
                                     </div>
                                     <div class="card">
                                         <div class="card-body">
@@ -298,7 +291,7 @@ export default {
                 ho_ten: '',
                 email: '',
                 ngay_sinh: '',
-                gioi_tinh: '0',
+                gioi_tinh: 0,
                 sdt: '',
                 so_cccd: '',
                 dia_chi: '',

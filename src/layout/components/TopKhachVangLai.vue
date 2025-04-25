@@ -21,8 +21,8 @@
                         </li>
                     </ul>
                 </div>
-                <button class="btn btn-chinh me-2" @click="goDangNhap">Đăng Nhập</button>
-                <button class="btn btn-chinh" @click="goDangKy">Đăng Ký</button>
+                <button class="btn btn-chinh me-2" @click="goDangNhap"><i class="fa-solid fa-right-to-bracket"  style="font-size: 15px;"></i> Đăng Nhập</button>
+                <button class="btn btn-secondary" @click="goDangKy"><i class="fa-solid fa-user-plus " style="font-size: 15px;"></i> Đăng Ký</button>
             </nav>
         </div>
     </header>
@@ -37,7 +37,7 @@ export default {
             modal.hide()
         },
         goDangKy() {
-            this.$router.push('dang-ky')
+            this.$router.push('/dang-ky')
             const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'))
             modal.hide()
         },

@@ -40,9 +40,11 @@
                     <!-- Admin -->
                     <div class="row ">
                         <div class="col mx-auto">
-                            <div class="mb-4 text-center">
-                                <img src="" width="180" alt="">
-                            </div>
+                            <div class=" text-center">
+                                        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                                            width="120" alt="">
+                                    </div>
+                            
                             <div class="card">
                                 <div class="card-body">
                                     <div class="border p-4 rounded">
@@ -91,9 +93,10 @@
                     <!-- Tổ chức -->
                     <div class="row ">
                         <div class="col mx-auto">
-                            <div class="mb-4 text-center">
-                                <img src="../../assets/images/logo-img.png" width="180" alt="">
-                            </div>
+                            <div class=" text-center">
+                                        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                                            width="120" alt="">
+                                    </div>
                             <div class="card" >
                                 <div class="card-body">
                                     <div class="border p-4 rounded">
@@ -145,9 +148,10 @@
                 <div class="tab-pane fade" id="primarycontact" role="tabpanel">
                     <div class="row ">
                         <div class="col mx-auto">
-                            <div class="mb-4 text-center">
-                                <img src="../../assets/images/logo-img.png" width="180" alt="">
-                            </div>
+                            <div class=" text-center">
+                                        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                                            width="120" alt="">
+                                    </div>
                             <div class="card">
                                 <div class="card-body">
                                     <div class="border p-4 rounded">
@@ -160,14 +164,14 @@
                                             <form class="row g-3">
                                                 <div class="col-12">
                                                     <label for="inputEmailAddress" class="form-label">Nhập Email</label>
-                                                    <input type="email" class="form-control"
+                                                    <input type="email" class="form-control" v-model="hoc_Vien_Dang_Nhap.email"
                                                         id="inputEmailAddress" placeholder="Nhập email">
                                                 </div>
                                                 <div class="col-12">
                                                     <label for="inputChoosePassword" class="form-label">Nhập Mật
                                                         Khẩu</label>
                                                     <div class="input-group" id="show_hide_password">
-                                                        <input type="password"
+                                                        <input type="password" v-model="hoc_Vien_Dang_Nhap.password"
                                                             class="form-control border-end-0" id="inputChoosePassword"
                                                             placeholder="Nhập mật khẩu"> <a href="javascript:;"
                                                             class="input-group-text bg-transparent"><i
@@ -181,7 +185,7 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
-                                                        <button type="button"
+                                                        <button type="button" @click="dangNhapHocVien()"
                                                             class="btn btn-chinh"><i class="bx bxs-lock-open"></i>Đăng
                                                             Nhập</button>
                                                     </div>
@@ -201,8 +205,59 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
-
+    data() {
+		return {
+			hoc_Vien_Dang_Nhap: {},
+			admin_Dang_Nhap: {},
+			to_Chuc_Dang_Nhap: {},
+		}
+	},
+	methods: {
+		dangNhapHocVien() {
+			axios
+				.post('http://127.0.0.1:8000/api/hoc-vien/dang-nhap', this.hoc_Vien_Dang_Nhap)
+				.then((res) => {
+					if (res.data.status) {
+						this.$toast.success(res.data.message)
+						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
+						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
+					}
+					else {
+						this.$toast.error(res.data.message)
+					}
+				})
+		},
+        dangNhapAdmin() {
+			axios
+				.post('http://127.0.0.1:8000/api/hoc-vien/dang-nhap', this.hoc_Vien_Dang_Nhap)
+				.then((res) => {
+					if (res.data.status) {
+						this.$toast.success(res.data.message)
+						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
+						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
+					}
+					else {
+						this.$toast.error(res.data.message)
+					}
+				})
+		},
+        dangNhapToChuc() {
+			axios
+				.post('http://127.0.0.1:8000/api/hoc-vien/dang-nhap', this.hoc_Vien_Dang_Nhap)
+				.then((res) => {
+					if (res.data.status) {
+						this.$toast.success(res.data.message)
+						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
+						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
+					}
+					else {
+						this.$toast.error(res.data.message)
+					}
+				})
+		},
+	}
 }
 </script>
 <style></style>
