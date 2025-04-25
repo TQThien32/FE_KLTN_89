@@ -47,14 +47,14 @@
                     <label for="inputLastName1" class="form-label">Họ và Tên</label>
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bxs-user'></i></span>
-                        <span>{{ profile.ho_ten }}</span>
+                                <div class="form-control bg-white">{{ profile.ho_ten }}</div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label for="inputLastName2" class="form-label">Số CCCD</label>
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bx-barcode'></i></span>
-                        <span>{{ profile.so_cccd }}</span>
+                                <div class="form-control bg-white">{{ profile.so_cccd }}</div>
                     </div>
                 </div>
                 <div class="col-6">
@@ -69,7 +69,7 @@
                     <label for="inputEmailAddress" class="form-label">Email</label>
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bxs-message'></i></span>
-                        <span style="border: 1px solid #ccc; padding: 10px; ">{{ profile.email }}</span>
+                                <div class="form-control bg-white">{{ profile.email }}</div>
                     </div>
                 </div>
                 <hr>

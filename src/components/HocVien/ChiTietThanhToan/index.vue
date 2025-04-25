@@ -6,13 +6,13 @@
                 <div class="card-body  text-dark">
                     <div class="row">
                         <div class="col-md-6">
-                            <p class="card-text"><b>Họ Và Tên:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.ho_va_ten
+                            <p class="card-text"><b>Họ Và Tên:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.ho_ten
                             }}</span></p>
                             <p class="card-text"><b>Số CCCD:</b> <span class="ms-3">{{
-                                thong_tin_nguoi_dung.cccd }}</span></p>
+                                thong_tin_nguoi_dung.so_cccd }}</span></p>
                         </div>
                         <div class="col-md-6">
-                            <p class="card-text"><b>Email:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.emai }}</span>
+                            <p class="card-text"><b>Email:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.email }}</span>
                             </p>
                             <p class="card-text"><b>Số Điện Thoại:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.sdt
                             }}</span></p>
@@ -84,12 +84,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="card">
-        <div class="card-body">
-            <img v-bind:src="qr_link" alt="">
-        </div>
-        <input v-model="tong_tien_thanh_toan" type="text">
-    </div> -->
 </template>
 
 <script>
@@ -104,7 +98,7 @@ export default {
             ma_don_hang: '',
             tong_tien_thanh_toan: '',
             qr_link: '',
-            chi_tiet_don_hang:[],
+            chi_tiet_don_hang: [],
         }
     },
     mounted() {
@@ -115,25 +109,13 @@ export default {
             this.qr_link = mathanhtoan.qr_link;
             this.chi_tiet_don_hang = mathanhtoan.chi_tiet_don_hang;
         }
-        // this.loadDataChungChi();
-        // this.loadDataNguoiDung();
+        this.loadDataNguoiDung();
     },
-    computed: {
-        tongTien() {
-            return this.chung_chi_thanh_toan.length * 120000;
-        }
-    },
+
     methods: {
-        loadDataChungChi() {
-            baseRequest
-                .get('hoc-vien/thanh-toan-co-qr')
-                .then((res) => {
-                    this.chung_chi_thanh_toan = res.data.data;
-                });
-        },
         loadDataNguoiDung() {
             baseRequest
-                .get('thong-tin-nguoi-dung/data')
+                .get('hoc-vien/profile')
                 .then((res) => {
                     this.thong_tin_nguoi_dung = res.data.data;
                 });
