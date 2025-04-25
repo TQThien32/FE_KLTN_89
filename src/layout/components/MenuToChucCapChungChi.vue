@@ -19,20 +19,7 @@
                         <div class="menu-title">Trang Chủ</div>
                     </router-link>
                 </li>
-                <li class="nav-item">
-                    <router-link to="/dung-chung/gioi-thieu" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-circle-user"></i>
-                        </div>
-                        <div class="menu-title">Giới Thiệu</div>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/dung-chung/lien-he" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="menu-title">Liên Hệ</div>
-                    </router-link>
-                </li>
+                
                 <li class="nav-item">
                     <router-link to="/to-chuc-cap-chung-chi/to-chuc-upload-chung-chi-hoc-vien" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-code-pull-request"></i>
@@ -59,6 +46,20 @@
                         <div class="parent-icon"><i class="fa-solid fa-ban"></i>
                         </div>
                         <div class="menu-title">Vô Hiệu Hóa Chứng Chỉ</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/dung-chung/lien-he" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="menu-title">Liên Hệ</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/dung-chung/gioi-thieu" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div class="menu-title">Giới Thiệu</div>
                     </router-link>
                 </li>
             </ul>
