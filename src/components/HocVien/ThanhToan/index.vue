@@ -6,29 +6,25 @@
                 <i class="fa-solid fa-arrow-right"></i> Thanh
                 Toán</button>
         </div>
-
         <hr class="text-white">
         <div class="row">
-            <div class="form-check d-flex justify-content-end">
-                <input class="form-check-input " type="checkbox" id="checkRight">
-                <label class="form-check-label ms-2 text-light mb-2 me-4 mt-1" for="checkRight">Chọn tất cả</label>
-            </div>
-
             <template v-for="(value, index) in list_chung_chi" :key="index">
                 <div class="col-lg-4">
                     <div class="card card-hieuung border-chinh border-bottom border-top border-3 border-0">
                         <div class="card-body">
-                            <img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
+                            <img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`"
                                 class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
-
                             <p class="text-light mt-3" style="font-size: 16px;">Phí NFT:
-                                <b>{{ value.so_hieu_chung_chi }}1.000.000đ</b>
+                                <b>{{ value.so_hieu_chung_chi }}</b>
+                            </p>
+                            <p class="text-light mt-3" style="font-size: 16px;">Phí NFT:
+                                <b>{{ value.so_tien }}</b>
                             </p>
 
                             <div class=" d-flex justify-content-between align-items-center gap-2">
                                 <a data-bs-toggle="modal" data-bs-target="#ttchitiet" href="javascript:;"
-                                    class="btn btn-outline-light"><i class="fa-solid fa-indent "
-                                        style="font-size: 15px;"></i> Thông tin chi tiết</a>
+                                    v-on:click="Object.assign(thong_tin, value)" class="btn btn-outline-light"><i
+                                        class="fa-solid fa-indent " style="font-size: 15px;"></i> Thông tin chi tiết</a>
                                 <div class="form-check ms-2">
                                     <a v-on:click="themVaoThanhToan(value.id)" href="javascript:;"
                                         class="btn btn-outline-light"><i class="fa-solid fa-indent "
@@ -81,14 +77,38 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="card-text"><b>Tổ Chức cấp: </b><span class="ms-3">Đại Học Duy Tân</span></p>
-                    <p class="card-text"><b>Ngày Cấp : </b><span class="ms-3">30/4/1975</span></p>
-                    <p class="card-text"><b>Khóa Học: </b><span class="ms-3">2024 - 2027</span></p>
-                    <p class="card-text"><b>Họ Và Tên : </b><span class="ms-3">Trần Quang Thiên</span></p>
-                    <p class="card-text"><b>Số CCCD : </b><span class="ms-3">049203006689</span></p>
-                    <p class="card-text"><b>Trình Độ: </b><span class="ms-3">Cử nhân</span></p>
-                    <p class="card-text"><b>Kết Quả: </b><span class="ms-3">Giỏi</span></p>
-                    <p class="card-text"><b>Số Hiệu Chứng Chỉ: </b><span class="ms-3">123456</span></p>
+                    <p><b>Tên Học Viên: </b> <span>{{ thong_tin.ho_ten }}</span></p>
+                    <p><b>Ngày Sinh: </b> <span>{{ thong_tin.ngay_sinh }}</span></p>
+                    <p><b>Số CCCD: </b> <span>{{ thong_tin.so_cccd }}</span></p>
+                    <p><b>Tên Tổ Chức Cấp Chứng Chỉ: </b> <span>{{ thong_tin.ten_to_chuc }}</span></p>
+                    <p><b>Khóa Học: </b> <span>{{ thong_tin.khoa_hoc }}</span></p>
+                    <p><b>Số Hiệu Chứng Chỉ: </b> <span>{{ thong_tin.so_hieu_chung_chi }}</span></p>
+                    <p><b>Kết Quả: </b> <span>{{ thong_tin.ket_qua }}</span></p>
+                    <p><b>Ngày Cấp: </b> <span>{{ thong_tin.ngay_cap }}</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ttchitiettrongthanhtoan" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thông tin chi tiết</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><b>Tên Học Viên: </b> <span>{{ thong_tin_trongthanhtoan.ho_ten }}</span></p>
+                    <p><b>Ngày Sinh: </b> <span>{{ thong_tin_trongthanhtoan.ngay_sinh }}</span></p>
+                    <p><b>Số CCCD: </b> <span>{{ thong_tin_trongthanhtoan.so_cccd }}</span></p>
+                    <p><b>Tên Tổ Chức Cấp Chứng Chỉ: </b> <span>{{ thong_tin_trongthanhtoan.ten_to_chuc }}</span></p>
+                    <p><b>Khóa Học: </b> <span>{{ thong_tin_trongthanhtoan.khoa_hoc }}</span></p>
+                    <p><b>Số Hiệu Chứng Chỉ: </b> <span>{{ thong_tin_trongthanhtoan.so_hieu_chung_chi }}</span></p>
+                    <p><b>Kết Quả: </b> <span>{{ thong_tin_trongthanhtoan.ket_qua }}</span></p>
+                    <p><b>Ngày Cấp: </b> <span>{{ thong_tin_trongthanhtoan.ngay_cap }}</span></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
@@ -120,11 +140,11 @@
                             <template v-for="(value, index) in list_chi_tiet_don_hang" :key="index">
                                 <tr class="text-center align-middle">
                                     <th>{{ index + 1 }}</th>
-                                    <td><img src="https://edulife.com.vn/wp-content/uploads/2021/03/ang-tieng-anh-toeic-la-gi-scaled.jpg"
+                                    <td><img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`"
                                             style="height: 50px;" alt=""></td>
                                     <td>{{ value.so_hieu_chung_chi }}</td>
-                                    <td><span class="badge text-bg-dark" data-bs-toggle="modal"
-                                            data-bs-target="#ttchitiet">Xem
+                                    <td><span class="badge text-bg-dark" v-on:click="Object.assign(thong_tin_trongthanhtoan, value)" data-bs-toggle="modal"
+                                            data-bs-target="#ttchitiettrongthanhtoan">Xem
                                             chi tiết</span></td>
                                     <th>100.000 đ</th>
                                     <td><button type="button" v-on:click="xoaDonChiTiet(value.id)"
@@ -161,6 +181,8 @@ export default {
             list_chung_chi: [],
             list_chi_tiet_don_hang: [],
             isShowResult: true,
+            thong_tin: {},
+            thong_tin_trongthanhtoan:{}
         }
     },
     mounted() {
