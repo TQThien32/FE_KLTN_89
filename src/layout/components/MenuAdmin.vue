@@ -12,6 +12,13 @@
         </div>
         <nav class="navbar navbar-expand-xl w-100 ">
             <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
+                <li class="nav-item">
+                    <router-link to="/admin/trang-chu" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-house-chimney-window"></i>
+                        </div>
+                        <div class="menu-title">Trang Chủ</div>
+                    </router-link>
+                </li>
                 <li class="nav-item dropdown">
                     <a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
                         data-bs-toggle="dropdown">
@@ -36,12 +43,6 @@
                             <router-link to="/admin/danh-sach-to-chuc-cap-chung-chi">
                                 <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
                                     khoản tổ chức cấp chứng chỉ</a>
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link to="/admin/danh-sach-co-quan-xac-thuc">
-                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản cơ quan xác thực</a>
                             </router-link>
                         </li>
                     </ul>
