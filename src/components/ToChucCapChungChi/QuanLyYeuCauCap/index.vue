@@ -26,7 +26,7 @@
                                     <td>{{ value.so_cccd }}</td>
                                     <td>{{ value.email }}</td>
                                     <td>{{ value.so_hieu_chung_chi }}</td>
-                                    <td>{{ value.create_at }}</td>
+                                    <td>{{ value.created_at }}</td>
                                     <td class="align-middle text-center">
                                         <button type="button" class="btn btn-chinh" data-bs-toggle="modal"
                                             data-bs-target="#exampleSuccessModal"
@@ -109,8 +109,9 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                <button type="button" v-on:click="taoChungChi()" data-bs-dismiss="modal" class="btn btn-chinh">Tạo dữ liệu
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button v-if="isShowResult" type="button" v-on:click="taoChungChi()"
+                                    data-bs-dismiss="modal" class="btn btn-chinh">Tạo dữ liệu
                                     chứng chỉ</button>
                             </div>
                         </div>
@@ -130,7 +131,7 @@ export default {
             hien_thi_yeu_cau: {},
             chung_chi: {},
             isShowResult: false,
-            chung_chi_true:{}
+            chung_chi_true: {}
         }
     },
     mounted() {

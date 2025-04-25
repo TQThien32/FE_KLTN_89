@@ -1,16 +1,15 @@
 <template>
     <div class="container mt-1">
-        <h2 class="text-light" >Thông Tin Tổ Chức</h2>
+        <h2 class="text-light">Thông Tin Tổ Chức</h2>
         <div class="row mt-3">
             <!-- Avatar -->
             <div class="col-lg-4">
                 <div class="card" style="box-shadow: none;">
                     <div class="card-body text-center">
-                        <img src="assets/images/avatars/avatar-2.png" alt="Avatar" class="rounded-circle p-1 bg-primary"
-                            width="110">
+                        <img src="../../../assets/images/avatars/avatar-2.png" alt="Avatar"
+                            class="rounded-circle p-1 bg-primary" width="110">
                         <div class="mt-3">
-                            <h4>John Doe</h4>
-                            <p class="text-secondary mb-1">Full Stack Developer</p>
+                            <h4>{{ profile.ten_to_chuc }}</h4>
                         </div>
                     </div>
                 </div>
@@ -32,33 +31,25 @@
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Tên Tổ Chức</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="John Doe">
-                            </div>
+                            <div class="form-control bg-white">{{ profile.ten_to_chuc }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Email</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="john@example.com">
-                            </div>
+                            <div class="form-control bg-white">{{ profile.email }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Hotline</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="(239) 816-9029">
-                            </div>
+                            <div class="form-control bg-white">{{ profile.hotline }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Địa Chỉ</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="(320) 380-4539">
-                            </div>
+                            <div class="form-control bg-white">{{ profile.dia_chi }}</div>
                         </div>
                         <hr>
                         <div class="row mb-3">
@@ -73,40 +64,34 @@
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Họ Và Tên</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="(320) 380-4539">
-                            </div>
+                            <div class="form-control bg-white">{{ profile.ho_ten_nguoi_dai_dien
+                            }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Số Điện Thoại</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
-                            </div>
+                            <div class="form-control bg-white">{{ profile.sdt_nguoi_dai_dien }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Số CCCD</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="(320) 380-4539">
-                            </div>
+                            <div class="form-control bg-white">{{ profile.so_cccd }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Email</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
-                            </div>
+                            <div class="form-control bg-white">{{ profile.email_nguoi_dai_dien
+                            }}</div>
                         </div>
 
                         <!-- Button trigger modal -->
                         <div class="row">
                             <div class="col-auto ms-auto">
-                                <button type="button" class="btn btn btn-chinh" data-bs-toggle="modal"
-                                    data-bs-target="#updateModal">
+                                <button v-on:click="Object.assign(update_profile, profile)" type="button"
+                                    class="btn btn btn-chinh" data-bs-toggle="modal" data-bs-target="#updateModal">
                                     Cập Nhật
                                 </button>
                             </div>
@@ -135,7 +120,8 @@
                                                 <h6 class="mb-0">Tên Tổ Chức Cấp Chứng Chỉ</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="John Doe">
+                                                <input v-model="update_profile.ten_to_chuc" type="text"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -143,7 +129,7 @@
                                                 <h6 class="mb-0">Email</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="john@example.com">
+                                                <input v-model="update_profile.email" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -151,7 +137,8 @@
                                                 <h6 class="mb-0">Hotline</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="(239) 816-9029">
+                                                <input v-model="update_profile.hotline" type="text"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -159,7 +146,8 @@
                                                 <h6 class="mb-0">Địa Chỉ</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="(320) 380-4539">
+                                                <input v-model="update_profile.dia_chi" type="text"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <hr>
@@ -176,7 +164,8 @@
                                                 <h6 class="mb-0">Họ Và Tên</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="(320) 380-4539">
+                                                <input v-model="update_profile.ho_ten_nguoi_dai_dien" type="text"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -184,8 +173,7 @@
                                                 <h6 class="mb-0">Số Điện Thoại</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control"
-                                                    value="Bay Area, San Francisco, CA">
+                                                <input v-model="update_profile.sdt_nguoi_dai_dien" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -193,7 +181,8 @@
                                                 <h6 class="mb-0">Số CCCD</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="(320) 380-4539">
+                                                <input v-model="update_profile.so_cccd" type="text"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -201,15 +190,15 @@
                                                 <h6 class="mb-0">Email</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control"
-                                                    value="Bay Area, San Francisco, CA">
+                                                <input v-model="update_profile.email_nguoi_dai_dien" type="text"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Đóng</button>
-                                        <button type="button" class="btn btn-primary">Xác Nhận</button>
+                                        <button v-on:click="updateProfile()" data-bs-dismiss="modal" type="button" class="btn btn-primary">Xác Nhận</button>
                                     </div>
                                 </div>
                             </div>
@@ -221,8 +210,40 @@
     </div>
 </template>
 <script>
-export default {
+import baseRequest from '../../../core/baseRequest'
 
+export default {
+    data() {
+        return {
+            profile: {},
+            update_profile: {}
+        }
+    },
+    mounted() {
+        this.getProfile();
+
+    },
+    methods: {
+        getProfile() {
+            baseRequest
+                .get('to-chuc/profile')
+                .then((res) => {
+                    this.profile = res.data.data
+                })
+        },
+        updateProfile() {
+            baseRequest
+                .post('to-chuc/update-profile', this.update_profile)
+                .then((res) => {
+                    if(res.data.status){
+                        this.$toast.success(res.data.message);
+                        this.getProfile();
+                    }else{
+                        this.$toast.error(res.data.message);
+                    }
+                })
+        }
+    }
 }
 </script>
 <style></style>

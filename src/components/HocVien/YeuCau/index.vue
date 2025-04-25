@@ -47,32 +47,29 @@
                     <label for="inputLastName1" class="form-label">Họ và Tên</label>
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bxs-user'></i></span>
-                        <input type="text" class="form-control border-start-0" id="inputLastName1"
-                            placeholder="#Nguyen Van A" v-model="create_yeu_cau.ho_ten">
+                        <span>{{ profile.ho_ten }}</span>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label for="inputLastName2" class="form-label">Số CCCD</label>
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bx-barcode'></i></span>
-                        <input type="text" class="form-control border-start-0" id="inputLastName2"
-                            placeholder="#049203..." v-model="create_yeu_cau.so_cccd">
+                        <span>{{ profile.so_cccd }}</span>
                     </div>
                 </div>
                 <div class="col-6">
                     <label for="inputPhoneNo" class="form-label">Số Hiệu Chứng Chỉ</label>
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bxs-file-doc'></i></span>
-                        <input type="text" class="form-control border-start-0" id="inputPhoneNo"
-                            placeholder="#598424" v-model="create_yeu_cau.so_hieu_chung_chi">
+                        <input type="text" class="form-control border-start-0" id="inputPhoneNo" placeholder="#598424"
+                            v-model="create_yeu_cau.so_hieu_chung_chi">
                     </div>
                 </div>
                 <div class="col-6">
                     <label for="inputEmailAddress" class="form-label">Email</label>
                     <div class="input-group"> <span class="input-group-text bg-transparent"><i
                                 class='bx bxs-message'></i></span>
-                        <input type="text" class="form-control border-start-0" id="inputEmailAddress"
-                            placeholder="#abc@gmail.com" v-model="create_yeu_cau.email">
+                        <span style="border: 1px solid #ccc; padding: 10px; ">{{ profile.email }}</span>
                     </div>
                 </div>
                 <hr>
@@ -89,7 +86,7 @@
                         </span>
                         <select class="form-select bg-white text-dark " v-model="create_yeu_cau.id_to_chuc">
                             <template v-for="(value, index) in ten_to_chuc" :key="index">
-                                <option value="{{ value.id }}">{{ value.ten_to_chuc }}</option>
+                                <option :value="value.id">{{ value.ten_to_chuc }}</option>
                             </template>
                         </select>
                     </div>
@@ -121,13 +118,15 @@
                         <tr class="text-light text-center">
                             <th>{{ index + 1 }}</th>
                             <td>{{ value.ten_to_chuc }}</td>
-                            <td>{{ value.create_at }}</td>
+                            <td>{{ value.created_at }}</td>
                             <td><span class="badge text-bg-light hover-zoom" data-bs-toggle="modal"
                                     data-bs-target="#xemct" v-on:click="Object.assign(ct_yc, value)">Xem chi
                                     tiết</span></td>
                             <td>
-                                <span v-if="value.trang_thai == 0" class="badge text-bg-warning ">Đang chờ phê duyệt</span>
-                                <span v-else-if="value.trang_thai == 1" class="badge text-bg-success ">Yêu cầu chấp thuận</span>
+                                <span v-if="value.trang_thai == 0" class="badge text-bg-warning ">Đang chờ phê
+                                    duyệt</span>
+                                <span v-else-if="value.trang_thai == 1" class="badge text-bg-success ">Yêu cầu chấp
+                                    thuận</span>
                                 <span v-else class="badge text-bg-danger ">Không có thông tin</span>
                             </td>
                         </tr>
@@ -168,9 +167,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">Gửi đến:</label>
-                                <template v-for="(value, index) in ten_to_chuc" :key="index">
-                                    <div v-if="value.id == ct_yc.id" class="form-control bg-white">{{ value.ten_to_chuc }}</div>
-                                </template>
+                                <div class="form-control bg-white">{{ ct_yc.ten_to_chuc }}</div>
                             </div>
                         </div>
                     </div>
@@ -203,7 +200,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-info" v-on:click="add_yeu_cau()">Gửi</button>
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal" v-on:click="add_yeu_cau()">Gửi</button>
                 </div>
             </div>
         </div>
@@ -215,36 +212,38 @@ import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
-            list_yeu_cau : [],
-            create_yeu_cau : {},
-            ten_to_chuc : [],
-            ct_yc : {}
+            list_yeu_cau: [],
+            create_yeu_cau: {},
+            ten_to_chuc: [],
+            ct_yc: {},
+            profile: {},
         }
     },
     mounted() {
         this.loadData();
         this.loadTenTC();
+        this.getProfile();
     },
     methods: {
-        loadData(){
+        loadData() {
             baseRequest
-                .get('link load ds yêu cầu')
+                .get('get-yeu-cau-cap-data')
                 .then((res) => {
                     this.list_yeu_cau = res.data.data;
                 })
         },
-        loadTenTC(){
+        loadTenTC() {
             baseRequest
-                .get('link load select tên tổ c')
+                .get('list-ten/to-chuc/data')
                 .then((res) => {
                     this.ten_to_chuc = res.data.data;
                 })
         },
-        add_yeu_cau(){
+        add_yeu_cau() {
             baseRequest
-                .post('link gửi yêu cầu', this.create_yeu_cau)
+                .post('hoc-vien/yeu-cau-cap', this.create_yeu_cau)
                 .then((res) => {
-                    if(res.data.status){
+                    if (res.data.status) {
                         this.$toast.success(res.data.message);
                         this.create_yeu_cau = {
                             ho_ten: '',
@@ -256,9 +255,16 @@ export default {
                         this.loadData();
                     }
                     else
-                    this.$toast.error(res.data.message);
+                        this.$toast.error(res.data.message);
                 })
-        }
+        },
+        getProfile() {
+            baseRequest
+                .get('hoc-vien/profile')
+                .then((res) => {
+                    this.profile = res.data.data;
+                })
+        },
     },
 }
 </script>
