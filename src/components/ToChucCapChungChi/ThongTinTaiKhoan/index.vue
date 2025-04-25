@@ -31,25 +31,25 @@
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Tên Tổ Chức</h6>
                             </div>
-                            <span style="border: 1px solid #ccc; padding: 10px; ">{{ profile.ten_to_chuc }}</span>
+                            <div class="form-control bg-white">{{ profile.ten_to_chuc }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Email</h6>
                             </div>
-                            <span style="border: 1px solid #ccc; padding: 10px; ">{{ profile.email }}</span>
+                            <div class="form-control bg-white">{{ profile.email }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Hotline</h6>
                             </div>
-                            <span style="border: 1px solid #ccc; padding: 10px; ">{{ profile.hotline }}</span>
+                            <div class="form-control bg-white">{{ profile.hotline }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Địa Chỉ</h6>
                             </div>
-                            <span style="border: 1px solid #ccc; padding: 10px; ">{{ profile.dia_chi }}</span>
+                            <div class="form-control bg-white">{{ profile.dia_chi }}</div>
                         </div>
                         <hr>
                         <div class="row mb-3">
@@ -64,27 +64,27 @@
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Họ Và Tên</h6>
                             </div>
-                            <span style="border: 1px solid #ccc; padding: 10px; ">{{ profile.ho_ten_nguoi_dai_dien
-                            }}</span>
+                            <div class="form-control bg-white">{{ profile.ho_ten_nguoi_dai_dien
+                            }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Số Điện Thoại</h6>
                             </div>
-                            <span style="border: 1px solid #ccc; padding: 10px; ">{{ profile.sdt_nguoi_dai_dien }}</span>
+                            <div class="form-control bg-white">{{ profile.sdt_nguoi_dai_dien }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Số CCCD</h6>
                             </div>
-                            <span style="border: 1px solid #ccc; padding: 10px; ">{{ profile.so_cccd }}</span>
+                            <div class="form-control bg-white">{{ profile.so_cccd }}</div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Email</h6>
                             </div>
-                            <span style="border: 1px solid #ccc; padding: 10px; ">{{ profile.email_nguoi_dai_dien
-                            }}</span>
+                            <div class="form-control bg-white">{{ profile.email_nguoi_dai_dien
+                            }}</div>
                         </div>
 
                         <!-- Button trigger modal -->
