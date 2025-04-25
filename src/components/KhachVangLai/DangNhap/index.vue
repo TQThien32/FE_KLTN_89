@@ -1,5 +1,8 @@
 <template>
-    <div class="card">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
         <div class="card-body">
             <ul class="nav nav-tabs nav-primary" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -32,25 +35,26 @@
                     </a>
                 </li>
             </ul>
-            <div class="tab-content py-3">
+            <div class="tab-content py-1">
                 <div class="tab-pane fade active show" id="primaryhome" role="tabpanel">
                     <!-- Admin -->
-                    <div class="row row-cols-1 row-cols-lg-2">
+                    <div class="row ">
                         <div class="col mx-auto">
                             <div class="mb-4 text-center">
                                 <img src="" width="180" alt="">
                             </div>
-                            <div class="card" style="box-shadow: none; ">
+                            <div class="card">
                                 <div class="card-body">
                                     <div class="border p-4 rounded">
                                         <div class="text-center">
                                             <h3 class="">Đăng Nhập - Admin</h3>
+                                            <p>Chỉ dành cho nhân viên!
+                                            </p>
                                         </div>
                                         <div class="form-body mt-3">
                                             <form class="row g-3">
                                                 <div class="col-12">
-                                                    <label for="inputEmailAddress" class="form-label">Tên đăng
-                                                        nhập</label>
+                                                    <label for="inputEmailAddress" class="form-label">Nhập Email</label>
                                                     <input type="email" class="form-control" id="inputEmailAddress"
                                                         placeholder="Nhập tên đăng nhập">
                                                 </div>
@@ -64,6 +68,9 @@
                                                                 class="bx bx-hide"></i></a>
                                                     </div>
                                                 </div>
+                                                <div class="col-12 text-end ">
+                                                    <a href="/admin/quen-mat-khau">Bạn quên mật khẩu? Nhấn vào đây!</a>
+                                                </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
                                                         <button type="button" class="btn btn-chinh"><i
@@ -71,9 +78,7 @@
                                                             Nhập</button>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 mt-3">
-                                                    <a href="/admin/quen-mat-khau">Bạn quên mật khẩu? Click here</a>
-                                                </div>
+                                                
                                             </form>
                                         </div>
                                     </div>
@@ -84,12 +89,12 @@
                 </div>
                 <div class="tab-pane fade" id="primaryprofile" role="tabpanel">
                     <!-- Tổ chức -->
-                    <div class="row row-cols-1 row-cols-lg-2">
+                    <div class="row ">
                         <div class="col mx-auto">
                             <div class="mb-4 text-center">
                                 <img src="../../assets/images/logo-img.png" width="180" alt="">
                             </div>
-                            <div class="card" style="box-shadow: none;">
+                            <div class="card" >
                                 <div class="card-body">
                                     <div class="border p-4 rounded">
                                         <div class="text-center">
@@ -120,7 +125,7 @@
 
                                                 </div>
                                                 <div class="col-md-6 text-end"> <a
-                                                        href="/to-chuc-cap-chung-chi/quen-mat-khau">Quên mật khẩu ?</a>
+                                                        href="/to-chuc-cap-chung-chi/quen-mat-khau">Bạn quên mật khẩu? Nhấn vào đây!</a>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
@@ -138,7 +143,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="primarycontact" role="tabpanel">
-                    <div class="row row-cols-1 row-cols-lg-2">
+                    <div class="row ">
                         <div class="col mx-auto">
                             <div class="mb-4 text-center">
                                 <img src="../../assets/images/logo-img.png" width="180" alt="">
@@ -148,7 +153,7 @@
                                     <div class="border p-4 rounded">
                                         <div class="text-center">
                                             <h3 class="">Đăng Nhập - Người Dùng</h3>
-                                            <p>Bạn chưa có tài khoản? <a href="/hoc-vien/dang-ky">Đăng ký</a>
+                                            <p>Bạn chưa có tài khoản? <a href="/dang-ky">Đăng ký</a>
                                             </p>
                                         </div>
                                         <div class="form-body">
@@ -172,8 +177,7 @@
                                                 <div class="col-md-6">
 
                                                 </div>
-                                                <div class="col-md-6 text-end"> <a href="/hoc-vien/quen-mat-khau">Quên
-                                                        mật khẩu ?</a>
+                                                <div class="col-md-6 text-end"> <a href="/hoc-vien/quen-mat-khau">Bạn quên mật khẩu? Nhấn vào đây!</a>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
@@ -191,6 +195,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
         </div>
     </div>
 </template>

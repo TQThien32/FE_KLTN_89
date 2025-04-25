@@ -17,7 +17,7 @@
                                 <div class="my-4">
                                     <label class="form-label">Email</label>
                                     <input type="text" class="form-control form-control-lg"
-                                        placeholder="example@user.com" v-model="quen_mk.email">
+                                        placeholder="ex: tranquangthien@gmail.com" v-model="quen_mk.email">
                                 </div>
                                 <div class="d-grid gap-2">
                                     <button type="button" class="btn btn-chinh btn-lg"
@@ -28,10 +28,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <img src="https://cdn.tgdd.vn/hoi-dap/596402/minh-k-nho-mat-khau-o-che-do-rieng-tu-gio-lam-sao%20(1).jpg"
-                                alt="" style="width: 500px; height: 500px;">
-                        </div>
+                       
                     </div>
                 </div>
             </div>

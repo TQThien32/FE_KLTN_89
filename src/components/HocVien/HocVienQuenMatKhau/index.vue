@@ -8,13 +8,13 @@
                     <div class="card-body">
                         <div class="p-4 rounded  border">
                             <div class="text-center">
-                                <img src="../../../assets/images/icons/forgot-2.png" width="120" alt="">
+                                <img src="https://png.pngtree.com/png-clipart/20230930/original/pngtree-editable-password-change-icon-with-circular-arrow-icon-pictogram-update-vector-png-image_12914234.png" width="120" alt="">
                             </div>
                             <h4 class="mt-5 font-weight-bold">Quên Mật Khẩu</h4>
                             <p class="text-muted">Nhập Email Mà Bạn Đã Đăng Ký Để Nhận Lại Mật Khẩu</p>
                             <div class="my-4">
                                 <label class="form-label">Email</label>
-                                <input type="text" class="form-control form-control-lg" placeholder="example@user.com"
+                                <input type="text" class="form-control form-control-lg" placeholder="ex: tranquangthien@gmail.com"
                                     v-model="quen_mk.email">
                             </div>
                             <div class="d-grid gap-2">

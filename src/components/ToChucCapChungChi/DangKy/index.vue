@@ -94,7 +94,7 @@
                                                     </div>
                                                     <br>
                                                     <span v-if="errorMessage" style="color:red">{{ errorMessage
-                                                        }}</span>
+                                                    }}</span>
                                                 </div>
                                                 <div class="col-12">
 

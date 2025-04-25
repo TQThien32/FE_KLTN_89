@@ -77,7 +77,7 @@
                                                             id="inputChoosePassword" placeholder="Nhập lại mật khẩu"> <a
                                                             href="javascript:;"
                                                             class="input-group-text bg-transparent"><i
-                                                                class="bx bx-hide"></i></a>
+                                                            :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
