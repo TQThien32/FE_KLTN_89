@@ -33,7 +33,7 @@
                                 <h6 class="mb-0">Họ Và Tên</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="(320) 380-4539">
+                                <div class="form-control bg-white">fgjknlm</div>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -41,7 +41,7 @@
                                 <h6 class="mb-0">Chức Vụ</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Trưởng Phòng">
+                                <div class="form-control bg-white">fvbj</div>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -49,7 +49,7 @@
                                 <h6 class="mb-0">Số Điện Thoại</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
+                                <div class="form-control bg-white">cgjvbk</div>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -57,7 +57,7 @@
                                 <h6 class="mb-0">Số CCCD</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="(320) 380-4539">
+                                <div class="form-control bg-white">ưedsgfgh</div>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -65,7 +65,7 @@
                                 <h6 class="mb-0">Email</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
+                                <div class="form-control bg-white">adsfgf</div>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -73,7 +73,7 @@
                                 <h6 class="mb-0">Giới Tính</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Nam">
+                                <div class="form-control bg-white">sdgfdfg</div>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -81,7 +81,7 @@
                                 <h6 class="mb-0">Ngày Sinh</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="date" class="form-control" value="13/12/2001">
+                                <div class="form-control bg-white">sadfsgdfg</div>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -89,7 +89,7 @@
                                 <h6 class="mb-0">Địa Chỉ</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Quế Sơn, Quảng Nam">
+                                <div class="form-control bg-white">dsfsgdfh</div>
                             </div>
                         </div>
                         <!-- Button trigger modal -->
@@ -125,7 +125,7 @@
                                                 <h6 class="mb-0">Tên Tổ Chức Cấp Chứng Chỉ</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="John Doe">
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -133,7 +133,7 @@
                                                 <h6 class="mb-0">Email</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="john@example.com">
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -141,7 +141,7 @@
                                                 <h6 class="mb-0">Hotline</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="(239) 816-9029">
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -149,7 +149,7 @@
                                                 <h6 class="mb-0">Địa Chỉ</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="(320) 380-4539">
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <hr>
@@ -166,7 +166,7 @@
                                                 <h6 class="mb-0">Họ Và Tên</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="(320) 380-4539">
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -175,7 +175,7 @@
                                             </div>
                                             <div class="col-sm-9 text-secondary">
                                                 <input type="text" class="form-control"
-                                                    value="Bay Area, San Francisco, CA">
+                                                    >
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -183,7 +183,7 @@
                                                 <h6 class="mb-0">Số CCCD</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control" value="(320) 380-4539">
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -192,7 +192,7 @@
                                             </div>
                                             <div class="col-sm-9 text-secondary">
                                                 <input type="text" class="form-control"
-                                                    value="Bay Area, San Francisco, CA">
+                                                    >
                                             </div>
                                         </div>
                                     </div>
@@ -212,7 +212,37 @@
 </template>
 <script>
 export default {
+    data() {
+        return {
+            profile: {},
+            update_profile: {}
+        }
+    },
+    mounted() {
+        this.getProfile();
 
+    },
+    methods: {
+        getProfile() {
+            baseRequest
+                .get('admin/profile')
+                .then((res) => {
+                    this.profile = res.data.data
+                })
+        },
+        updateProfile() {
+            baseRequest
+                .post('admin/update-profile', this.update_profile)
+                .then((res) => {
+                    if(res.data.status){
+                        this.$toast.success(res.data.message);
+                        this.getProfile();
+                    }else{
+                        this.$toast.error(res.data.message);
+                    }
+                })
+        }
+    }
 }
 </script>
 <style></style>
