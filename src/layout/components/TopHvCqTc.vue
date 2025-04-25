@@ -28,13 +28,25 @@
                         <li class="nav-item mobile-search-icon">
                             <a class="nav-link" href="#"> <i class='bx bx-search'></i>
                             </a>
-
+                        </li>
+                        
+                        <li class="nav-item dropdown dropdown-large">
+                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                                href="/hoc-vien/quan-ly-vi-NFT">
+                                <i class='bx bx-wallet' style="font-size: 30px"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-large">
+                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                                href="/hoc-vien/thanh-toan">
+                                <i class='bx bx-cart' style="font-size: 30px"></i>
+                            </a>
                         </li>
                         <li class="nav-item dropdown dropdown-large">
                             <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
-                                    class="alert-count">7</span>
-                                <i class='bx bx-bell'></i>
+                                    class="alert-count ms-2">7</span>
+                                <i class='bx bx-bell' style="font-size: 30px"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-wide">
                                 <a href="javascript:;">
@@ -113,18 +125,6 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item dropdown dropdown-large">
-                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
-                                href="/hoc-vien/quan-ly-vi-NFT">
-                                <i class='bx bx-wallet' style="font-size: 30px"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown dropdown-large">
-                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
-                                href="/hoc-vien/thanh-toan">
-                                <i class='bx bx-cart' style="font-size: 30px"></i>
-                            </a>
-                        </li>
                     </ul>
                 </div>
                 <div class="user-box dropdown">
@@ -133,7 +133,7 @@
                         <img src="../../assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
                         <div class="user-info ps-3">
                             <p class="user-name mb-0">Pauline Seitz</p>
-                            <p class="designattion mb-0">Học Viên</p>
+                            <p class="designattion mb-0">Người Dùng</p>
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -156,8 +156,49 @@
     </header>
 </template>
 <script>
+import baseRequest from '../../core/baseRequest'
 export default {
-
+    // data() {
+    //     return {
+    //         ten_qtv: '',
+    //         auth: false,
+    //     }
+    // },
+    // computed: {
+    //     getTenQTV() {
+    //         return localStorage.getItem('ten_admin');
+    //     },
+    // },
+    // mounted() {
+    //     this.checkLogin();
+    //     this.ten_qtv = localStorage.getItem('ten_admin')
+    // },
+    // methods: {
+    //     checkLogin() {
+    //         baseRequest
+    //             .post('admin/kiem-tra-chia-khoa')
+    //             .then((res) => {
+    //                 if (res.data.status) {
+    //                     this.auth = true
+    //                 }
+    //             })
+    //     },
+    //     dangXuat() {
+    //         baseRequest
+    //             .get('admin/dang-xuat')
+    //             .then((res) => {
+    //                 if (res.data.status) {
+    //                     this.$toast.success('Thông báo<br>' + res.data.message);
+    //                     window.localStorage.removeItem('chia_khoa_so1');
+    //                     window.localStorage.removeItem('ten_admin');
+    //                     this.mounted();
+    //                     // this.$router.push('/');
+    //                 } else {
+    //                     this.$toast.error('Thông báo<br>' + res.data.message);
+    //                 }
+    //             })
+    //     },
+    // },
 }
 </script>
 <style scoped>
