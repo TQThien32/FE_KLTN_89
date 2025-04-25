@@ -15,7 +15,7 @@
 
 
                 <li class="nav-item">
-                    <router-link to="/khach-vang-lai/trang-chu" class="nav-link">
+                    <router-link to="/" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-house-chimney-window"></i>
                         </div>
                         <div class="menu-title">Trang Chủ</div>

@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router"; // cài vue-router: npm install vue-router@next --save
 import kiemTraAdmin from './kiemTraAdmin'
-import kiemTraCoQuan from './kiemTraCoQuan'
 import kiemTraHocVien from './kiemTraHocVien'
 import kiemTraToChuc from './kiemTraToChuc'
 const routes = [
@@ -177,35 +176,7 @@ const routes = [
         props: true
     },
 
-    //CoQuanXacThuc
-    {
-        path: '/co-quan-xac-thuc/dang-nhap',
-        component: () => import('../components/CoQuanXacThuc/DangNhap/index.vue'),
-        meta: { layout: 'Auth' },
-    },
-
-    {
-        path: '/co-quan-xac-thuc/dang-ky',
-        component: () => import('../components/CoQuanXacThuc/DangKy/index.vue'),
-        meta: { layout: 'Auth' },
-    },
-    {
-        path: '/co-quan-xac-thuc/thong-tin-co-quan',
-        component: () => import('../components/CoQuanXacThuc/ThongTinCoQuan/index.vue'),
-        meta: { layout: 'CoQuanXacThuc' },
-    },
-    {
-        path: '/co-quan-xac-thuc/xac-minh-nft',
-        component: () => import('../components/CoQuanXacThuc/XacMinhNFT/index.vue'),
-        meta: { layout: 'CoQuanXacThuc' },
-    },
-    {
-        path: '/co-quan-xac-thuc/luu-nft-da-xac-minh',
-        component: () => import('../components/CoQuanXacThuc/LuuNFTdaXacMinh/index.vue'),
-        meta: { layout: 'CoQuanXacThuc' },
-    },
-
-
+   
     //ToChucCapChungChi
     {
         path: '/to-chuc-cap-chung-chi/trang-chu',
