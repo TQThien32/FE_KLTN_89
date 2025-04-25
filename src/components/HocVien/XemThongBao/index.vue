@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         </p>
-                        <a href="app-emailread.html" v-for="(value, index) in emailslist" :key="index">
+                        <a href="/hoc-vien/xem-thong-bao/chi-tiet-thong-bao" v-for="(value, index) in emailslist" :key="index">
                             <div class="d-md-flex align-items-center email-message px-3 py-1">
                                 <div class="d-flex align-items-center email-actions">
                                     <input class="form-check-input" type="checkbox" v-model="value.selected">

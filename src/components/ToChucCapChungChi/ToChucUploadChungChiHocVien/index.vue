@@ -93,6 +93,7 @@
 
 <script>
 import axios from 'axios';
+import baseRequest from '../../../core/baseRequest';
 
 export default {
    data() {
@@ -119,7 +120,7 @@ export default {
          formData.append("file", this.selectedFile);
 
          try {
-            await axios.post("http://localhost:8000/api/import-excel", formData);
+            await baseRequest.post("import-excel", formData);
             this.$toast.success("Tải Lên Thành Công")
             this.fetchData();
          } catch (error) {
@@ -144,7 +145,7 @@ export default {
          });
 
          try {
-            await axios.post("http://localhost:8000/api/upload-folder", formData);
+            await baseRequest.post("upload-folder", formData);
             this.$toast.success("Tải Lên Thành Công")
          } catch (error) {
             this.$toast.error("Có Lỗi Xảy Ra")
@@ -154,10 +155,10 @@ export default {
       },
       async fetchData() {
          try {
-            let response = await axios.get("http://localhost:8000/api/get-data");
+            let response = await baseRequest.get("get-data");
             this.dataList = response.data;
          } catch (error) {
-            this.$toast.success("Có Lỗi Xảy Ra")
+            this.$toast.error("Có Lỗi Xảy Ra")
          }
       }
    },

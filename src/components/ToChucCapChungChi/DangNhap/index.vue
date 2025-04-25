@@ -19,29 +19,33 @@
 										<form class="row g-3">
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label">Nhập Email</label>
-												<input type="email" v-model="dang_Nhap.email" class="form-control" id="inputEmailAddress"
-													placeholder="Nhập email">
+												<input type="email" v-model="dang_Nhap.email" class="form-control"
+													id="inputEmailAddress" placeholder="Nhập email">
 											</div>
 											<div class="col-12">
-												<label for="inputChoosePassword" class="form-label">Nhập Mật Khẩu</label>
-												<div class="input-group" id="show_hide_password">
-													<input type="password" v-model="dang_Nhap.password" class="form-control border-end-0"
-														id="inputChoosePassword"
-														placeholder="Nhập mật khẩu"> <a href="javascript:;"
-														class="input-group-text bg-transparent"><i
-															class="bx bx-hide"></i></a>
+												<label for="inputChoosePassword" class="form-label">Nhập Mật
+													Khẩu</label>
+												<div class="input-group" id="password_group">
+													<input :type="showPassword ? 'text' : 'password'"
+														class="form-control border-end-0" id="inputChoosePassword"
+														placeholder="Nhập Mật Khẩu" v-model="dang_Nhap.password">
+													<a href="javascript:;" class="input-group-text bg-transparent"
+														@click="togglePassword">
+														<i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
+													</a>
 												</div>
 											</div>
 											<div class="col-md-6">
-												
+
 											</div>
 											<div class="col-md-6 text-end"> <a
 													href="/to-chuc-cap-chung-chi/quen-mat-khau">Quên mật khẩu ?</a>
 											</div>
 											<div class="col-12">
 												<div class="d-grid">
-													<button v-on:click="dangNhap()" type="button" class="btn btn-chinh"><i
-															class="bx bxs-lock-open"></i>Đăng Nhập</button>
+													<button v-on:click="dangNhap()" type="button"
+														class="btn btn-chinh"><i class="bx bxs-lock-open"></i>Đăng
+														Nhập</button>
 												</div>
 											</div>
 										</form>
@@ -62,20 +66,24 @@ import axios from 'axios';
 export default {
 	data() {
 		return {
+			showPassword: false,
 			dang_Nhap: {}
 		}
-},
+	},
 	methods: {
+		togglePassword() {
+			this.showPassword = !this.showPassword;
+		},
 		dangNhap() {
 			axios
 				.post('http://127.0.0.1:8000/api/to-chuc/dang-nhap', this.dang_Nhap)
 				.then((res) => {
-					if(res.data.status){
+					if (res.data.status) {
 						this.$toast.success(res.data.message);
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
-						localStorage.setItem('ten_to_chuc', res.data.ten_to_chuc);
+						localStorage.setItem('ten_to_chuc', res.data.ten_to_chuc);		
 					}
-					else{
+					else {
 						this.$toast.success(res.data.message)
 					}
 				})

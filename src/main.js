@@ -7,6 +7,7 @@ import Auth from './layout/wrapper/AuthMaster.vue'
 import Hocvien from './layout/wrapper/Hocvien.vue'
 import CoQuanXacThuc from './layout/wrapper/CoQuanXacThuc.vue'
 import ToChucCapChungChi from './layout/wrapper/ToChucCapChungChi.vue'
+import KhachVangLai from './layout/wrapper/KhachVangLai.vue'
 import { createToaster } from '@meforma/vue-toaster';
 
 
@@ -26,5 +27,6 @@ app.component("HocVien-layout", Hocvien);
 app.component("Admin-layout", Admin);
 app.component("CoQuanXacThuc-layout", CoQuanXacThuc);
 app.component("ToChucCapChungChi-layout", ToChucCapChungChi);
+app.component("KhachVangLai-layout", KhachVangLai)
 
 app.mount("#app")
