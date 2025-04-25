@@ -32,7 +32,6 @@
                         <th class="align-middle text-center">Email Người Đại Diện</th>
                         <th class="align-middle text-center">Avatar</th>
                         <th class="align-middle text-center">Trạng Thái</th>
-                        <th class="align-middle text-center">Khác</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,13 +45,10 @@
                             <td class="align-middle text-center">{{ value.ho_ten_nguoi_dai_dien }}</td>
                             <td class="align-middle text-center">{{ value.sdt_nguoi_dai_dien }}</td>
                             <td class="align-middle text-center">{{ value.email_nguoi_dai_dien }}</td>
-
+                            <td class="align-middle text-center"></td>
                             <td class="align-middle text-center">
-                                <button v-if="value.tinh_trang == 1" class="btn btn-success">Hoạt động</button>
-                                <button v-else class="btn btn-success">Tạm Dừng</button>
-                            </td>
-                            <td class="align-middle text-center">
-                                <button class="btn btn-chinh">Gửi thông báo</button>
+                                <button v-on:click="doiTrangThai(value)" v-if="value.tinh_trang == 1" class="btn btn-success">Hoạt động</button>
+                                <button v-on:click="doiTrangThai(value)" v-else class="btn btn-danger">Tạm Dừng</button>
                             </td>
                         </tr>
                     </template>
@@ -83,7 +79,19 @@ export default {
                     this.list_to_chuc = res.data.data;
                 });
 
-        }
+        },
+        doiTrangThai(value) {
+            baseRequest
+                .post('admin/to-chuc/doi-trang-thai', value)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success(res.data.message)
+                        this.loadData();
+                    } else {
+                        this.$toast.error(res.data.message);
+                    }
+                });
+        },
     }
 }
 </script>
