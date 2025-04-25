@@ -231,6 +231,7 @@ export default {
 						this.$toast.success(res.data.message)
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
+                        this.$router.push('/hoc-vien/trang-chu');
 					}
 					else {
 						this.$toast.error(res.data.message)
@@ -243,9 +244,10 @@ export default {
 				.then((res) => {
 					if (res.data.status) {
 						this.$toast.success(res.data.message);
-						// this.$router.push('/admin/danh-muc');
+						
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_admin', res.data.ten_admin);
+                        this.$router.push('/admin/trang-chu');
 					}
 					else {
 						this.$toast.error(res.data.message);
@@ -254,12 +256,13 @@ export default {
 		},
         dangNhapToChuc() {
 			baseRequest
-				.post('http://127.0.0.1:8000/api/hoc-vien/dang-nhap', this.to_Chuc_Dang_Nhap)
+				.post('to-chuc-cap-chung-chi/dang-nhap', this.to_Chuc_Dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
 						this.$toast.success(res.data.message)
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_to_chuc', res.data.ten_to_chuc);
+                        this.$router.push('to-chuc-cap-chung-chi/trang-chu');
 					}
 					else {
 						this.$toast.error(res.data.message)
