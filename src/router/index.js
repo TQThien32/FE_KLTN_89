@@ -85,6 +85,11 @@ const routes = [
         meta: { layout: 'Auth' },
     },
     {
+        path: '/admin/phan-quyen',
+        component: () => import('../components/Admin/PhanQuyen/index.vue'),
+        meta: { layout: 'Admin' },
+    },
+    {
         path : '/admin/lay-lai-mat-khau/:hash_reset',
         component: ()=>import('../components/Admin/NhanLaiMatKhau/index.vue'),
         meta : {layout : 'auth'},

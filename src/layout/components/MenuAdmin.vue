@@ -81,6 +81,13 @@
                         <div class="menu-title">Thông Báo</div>
                     </router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link to="/admin/phan-quyen" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-user-group"></i>
+                        </div>
+                        <div class="menu-title">Phân Quyền</div>
+                    </router-link>
+                </li>
             </ul>
         </nav>
     </div>
