@@ -57,25 +57,27 @@
                                             <form class="row g-3">
                                                 <div class="col-12">
                                                     <label for="inputEmailAddress" class="form-label">Nhập Email</label>
-                                                    <input type="email" class="form-control" id="inputEmailAddress"
+                                                    <input type="email" class="form-control" id="inputEmailAddress" v-model="admin_Dang_Nhap.email"
                                                         placeholder="Nhập tên đăng nhập">
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
-                                                    <div class="input-group" id="show_hide_password">
-                                                        <input type="password" class="form-control border-end-0"
-                                                            id="inputChoosePassword" placeholder="Nhập mật khẩu"> <a
-                                                            href="javascript:;"
-                                                            class="input-group-text bg-transparent"><i
-                                                                class="bx bx-hide"></i></a>
-                                                    </div>
-                                                </div>
+												<label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
+												<div class="input-group" id="password_group">
+													<input :type="showPassword ? 'text' : 'password'"
+														class="form-control border-end-0" id="inputChoosePassword"
+														placeholder="Nhập Mật Khẩu" v-model="admin_Dang_Nhap.password">
+													<a href="javascript:;" class="input-group-text bg-transparent"
+														@click="togglePassword">
+														<i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
+													</a>
+												</div>
+											</div>
                                                 <div class="col-12 text-end ">
                                                     <a href="/admin/quen-mat-khau">Bạn quên mật khẩu? Nhấn vào đây!</a>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
-                                                        <button type="button" class="btn btn-chinh"><i
+                                                        <button type="button" @click="dangNhapAdmin()" class="btn btn-chinh"><i
                                                                 class="bx bxs-lock-open"></i>Đăng
                                                             Nhập</button>
                                                     </div>
@@ -110,20 +112,21 @@
                                             <form class="row g-3">
                                                 <div class="col-12">
                                                     <label for="inputEmailAddress" class="form-label">Nhập Email</label>
-                                                    <input type="email" class="form-control" id="inputEmailAddress"
+                                                    <input type="email" v-model="to_Chuc_Dang_Nhap.email" class="form-control" id="inputEmailAddress"
                                                         placeholder="Nhập email">
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="inputChoosePassword" class="form-label">Nhập Mật
-                                                        Khẩu</label>
-                                                    <div class="input-group" id="show_hide_password">
-                                                        <input type="password" class="form-control border-end-0"
-                                                            id="inputChoosePassword" placeholder="Nhập mật khẩu"> <a
-                                                            href="javascript:;"
-                                                            class="input-group-text bg-transparent"><i
-                                                                class="bx bx-hide"></i></a>
-                                                    </div>
-                                                </div>
+												<label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
+												<div class="input-group" id="password_group">
+													<input :type="showPassword ? 'text' : 'password'"
+														class="form-control border-end-0" id="inputChoosePassword"
+														placeholder="Nhập Mật Khẩu" v-model="to_Chuc_Dang_Nhap.password">
+													<a href="javascript:;" class="input-group-text bg-transparent"
+														@click="togglePassword">
+														<i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
+													</a>
+												</div>
+											</div>
                                                 <div class="col-md-6">
 
                                                 </div>
@@ -132,7 +135,7 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
-                                                        <button type="button" class="btn btn-chinh"><i
+                                                        <button type="button" v-on:click="dangNhapToChuc()" class="btn btn-chinh"><i
                                                                 class="bx bxs-lock-open"></i>Đăng
                                                             Nhập</button>
                                                     </div>
@@ -168,16 +171,17 @@
                                                         id="inputEmailAddress" placeholder="Nhập email">
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="inputChoosePassword" class="form-label">Nhập Mật
-                                                        Khẩu</label>
-                                                    <div class="input-group" id="show_hide_password">
-                                                        <input type="password" v-model="hoc_Vien_Dang_Nhap.password"
-                                                            class="form-control border-end-0" id="inputChoosePassword"
-                                                            placeholder="Nhập mật khẩu"> <a href="javascript:;"
-                                                            class="input-group-text bg-transparent"><i
-                                                                class="bx bx-hide"></i></a>
-                                                    </div>
-                                                </div>
+												<label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
+												<div class="input-group" id="password_group">
+													<input :type="showPassword ? 'text' : 'password'"
+														class="form-control border-end-0" id="inputChoosePassword"
+														placeholder="Nhập Mật Khẩu" v-model="hoc_Vien_Dang_Nhap.password">
+													<a href="javascript:;" class="input-group-text bg-transparent"
+														@click="togglePassword">
+														<i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
+													</a>
+												</div>
+											</div>
                                                 <div class="col-md-6">
 
                                                 </div>
@@ -205,24 +209,29 @@
     </div>
 </template>
 <script>
-import axios from 'axios'
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
 		return {
 			hoc_Vien_Dang_Nhap: {},
 			admin_Dang_Nhap: {},
 			to_Chuc_Dang_Nhap: {},
+            showPassword: false,
 		}
 	},
 	methods: {
+        togglePassword() {
+            this.showPassword = !this.showPassword;
+        },
 		dangNhapHocVien() {
-			axios
-				.post('http://127.0.0.1:8000/api/hoc-vien/dang-nhap', this.hoc_Vien_Dang_Nhap)
+			baseRequest
+				.post('hoc-vien/dang-nhap', this.hoc_Vien_Dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
 						this.$toast.success(res.data.message)
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
+                        this.$router.push('/hoc-vien/trang-chu');
 					}
 					else {
 						this.$toast.error(res.data.message)
@@ -230,27 +239,30 @@ export default {
 				})
 		},
         dangNhapAdmin() {
-			axios
-				.post('http://127.0.0.1:8000/api/hoc-vien/dang-nhap', this.hoc_Vien_Dang_Nhap)
+			baseRequest
+				.post('admin/dang-nhap', this.admin_Dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
-						this.$toast.success(res.data.message)
+						this.$toast.success(res.data.message);
+						
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
-						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
+						localStorage.setItem('ten_admin', res.data.ten_admin);
+                        this.$router.push('/admin/trang-chu');
 					}
 					else {
-						this.$toast.error(res.data.message)
+						this.$toast.error(res.data.message);
 					}
 				})
 		},
         dangNhapToChuc() {
-			axios
-				.post('http://127.0.0.1:8000/api/hoc-vien/dang-nhap', this.hoc_Vien_Dang_Nhap)
+			baseRequest
+				.post('to-chuc-cap-chung-chi/dang-nhap', this.to_Chuc_Dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
 						this.$toast.success(res.data.message)
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
-						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
+						localStorage.setItem('ten_to_chuc', res.data.ten_to_chuc);
+                        this.$router.push('to-chuc-cap-chung-chi/trang-chu');
 					}
 					else {
 						this.$toast.error(res.data.message)
