@@ -12,12 +12,14 @@
                         <p>
                         <div class="text-end">
                             <div class="">
-                                <button v-on:click="deleteSelected()" type="button" class="btn btn-chinh ms-2"><i class="bx bx-trash me-0"></i>
+                                <button v-on:click="deleteSelected()" type="button" class="btn btn-chinh ms-2"><i
+                                        class="bx bx-trash me-0"></i>
                                 </button>
                             </div>
                         </div>
                         </p>
-                        <a href="/to-chuc-cap-chung-chi/xem-thong-bao/chi-tiet-thong-bao" v-for="(value, index) in emailslist" :key="index">
+                        <a href="/to-chuc-cap-chung-chi/xem-thong-bao/chi-tiet-thong-bao"
+                            v-for="(value, index) in emailslist" :key="index">
                             <div class="d-md-flex align-items-center email-message px-3 py-1">
                                 <div class="d-flex align-items-center email-actions">
                                     <input class="form-check-input" type="checkbox" v-model="value.selected">
@@ -50,65 +52,64 @@
     </div>
 </template>
 <script>
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
             selectAll: false,
-            emailslist: [
-                {
-                    tieude: "Wordpress",
-                    noidung: "It is a long established fact that a reader will be distracted by the readable...",
-                    thoigian: "5:56 PM",
-                    selected: false
-                },
-                {
-                    tieude: "Wordpress",
-                    noidung: "It is a long established fact that a reader will be distracted by the readable...",
-                    thoigian: "5:56 PM",
-                    selected: false
-                },
-                {
-                    tieude: "Facebook",
-                    noidung: "It is a long established fact that a reader will be distracted by the readable...",
-                    thoigian: "5:56 PM",
-                    selected: false
-                },
-                // Thêm nhiều email khác nếu muốn
-            ]
+            emailslist: [],
+            ds_thong_bao_can_xoa: []
         };
     },
+    mounted() {
+        this.getDataThongBao();
+    },
     methods: {
+        getDataThongBao() {
+            baseRequest
+                .get('xem-thong-bao')
+                .then((res) => {
+                    this.emailslist = res.data.data
+                });
+        },
+        xoaThongBao() {
+            baseRequest
+                .post('xoa-thong-bao', this.ds_thong_bao_can_xoa)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success(res.data.message);
+                        this.getDataThongBao();
+                    } else {
+                        this.$toast.error(res.data.message);
+                    }
+                });
+        },
+
+
         toggleAll() {
             this.emailslist.forEach(value => {
                 value.selected = this.selectAll;
             });
         },
         deleteSelected() {
-    const idsToDelete = this.emailslist
-      .filter(email => email.selected)
-      .map((email, index) => index); // Hoặc email.id nếu có ID thực
+            const selectedEmails = this.emailslist.filter(email => email.selected);
 
-    if (idsToDelete.length === 0) {
-      alert("Vui lòng chọn ít nhất một thông báo để xoá.");
-      return;
-    }
-
-    // TODO: Gửi request xóa về backend tại đây
-    console.log("Đã chọn để xóa:", idsToDelete);
-
-    // Giả lập xóa tại frontend (chỉ giữ lại các thông báo chưa được chọn)
-    this.emailslist = this.emailslist.filter((email, index) => !idsToDelete.includes(index));
-    this.selectAll = false;
-  }
+            if (selectedEmails.length === 0) {
+                this.$toast.error('Vui lòng chọn ít nhất một bản ghi để xóa.');
+                return;
+            }
+            this.ds_thong_bao_can_xoa = selectedEmails.map(email => ({ id: email.id }));
+            this.xoaThongBao();
+        }
     },
     watch: {
-    emailslist: {
-        handler() {
-            this.selectAll = this.emailslist.length > 0 && this.emailslist.every(value => value.selected);
-        },
-        deep: true
+        emailslist: {
+            handler() {
+                this.selectAll = this.emailslist.length > 0 && this.emailslist.every(value => value.selected);
+            },
+            deep: true
+        }
     }
-}
 };
 
 </script>

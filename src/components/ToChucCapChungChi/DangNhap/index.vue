@@ -72,8 +72,8 @@ export default {
 	},
 	methods: {
 		togglePassword() {
-            this.showPassword = !this.showPassword;
-        },
+			this.showPassword = !this.showPassword;
+		},
 		dangNhap() {
 			axios
 				.post('http://127.0.0.1:8000/api/to-chuc/dang-nhap', this.dang_Nhap)
@@ -81,7 +81,7 @@ export default {
 					if (res.data.status) {
 						this.$toast.success(res.data.message);
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
-						localStorage.setItem('ten_to_chuc', res.data.ten_to_chuc);
+						localStorage.setItem('ten_to_chuc', res.data.ten_to_chuc);		
 					}
 					else {
 						this.$toast.success(res.data.message)

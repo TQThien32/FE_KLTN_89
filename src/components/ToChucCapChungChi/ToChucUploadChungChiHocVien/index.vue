@@ -158,7 +158,7 @@ export default {
             let response = await baseRequest.get("get-data");
             this.dataList = response.data;
          } catch (error) {
-            // this.$toast.error("Có Lỗi Xảy Ra")
+            this.$toast.error("Có Lỗi Xảy Ra")
          }
       }
    },
