@@ -31,7 +31,6 @@
                      <th class="align-middle text-center">Địa Chỉ</th>
                      <th class="align-middle text-center">Avatar</th>
                      <th class="align-middle text-center">Trạng Thái</th>
-                     <th class="align-middle text-center">Khác</th>
                   </tr>
                </thead>
                <tbody>
@@ -42,18 +41,15 @@
                         <td class="align-middle text-center">{{ value.email }}</td>
                         <td class="align-middle text-center">{{ value.sdt }}</td>
                         <td class="align-middle text-center">{{ value.so_cccd }}</td>
-                        <td class="align-middle text-center">{{ value.gioi_tinh }}</td>
+                        <td class="align-middle text-center">{{ value.gioi_tinh == 0 ? 'Nam' : (value.gioi_tinh== 1 ? 'Nữ' : 'Không rõ') }}</td>
                         <td class="align-middle text-center">{{ value.dia_chi }}</td>
                         <td class="align-middle text-center">
                            <img v-bind:src="value.hinh_anh" alt=""
                               style="width: 50px; height: 50px; border-radius: 50%;">
                         </td>
                         <td class="align-middle text-center">
-                           <button v-if="value.tinh_trang == 1" class="btn btn-success">Hoạt động</button>
-                           <button v-else class="btn btn-success">Tạm Dừng</button>
-                        </td>
-                        <td class="align-middle text-center">
-                           <button class="btn btn-chinh">Gửi thông báo</button>
+                           <button v-on:click="doiTrangThai(value)" v-if="value.is_duyet == 1" class="btn btn-success">Hoạt động</button>
+                           <button v-on:click="doiTrangThai(value)" v-else class="btn btn-danger">Tạm Dừng</button>
                         </td>
                      </tr>
                   </template>
@@ -83,7 +79,19 @@ export default {
                this.list_hoc_vien = res.data.data;
             });
 
-      }
+      },
+      doiTrangThai(value) {
+            baseRequest
+                .post('admin/hoc-vien/doi-trang-thai', value)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success(res.data.message)
+                        this.loadData();
+                    } else {
+                        this.$toast.error(res.data.message);
+                    }
+                });
+        },
    }
 }
 </script>
