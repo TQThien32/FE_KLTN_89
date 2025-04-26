@@ -97,12 +97,12 @@
                                                         </div>
                                                         <hr>
                                                         <div class="col-12">
-                                                            <label for="inputChoosePassword" class="form-label">Mật
+                                                            <label for="" class="form-label">Mật
                                                                 Khẩu</label>
                                                             <div class="input-group" id="password_group">
                                                                 <input :type="showPasswordToChuc ? 'text' : 'password'"
                                                                     class="form-control border-end-0"
-                                                                    id="inputChoosePassword" placeholder="Nhập Mật Khẩu"
+                                                                    id="" placeholder="Nhập Mật Khẩu"
                                                                     v-model="create_to_chuc.password" required>
                                                                 <a href="javascript:;"
                                                                     class="input-group-text bg-transparent"
@@ -113,7 +113,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-12">
-                                                            <label for="inputChoosePassword" class="form-label">Nhập Lại
+                                                            <label for="" class="form-label">Nhập Lại
                                                                 Mật
                                                                 Khẩu</label>
                                                             <div class="input-group" id="confirm_password_group">
@@ -172,7 +172,7 @@
                                                 <div class="form-body">
                                                     <form class="row g-3">
                                                         <div class="col-sm-12">
-                                                            <label for="inputTenHocVien" class="form-label">Họ Và
+                                                            <label for="" class="form-label">Họ Và
                                                                 Tên</label>
                                                             <input v-model="create_hoc_vien.ho_ten" type="text"
                                                                 class="form-control" id="inputTenHocVien"
@@ -222,12 +222,12 @@
                                                                 placeholder="Nhập Địa chỉ">
                                                         </div>
                                                         <div class="col-12">
-                                                            <label for="inputChoosePassword" class="form-label">Mật
+                                                            <label for="" class="form-label">Mật
                                                                 Khẩu</label>
                                                             <div class="input-group" id="password_group">
                                                                 <input :type="showPasswordHocVien ? 'text' : 'password'"
                                                                     class="form-control border-end-0"
-                                                                    id="inputChoosePassword" placeholder="Nhập Mật Khẩu"
+                                                                    id="" placeholder="Nhập Mật Khẩu"
                                                                     v-model="create_hoc_vien.password" required>
                                                                 <a href="javascript:;"
                                                                     class="input-group-text bg-transparent"
@@ -238,7 +238,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-12">
-                                                            <label for="inputChoosePassword" class="form-label">Nhập Lại
+                                                            <label for="" class="form-label">Nhập Lại
                                                                 Mật
                                                                 Khẩu</label>
                                                             <div class="input-group" id="confirm_password_group">

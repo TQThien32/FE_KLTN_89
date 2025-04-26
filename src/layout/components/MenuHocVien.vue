@@ -22,7 +22,7 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/dung-chung/gioi-thieu" class="nav-link">
+                    <router-link to="/khach-vang-lai/gioi-thieu" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-circle-user"></i>
                         </div>
                         <div class="menu-title">Giới Thiệu</div>

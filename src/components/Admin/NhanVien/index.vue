@@ -32,7 +32,6 @@
                             <label class="mt-2">Giới Tính</label>
                             <div>
                                 <select class="mt-2 form-control" name="" id="" v-model="create_nhan_vien.gioi_tinh">
-                                    <option value="">Giới Tính</option>
                                     <option value="0">Nam</option>
                                     <option value="1">Nữ</option>
                                 </select>
@@ -186,7 +185,7 @@ export default {
         },
         addNV() {
             this.errorMessage = '';
-            if (this.list_nhan_vien.password !== this.confirmPassword) {
+            if (this.create_nhan_vien.password !== this.confirmPassword) {
                 this.errorMessage = 'Nhập Lại Mật Khẩu phải trùng với Mật Khẩu!';
             }
             else {

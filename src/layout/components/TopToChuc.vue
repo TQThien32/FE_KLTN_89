@@ -282,7 +282,7 @@
                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
                        <img src="../../assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
                        <div class="user-info ps-3">
-                           <p class="user-name mb-0">Pauline Seitz</p>
+                           <p class="user-name mb-0">{{ten_to_chuc}}</p>
                            <p class="designattion mb-0">Web Designer</p>
                        </div>
                    </a>
@@ -306,8 +306,51 @@
    </header>   
 </template>
 <script>
-export default {
+import baseRequest from '../../core/baseRequest'
 
+export default {
+    data() {
+        return {
+            ten_to_chuc: '',
+            auth: false,
+        }
+    },
+    computed: {
+        getTenQTV() {
+            return localStorage.getItem('ten_to_chuc');
+        },
+    },
+    mounted() {
+        this.checkLogin();
+        this.ten_to_chuc = localStorage.getItem('ten_to_chuc')
+    },
+    methods: {
+        checkLogin() {
+            baseRequest
+                .post('to-chuc/kiem-tra-chia-khoa')
+                .then((res) => {
+                    if (res.data.status) {
+                        this.auth = true
+                    }
+                })
+        },
+        dangXuat() {
+            baseRequest
+                .get('to-chuc/dang-xuat')
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success('Thông báo<br>' + res.data.message);
+                        window.localStorage.removeItem('chia_khoa_so1');
+                        window.localStorage.removeItem('ten_to_chuc');
+                        this.$router.push('/');
+                        this.mounted();
+                       
+                    } else {
+                        this.$toast.error('Thông báo<br>' + res.data.message);
+                    }
+                })
+        },
+    },
 }
 </script>
 <style scoped>

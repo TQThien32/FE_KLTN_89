@@ -17,7 +17,7 @@
                                 <div class="my-4">
                                     <label class="form-label">Email</label>
                                     <input type="text" class="form-control form-control-lg"
-                                        placeholder="ex: tranquangthien@gmail.com" v-model="quen_mk.email">
+                                        placeholder="Nhập Email tại đây" v-model="quen_mk.email">
                                 </div>
                                 <div class="d-grid gap-2">
                                     <button type="button" class="btn btn-chinh btn-lg"

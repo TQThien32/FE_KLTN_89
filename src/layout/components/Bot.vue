@@ -56,7 +56,7 @@
                             <a href="/dung-chung/trang-chu" style="color: white;" class="login-link"
                                 title="Trang chủ" rel="nofollow">Trang chủ</a>
                             <br>
-                            <a href="/dung-chung/gioi-thieu" style="color: white;" class="login-link"
+                            <a href="/khach-vang-lai/gioi-thieu" style="color: white;" class="login-link"
                                 title="Giới Thiệu" rel="nofollow">Giới thiệu</a>
                             <br>
                             <a href="/dung-chung/lien-he" style="color: white;" class="login-link"

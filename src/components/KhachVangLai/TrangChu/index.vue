@@ -9,7 +9,7 @@
         <p class="text-start intro-description fade-in-up">"Học thật, bằng thật, xác minh tức thì"</p> <hr class="text-white">
         <p class="text-start intro-description fade-in-up">"Hệ thống chứng nhận học vấn bằng NFT là một nền tảng hiện đại..."</p> 
         <div class="text-end">
-          <router-link to="/dung-chung/gioi-thieu" @click="scrollToTop">
+          <router-link to="/khach-vang-lai/gioi-thieu" @click="scrollToTop">
             <button class="btn btn-outline-primary rounded-pill  mt-2 me-5 fade-in-up" style="font-size: 0.75rem;">Tìm hiểu thêm
               <i class="fa-solid fa-arrow-right"></i></button>
           </router-link>
@@ -96,7 +96,7 @@
           trong lĩnh vực giáo dục.
         </p>
         <br>
-        <router-link to="/dung-chung/gioi-thieu" @click="scrollToTop"><button class="btn btn-outline-primary rounded-btn" href="index.html">Xem Thêm <i
+        <router-link to="/khach-vang-lai/gioi-thieu" @click="scrollToTop"><button class="btn btn-outline-primary rounded-btn" href="index.html">Xem Thêm <i
               class="fa-solid fa-arrow-right"></i></button></router-link>
   
       </div>
