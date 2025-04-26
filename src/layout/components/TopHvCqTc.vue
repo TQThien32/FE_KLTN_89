@@ -28,13 +28,25 @@
                         <li class="nav-item mobile-search-icon">
                             <a class="nav-link" href="#"> <i class='bx bx-search'></i>
                             </a>
-
+                        </li>
+                        
+                        <li class="nav-item dropdown dropdown-large">
+                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                                href="/hoc-vien/quan-ly-vi-NFT">
+                                <i class='bx bx-wallet' style="font-size: 30px"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-large">
+                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                                href="/hoc-vien/thanh-toan">
+                                <i class='bx bx-cart' style="font-size: 30px"></i>
+                            </a>
                         </li>
                         <li class="nav-item dropdown dropdown-large">
                             <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
-                                    class="alert-count">7</span>
-                                <i class='bx bx-bell'></i>
+                                    class="alert-count ms-2">7</span>
+                                <i class='bx bx-bell' style="font-size: 30px"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-wide">
                                 <a href="javascript:;">
@@ -113,18 +125,6 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item dropdown dropdown-large">
-                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
-                                href="/hoc-vien/quan-ly-vi-NFT">
-                                <i class='bx bx-wallet' style="font-size: 30px"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown dropdown-large">
-                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
-                                href="/hoc-vien/thanh-toan">
-                                <i class='bx bx-cart' style="font-size: 30px"></i>
-                            </a>
-                        </li>
                     </ul>
                 </div>
                 <div class="user-box dropdown">
@@ -200,8 +200,7 @@ export default {
                     }
                 })
         },
-    },
-}
+    }}
 </script>
 <style scoped>
 .navbar-nav .nav-link {

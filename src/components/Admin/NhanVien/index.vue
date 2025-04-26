@@ -23,10 +23,10 @@
                             <input class="mt-2 form-control" type="tel" v-model="create_nhan_vien.sdt">
                             <label class="mt-2">Chức Vụ</label>
                             <div>
-                                <select class="mt-2 form-control" name="" id="" v-model="create_nhan_vien.chuc_vu">
-                                    <option value="0">Chức Vụ</option>
-                                    <option value="1">Trưởng Phòng</option>
-                                    <option value="2">Phó Phòng</option>
+                                <select class="mt-2 form-control" name="" id="" v-model="create_nhan_vien.id_chuc_vu">
+                                    <template v-for="(v, k) in listChucVu" :key="k">
+                                        <option v-bind:value="v.id">{{ v.ten_chuc_vu }}</option>
+                                    </template>
                                 </select>
                             </div>
                             <label class="mt-2">Giới Tính</label>
@@ -40,7 +40,7 @@
                         <div class="col-lg-6">
                             <div>
                                 <label class="mt-2">Email Nhân Viên</label>
-                            <input class="mt-2 form-control" type="email" v-model="create_nhan_vien.email">
+                                <input class="mt-2 form-control" type="email" v-model="create_nhan_vien.email">
                             </div>
                             <label class="mt-2">Password</label>
                             <div class="input-group" id="password_group">
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                     <div class="row mt-1">
-                        
+
                     </div>
                 </div>
                 <div class="card-footer text-end">
@@ -106,7 +106,6 @@
                             <th class="align-middle text-center">Avatar</th>
                             <th class="align-middle text-center">Chức Vụ</th>
                             <th class="align-middle text-center">Trạng Thái</th>
-                            <th class="align-middle text-center">Khác</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -117,20 +116,19 @@
                                 <td class="align-middle text-center">{{ value.email }}</td>
                                 <td class="align-middle text-center">{{ value.sdt }}</td>
                                 <td class="align-middle text-center">{{ value.so_cccd }}</td>
-                                <td class="align-middle text-center">{{ value.gioi_tinh }}</td>
+                                <td class="align-middle text-center">{{ value.gioi_tinh == 0 ? 'Nam' : (value.gioi_tinh== 1 ? 'Nữ' : 'Không rõ') }}</td>
                                 <td class="align-middle text-center">{{ value.ngay_sinh }}</td>
                                 <td class="align-middle text-center">{{ value.dia_chi }}</td>
                                 <td class="align-middle text-center">
                                     <img v-bind:src="value.hinh_anh" alt=""
                                         style="width: 50px; height: 50px; border-radius: 50%;">
                                 </td>
-                                <td class="align-middle text-center">{{ value.chuc_vu }}</td>
+                                <td class="align-middle text-center">{{ value.ten_chuc_vu }}</td>
                                 <td class="align-middle text-center">
-                                    <button v-if="value.tinh_trang == 1" class="btn btn-success">Hoạt động</button>
-                                    <button v-else class="btn btn-success">Tạm Dừng</button>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <button class="btn btn-chinh">Gửi thông báo</button>
+                                    <button v-on:click="doiTrangThai(value)" v-if="value.is_duyet == 1"
+                                        class="btn btn-success">Hoạt động</button>
+                                    <button v-on:click="doiTrangThai(value)" v-else class="btn btn-danger">Tạm
+                                        Dừng</button>
                                 </td>
                             </tr>
                         </template>
@@ -147,6 +145,7 @@ import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
+            listChucVu: [],
             list_nhan_vien: [],
             create_nhan_vien: {
                 ho_ten: '',
@@ -167,6 +166,7 @@ export default {
     },
     mounted() {
         this.loadData();
+        this.loadChucVu();
     },
     methods: {
         togglePassword() {
@@ -200,7 +200,26 @@ export default {
                         }
                     });
             }
-        }
+        },
+        doiTrangThai(value) {
+            baseRequest
+                .post('admin/doi-trang-thai', value)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success(res.data.message)
+                        this.loadData();
+                    } else {
+                        this.$toast.error(res.data.message);
+                    }
+                });
+        },
+        loadChucVu() {
+            baseRequest
+                .get('admin/chuc-vu/data')
+                .then((res) => {
+                    this.listChucVu = res.data.data;
+                });
+        },
     }
 }
 </script>

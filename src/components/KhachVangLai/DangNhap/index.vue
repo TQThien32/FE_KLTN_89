@@ -239,7 +239,7 @@ export default {
 				.then((res) => {
 					if (res.data.status) {
 						this.$toast.success(res.data.message);
-						// this.$router.push('/admin/danh-muc');
+						
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_admin', res.data.ten_admin);
                         this.$router.push('/admin/trang-chu');
@@ -251,7 +251,7 @@ export default {
 		},
         dangNhapToChuc() {
 			baseRequest
-                .post('to-chuc/dang-nhap', this.to_Chuc_Dang_Nhap)
+				.post('to-chuc-cap-chung-chi/dang-nhap', this.to_Chuc_Dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
 						this.$toast.success(res.data.message)
