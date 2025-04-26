@@ -15,7 +15,7 @@
                
                 
                 <li class="nav-item">
-                    <router-link to="/dung-chung/trang-chu" class="nav-link">
+                    <router-link to="/hoc-vien/trang-chu" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-house-chimney-window"></i>
                         </div>
                         <div class="menu-title">Trang Chủ</div>
@@ -29,7 +29,7 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/dung-chung/lien-he" class="nav-link">
+                    <router-link to="/khach-vang-lai/lien-he" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-phone"></i>
                         </div>
                         <div class="menu-title">Liên Hệ</div>

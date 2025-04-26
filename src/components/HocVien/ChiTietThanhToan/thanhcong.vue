@@ -9,7 +9,7 @@
                     <p class="text-warning" style="font-size: 18px">
                         Vui lòng đợi, NFT chứng chỉ sẽ được chuyển vào ví NFT của bạn
                     </p>
-                    <router-link to="/dung-chung/trang-chu">
+                    <router-link to="/hoc-/trang-chu">
                         <button class="btn btn-secondary me-4">
                             <i class="fa-regular fa-circle-left fa-sm"></i> Quay Về Trang Chủ
                         </button>

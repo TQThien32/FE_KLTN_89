@@ -89,11 +89,13 @@ export default {
         return {
             chung_chi_nft: [],
             thong_tin: {},
-            chia_se: {}
+            chia_se: {},
+            data:[]
         }
     },
     mounted() {
         this.getChungChiNft();
+        this.xemgiaodich();
 
     },
     methods: {
@@ -115,7 +117,14 @@ export default {
                         this.$toast.error(res.data.message);
                     }
                 })
-        }
+        },
+        xemgiaodich() {
+			baseRequest
+				.get('xem-giao-dich')
+				.then((res) => {
+                  this.data = res.data.data
+				})
+		},
 
     }
 }
