@@ -32,7 +32,6 @@
                             <label class="mt-2">Giới Tính</label>
                             <div>
                                 <select class="mt-2 form-control" name="" id="" v-model="create_nhan_vien.gioi_tinh">
-                                    <option value="">Giới Tính</option>
                                     <option value="0">Nam</option>
                                     <option value="1">Nữ</option>
                                 </select>

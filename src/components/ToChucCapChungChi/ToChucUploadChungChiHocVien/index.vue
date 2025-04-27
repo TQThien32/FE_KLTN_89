@@ -68,17 +68,17 @@
                   </tr>
                </thead>
                <tbody>
-                  <tr v-for="(item, index) in dataList" :key="item.id">
+                  <tr v-for="(value, index) in dataList" :key="index">
                      <th>{{ index + 1 }}</th>
-                     <td>{{ item.ten_hoc_vien }}</td>
-                     <td>{{ item.email }}</td>
-                     <td>{{ item.sdt }}</td>
-                     <td>{{ item.so_cccd }}</td>
-                     <td>{{ item.so_hieu_chung_chi }}</td>
-                     <td>{{ item.khoa_hoc }}</td>
-                     <td>{{ item.trinh_do }}</td>
-                     <td>{{ item.ngay_cap }}</td>
-                     <td>{{ item.ket_qua }}</td>
+                     <td>{{ value.ho_ten }}</td>
+                     <td>{{ value.email }}</td>
+                     <td>{{ value.sdt }}</td>
+                     <td>{{ value.so_cccd }}</td>
+                     <td>{{ value.so_hieu_chung_chi }}</td>
+                     <td>{{ value.khoa_hoc }}</td>
+                     <td>{{ value.trinh_do }}</td>
+                     <td>{{ value.ngay_cap }}</td>
+                     <td>{{ value.ket_qua }}</td>
                      <td>
                         <img v-bind:src="`http://localhost:8000/storage/uploads/images/${item.hinh_anh}`" alt="Hình ảnh"
                            style="width: 50px; height: 50px; border-radius: 50%;">

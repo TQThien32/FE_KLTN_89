@@ -77,8 +77,8 @@ export default {
                         this.$toast.success('Thông báo<br>' + res.data.message);
                         window.localStorage.removeItem('chia_khoa_so1');
                         window.localStorage.removeItem('ten_admin');
+                        this.$router.push('/');
                         this.mounted();
-                        // this.$router.push('/');
                     } else {
                         this.$toast.error('Thông báo<br>' + res.data.message);
                     }

@@ -10,12 +10,12 @@ export default function (to, from, next) {
             if(res.data.status) {
                 next(); // Được phép đi qua
             } else {
-                next('/to-chuc-cap-chung-chi/dang-nhap');
+                next('/dang-nhap');
                 this.$toast.success(res.data.message)
             }
         })
         .catch(() => {
-            next('/to-chuc-cap-chung-chi/dang-nhap');
+            next('/dang-nhap');
             this.$toast.error('Yêu Cầu Đăng Nhập')
         });
 }

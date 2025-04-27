@@ -9,7 +9,7 @@
                     </div>
                     <hr>
                     <div class="email-list">
-                        <p>
+                    
                         <div class="text-end">
                             <div class="">
                                 <button v-on:click="deleteSelected()" type="button" class="btn btn-chinh ms-2"><i
@@ -17,7 +17,7 @@
                                 </button>
                             </div>
                         </div>
-                        </p>
+                        
                         <a href="/to-chuc-cap-chung-chi/xem-thong-bao/chi-tiet-thong-bao"
                             v-for="(value, index) in emailslist" :key="index">
                             <div class="d-md-flex align-items-center email-message px-3 py-1">

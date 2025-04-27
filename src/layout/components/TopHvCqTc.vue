@@ -132,8 +132,8 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../../assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
                         <div class="user-info ps-3">
-                            <p class="user-name mb-0">Pauline Seitz</p>
-                            <p class="designattion mb-0">Người Dùng</p>
+                            <p class="user-name mb-0">{{ten_hoc_vien}}</p>
+                            <p class="designattion mb-0">Học Viên</p>
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -157,49 +157,50 @@
 </template>
 <script>
 import baseRequest from '../../core/baseRequest'
+
 export default {
-    // data() {
-    //     return {
-    //         ten_qtv: '',
-    //         auth: false,
-    //     }
-    // },
-    // computed: {
-    //     getTenQTV() {
-    //         return localStorage.getItem('ten_admin');
-    //     },
-    // },
-    // mounted() {
-    //     this.checkLogin();
-    //     this.ten_qtv = localStorage.getItem('ten_admin')
-    // },
-    // methods: {
-    //     checkLogin() {
-    //         baseRequest
-    //             .post('admin/kiem-tra-chia-khoa')
-    //             .then((res) => {
-    //                 if (res.data.status) {
-    //                     this.auth = true
-    //                 }
-    //             })
-    //     },
-    //     dangXuat() {
-    //         baseRequest
-    //             .get('admin/dang-xuat')
-    //             .then((res) => {
-    //                 if (res.data.status) {
-    //                     this.$toast.success('Thông báo<br>' + res.data.message);
-    //                     window.localStorage.removeItem('chia_khoa_so1');
-    //                     window.localStorage.removeItem('ten_admin');
-    //                     this.mounted();
-    //                     // this.$router.push('/');
-    //                 } else {
-    //                     this.$toast.error('Thông báo<br>' + res.data.message);
-    //                 }
-    //             })
-    //     },
-    // },
-}
+    data() {
+        return {
+            ten_hoc_vien: '',
+            auth: false,
+        }
+    },
+    computed: {
+        getTenQTV() {
+            return localStorage.getItem('ten_hoc_vien');
+        },
+    },
+    mounted() {
+        this.checkLogin();
+        this.ten_hoc_vien = localStorage.getItem('ten_hoc_vien')
+    },
+    methods: {
+        checkLogin() {
+            baseRequest
+                .post('hoc-vien/kiem-tra-chia-khoa')
+                .then((res) => {
+                    if (res.data.status) {
+                        this.auth = true
+                    }
+                })
+        },
+        dangXuat() {
+            baseRequest
+                .get('hoc-vien/dang-xuat')
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success('Thông báo<br>' + res.data.message);
+                        window.localStorage.removeItem('chia_khoa_so1');
+                        window.localStorage.removeItem('ten_hoc_vien');
+                        this.$router.push('/');
+                        this.mounted();
+                       
+                    } else {
+                        this.$toast.error('Thông báo<br>' + res.data.message);
+                    }
+                })
+        },
+    }}
 </script>
 <style scoped>
 .navbar-nav .nav-link {

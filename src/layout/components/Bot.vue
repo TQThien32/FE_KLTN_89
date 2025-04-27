@@ -53,14 +53,14 @@
                         </b>
                         <div class="footer-menu">
 
-                            <a href="/dung-chung/trang-chu" style="color: white;" class="login-link"
+                            <a href="/khach-vang-lai/trang-chu" style="color: white;" class="login-link"
                                 title="Trang chủ" rel="nofollow">Trang chủ</a>
                             <br>
-                            <a href="/dung-chung/gioi-thieu" style="color: white;" class="login-link"
+                            <a href="/khach-vang-lai/gioi-thieu" style="color: white;" class="login-link"
                                 title="Giới Thiệu" rel="nofollow">Giới thiệu</a>
                             <br>
-                            <a href="/dung-chung/lien-he" style="color: white;" class="login-link"
-                                title="Liên Hệ" rel="nofollow">Liên hệ</a>
+                            <a href="/khach-vang-lai/lien-he" style="color: white;" class="login-link" title="Liên Hệ"
+                                rel="nofollow">Liên hệ</a>
 
                         </div>
                     </div>

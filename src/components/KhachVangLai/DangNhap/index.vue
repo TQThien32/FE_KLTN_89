@@ -56,16 +56,15 @@
                                         <div class="form-body mt-3">
                                             <form class="row g-3">
                                                 <div class="col-12">
-                                                    <label for="inputEmailAddress" class="form-label">Nhập Email</label>
-                                                    <input type="email" class="form-control" id="inputEmailAddress" v-model="admin_Dang_Nhap.email"
-                                                        placeholder="Nhập tên đăng nhập">
+                                                    <label for="" class="form-label">Nhập Email</label>
+                                                    <input type="email" class="form-control" v-model="admin_Dang_Nhap.email">
                                                 </div>
                                                 <div class="col-12">
-												<label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
+												<label for="" class="form-label">Mật Khẩu</label>
 												<div class="input-group" id="password_group">
 													<input :type="showPassword ? 'text' : 'password'"
-														class="form-control border-end-0" id="inputChoosePassword"
-														placeholder="Nhập Mật Khẩu" v-model="admin_Dang_Nhap.password">
+														class="form-control border-end-0"
+														v-model="admin_Dang_Nhap.password">
 													<a href="javascript:;" class="input-group-text bg-transparent"
 														@click="togglePassword">
 														<i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
@@ -111,16 +110,14 @@
                                         <div class="form-body">
                                             <form class="row g-3">
                                                 <div class="col-12">
-                                                    <label for="inputEmailAddress" class="form-label">Nhập Email</label>
-                                                    <input type="email" v-model="to_Chuc_Dang_Nhap.email" class="form-control" id="inputEmailAddress"
-                                                        placeholder="Nhập email">
+                                                    <label for="" class="form-label">Nhập Email</label>
+                                                    <input type="email" v-model="to_Chuc_Dang_Nhap.email" class="form-control">
                                                 </div>
                                                 <div class="col-12">
-												<label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
+												<label for="" class="form-label">Mật Khẩu</label>
 												<div class="input-group" id="password_group">
 													<input :type="showPassword ? 'text' : 'password'"
-														class="form-control border-end-0" id="inputChoosePassword"
-														placeholder="Nhập Mật Khẩu" v-model="to_Chuc_Dang_Nhap.password">
+														class="form-control border-end-0" v-model="to_Chuc_Dang_Nhap.password">
 													<a href="javascript:;" class="input-group-text bg-transparent"
 														@click="togglePassword">
 														<i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
@@ -167,15 +164,13 @@
                                             <form class="row g-3">
                                                 <div class="col-12">
                                                     <label for="inputEmailAddress" class="form-label">Nhập Email</label>
-                                                    <input type="email" class="form-control" v-model="hoc_Vien_Dang_Nhap.email"
-                                                        id="inputEmailAddress" placeholder="Nhập email">
+                                                    <input type="email" class="form-control" v-model="hoc_Vien_Dang_Nhap.email">
                                                 </div>
                                                 <div class="col-12">
-												<label for="inputChoosePassword" class="form-label">Mật Khẩu</label>
+												<label for="" class="form-label">Mật Khẩu</label>
 												<div class="input-group" id="password_group">
 													<input :type="showPassword ? 'text' : 'password'"
-														class="form-control border-end-0" id="inputChoosePassword"
-														placeholder="Nhập Mật Khẩu" v-model="hoc_Vien_Dang_Nhap.password">
+														class="form-control border-end-0" v-model="hoc_Vien_Dang_Nhap.password">
 													<a href="javascript:;" class="input-group-text bg-transparent"
 														@click="togglePassword">
 														<i :class="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
@@ -256,19 +251,20 @@ export default {
 		},
         dangNhapToChuc() {
 			baseRequest
-				.post('to-chuc-cap-chung-chi/dang-nhap', this.to_Chuc_Dang_Nhap)
+				.post('to-chuc/dang-nhap', this.to_Chuc_Dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
 						this.$toast.success(res.data.message)
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_to_chuc', res.data.ten_to_chuc);
-                        this.$router.push('to-chuc-cap-chung-chi/trang-chu');
+                        this.$router.push('/to-chuc-cap-chung-chi/trang-chu');
 					}
 					else {
 						this.$toast.error(res.data.message)
 					}
 				})
 		},
+        
 	}
 }
 </script>
