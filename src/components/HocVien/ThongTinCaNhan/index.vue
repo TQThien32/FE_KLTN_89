@@ -9,12 +9,13 @@
           <div class="row mt-3">
             <!-- Avatar -->
             <div class="col-lg-4">
-              <div class="card">
+              <div class="card "  style="box-shadow: none;">
                 <div class="card-body text-center">
                   <img src="../../../assets/images/avatars/avatar-2.png" alt="Avatar"
-                    class="rounded-circle p-1 bg-primary" width="110">
+                    class="rounded-circle p-1 bg-gradient-scooter" width="150">
                   <div class="mt-3">
-                    <h4>{{profile.ho_ten}}</h4>
+                    <h3>{{profile.ho_ten}}</h3>
+                    <p class="text-secondary">Người Dùng</p>
                   </div>
                 </div>
               </div>
@@ -22,9 +23,12 @@
 
             <!-- Thông Tin -->
             <div class="col-lg-8">
-              <div class="card">
+              <div class="card"  style="box-shadow: none;">
+                <div class="card-header bg-gradient-scooter">
+                  <h4 class="text-white mt-2 text-center">Thông Tin Người Dùng</h4>
+                </div>
                 <div class="card-body">
-                  <div class="row mb-3">
+                  <div class="row mb-3 mt-2">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Họ Và Tên</h6>
                     </div>
@@ -84,7 +88,7 @@
                   <div class="row">
                     <div class="col-auto ms-auto">
                       <button v-on:click="Object.assign(update_profile, profile)" type="button"
-                        class="btn btn btn-chinh" data-bs-toggle="modal" data-bs-target="#updateModal">
+                        class="btn btn btn-inverse-primary" data-bs-toggle="modal" data-bs-target="#updateModal">
                         Cập Nhật
                       </button>
                     </div>

@@ -3394,10 +3394,10 @@ a {
     background: #17ead9;
     background: -webkit-linear-gradient(
 45deg
-, #17ead9, #6078ea)!important;
+, #17ead9, #4e67e8)!important;
     background: linear-gradient(
 45deg
-, #17ead9, #6078ea)!important;
+, #17ead9, #556fed)!important;
 }
 
 
@@ -3838,13 +3838,13 @@ a {
 
 
 .btn-inverse-primary {
-	color: #008cff;
+	color: #0066ff;
     background-color: rgba(0, 140, 255, 0.18);
     border-color: rgb(209, 234, 255);
 }
 
 .btn-inverse-primary:hover {
-	color: #008cff;
+	color: #093e69;
     background-color: rgba(0, 140, 255, 0.18);
     border-color: rgba(0, 140, 255, 0.18);
 }
