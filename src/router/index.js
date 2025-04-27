@@ -264,11 +264,11 @@ const routes = [
         component: () => import('../components/DungChung/ChiTietThongBao/index.vue'),
         meta: { layout: 'Auth' },
     },
-    {
-        path: '/dung-chung/trang-chu',
-        component: () => import('../components/DungChung/TrangChu/index.vue'),
-        meta: { layout: 'HocVien' },
-    },
+    // {
+    //     path: '/dung-chung/trang-chu',
+    //     component: () => import('../components/DungChung/TrangChu/index.vue'),
+    //     meta: { layout: 'HocVien' },
+    // },
     {
         path: '/dung-chung/lien-he',
         component: () => import('../components/DungChung/LienHe/index.vue'),
