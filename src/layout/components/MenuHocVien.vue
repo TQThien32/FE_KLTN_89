@@ -22,14 +22,14 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/khach-vang-lai/gioi-thieu" class="nav-link">
+                    <router-link to="/hoc-vien/gioi-thieu" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-circle-user"></i>
                         </div>
                         <div class="menu-title">Giới Thiệu</div>
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/khach-vang-lai/lien-he" class="nav-link">
+                    <router-link to="/hoc-vien/lien-he" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-phone"></i>
                         </div>
                         <div class="menu-title">Liên Hệ</div>
