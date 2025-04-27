@@ -43,87 +43,9 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown dropdown-large">
-                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
-                                    class="alert-count ms-2">7</span>
+                            <a  class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="/hoc-vien/xem-thong-bao">
                                 <i class='bx bx-bell' style="font-size: 30px"></i>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-wide">
-                                <a href="javascript:;">
-                                    <div class="msg-header">
-                                        <p class="msg-header-title"><b>Thông báo</b></p>
-                                        <a href="/hoc-vien/xem-thong-bao" class="ms-auto">Xem tất cả</a>
-                                    </div>
-                                </a>
-                                <div class="header-notifications-list">
-                                    <a class="dropdown-item" href="javascript:;">
-                                        <div class="d-flex align-items-center w-100">
-                                            <a href="/hoc-vien/xem-thong-bao/chi-tiet-thong-bao" class="w-100 text-decoration-none">
-                                                <div class="d-flex align-items-start py-2 w-100">
-                                                    <!-- Tiêu đề -->
-                                                    <div class="me-2" style="width: 100px;">
-                                                        <p class="mb-0 text-dark"><b>Wordpress</b></p>
-                                                    </div>
-                                                    <!-- Nội dung -->
-                                                    <div class="me-2 flex-grow-1">
-                                                        <p class="mb-0 text-muted text-truncate"
-                                                            style="max-width: 400px;">
-                                                            It is a long established fact that a reader will be
-                                                            distracted by the readable...
-                                                        </p>
-                                                    </div>
-                                                    <!-- Thời gian -->
-                                                    <div style="width: 80px;" class="text-end">
-                                                        <p class="mb-0 email-time">5:56 PM</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </a>
-
-                                    <a class="dropdown-item" href="javascript:;">
-                                        <div class="d-flex align-items-center w-100">
-                                            <a href="/hoc-vien/xem-thong-bao/chi-tiet-thong-bao" class="w-100 text-decoration-none">
-                                                <div class="d-flex align-items-start py-2 w-100">
-                                                    <!-- Tiêu đề -->
-                                                    <div class="me-2" style="width: 100px;">
-                                                        <p class="mb-0 text-dark"><b>Locanto</b></p>
-                                                    </div>
-                                                    <!-- Nội dung -->
-                                                    <div class="me-2 flex-grow-1">
-                                                        <p class="mb-0 text-muted text-truncate"
-                                                            style="max-width: 400px;">
-                                                            It is a long established fact that a reader will be
-                                                            distracted by the readable...
-                                                        </p>
-                                                    </div>
-                                                    <!-- Thời gian -->
-                                                    <div style="width: 80px;" class="text-end">
-                                                        <p class="mb-0 email-time">5:56 PM</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </a>
-                                    
-                                    <!-- <a class="dropdown-item" href="javascript:;">
-                                        <div class="d-flex align-items-center">
-                                            <a href="app-emailread.html">
-                                                <div class="d-md-flex align-items-center email-message py-1">
-                                                    <p class="mb-0 text-dark me-3"><b>Locanto</b>
-                                                    </p>
-                                                    <p class="mb-0 me-2">The point of using Lorem Ipsum is that it has a
-                                                        more-or-less normal...</p>
-
-                                                    <div style="width: 70px;" class="text-end">
-                                                        <p class="mb-0 email-time ">5:54 PM</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </a> -->
-                                </div>
-                            </div>
                         </li>
                     </ul>
                 </div>

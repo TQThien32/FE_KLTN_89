@@ -9,48 +9,26 @@
                     </div>
                     <hr>
                     <div class="email-list">
-                        
                         <div class="text-end">
-                            <div class="">
-                                <button v-on:click="deleteSelected()" type="button" class="btn btn-chinh ms-2"><i
-                                        class="bx bx-trash me-0"></i>
-                                </button>
-                            </div>
+                            <button v-on:click="deleteSelected()" type="button" class="btn btn-chinh ms-2">
+                                <i class="bx bx-trash me-0"></i>
+                            </button>
                         </div>
-                        
-                        <a href="/to-chuc-cap-chung-chi/xem-thong-bao/chi-tiet-thong-bao"
-                            v-for="(value, index) in emailslist" :key="index">
-                            <div class="d-md-flex align-items-center email-message px-3 py-1">
+                        <template v-for="(value, index) in emailslist" :key="index">
+                            <router-link :to="'/hoc-vien/xem-thong-bao/chi-tiet-thong-bao/' + value.id"><div class="d-md-flex align-items-center email-message px-3 py-1">
                                 <div class="d-flex align-items-center email-actions">
-                                    <input class="form-check-input" type="checkbox" v-model="value.selected">
-                                    <i class="bx bx-star font-20 mx-2 email-star"></i>
-                                    <p class="mb-0"><b>{{ value.tieude }}</b></p>
+                                    <input class="form-check-input me-3" type="checkbox" v-model="value.selected">
+                                    <p class="mb-0 fs-5"><b>{{ value.tieu_de }}</b></p>
                                 </div>
-                                <div class="">
-                                    <p class="mb-0">{{ value.noidung }}</p>
-                                </div>
-                                <div class="ms-auto">
-                                    <p class="mb-0 email-time">{{ value.thoigian }}</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="card-footer bg-white">
-                    <div class="d-flex justify-content-between align-items-center px-3 py-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="selectAll" v-model="selectAll"
-                                @change="toggleAll">
-                            <label class="form-check-label" for="selectAll">
-                                Chọn tất cả
-                            </label>
-                        </div>
+                            </div></router-link>
+                        </template>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 <script>
 import baseRequest from '../../../core/baseRequest';
 export default {
@@ -64,55 +42,44 @@ export default {
     mounted() {
         this.getDataThongBao();
     },
+    watch: {
+        emailslist: {
+            handler() {
+                this.ds_thong_bao_can_xoa = this.emailslist
+                    .filter(item => item.selected)
+                    .map(item => item.id);
+            },
+            deep: true
+        }
+    },
     methods: {
         getDataThongBao() {
-            baseRequest
-                .get('xem-thong-bao')
+            baseRequest.get('xem-thong-bao')
                 .then((res) => {
-                    this.emailslist = res.data.data
+                    this.emailslist = res.data.data.map(item => ({ ...item, selected: false }));
                 });
         },
-        xoaThongBao() {
+        deleteSelected() {
+            if (this.ds_thong_bao_can_xoa.length === 0) {
+                this.$toast.error('Vui lòng chọn thông báo để xóa!');
+                return;
+            }
             baseRequest
-                .post('xoa-thong-bao', this.ds_thong_bao_can_xoa)
+                .post('xoa-thong-bao', { ds_thong_bao_can_xoa: this.ds_thong_bao_can_xoa })
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success(res.data.message);
                         this.getDataThongBao();
+                        this.ds_thong_bao_can_xoa = [];
                     } else {
                         this.$toast.error(res.data.message);
                     }
                 });
-        },
-
-
-        toggleAll() {
-            this.emailslist.forEach(value => {
-                value.selected = this.selectAll;
-            });
-        },
-        deleteSelected() {
-            const selectedEmails = this.emailslist.filter(email => email.selected);
-
-            if (selectedEmails.length === 0) {
-                this.$toast.error('Vui lòng chọn ít nhất một bản ghi để xóa.');
-                return;
-            }
-            this.ds_thong_bao_can_xoa = selectedEmails.map(email => ({ id: email.id }));
-            this.xoaThongBao();
-        }
-    },
-    watch: {
-        emailslist: {
-            handler() {
-                this.selectAll = this.emailslist.length > 0 && this.emailslist.every(value => value.selected);
-            },
-            deep: true
         }
     }
 };
-
 </script>
+
 <style>
 .card {
     border-radius: 16px;
