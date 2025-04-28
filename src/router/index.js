@@ -111,7 +111,18 @@ const routes = [
         meta: { layout: 'HocVien' },
         //beforeEnter: kiemTraHocVien,
     },
-
+    {
+        path: '/hoc-vien/gioi-thieu',
+        component: () => import('../components/HocVien/TrangChu/gioithieu.vue'),
+        meta: { layout: 'HocVien' },
+        //beforeEnter: kiemTraHocVien,
+    },
+    {
+        path: '/hoc-vien/lien-he',
+        component: () => import('../components/HocVien/TrangChu/lienhe.vue'),
+        meta: { layout: 'HocVien' },
+        //beforeEnter: kiemTraHocVien,
+    },
     {
         path: '/hoc-vien/yeu-cau-cap-nft',
         component: () => import('../components/HocVien/YeuCau/index.vue'),
