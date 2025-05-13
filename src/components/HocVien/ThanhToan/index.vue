@@ -48,9 +48,6 @@
                         <th>Mã Giao Dịch</th>
                         <th>Thời Gian</th>
                         <th>Họ và Tên</th>
-                        <th>Số CCCD</th>
-                        <th>Tổ Chức Cấp</th>
-                        <th>Số Hiệu Chứng Chỉ</th>
                         <th>Đã Thanh Toán</th>
                     </tr>
                 </thead>
@@ -59,12 +56,9 @@
                         <tr class=" text-light text-center">
                             <th>{{ index + 1 }}</th>
                             <td>{{ value.ma_don_hang }}</td>
-                            <td>11:12 12/12/2024</td>
-                            <td>Trần Quang Thiên</td>
-                            <td>049203006547</td>
-                            <td>Đại Học Duy Tân</td>
-                            <td>12133434</td>
-                            <th>10000000 đ</th>
+                            <td>{{ value.updated_at }}</td>
+                            <td>{{ value.ho_ten }}</td>
+                            <th>{{ value.tong_tien_thanh_toan }} đ</th>
                         </tr>
                     </template>
                 </tbody>
@@ -149,7 +143,7 @@
                                             v-on:click="Object.assign(thong_tin_trongthanhtoan, value)"
                                             data-bs-toggle="modal" data-bs-target="#ttchitiettrongthanhtoan">Xem
                                             chi tiết</span></td>
-                                    <th>100.000 đ</th>
+                                    <th>{{ value.so_tien }}đ</th>
                                     <td><button type="button" v-on:click="xoaDonChiTiet(value.id)"
                                             class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
                                     </td>
@@ -161,7 +155,7 @@
                 </div>
                 <div class="modal-footer">
                     <div class="me-5 mt-3">
-                        <p style="font-size: 18px;">Tổng Tiền: <b>250.000 đ</b></p>
+                        <span style="font-size: 18px;"><b>{{ tongTien.toLocaleString('vi-VN') }} đ</b></span>
                     </div>
                     <!-- <router-link to="/hoc-vien/chi-tiet-thanh-toan"> -->
                     <button v-on:click="thanhToan()" type="button" data-bs-dismiss="modal" class="btn btn-chinh">Thanh
@@ -181,18 +175,25 @@ import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
-            list_giao_dich:[],
+            list_giao_dich: [],
             list_chung_chi: [],
             list_chi_tiet_don_hang: [],
             isShowResult: true,
             thong_tin: {},
-            thong_tin_trongthanhtoan:{}
+            thong_tin_trongthanhtoan: {}
         }
     },
     mounted() {
         this.lichSuGiaoDich();
         this.loadData();
         this.loadDataChiTietDonHang();
+    },
+    computed: {
+        tongTien() {
+            return this.list_chi_tiet_don_hang.reduce((tong, item) => {
+                return tong + Number(item.so_tien);
+            }, 0);
+        }
     },
     methods: {
         lichSuGiaoDich() {
@@ -262,8 +263,9 @@ export default {
                         this.$toast.error(res.data.message)
                     }
                 });
-                
+
         }
+
     }
 }
 window.onload = function () {
@@ -282,6 +284,7 @@ window.onload = function () {
         });
     });
 }
+
 </script>
 <style scoped>
 .form-check-input {

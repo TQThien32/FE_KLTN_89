@@ -7,61 +7,22 @@
                     <div class="row">
                         <div class="col-md-6">
                             <p class="card-text"><b>Họ Và Tên:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.ho_ten
-                            }}</span></p>
+                                    }}</span></p>
                             <p class="card-text"><b>Số CCCD:</b> <span class="ms-3">{{
-                                thong_tin_nguoi_dung.so_cccd }}</span></p>
+                                    thong_tin_nguoi_dung.so_cccd }}</span></p>
                         </div>
                         <div class="col-md-6">
-                            <p class="card-text"><b>Email:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.email }}</span>
+                            <p class="card-text"><b>Email:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.email
+                                    }}</span>
                             </p>
                             <p class="card-text"><b>Số Điện Thoại:</b> <span class="ms-3">{{ thong_tin_nguoi_dung.sdt
-                            }}</span></p>
+                                    }}</span></p>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <h4 class="text-white mt-5"><i class="fa-solid fa-circle-info"></i> Thông Tin Chứng Chỉ</h4>
-            <template v-for="(value, index) in chi_tiet_don_hang" :key="index">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="card card-hieuung">
-                            <div class="card-body  text-dark">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 mt-3">
-                                        <p class="card-text"><b>{{ value.id_chung_chi }}</b><span class="ms-3">{{
-                                            value.ten_to_chuc }}</span></p>
-                                        <!-- <p class="card-text"><b>Ngày Cấp : </b><span class="ms-3">{{
-                                            value.ngay_cap }}</span></p> -->
-                                        <!-- <p class="card-text"><b>Khóa Học: </b><span class="ms-3">{{ value.khoa_hoc
-                                        }}</span></p>
-                                        <p class="card-text"><b>Họ Và Tên : </b><span class="ms-3">{{
-                                            value.ho_va_ten }}</span></p>
-                                        <p class="card-text"><b>Số CCCD : </b><span class="ms-3">{{ value.cccd }}</span>
-                                        </p>
-                                        <p class="card-text"><b>Trình Độ : </b><span class="ms-3">{{
-                                            value.trinh_do }}</span></p>
-                                        <p class="card-text"><b>Kết Quả: </b><span class="ms-3">{{ value.ket_qua
-                                        }}</span></p>
-                                        <p class="card-text"><b>Số Hiệu Chứng Chỉ: </b><span class="ms-3">{{
-                                            value.so_hieu }}</span></p> -->
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 mt-3">
-                                        <p class="card-text"><b>Hình Ảnh: </b></p>
-                                        <img v-bind:src="value.hinh_anh" class="" style="height: 220px;" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer  text-end">
-                                <p class="card-text me-5 text-primary" style="font-size:22px;"><i
-                                        class="fa-regular fa-money-bill-1 text-dark"></i><b> 120.000 đ</b></p>
 
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </template>
         </div>
         <div class="col-lg-1 col-md-1"></div>
         <div class="col-lg-4 col-md-4">
@@ -77,9 +38,13 @@
                 <div class="card-body text-center">
                     <h5>Quét mã dưới đây bằng Internet Banking </h5>
                     <img v-bind:src="qr_link" alt="" style="height: 150px;">
-                    <p class="text-muted small mb-2">Lưu ý: Mã QR này sẽ hết hạn sau 24 giờ kể từ lúc tạo</p>
-                    <p class="small mb-4"><b>Mã giao dịch:</b> <span class="ms-2">6491184871323425033</span></p>
-                    <button v-on:click="xemGiaoDich()" type="button" class="btn btn-chinh btn-sm">Thanh toán xong, nhấn vào đây</button>
+                    <p class="text-muted small mb-2">Nếu bạn không quét mã trên, bạn có thể chuyển khoản theo nội dung sau:</p>
+                    <p>Ngân Hàng Hưởng Thụ: MBBANK</p>
+                    <p>Số Tài Khoản: 054983839382</p>
+                    <p>Tên Người Nhận: NFT CERTIFICATE</p>
+                    <p class="small mb-4"><b>Nội dung:</b> <span class="ms-2">{{ ma_don_hang }}</span></p>
+                    <button v-on:click="xemGiaoDich()" type="button" class="btn btn-chinh btn-sm">Thanh toán xong, nhấn
+                        vào đây</button>
                 </div>
             </div>
         </div>
@@ -123,6 +88,7 @@ export default {
         xemGiaoDich(){
             baseRequest
             .get('xem-giao-dich')
+            .then(this.$router.push('/hoc-vien/thanh-toan'));
             
         }
     }
