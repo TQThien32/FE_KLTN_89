@@ -4,9 +4,10 @@ import router from './router'
 import Default from './layout/wrapper/Master.vue'
 import Admin from './layout/wrapper/Admin.vue'
 import Auth from './layout/wrapper/AuthMaster.vue'
-import Hocvien from './layout/wrapper/Hocvien.vue'
+import Hocvien from './layout/wrapper/HocVien.vue'
 import ToChucCapChungChi from './layout/wrapper/ToChucCapChungChi.vue'
 import KhachVangLai from './layout/wrapper/KhachVangLai.vue'
+
 import { createToaster } from '@meforma/vue-toaster';
 
 

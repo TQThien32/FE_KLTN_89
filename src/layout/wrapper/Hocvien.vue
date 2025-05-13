@@ -4,7 +4,7 @@
             <TopHocVien></TopHocVien>
             <MenuHocVien></MenuHocVien>
         </div>
-        <div class="page-wrapper">
+        <div class="page-wrapper bg-gradient-moonlit">
             <div class="page-content">
                 <router-view></router-view>
             </div>
@@ -45,4 +45,12 @@ export default {
 @import "../../assets/css/dark-theme.css";
 @import "../../assets/css/semi-dark.css";
 @import "../../assets/css/header-colors.css";
+@import "../../assets/css/reset.css";
+
+.wrapper {
+   
+    min-height: 100vh; /* Đảm bảo chiếm toàn bộ chiều cao màn hình */
+    display: flex;
+    flex-direction: column;
+}
 </style>
