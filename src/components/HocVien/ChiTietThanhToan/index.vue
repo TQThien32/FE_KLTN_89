@@ -79,7 +79,7 @@
                     <img v-bind:src="qr_link" alt="" style="height: 150px;">
                     <p class="text-muted small mb-2">Lưu ý: Mã QR này sẽ hết hạn sau 24 giờ kể từ lúc tạo</p>
                     <p class="small mb-4"><b>Mã giao dịch:</b> <span class="ms-2">6491184871323425033</span></p>
-                    <button type="button" class="btn btn-chinh btn-sm">Thanh toán xong, nhấn vào đây</button>
+                    <button v-on:click="xemGiaoDich()" type="button" class="btn btn-chinh btn-sm">Thanh toán xong, nhấn vào đây</button>
                 </div>
             </div>
         </div>
@@ -120,6 +120,11 @@ export default {
                     this.thong_tin_nguoi_dung = res.data.data;
                 });
         },
+        xemGiaoDich(){
+            baseRequest
+            .get('xem-giao-dich')
+            
+        }
     }
 }
 

@@ -47,7 +47,7 @@
                             <td class="align-middle text-center">{{ value.email_nguoi_dai_dien }}</td>
                             <td class="align-middle text-center"></td>
                             <td class="align-middle text-center">
-                                <button v-on:click="doiTrangThai(value)" v-if="value.tinh_trang == 1" class="btn btn-success">Hoạt động</button>
+                                <button v-on:click="doiTrangThai(value)" v-if="value.is_duyet == 1" class="btn btn-success">Hoạt động</button>
                                 <button v-on:click="doiTrangThai(value)" v-else class="btn btn-danger">Tạm Dừng</button>
                             </td>
                         </tr>
@@ -60,7 +60,9 @@
 
 </template>
 <script>
-import axios from 'axios';
+import baseRequest from '../../../core/baseRequest';
+
+
 
 export default {
     data() {
@@ -73,8 +75,8 @@ export default {
     },
     methods: {
         loadData() {
-            axios
-                .get('http://127.0.0.1:8000/api/to-chuc/data')
+            baseRequest
+                .get('to-chuc/data')
                 .then((res) => {
                     this.list_to_chuc = res.data.data;
                 });

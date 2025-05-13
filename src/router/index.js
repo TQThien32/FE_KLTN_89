@@ -38,13 +38,6 @@ const routes = [
     },
 
     {
-        path: '/admin/danh-sach-co-quan-xac-thuc',
-        component: () => import('../components/Admin/CoQuanXacThuc/indev.vue'),
-        meta: { layout: 'Admin' },
-        //beforeEnter: kiemTraAdmin,
-    },
-
-    {
         path: '/admin/danh-sach-nhan-vien',
         component: () => import('../components/Admin/NhanVien/index.vue'),
         meta: { layout: 'Admin' },
@@ -87,6 +80,12 @@ const routes = [
         //beforeEnter: kiemTraAdmin,
     },
     {
+        path: '/admin/quan-ly-chung-chi',
+        component: () => import('../components/Admin/QuanLyChungChi/index.vue'),
+        meta: { layout: 'Admin' },
+        //beforeEnter: kiemTraAdmin,
+    },
+    {
         path: '/admin/quen-mat-khau',
         component: () => import('../components/Admin/AdminQuenMatKhau/index.vue'),
         meta: { layout: 'Auth' },
@@ -104,6 +103,17 @@ const routes = [
         //beforeEnter: kiemTraAdmin,
         props: true
     },
+    {
+        path: '/admin/yeu-cau-cap-nft',
+        component: () => import('../components/Admin/CapNFT/index.vue'),
+        meta: { layout: 'Admin' },
+        //beforeEnter: kiemTraAdmin,
+        props: true
+    },
+
+
+
+
     // HocVien
     {
         path: '/hoc-vien/trang-chu',
@@ -191,12 +201,42 @@ const routes = [
         props: true,
         //beforeEnter: kiemTraHocVien,
     },
+    {
+        path: '/hoc-vien/trang-chu',
+        component: () => import('../components/HocVien/TrangChu/index.vue'),
+        meta: { layout: 'HocVien' },
+        //beforeEnter: kiemTraHocVien,
+    },
+    {
+        path: '/hoc-vien/gioi-thieu',
+        component: () => import('../components/HocVien/TrangChu/gioithieu.vue'),
+        meta: { layout: 'HocVien' },
+        //beforeEnter: kiemTraHocVien,
+    },
+    {
+        path: '/hoc-vien/lien-he',
+        component: () => import('../components/HocVien/TrangChu/lienhe.vue'),
+        meta: { layout: 'HocVien' },
+        //beforeEnter: kiemTraHocVien,
+    },
 
    
     //ToChucCapChungChi
     {
         path: '/to-chuc-cap-chung-chi/trang-chu',
         component: () => import('../components/ToChucCapChungChi/TrangChu/index.vue'),
+        meta: { layout: 'ToChucCapChungChi' },
+        //beforeEnter: kiemTraToChuc,
+    },
+    {
+        path: '/to-chuc-cap-chung-chi/gioi-thieu',
+        component: () => import('../components/ToChucCapChungChi/TrangChu/gioithieu.vue'),
+        meta: { layout: 'ToChucCapChungChi' },
+        //beforeEnter: kiemTraToChuc,
+    },
+    {
+        path: '/to-chuc-cap-chung-chi/lien-he',
+        component: () => import('../components/ToChucCapChungChi/TrangChu/lienhe.vue'),
         meta: { layout: 'ToChucCapChungChi' },
         //beforeEnter: kiemTraToChuc,
     },

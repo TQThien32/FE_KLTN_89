@@ -54,12 +54,25 @@
                         <div class="menu-title">Quản Lý Giao Dịch</div>
                     </router-link>
                 </li>
-                <li class="nav-item">
-                    <router-link to="/admin/ds-chung-chi-da-cap" class="nav-link">
+                <li class="nav-item dropdown">
+                    <a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
+                        data-bs-toggle="dropdown">
                         <div class="parent-icon"><i class="fa-solid fa-book-open-reader"></i>
                         </div>
-                        <div class="menu-title">Danh Sách Chứng Chỉ Đã Cấp</div>
-                    </router-link>
+                        <div class="menu-title">Quản Lý Chứng Chỉ</div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <router-link to="/admin/yeu-cau-cap-nft">
+                                <a class="dropdown-item" href="/admin/yeu-cau-cap-nft"><i class="fa-solid fa-right-long"></i>Yêu Cầu NFT</a>
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/admin/danh-sach-hoc-vien">
+                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>NFT Đã Cấp</a>
+                            </router-link>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <router-link to="/admin/thong-ke" class="nav-link">

@@ -22,11 +22,11 @@
                             <template v-for="(value, index) in list_yeu_cau" :key="index">
                                 <tr>
                                     <th class="align-middle text-center">{{ index + 1 }}</th>
-                                    <td>{{ value.ho_ten }}</td>
-                                    <td>{{ value.so_cccd }}</td>
-                                    <td>{{ value.email }}</td>
-                                    <td>{{ value.so_hieu_chung_chi }}</td>
-                                    <td>{{ value.created_at }}</td>
+                                    <td class="align-middle">{{ value.ho_ten }}</td>
+                                    <td class="align-middle text-center">{{ value.so_cccd }}</td>
+                                    <td class="align-middle">{{ value.email }}</td>
+                                    <td class="align-middle text-center">{{ value.so_hieu_chung_chi }}</td>
+                                    <td class="align-middle text-center">{{ value.created_at }}</td>
                                     <td class="align-middle text-center">
                                         <button type="button" class="btn btn-chinh" data-bs-toggle="modal"
                                             data-bs-target="#exampleSuccessModal"

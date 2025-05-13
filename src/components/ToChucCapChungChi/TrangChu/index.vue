@@ -1,8 +1,8 @@
 <template>
     <div class="row">
       <div class="col-lg-5 mt-3">
-        <h1 class="text-start mt-5 text-light fade-in-up"><b>Chào mừng bạn đến với </b><br><b class="text-info" style="font-size: 100px;">NFT</b>
-           <b style="font-size: 50px;" class="text-primary"> CERTIFICATE</b>
+        <h1 class="text-start mt-5 text-light fade-in-up"><b>Chào mừng bạn đến với </b><br><b class="text-twitter" style="font-size: 100px;">NFT</b>
+           <b style="font-size: 50px;" class="text-facebook"> CERTIFICATE</b>
         </h1>
         <br>
         <div style="width: 40px; height: 2px; background-color: #b28b66; margin: 0 auto 20px auto;"></div>
@@ -10,8 +10,8 @@
         <p class="text-start intro-description fade-in-up">"Hệ thống chứng nhận học vấn bằng NFT là một nền tảng hiện đại..."</p> 
         <div class="text-end">
           <router-link to="/khach-vang-lai/gioi-thieu" @click="scrollToTop">
-            <button class="btn btn-outline-primary rounded-pill  mt-2 me-5 fade-in-up" style="font-size: 0.75rem;">Tìm hiểu thêm
-              <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="btn btn-inverse-info rounded-pill  mt-2 me-5 fade-in-up" style="font-size: 0.9rem;">Tìm hiểu thêm
+              <i class="fa-solid fa-arrow-right" style="font-size: 1.2rem;"></i></button>
           </router-link>
   
         </div>
@@ -51,13 +51,13 @@
     <div class="row">
       <div class="col-lg-4">
         <img class="hover-effect"
-          src="https://th.bing.com/th/id/OIP.pLNrLyg3lo552n-hbedu1gHaEK?w=1024&h=576&rs=1&pid=ImgDetMain"
+          src="https://wallpapers.com/images/high/nft-background-s5a2ljneovg0zmg0.webp"
           style="height: 250px; width: 100%;">
   
       </div>
       <div class="col-lg-4">
         <img class="hover-effect"
-          src="/src/assets/images/slide/4.png"
+          src="https://wallpapers.com/images/high/blockchain-shaded-green-aypnz289nt5auyht.webp"
           style="height: 250px; width: 100%;">
       </div>
       <div class="col-lg-4">
@@ -73,7 +73,7 @@
         <div class="image-container">
           <!-- Ảnh nền lớn -->
           <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-            alt="Học viên 1" class="main-img" style="width: 100%; height: 100%;">
+            alt="Học viên 1" class="main-img ms-5" style="width: 100%; height: 100%;">
   
           <!-- Ảnh nền nhỏ -->
           <!-- <img src="https://i.imgur.com/mj2sQmj.jpg" alt="Học viên 2" class="overlay-img"> -->
@@ -96,8 +96,9 @@
           trong lĩnh vực giáo dục.
         </p>
         <br>
-        <router-link to="/khach-vang-lai/gioi-thieu" @click="scrollToTop"><button class="btn btn-outline-primary rounded-btn" href="index.html">Xem Thêm <i
-              class="fa-solid fa-arrow-right"></i></button></router-link>
+        <router-link to="/khach-vang-lai/gioi-thieu" @click="scrollToTop"><button style="font-size: 0.9rem;"
+           class="btn btn-inverse-info rounded-btn" href="index.html">Tìm hiểu thêm <i
+              class="fa-solid fa-arrow-right" style="font-size: 1.2rem;"></i></button></router-link>
   
       </div>
     </div>
@@ -118,8 +119,8 @@
       <div class="col-lg-9">
         <div class="row">
           <div class="col-lg-4">
-            <h3 class="text-light"><b class="text-success">AN TOÀN</b> - <b class="text-danger">BẢO MẬT</b></h3>
-            <h3 class="text-light"><b>KHÔNG THỂ LÀM GIẢ</b></h3>
+            <h3 class="text-light"><b class="text-info">AN TOÀN</b> - <b class="text-warning">BẢO MẬT</b></h3>
+            <h3 class="text-2"><b>KHÔNG THỂ LÀM GIẢ</b></h3>
           </div>
           <div class="col-lg-8">
             <p class="intro-description">Chúng tôi cung cấp dịch vụ chứng nhận học vấn cho các tổ chức cấp chứng chỉ,
@@ -169,7 +170,7 @@
     <h2 class="text-center mt-5 text-light"><b>CÁC CHỨNG CHỈ ĐÃ ĐƯỢC CẤP NFT</b></h2>
     <div class="position-relative mt-5">
       <!-- Nút cuộn trái -->
-      <button class="btn btn-outline-primary position-absolute top-50 start-0 translate-middle-y rounded-btn"
+      <button class="btn btn-phu position-absolute top-50 start-0 translate-middle-y rounded-btn"
         style="z-index: 10;" @click="scrollLeft">
         ‹
       </button>
@@ -182,7 +183,7 @@
       </div>
   
       <!-- Nút cuộn phải -->
-      <button class="btn btn-outline-primary position-absolute top-50 end-0 translate-middle-y z-3 rounded-btn"
+      <button class="btn btn-phu position-absolute top-50 end-0 translate-middle-y z-3 rounded-btn"
         @click="scrollRight">
         ›
       </button>
@@ -193,7 +194,7 @@
         <h3 class="text-center mt-5 text-light"><b>TIỆN ÍCH KHI SỬ DỤNG CÔNG NGHỆ CỦA CHÚNG TÔI</b></h3>
         <div class="row mt-3">
           <div class="col-lg-4 text-center">
-            <button class="btn btn-outline-primary mt-3 btn-circle mx-auto"
+            <button class="btn btn-phu mt-3 btn-circle mx-auto"
               style="width: 70px; height: 70px; border-radius: 50%;">
               <i class="ms-1 fa-solid fa-thumbs-up" style="font-size: 35px;"></i>
             </button>
@@ -204,7 +205,7 @@
             </p>
           </div>
           <div class="col-lg-4 text-center">
-            <button class="btn btn-outline-primary mt-3 btn-circle mx-auto"
+            <button class="btn btn-phu mt-3 btn-circle mx-auto"
               style="width: 70px; height: 70px; border-radius: 50%;"><i class="ms-1 fa-solid fa-people-group"
                 style="font-size: 35px;"></i></button>
             <h4 class="mt-3 text-light">Chúng tôi làm gì?</h4>
@@ -212,7 +213,7 @@
               giúp sinh viên và nhà tuyển dụng xác thực thông tin một cách nhanh chóng và chính xác.</p>
           </div>
           <div class="col-lg-4 text-center">
-            <button class="btn btn-outline-primary mt-3 btn-circle mx-auto"
+            <button class="btn btn-phu mt-3 btn-circle mx-auto"
               style="width: 70px; height: 70px; border-radius: 50%;"><i class="ms-1 fa-solid fa-gear"
                 style="font-size: 35px;"></i></button>
             <h4 class="mt-3 text-light">Chúng tôi là ai?</h4>
@@ -249,36 +250,7 @@
     <br>
     <hr class="mt-5">
     <br>
-    <div class="row text-center mt-4">
-      <div class="col-lg-3">
-        <div class="card-body" style="border: 1px solid white; border-radius: 8px;">
-          <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="icon" width="50">
-          <h5 class="mt-2 fw-bold text-white">Chứng chỉ số an toàn</h5>
-          <p class="text-light">Chứng chỉ NFT không thể làm giả, đảm bảo xác thực tuyệt đối.</p>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card-body" style="border: 1px solid white; border-radius: 8px;">
-          <i class="fa-solid fa-microphone mt-4" style="font-size: 50px;"></i>
-            <h5 class="mt-2 fw-bold text-white">Truy xuất dễ dàng</h5>
-            <p class="text-light">Người học, tổ chức và nhà tuyển dụng có thể kiểm tra mọi lúc.</p>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card-body" style="border: 1px solid white; border-radius: 8px;">
-          <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="icon" width="50">
-            <h5 class="mt-2 fw-bold text-white">Lưu trữ vĩnh viễn</h5>
-            <p class="text-light">Chứng chỉ được lưu trữ trên blockchain, không bị mất hay hư hỏng theo thời gian.</p>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card-body" style="border: 1px solid white; border-radius: 8px;">
-          <img class="mt-4" src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="icon" width="50">
-            <h5 class="mt-2 fw-bold text-white">Hỗ trợ 24/7</h5>
-            <p class="text-light">Luôn sẵn sàng tư vấn và xử lý mọi thắc mắc về chứng chỉ.</p>
-        </div>
-      </div>
-    </div>
+    
    
   </template>
   <script>
