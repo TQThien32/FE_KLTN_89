@@ -1,5 +1,5 @@
 <template>
-   <div class="wrapper">
+   <div class="wrapper bg-gradient-moonlit">
     <router-view></router-view>
 </div>
 </template>
@@ -29,4 +29,5 @@ export default {
 @import '../../assets/css/semi-dark.css';
 @import '../../assets/css/header-colors.css';
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');    
+@import "../../assets/css/reset.css";
 </style>

@@ -69,18 +69,18 @@
                </thead>
                <tbody>
                   <tr v-for="(value, index) in dataList" :key="index">
-                     <th>{{ index + 1 }}</th>
-                     <td>{{ value.ho_ten }}</td>
-                     <td>{{ value.email }}</td>
-                     <td>{{ value.sdt }}</td>
-                     <td>{{ value.so_cccd }}</td>
-                     <td>{{ value.so_hieu_chung_chi }}</td>
-                     <td>{{ value.khoa_hoc }}</td>
-                     <td>{{ value.trinh_do }}</td>
-                     <td>{{ value.ngay_cap }}</td>
-                     <td>{{ value.ket_qua }}</td>
-                     <td>
-                        <img v-bind:src="`http://localhost:8000/storage/uploads/images/${item.hinh_anh}`" alt="Hình ảnh"
+                     <th class="text-center align-middle">{{ index + 1 }}</th>
+                     <td class="align-middle">{{ value.ho_ten }}</td>
+                     <td class="align-middle">{{ value.email }}</td>
+                     <td class="text-center align-middle">{{ value.sdt }}</td>
+                     <td class="text-center align-middle">{{ value.so_cccd }}</td>
+                     <td class="text-center align-middle">{{ value.so_hieu_chung_chi }}</td>
+                     <td class="align-middle">{{ value.khoa_hoc }}</td>
+                     <td class="align-middle">{{ value.trinh_do }}</td>
+                     <td class="text-center align-middle">{{ value.ngay_cap }}</td>
+                     <td class="text-center align-middle">{{ value.ket_qua }}</td>
+                     <td class="text-center align-middle">
+                        <img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`" alt="Hình ảnh"
                            style="width: 50px; height: 50px; border-radius: 50%;">
                      </td>
                   </tr>
@@ -156,7 +156,7 @@ export default {
       async fetchData() {
          try {
             let response = await baseRequest.get("get-data");
-            this.dataList = response.data;
+            this.dataList = response.data[0];
          } catch (error) {
             this.$toast.error("Có Lỗi Xảy Ra")
          }

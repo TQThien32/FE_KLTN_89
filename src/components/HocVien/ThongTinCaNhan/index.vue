@@ -23,7 +23,7 @@
 
             <!-- Thông Tin -->
             <div class="col-lg-8">
-              <div class="card"  style="box-shadow: none;">
+              <div class="card"  >
                 <div class="card-header bg-gradient-scooter">
                   <h4 class="text-white mt-2 text-center">Thông Tin Người Dùng</h4>
                 </div>
@@ -99,8 +99,8 @@
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                       <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="updateModalLabel">Cập Nhật Thông Tin</h5>
+                        <div class="modal-header bg-gradient-scooter">
+                          <h5 class="modal-title text-light" id="updateModalLabel">Cập Nhật Thông Tin</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -166,8 +166,8 @@
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                          <button v-on:click="updateProfile()" data-bs-dismiss="modal" type="button" class="btn btn-primary">Xác Nhận</button>
+                          <button type="button" class="btn btn-inverse-dark" data-bs-dismiss="modal">Đóng</button>
+                          <button v-on:click="updateProfile()" data-bs-dismiss="modal" type="button" class="btn btn-inverse-info">Xác Nhận</button>
                         </div>
                       </div>
                     </div>

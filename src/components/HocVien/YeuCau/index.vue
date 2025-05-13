@@ -1,39 +1,5 @@
 <template>
-    <h4 class="text-white mt-5"><i class="fa-solid fa-crown"></i> Đặc Quyền Khi Sở Hữu NFT Chứng Chỉ</h4>
-    <div class="row mt-5">
-        <div class="col-lg-4">
-            <div class="card card-dark">
-                <div class="card-body text-center">
-                    <img src="https://cdn-icons-png.freepik.com/256/7976/7976823.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-                        style="height: 70px;" alt="">
-                    <h4 class="card-title mt-2  text-light">NFT Chứng Chỉ</h4>
-                    <h6 class="card-subtitle mb-2 text-body-secondary text-light">Chứng chỉ độc nhất – xác thực tức thì.
-                    </h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card card-dark ">
-                <div class="card-body text-center">
-                    <img src="https://cdn-icons-png.freepik.com/256/4713/4713258.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-                        style="height: 70px;" alt="">
-                    <h4 class="card-title mt-2  text-light">Gửi Yêu Cầu</h4>
-                    <h6 class="card-subtitle mb-2 text-body-secondary text-light">Một lần gửi – mãi mãi xác thực.</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card card-dark">
-                <div class="card-body text-center">
-                    <img src="https://cdn-icons-png.freepik.com/256/11442/11442748.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
-                        style="height: 70px;" alt="">
-                    <h4 class="card-title mt-2  text-light">Bảo Mật</h4>
-                    <h6 class="card-subtitle mb-2 text-body-secondary text-light">Dữ liệu vĩnh viễn - quyền riêng tư tối
-                        đa.</h6>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <h4 class="text-white mt-5"><i class="fa-solid fa-code-pull-request"></i> Yêu Cầu Cấp NFT</h4>
     <div class="card border-top border-0 border-4 border-info mt-5">
         <div class="card-body mt-2">
@@ -133,6 +99,41 @@
                     </template>
                 </tbody>
             </table>
+        </div>
+    </div>
+    <h4 class="text-white mt-5"><i class="fa-solid fa-crown"></i> Đặc Quyền Khi Sở Hữu NFT Chứng Chỉ</h4>
+    <div class="row mt-5">
+        <div class="col-lg-4">
+            <div class="card card-dark">
+                <div class="card-body text-center">
+                    <img src="https://cdn-icons-png.freepik.com/256/7976/7976823.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                        style="height: 70px;" alt="">
+                    <h4 class="card-title mt-2  text-light">NFT Chứng Chỉ</h4>
+                    <h6 class="card-subtitle mb-2 text-body-secondary text-light">Chứng chỉ độc nhất – xác thực tức thì.
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card card-dark ">
+                <div class="card-body text-center">
+                    <img src="https://cdn-icons-png.freepik.com/256/4713/4713258.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                        style="height: 70px;" alt="">
+                    <h4 class="card-title mt-2  text-light">Gửi Yêu Cầu</h4>
+                    <h6 class="card-subtitle mb-2 text-body-secondary text-light">Một lần gửi – mãi mãi xác thực.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card card-dark">
+                <div class="card-body text-center">
+                    <img src="https://cdn-icons-png.freepik.com/256/11442/11442748.png?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                        style="height: 70px;" alt="">
+                    <h4 class="card-title mt-2  text-light">Bảo Mật</h4>
+                    <h6 class="card-subtitle mb-2 text-body-secondary text-light">Dữ liệu vĩnh viễn - quyền riêng tư tối
+                        đa.</h6>
+                </div>
+            </div>
         </div>
     </div>
     <!-- modal xem chi tiết -->

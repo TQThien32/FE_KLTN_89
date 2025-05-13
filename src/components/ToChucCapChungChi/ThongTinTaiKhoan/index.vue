@@ -4,10 +4,10 @@
         <div class="row mt-3">
             <!-- Avatar -->
             <div class="col-lg-4">
-                <div class="card" style="box-shadow: none;">
+                <div class="card" >
                     <div class="card-body text-center">
                         <img src="../../../assets/images/avatars/avatar-2.png" alt="Avatar"
-                            class="rounded-circle p-1 bg-primary" width="110">
+                            class="rounded-circle p-1 bg-gradient-scooter" width="150">
                         <div class="mt-3">
                             <h4>{{ profile.ten_to_chuc }}</h4>
                         </div>
@@ -17,16 +17,12 @@
 
             <!-- Thông Tin -->
             <div class="col-lg-8">
-                <div class="card" style="box-shadow: none;">
+                <div class="card" >
+                    <div class="card-header bg-gradient-scooter">
+                  <h4 class="text-white mt-2 text-center">Thông Tin Tổ Chức</h4>
+                </div>
                     <div class="card-body">
-                        <div class="row mb-3">
-                            <col-lg-6></col-lg-6>
-                            <col-lg-6>
-                                <p class="text-center"><b>
-                                        <h5 class="mb-0">Tổ Chức Cấp Chứng Chỉ</h5>
-                                    </b></p>
-                            </col-lg-6>
-                        </div>
+                        
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Tên Tổ Chức</h6>
@@ -51,12 +47,12 @@
                             </div>
                             <div class="form-control bg-white">{{ profile.dia_chi }}</div>
                         </div>
-                        <hr>
+                        
                         <div class="row mb-3">
                             <col-lg-6></col-lg-6>
                             <col-lg-6>
-                                <p class="text-center"><b>
-                                        <h5 class="mb-0">Người Đại Diện</h5>
+                                <p class="text-center "><b>
+                                        <h4 class="mt-2">Người Đại Diện</h4>
                                     </b></p>
                             </col-lg-6>
                         </div>
@@ -91,7 +87,7 @@
                         <div class="row">
                             <div class="col-auto ms-auto">
                                 <button v-on:click="Object.assign(update_profile, profile)" type="button"
-                                    class="btn btn btn-chinh" data-bs-toggle="modal" data-bs-target="#updateModal">
+                                    class="btn  btn-inverse-primary" data-bs-toggle="modal" data-bs-target="#updateModal">
                                     Cập Nhật
                                 </button>
                             </div>
@@ -101,8 +97,8 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cập Nhật Thông Tin</h1>
+                                    <div class="modal-header bg-gradient-scooter">
+                                        <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Cập Nhật Thông Tin</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
@@ -196,9 +192,9 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
+                                        <button type="button" class="btn btn-inverse-dark"
                                             data-bs-dismiss="modal">Đóng</button>
-                                        <button v-on:click="updateProfile()" data-bs-dismiss="modal" type="button" class="btn btn-primary">Xác Nhận</button>
+                                        <button v-on:click="updateProfile()" data-bs-dismiss="modal" type="button" class="btn btn-phu">Xác Nhận</button>
                                     </div>
                                 </div>
                             </div>
