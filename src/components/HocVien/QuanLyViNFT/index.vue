@@ -5,10 +5,12 @@
     <div class="container">
         <div class="row mt-3">
             <div class="input-group mb-3">
-            
-                <input v-if="is_cap_nhat == false" type="text" class="form-control"  v-model="dia_chi_vi" placeholder="Nhập địa chỉ ví" disabled>
+
+                <input v-if="is_cap_nhat == false" type="text" class="form-control" v-model="dia_chi_vi"
+                    placeholder="Nhập địa chỉ ví" disabled>
                 <input v-else type="text" class="form-control" placeholder="Nhập địa chỉ ví" v-model="dia_chi_vi">
-                <a href="#" v-if="is_cap_nhat == false" class="input-group-text" id="basic-addon2" v-on:click="is_cap_nhat = true">Cập Nhật</a>
+                <a href="#" v-if="is_cap_nhat == false" class="input-group-text" id="basic-addon2"
+                    v-on:click="is_cap_nhat = true">Cập Nhật</a>
                 <a href="#" v-else class="input-group-text" id="basic-addon2" v-on:click="capNhatDiaChiVi()">Lưu</a>
             </div>
         </div>
@@ -16,7 +18,8 @@
             <template v-for="(value, index) in chung_chi_nft" :key="index">
                 <div class="col-lg-4">
                     <div class="card">
-                        <img v-bind:src="value.hinh_anh" class="card-img-top" alt="anh chung chi">
+                        <img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`"
+                            class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
                         <div class="card-body">
                             <p class="card-text"><b class="me-3">Mã NFT</b> <span>{{ chung_chi_nft.token }}</span></p>
                             <p class="card-text"><b class="me-3">Data URL</b>
@@ -48,14 +51,17 @@
                 <div class="modal-body">
                     <p><b>Tên Học Viên: </b> <span>{{ thong_tin.ho_ten }}</span></p>
                     <p><b>Số CCCD: </b> <span>{{ thong_tin.so_cccd }}</span></p>
-                    <p><b>Mã NFT: </b><a href="#" v-on:click="copyToClipboard()">{{ substringWithDots(thong_tin.token) }}</a ></p>
+                    <p><b>Mã NFT: </b><a href="#" v-on:click="copyToClipboard()">{{ substringWithDots(thong_tin.token)
+                            }}</a></p>
                     <p><b>Tên Tổ Chức Cấp Chứng Chỉ: </b> <span>{{ thong_tin.ten_to_chuc }}</span></p>
                     <p><b>Khóa Học: </b> <span>{{ thong_tin.khoa_hoc }}</span></p>
                     <p><b>Số Hiệu Chứng Chỉ: </b> <span>{{ thong_tin.so_hieu_chung_chi }}</span></p>
                     <p><b>Kết Quả: </b> <span>{{ thong_tin.ket_qua }}</span></p>
                     <p><b>Ngày Cấp: </b> <span>{{ thong_tin.ngay_cap }}</span></p>
                     <p><b>View BlockChain: </b>
-                        <a :href="`https://shasta.tronscan.org/#/transaction/${thong_tin.token}`" target="_blank">Xem Trên TronScan</a>
+                        <a :href="`https://shasta.tronscan.org/#/transaction/${thong_tin.token}`" target="_blank">Xem
+                            Trên
+                            TronScan</a>
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -76,8 +82,10 @@
                 <div class="modal-body">
                     <label class="mt-2" for="">ID NFT</label>
                     <input type="text" name="" id="" class="form-control" v-model="chia_se.token" disabled>
+                    <label class="mt-2" for="">MetaData URL</label>
+                    <input type="text" name="" id="" class="form-control" v-model="chia_se.MetaData_URL" disabled>
                     <label class="mt-2" for="">Email người nhận</label>
-                    <input v-model="chia_se.email" class="mt-2 form-control" type="email"
+                    <input v-model="chia_se.email_nguoi_nhan" class="mt-2 form-control" type="email"
                         placeholder="Nhập email người dùng bạn muốn chia sẻ">
                 </div>
                 <div class="modal-footer">
@@ -99,7 +107,7 @@ export default {
             thong_tin: {},
             chia_se: {},
             dia_chi_vi: "",
-            is_cap_nhat : false,
+            is_cap_nhat: false,
         }
     },
     mounted() {
@@ -128,7 +136,7 @@ export default {
                 .then((res) => {
                     this.chung_chi_nft = res.data.data;
                     console.log(this.chung_chi_nft);
-                    
+
                 })
         },
         getDataDiaChiVi() {
@@ -142,23 +150,22 @@ export default {
             baseRequest
                 .post('hoc-vien/dia-chi-vi/update', { dia_chi_vi: this.dia_chi_vi })
                 .then((res) => {
-                    if(res.data.status){
+                    if (res.data.status) {
                         this.$toast.success(res.data.message);
                         this.getChungChiNft();
                         this.is_cap_nhat = false;
-                    }else{
+                    } else {
                         this.$toast.error(res.data.message);
                     }
                 })
         },
         chiaSeNFT() {
             baseRequest
-                .post('', this.chia_se)
+                .post('hoc-vien/gui-nft', this.chia_se)
                 .then((res) => {
-                    if(res.data.status){
+                    if (res.data.status) {
                         this.$toast.success(res.data.message);
-                        this.getProfile();
-                    }else{
+                    } else {
                         this.$toast.error(res.data.message);
                     }
                 })

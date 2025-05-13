@@ -55,16 +55,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="text-light text-center">
-                        <th>1</th>
-                        <td>458963215</td>
-                        <td>11:12 12/12/2024</td>
-                        <td>Trần Quang Thiên</td>
-                        <td>049203006547</td>
-                        <td>Đại Học Duy Tân</td>
-                        <td>12133434</td>
-                        <th>10000000 đ</th>
-                    </tr>
+                    <template v-for="(value, index) in list_giao_dich" :key="index">
+                        <tr class=" text-light text-center">
+                            <th>{{ index + 1 }}</th>
+                            <td>{{ value.ma_don_hang }}</td>
+                            <td>11:12 12/12/2024</td>
+                            <td>Trần Quang Thiên</td>
+                            <td>049203006547</td>
+                            <td>Đại Học Duy Tân</td>
+                            <td>12133434</td>
+                            <th>10000000 đ</th>
+                        </tr>
+                    </template>
                 </tbody>
             </table>
         </div>
@@ -143,8 +145,9 @@
                                     <td><img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`"
                                             style="height: 50px;" alt=""></td>
                                     <td>{{ value.so_hieu_chung_chi }}</td>
-                                    <td><span class="badge text-bg-dark" v-on:click="Object.assign(thong_tin_trongthanhtoan, value)" data-bs-toggle="modal"
-                                            data-bs-target="#ttchitiettrongthanhtoan">Xem
+                                    <td><span class="badge text-bg-dark"
+                                            v-on:click="Object.assign(thong_tin_trongthanhtoan, value)"
+                                            data-bs-toggle="modal" data-bs-target="#ttchitiettrongthanhtoan">Xem
                                             chi tiết</span></td>
                                     <th>100.000 đ</th>
                                     <td><button type="button" v-on:click="xoaDonChiTiet(value.id)"
@@ -178,6 +181,7 @@ import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
+            list_giao_dich:[],
             list_chung_chi: [],
             list_chi_tiet_don_hang: [],
             isShowResult: true,
@@ -186,10 +190,19 @@ export default {
         }
     },
     mounted() {
+        this.lichSuGiaoDich();
         this.loadData();
         this.loadDataChiTietDonHang();
     },
     methods: {
+        lichSuGiaoDich() {
+            baseRequest
+                .get('hoc-vien/lich-su-giao-dich')
+                .then((res) => {
+                    this.list_giao_dich = res.data.data;
+                });
+
+        },
         loadData() {
             baseRequest
                 .get('hoc-vien/chung-chi-chua-cap')
