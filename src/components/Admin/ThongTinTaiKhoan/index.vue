@@ -5,11 +5,10 @@
             <div class="col-lg-4">
                 <div class="card" style="box-shadow: none;">
                     <div class="card-body text-center">
-                        <img src="assets/images/avatars/avatar-2.png" alt="Avatar" class="rounded-circle p-1 bg-primary"
+                        <img src="../../../assets/images/avatars/avatar-1.png" alt="Avatar" class="rounded-circle p-1 bg-primary"
                             width="110">
                         <div class="mt-3">
-                            <h4>John Doe</h4>
-                            <p class="text-secondary mb-1">Full Stack Developer</p>
+                            <p class="text-secondary mb-1">Admin</p>
                         </div>
                     </div>
                 </div>
