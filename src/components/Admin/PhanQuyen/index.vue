@@ -208,6 +208,7 @@
     </div>
 </template>
 <script>
+import baseRequest from '../../../core/baseRequest';
 import axios from 'axios';
 export default {
     data() {
@@ -227,22 +228,22 @@ export default {
     },
     methods: {
         loadChucNang() {
-            axios
-                .get('http://127.0.0.1:8000/api/admin/chuc-nang/data')
+            baseRequest
+                .get('admin/chuc-nang/data')
                 .then((res) => {
                     this.listChucNang = res.data.data;
                 });
         },
         loadChucVu() {
-            axios
-                .get('http://127.0.0.1:8000/api/admin/chuc-vu/data')
+            baseRequest
+                .get('admin/chuc-vu/data')
                 .then((res) => {
                     this.listChucVu = res.data.data;
                 });
         },
         createChucVu() {
-            axios
-                .post('http://127.0.0.1:8000/api/admin/chuc-vu/create', this.create_chuc_vu)
+            baseRequest
+                .post('admin/chuc-vu/create', this.create_chuc_vu)
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success(res.data.message)
@@ -254,8 +255,8 @@ export default {
         },
 
         deleteChucVu() {
-            axios
-                .delete('http://127.0.0.1:8000/api/admin/chuc-vu/delete/' + this.delete_chuc_vu.id)
+            baseRequest
+                .delete('admin/chuc-vu/delete/' + this.delete_chuc_vu.id)
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success('Thông báo<br>' + res.data.message);
@@ -267,8 +268,8 @@ export default {
                 })
         },
         updateChucVu() {
-            axios
-                .post('http://127.0.0.1:8000/api/admin/chuc-vu/update', this.update_chuc_vu)
+            baseRequest
+                .post('admin/chuc-vu/update', this.update_chuc_vu)
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success(res.data.message)
@@ -283,8 +284,8 @@ export default {
                 'id_chuc_nang': id_chuc_nang,
                 'id_chuc_vu': this.chucVu.id
             }
-            axios
-                .post('http://127.0.0.1:8000/api/admin/chi-tiet-cap-quyen/create', payload)
+            baseRequest
+                .post('admin/chi-tiet-cap-quyen/create', payload)
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success(res.data.message)
@@ -295,15 +296,15 @@ export default {
                 });
         },
         loadChiTietChucNang() {
-            axios
-                .get('http://127.0.0.1:8000/api/admin/chuc-nang-theo-chuc-vu/' + this.chucVu.id)
+            baseRequest
+                .get('admin/chuc-nang-theo-chuc-vu/' + this.chucVu.id)
                 .then((res) => {
                     this.listChucNangQuyen = res.data.data;
                 });
         },
         xoaPhanQuyen(payload) {
-            axios
-                .post('http://127.0.0.1:8000/api/admin/chi-tiet-cap-quyen/delete', payload)
+            baseRequest
+                .post('admin/chi-tiet-cap-quyen/delete', payload)
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success(res.data.message)
