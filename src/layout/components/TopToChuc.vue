@@ -1,7 +1,7 @@
 <template>
     <header>
        <div class="topbar d-flex align-items-center">
-           <nav class="navbar navbar-expand ">
+           <nav class="navbar navbar-expand bg-light-primary">
                <div class="topbar-logo-header">
                    <div class="">
                        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid" style="height: 50px; width: 50px;" class="logo-icon" alt="logo icon">

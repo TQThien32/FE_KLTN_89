@@ -3,10 +3,12 @@
         <div class="row">
             <div class="col-lg-3 col-md-3"></div>
             <div class="col-lg-6 col-md-6">
-                <h2 class="text-light">Đổi Mật Khẩu</h2>
                 <div class="row mt-3">
                     <div class="col-lg">
                         <div class="card" style="box-shadow: none;">
+                            <div class="card-header bg-gradient-scooter">
+                                <h4 class="text-black mt-2 text-center">Đổi Mật Khẩu</h4>
+                            </div>
                             <div class="card-body">
                                 <form>
                                     <div class="mb-3">
