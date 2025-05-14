@@ -36,14 +36,7 @@
                     </router-link>
                 </li>
             </ul>
-            <form class="d-flex nav-search me-5" style="width: 320px;">
-                <div class="input-group rounded-pill shadow-sm w-100 overflow-hidden">
-                    <input type="text" class="form-control border-0" placeholder="Tìm kiếm...">
-                    <button class="btn px-3" type="submit">
-                        <i class="bx bx-search text-secondary"></i>
-                    </button>
-                </div>
-            </form>
+            
         </nav>
 
     </div>

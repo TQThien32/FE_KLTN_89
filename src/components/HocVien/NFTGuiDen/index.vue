@@ -5,7 +5,7 @@
             <div class="card mt-4">
                 <div class="card-body">
                     <div class="text-center">
-                        <h4><b>Thông Báo</b></h4>
+                        <h4><b>Tin Nhắn</b></h4>
                     </div>
                     <hr>
                     <div class="email-list">
@@ -15,14 +15,15 @@
                             </button>
                         </div>
                         <template v-for="(value, index) in emailslist" :key="index">
-                            <router-link :to="'/hoc-vien/chi-tiet-NFT-gui-den/' + value.id">
+                            
                                 <div class="d-md-flex align-items-center email-message px-3 py-1">
                                     <div class="d-flex align-items-center email-actions">
                                         <input class="form-check-input me-3" type="checkbox" v-model="value.selected">
-                                        <p class="mb-0 fs-5"><b>{{ value.email_nguoi_nhan }}</b></p>
+                                        <router-link :to="'/hoc-vien/chi-tiet-NFT-gui-den/' + value.id">
+                                        <p class="mb-0 fs-5"><b>{{ value.email_nguoi_gui }}</b></p>
+                                        </router-link>
                                     </div>
                                 </div>
-                            </router-link>
                         </template>
                     </div>
                 </div>
@@ -67,7 +68,7 @@ export default {
                 return;
             }
             baseRequest
-                .post('xoa-thong-bao', { ds_thong_bao_can_xoa: this.ds_thong_bao_can_xoa })
+                .post('xoa-NFT-gui-den', { ds_thong_bao_can_xoa: this.ds_thong_bao_can_xoa })
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success(res.data.message);

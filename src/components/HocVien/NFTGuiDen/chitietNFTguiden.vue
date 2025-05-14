@@ -17,7 +17,12 @@
                             <p>{{ chi_tiet.token }}</p>
                         </div>
                         <div class="email-read-content px-md-5 py-5">
-                            <p>{{ chi_tiet.MetaData_URL }}</p>
+                            <a :href="chi_tiet.MetaData_URL">MetaData</a>
+                        </div>
+                        <div class="email-read-content px-md-5 py-5">
+                           <a :href="`https://shasta.tronscan.org/#/transaction/${chi_tiet.token}`" target="_blank">Xem
+                            Trên
+                            TronScan</a>
                         </div>
                     </div>
                 </div>
