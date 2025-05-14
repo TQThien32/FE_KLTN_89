@@ -3,14 +3,17 @@
         <div class="row">
             <div class="col-lg-3 col-md-3"></div>
             <div class="col-lg-6 col-md-6">
-                <h2 class="text-light">Đổi Mật Khẩu</h2>
+
                 <div class="row mt-3">
                     <div class="col-lg">
                         <div class="card">
+                            <div class="card-header bg-light-info">
+                                <h4 class="text-black mt-2 text-center">Cập Nhật Mật Khẩu</h4>
+                            </div>
                             <div class="card-body">
                                 <form>
                                     <div class="mb-3">
-                                        <label for="currentPassword" class="form-label"><b>Mật Khẩu Hiện Tại</b></label>
+                                        <label for="currentPassword" class="form-label "><b>Mật Khẩu Hiện Tại</b></label>
                                         <input type="password" class="form-control" id="currentPassword"
                                             placeholder="Nhập mật khẩu hiện tại" v-model="update_mk.password">
                                     </div>
@@ -20,15 +23,14 @@
                                             placeholder="Nhập mật khẩu mới" v-model="update_mk.update_password"
                                             required>
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="mb-1">
                                         <label for="confirmPassword" class="form-label"><b>Xác Nhận Mật Khẩu</b></label>
                                         <input type="password" class="form-control" id="confirmPassword"
                                             placeholder="Xác nhận mật khẩu mới" v-model="confirmPassword" required><br>
                                         <span v-if="errorMessage" style="color:red">{{ errorMessage }}</span><br>
                                     </div>
-                                    <div class="text-center"><button type="button" class="btn btn btn-chinh"
-                                            v-on:click="doi_mk()">Đổi Mật
-                                            Khẩu</button></div>
+                                    <div class="text-end"><button type="button" class="btn btn-inverse-primary"
+                                            v-on:click="doi_mk()">Thay đổi</button></div>
                                 </form>
                             </div>
                         </div>
