@@ -74,7 +74,7 @@ export default {
 <style scoped>
 /* Nền menu chính (nav-container) */
 .nav-container {
-  background-color: #050f2d !important; /* Đổi nền menu chính thành #050f2d */
+  background-color: #000000 !important; /* Đổi nền menu chính thành #050f2d */
 }
 
 /* Màu chữ mặc định là trắng, padding và bo góc */
@@ -96,7 +96,7 @@ export default {
 
 /* Đặt nền của dropdown menu thành #050f2d */
 .nav-container .dropdown-menu {
-  background-color: #050f2d !important;
+  background-color: #000000 !important;
 }
 
 /* Màu chữ trong dropdown mặc định là trắng */

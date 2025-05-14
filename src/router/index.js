@@ -6,12 +6,6 @@ const routes = [
 
     // Admin
     {
-        path: '/admin/trang-chu',
-        component: () => import('../components/Admin/TrangChu/index.vue'),
-        meta: { layout: 'Admin' },
-    },
-
-    {
         path: '/admin/thong-tin-admin',
         component: () => import('../components/Admin/ThongTinTaiKhoan/index.vue'),
         meta: { layout: 'Admin' },

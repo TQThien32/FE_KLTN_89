@@ -12,13 +12,7 @@
         </div>
         <nav class="navbar navbar-expand-xl w-100 ">
             <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
-                <li class="nav-item">
-                    <router-link to="/admin/trang-chu" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-house-chimney-window"></i>
-                        </div>
-                        <div class="menu-title">Trang Chủ</div>
-                    </router-link>
-                </li>
+               
                 <li class="nav-item dropdown">
                     <a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
                         data-bs-toggle="dropdown">
@@ -114,7 +108,7 @@ export default {
 <style scoped>
 /* Nền menu chính (nav-container) */
 .nav-container {
-  background-color: #050f2d !important; /* Đổi nền menu chính thành #050f2d */
+  background-color: #000000 !important; /* Đổi nền menu chính thành #050f2d */
 }
 
 /* Màu chữ mặc định là trắng, padding và bo góc */
@@ -131,12 +125,12 @@ export default {
 .nav-container .nav-link:hover,
 .nav-container .dropdown-item:hover {
   background-color: white !important;
-  color: black !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 /* Đặt nền của dropdown menu thành #050f2d */
 .nav-container .dropdown-menu {
-  background-color: #050f2d !important;
+  background-color: #000000 !important;
 }
 
 /* Màu chữ trong dropdown mặc định là trắng */
