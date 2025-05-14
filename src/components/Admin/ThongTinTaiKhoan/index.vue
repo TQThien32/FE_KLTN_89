@@ -1,6 +1,5 @@
 <template>
     <div class="container mt-1">
-        <h2 class="text-light" >Thông Tin Admin</h2>
         <div class="row mt-3">
             <!-- Avatar -->
             <div class="col-lg-4">
@@ -19,15 +18,10 @@
             <!-- Thông Tin -->
             <div class="col-lg-8">
                 <div class="card" style="box-shadow: none;">
+                    <div class="card-header bg-gradient-scooter">
+                        <h4 class="text-white mt-2 text-center">Admin</h4>
+                    </div>
                     <div class="card-body">
-                        <div class="row mb-3">
-                            <col-lg-6></col-lg-6>
-                            <col-lg-6>
-                                <p class="text-center"><b>
-                                        <h5 class="mb-0">Admin</h5>
-                                    </b></p>
-                            </col-lg-6>
-                        </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Họ Và Tên</h6>
@@ -95,7 +89,7 @@
                         <!-- Button trigger modal -->
                         <div class="row">
                             <div class="col-auto ms-auto">
-                                <button type="button" class="btn btn btn-chinh" data-bs-toggle="modal"
+                                <button type="button" class="btn btn btn-inverse-primary" data-bs-toggle="modal"
                                     data-bs-target="#updateModal">
                                     Cập Nhật
                                 </button>
@@ -174,8 +168,7 @@
                                                 <h6 class="mb-0">Số Điện Thoại</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control"
-                                                    >
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -191,8 +184,7 @@
                                                 <h6 class="mb-0">Email</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control"
-                                                    >
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -234,10 +226,10 @@ export default {
             baseRequest
                 .post('admin/update-profile', this.update_profile)
                 .then((res) => {
-                    if(res.data.status){
+                    if (res.data.status) {
                         this.$toast.success(res.data.message);
                         this.getProfile();
-                    }else{
+                    } else {
                         this.$toast.error(res.data.message);
                     }
                 })

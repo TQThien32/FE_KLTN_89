@@ -6,7 +6,7 @@
                 <div class="row mt-3">
                     <div class="col-lg">
                         <div class="card" style="box-shadow: none;">
-                            <div class="card-header bg-gradient-scooter">
+                            <div class="card-header bg-light-info">
                                 <h4 class="text-black mt-2 text-center">Đổi Mật Khẩu</h4>
                             </div>
                             <div class="card-body">
@@ -42,7 +42,7 @@
                                         </div><br>
                                         <span v-if="errorMessage" style="color:red">{{ errorMessage }}</span>
                                     </div>
-                                    <div class="text-center"><button type="button" class="btn btn btn-chinh"
+                                    <div class="text-center"><button type="button" class="btn btn-inverse-primary"
                                             v-on:click="doi_mk()">Đổi Mật
                                             Khẩu</button></div>
                                 </form>

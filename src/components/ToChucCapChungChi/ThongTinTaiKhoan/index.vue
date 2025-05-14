@@ -1,6 +1,5 @@
 <template>
     <div class="container mt-1">
-        <h2 class="text-light">Thông Tin Tổ Chức</h2>
         <div class="row mt-3">
             <!-- Avatar -->
             <div class="col-lg-4">

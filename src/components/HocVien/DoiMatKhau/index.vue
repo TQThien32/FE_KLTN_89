@@ -7,7 +7,7 @@
                 <div class="row mt-3">
                     <div class="col-lg">
                         <div class="card">
-                            <div class="card-header bg-gradient-scooter">
+                            <div class="card-header bg-light-info">
                                 <h4 class="text-black mt-2 text-center">Cập Nhật Mật Khẩu</h4>
                             </div>
                             <div class="card-body">
