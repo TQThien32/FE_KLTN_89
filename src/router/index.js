@@ -201,6 +201,19 @@ const routes = [
         props: true,
         //beforeEnter: kiemTraHocVien,
     },
+     {
+        path: '/hoc-vien/NFT-gui-den',
+        component: () => import('../components/HocVien/NFTGuiDen/index.vue'),
+        meta: { layout: 'HocVien' },
+        //beforeEnter: kiemTraHocVien,
+    },
+    {
+        path: '/hoc-vien/chi-tiet-NFT-gui-den/:id',
+        component: () => import('../components/HocVien/NFTGuiDen/chitietNFTguiden.vue'),
+        meta: { layout: 'HocVien' },
+        props: true,
+        //beforeEnter: kiemTraHocVien,
+    },
     {
         path: '/hoc-vien/trang-chu',
         component: () => import('../components/HocVien/TrangChu/index.vue'),

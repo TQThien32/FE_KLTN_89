@@ -47,6 +47,11 @@
                                 <i class='bx bx-bell' style="font-size: 30px"></i>
                             </a>
                         </li>
+                        <li class="nav-item dropdown dropdown-large">
+                            <a  class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="/hoc-vien/NFT-gui-den">
+                                <i class="bx bx-comment" style="font-size: 30px"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="user-box dropdown">
