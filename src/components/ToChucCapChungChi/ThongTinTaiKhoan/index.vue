@@ -9,6 +9,7 @@
                             class="rounded-circle p-1 bg-gradient-scooter" width="150">
                         <div class="mt-3">
                             <h4>{{ profile.ten_to_chuc }}</h4>
+                            <p class="text-secondary">Tổ Chức</p>
                         </div>
                     </div>
                 </div>

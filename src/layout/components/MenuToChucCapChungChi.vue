@@ -49,13 +49,6 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/to-chuc-cap-chung-chi/lien-he" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="menu-title">Liên Hệ</div>
-                    </router-link>
-                </li>
-                <li class="nav-item">
                     <router-link to="/to-chuc-cap-chung-chi/gioi-thieu" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-circle-user"></i>
                         </div>
