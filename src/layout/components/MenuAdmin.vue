@@ -23,20 +23,17 @@
                     <ul class="dropdown-menu">
                         <li>
                             <router-link to="/admin/danh-sach-nhan-vien">
-                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản nhân viên</a>
+                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i> nhân viên</a>
                             </router-link>
                         </li>
                         <li>
                             <router-link to="/admin/danh-sach-hoc-vien">
-                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản học viên</a>
+                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i> người dùng</a>
                             </router-link>
                         </li>
                         <li>
                             <router-link to="/admin/danh-sach-to-chuc-cap-chung-chi">
-                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>Tài
-                                    khoản tổ chức cấp chứng chỉ</a>
+                                <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i> tổ chức cấp chứng chỉ</a>
                             </router-link>
                         </li>
                     </ul>

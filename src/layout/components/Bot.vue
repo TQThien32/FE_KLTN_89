@@ -53,7 +53,7 @@
                         </b>
                         <div class="footer-menu">
 
-                            <a href="/khach-vang-lai/trang-chu" style="color: white;" class="login-link"
+                            <a href="/" style="color: white;" class="login-link"
                                 title="Trang chủ" rel="nofollow">Trang chủ</a>
                             <br>
                             <a href="/khach-vang-lai/gioi-thieu" style="color: white;" class="login-link"
@@ -67,7 +67,7 @@
                     <div class="col-sm-6 col-lg-6 col-6 footer-nav-menu widget ">
                         <button class="btn btn-outline-light me-2"><i class="fa-brands fa-facebook ms-1"></i></button>
                         <button class="btn btn-outline-light me-2"><i class="fa-brands fa-instagram ms-1"></i></button>
-                        <button class="btn btn-outline-light"><i class="fa-brands fa-telegram ms-1"></i></button>
+                        <button class="btn btn-outline-light"><i class="fa-brands fa-tiktok ms-1"></i></button>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="d-flex justify-content-between">
-            <h3 class="text-light"><i class="fa-solid fa-list"></i> Chứng Chỉ Chưa Cấp</h3>
-            <button class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#thanhToan">
+            <h3 class="text-light"><i class="fa-solid fa-list"></i> Chứng Chỉ Chờ Thanh Toán</h3>
+            <button class="btn btn-phu2 rounded-pill" data-bs-toggle="modal" data-bs-target="#thanhToan">
                 <i class="fa-solid fa-arrow-right"></i> Thanh
                 Toán</button>
         </div>

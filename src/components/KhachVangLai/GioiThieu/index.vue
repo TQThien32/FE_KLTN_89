@@ -78,7 +78,7 @@
                 </p>
                 <h4 class="mt-5 text-light"><b>Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ, vui lòng liên hệ với chúng
                         tôi:</b></h4> <router-link to="/khach-vang-lai/lien-he" @click="scrollToTop"><button
-                        class="btn btn-outline-primary mt-2" href="index.html">Liện Hệ</button></router-link>
+                        class="btn btn-phu mt-2" href="index.html">Liên Hệ</button></router-link>
                 <br><br>
             </div>
         </div>

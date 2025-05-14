@@ -108,7 +108,6 @@ const routes = [
 
 
 
-    // HocVien
     {
         path: '/hoc-vien/trang-chu',
         component: () => import('../components/HocVien/TrangChu/index.vue'),
@@ -121,12 +120,7 @@ const routes = [
         meta: { layout: 'HocVien' },
         //beforeEnter: kiemTraHocVien,
     },
-    {
-        path: '/hoc-vien/lien-he',
-        component: () => import('../components/HocVien/TrangChu/lienhe.vue'),
-        meta: { layout: 'HocVien' },
-        //beforeEnter: kiemTraHocVien,
-    },
+    
     {
         path: '/hoc-vien/yeu-cau-cap-nft',
         component: () => import('../components/HocVien/YeuCau/index.vue'),
@@ -220,12 +214,7 @@ const routes = [
         meta: { layout: 'HocVien' },
         //beforeEnter: kiemTraHocVien,
     },
-    {
-        path: '/hoc-vien/lien-he',
-        component: () => import('../components/HocVien/TrangChu/lienhe.vue'),
-        meta: { layout: 'HocVien' },
-        //beforeEnter: kiemTraHocVien,
-    },
+   
 
    
     //ToChucCapChungChi

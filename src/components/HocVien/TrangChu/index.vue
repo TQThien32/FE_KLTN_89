@@ -15,7 +15,7 @@
       <hr class="text-white">
       <p class="text-start intro-description fade-in-up text-end">"Chứng chỉ số - Thành tựu mãi mãi"</p>
       <div class="text-end">
-        <router-link to="/khach-vang-lai/gioi-thieu" @click="scrollToTop">
+        <router-link to="/hoc-vien/gioi-thieu" @click="scrollToTop">
           <button class="btn btn-inverse-info rounded-pill  mt-4 me-5 fade-in-up" style="font-size: 0.9rem;">Tìm hiểu
             thêm
             <i class="fa-solid fa-arrow-right" style="font-size: 1.2rem;"></i></button>
