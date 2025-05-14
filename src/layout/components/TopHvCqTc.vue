@@ -113,7 +113,7 @@ export default {
         },
         dangXuat() {
             baseRequest
-                .get('hoc-vien/dang-xuat')
+                .get('hoc-vien/dang-xuat-all')
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success('Thông báo<br>' + res.data.message);

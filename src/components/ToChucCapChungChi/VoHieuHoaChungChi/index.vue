@@ -34,8 +34,8 @@
                                     <td>{{ value.ngay_cap }}</td>
                                     <td>{{ value.ghi_chu }}</td>
                                     <td class="align-middle text-center">
-                                        <button v-on:click="Object.assign(ghi_chu, value)"  v-if="value.tinh_trang == 1" type="button" class="btn btn-chinh"
-                                            data-bs-toggle="modal" data-bs-target="#vohieuhoa">Vô Hiệu Hóa</button>
+                                        <button v-on:click="Object.assign(ghi_chu, value)"  v-if="value.tinh_trang == 2" type="button" class="btn btn-chinh"
+                                            data-bs-toggle="modal" data-bs-target="#vohieuhoa">Đã Cấp</button>
                                         <button v-on:click="Object.assign(ghi_chu, value)" v-else type="button" data-bs-toggle="modal" data-bs-target="#movohieuhoa" class="btn btn-danger">Đã Vô
                                             Hiệu Hóa</button>
                                     </td>

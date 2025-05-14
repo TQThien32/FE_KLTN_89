@@ -86,10 +86,14 @@
             <div class="card-body table-responsive">
                 <div class="row">
                     <div class="col-lg-11">
-                        <input class="form-control" type="text" placeholder="n...">
+                        <input class="form-control" type="text" v-model="keyword.tim"
+                            placeholder="Nhập thông tin cần tìm">
+
                     </div>
                     <div class="col-lg-1">
-                        <button class="btn btn-chinh"><i class="fa-solid fa-magnifying-glass"></i>Tìm Kiếm</button>
+                        <button class="btn btn-chinh" v-on:click="searchNV()">
+                            <i class="fa-solid fa-magnifying-glass"></i> Tìm Kiếm
+                        </button>
                     </div>
                 </div>
                 <table class="table table-hover mt-3">
@@ -116,7 +120,8 @@
                                 <td class="align-middle text-center">{{ value.email }}</td>
                                 <td class="align-middle text-center">{{ value.sdt }}</td>
                                 <td class="align-middle text-center">{{ value.so_cccd }}</td>
-                                <td class="align-middle text-center">{{ value.gioi_tinh == 0 ? 'Nam' : (value.gioi_tinh== 1 ? 'Nữ' : 'Không rõ') }}</td>
+                                <td class="align-middle text-center">{{ value.gioi_tinh == 0 ? 'Nam' :
+                                    (value.gioi_tinh == 1 ? 'Nữ' : 'Không rõ') }}</td>
                                 <td class="align-middle text-center">{{ value.ngay_sinh }}</td>
                                 <td class="align-middle text-center">{{ value.dia_chi }}</td>
                                 <td class="align-middle text-center">
@@ -161,7 +166,8 @@ export default {
             confirmPassword: '',
             errorMessage: '',
             showPassword: false,
-            showConfirmPassword: false
+            showConfirmPassword: false,
+            keyword: {},
         }
     },
     mounted() {
@@ -220,6 +226,20 @@ export default {
                     this.listChucVu = res.data.data;
                 });
         },
+        searchNV() {
+            baseRequest
+                .post('admin/tai-khoan-nhan-vien/tim-kiem', this.keyword)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.list_nhan_vien = res.data.data;
+                    } else {
+                        this.list_nhan_vien = [];
+                        this.$toast.error(res.data.message);
+                    }
+                });
+        }
+
+
     }
 }
 </script>

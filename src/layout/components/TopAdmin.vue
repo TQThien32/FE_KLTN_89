@@ -71,7 +71,7 @@ export default {
         },
         dangXuat() {
             baseRequest
-                .get('admin/dang-xuat')
+                .get('admin/dang-xuat-all')
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success('Thông báo<br>' + res.data.message);

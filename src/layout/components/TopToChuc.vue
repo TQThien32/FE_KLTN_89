@@ -336,7 +336,7 @@ export default {
         },
         dangXuat() {
             baseRequest
-                .get('to-chuc/dang-xuat')
+                .get('to-chuc/dang-xuat-all')
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success('Thông báo<br>' + res.data.message);
