@@ -73,7 +73,7 @@
                         <li>
                             <div class="dropdown-divider mb-0"></div>
                         </li>
-                        <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Đăng
+                        <li v-on:click="dangXuat()"><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Đăng
                                     Xuất</span></a>
                         </li>
                     </ul>
