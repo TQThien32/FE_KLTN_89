@@ -128,7 +128,12 @@
                                     <img v-bind:src="value.hinh_anh" alt=""
                                         style="width: 50px; height: 50px; border-radius: 50%;">
                                 </td>
-                                <td class="align-middle text-center">{{ value.ten_chuc_vu }}</td>
+                                <td class="align-middle text-center"><button
+                                        v-on:click="Object.assign(update_chuc_vu, value)" type="button"
+                                        class="btn btn btn-inverse-primary" data-bs-toggle="modal"
+                                        data-bs-target="#updateModal">
+                                        {{ value.ten_chuc_vu }}
+                                    </button></td>
                                 <td class="align-middle text-center">
                                     <button v-on:click="doiTrangThai(value)" v-if="value.is_duyet == 1"
                                         class="btn btn-success">Hoạt động</button>
@@ -142,6 +147,53 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-gradient-scooter">
+                    <h5 class="modal-title text-light" id="updateModalLabel">Cập Nhật Chức Vụ Cho Nhân Viên</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form cập nhật thông tin -->
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Họ Và Tên</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            <div class="form-control bg-white">{{ update_chuc_vu.ho_ten }}</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Email</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            <div class="form-control bg-white">{{ update_chuc_vu.email }}</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Chọn Chức Vụ</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            <select class="mt-2 form-control" v-model="update_chuc_vu.id_chuc_vu">
+                                <template v-for="(v, k) in listChucVu" :key="k">
+                                    <option v-bind:value="v.id">{{ v.ten_chuc_vu }}</option>
+                                </template>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-inverse-dark" data-bs-dismiss="modal">Đóng</button>
+                    <button v-on:click="updateChucVu()" data-bs-dismiss="modal" type="button"
+                        class="btn btn-inverse-info">Xác Nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 <script>
 
@@ -151,6 +203,7 @@ export default {
     data() {
         return {
             listChucVu: [],
+            update_chuc_vu: {},
             list_nhan_vien: [],
             create_nhan_vien: {
                 ho_ten: '',
@@ -210,6 +263,18 @@ export default {
         doiTrangThai(value) {
             baseRequest
                 .post('admin/doi-trang-thai', value)
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success(res.data.message)
+                        this.loadData();
+                    } else {
+                        this.$toast.error(res.data.message);
+                    }
+                });
+        },
+        updateChucVu() {
+            baseRequest
+                .post('admin/chuc-vu-nhan-vien/update', this.update_chuc_vu)
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success(res.data.message)

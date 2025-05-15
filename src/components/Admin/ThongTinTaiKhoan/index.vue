@@ -77,7 +77,7 @@
                                 <h6 class="mb-0">Ngày Sinh</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <div class="form-control bg-white">{{profile.ngay_sinh }}</div>
+                                <div class="form-control bg-white">{{ profile.ngay_sinh }}</div>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -85,43 +85,36 @@
                                 <h6 class="mb-0">Địa Chỉ</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <div class="form-control bg-white">{{profile.dia_chi }}</div>
+                                <div class="form-control bg-white">{{ profile.dia_chi }}</div>
                             </div>
                         </div>
                         <!-- Button trigger modal -->
                         <div class="row">
-                            <div class="col-auto ms-auto">
-                                <button type="button" class="btn btn btn-inverse-primary" data-bs-toggle="modal"
-                                    data-bs-target="#updateModal">
-                                    Cập Nhật
-                                </button>
-                            </div>
-                        </div>
+                    <div class="col-auto ms-auto">
+                      <button v-on:click="Object.assign(update_profile, profile)" type="button"
+                        class="btn btn btn-inverse-primary" data-bs-toggle="modal" data-bs-target="#updateModal">
+                        Cập Nhật
+                      </button>
+                    </div>
+                  </div>
                         <!-- Modal -->
-                        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cập Nhật Thông Tin</h1>
+                                    <div class="modal-header bg-gradient-scooter">
+                                        <h5 class="modal-title text-light" id="updateModalLabel">Cập Nhật Thông Tin</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <div class="row mb-3">
-                                            <col-lg-6></col-lg-6>
-                                            <col-lg-6>
-                                                <p class="text-center"><b>
-                                                        <h5 class="mb-0">Tổ Chức Cấp Chứng Chỉ</h5>
-                                                    </b></p>
-                                            </col-lg-6>
-                                        </div>
+                                        <!-- Form cập nhật thông tin -->
                                         <div class="row mb-3">
                                             <div class="col-sm-3">
-                                                <h6 class="mb-0">Tên Tổ Chức Cấp Chứng Chỉ</h6>
+                                                <h6 class="mb-0">Họ Và Tên</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control">
+                                                <input v-model="update_profile.ho_ten" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -129,40 +122,7 @@
                                                 <h6 class="mb-0">Email</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-sm-3">
-                                                <h6 class="mb-0">Hotline</h6>
-                                            </div>
-                                            <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-sm-3">
-                                                <h6 class="mb-0">Địa Chỉ</h6>
-                                            </div>
-                                            <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="row mb-3">
-                                            <col-lg-6></col-lg-6>
-                                            <col-lg-6>
-                                                <p class="text-center"><b>
-                                                        <h5 class="mb-0">Người Đại Diện</h5>
-                                                    </b></p>
-                                            </col-lg-6>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-sm-3">
-                                                <h6 class="mb-0">Họ Và Tên</h6>
-                                            </div>
-                                            <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control">
+                                                <input v-model="update_profile.email" type="email" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -170,7 +130,27 @@
                                                 <h6 class="mb-0">Số Điện Thoại</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control">
+                                                <input v-model="update_profile.sdt" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0">Ngày Sinh</h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input v-model="update_profile.ngay_sinh" type="date"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0">Giới Tính</h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <select v-model="update_profile.gioi_tinh" class="form-select">
+                                                    <option value="0">Nam</option>
+                                                    <option value="1">Nữ</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
@@ -178,22 +158,25 @@
                                                 <h6 class="mb-0">Số CCCD</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control">
+                                                <input v-model="update_profile.so_cccd" type="text"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-sm-3">
-                                                <h6 class="mb-0">Email</h6>
+                                                <h6 class="mb-0">Địa Chỉ</h6>
                                             </div>
                                             <div class="col-sm-9 text-secondary">
-                                                <input type="text" class="form-control">
+                                                <input v-model="update_profile.dia_chi" type="text"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
+                                        <button type="button" class="btn btn-inverse-dark"
                                             data-bs-dismiss="modal">Đóng</button>
-                                        <button type="button" class="btn btn-primary">Xác Nhận</button>
+                                        <button v-on:click="updateProfile()" data-bs-dismiss="modal" type="button"
+                                            class="btn btn-inverse-info">Xác Nhận</button>
                                     </div>
                                 </div>
                             </div>

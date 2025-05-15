@@ -16,10 +16,10 @@
                   <div class="mt-3">
                     <h3>{{ profile.ho_ten }}</h3>
                     <p class="text-secondary">Người Dùng</p>
-                  
-                      <button class="btn btn-inverse-info" data-bs-toggle="modal" data-bs-target="#imageModal">Chọn
-                        ảnh</button>
-                    
+
+                    <button class="btn btn-inverse-info" data-bs-toggle="modal" data-bs-target="#imageModal">Chọn
+                      ảnh</button>
+
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                   
+
                   </div>
                 </div>
               </div>
@@ -222,7 +222,7 @@ export default {
       update_profile: {},
       selectedImage: null,
       images: [
-      
+
         'https://jbagy.me/wp-content/uploads/2025/03/Hinh-anh-avatar-nam-cute-2.jpg',
         'https://jbagy.me/wp-content/uploads/2025/03/Hinh-anh-avatar-nam-cute-2.jpg',
 
@@ -266,6 +266,12 @@ export default {
 .container {
   margin-top: 20px;
 }
-.modal-body img { transition: transform 0.2s; }
-.modal-body img:hover { transform: scale(1.05); }
+
+.modal-body img {
+  transition: transform 0.2s;
+}
+
+.modal-body img:hover {
+  transform: scale(1.05);
+}
 </style>

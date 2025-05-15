@@ -35,13 +35,6 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/to-chuc-cap-chung-chi/tao-chung-chi" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-folder-plus"></i>
-                        </div>
-                        <div class="menu-title">Tạo Chứng Chỉ</div>
-                    </router-link>
-                </li>
-                <li class="nav-item">
                     <router-link to="/to-chuc-cap-chung-chi/vo-hieu-hoa-chung-chi" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-ban"></i>
                         </div>

@@ -146,7 +146,9 @@ export default {
 
          try {
             await baseRequest.post("upload-folder", formData);
+            this.fetchData()
             this.$toast.success("Tải Lên Thành Công")
+            
          } catch (error) {
             this.$toast.error("Có Lỗi Xảy Ra")
          } finally {
@@ -156,7 +158,7 @@ export default {
       async fetchData() {
          try {
             let response = await baseRequest.get("get-data");
-            this.dataList = response.data[0];
+            this.dataList = response.data.data;
          } catch (error) {
             this.$toast.error("Có Lỗi Xảy Ra")
          }

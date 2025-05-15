@@ -47,8 +47,21 @@
                             </td>
                             <td class="align-middle text-center">{{ value.ngay_cap }}</td>
                             <td class="align-middle text-center">
-                                <span class="bg-success " style="padding: 10px; border-radius: 8px;">Đã Cấp</span>
-                            </td>
+  <span 
+    :class="value.tinh_trang == 2 
+              ? 'bg-success text-white' 
+              : (value.tinh_trang == 3 
+                  ? 'bg-danger text-white' 
+                  : 'bg-secondary text-white')"
+    style="padding: 10px; border-radius: 8px;">
+    {{ value.tinh_trang == 2 
+        ? 'Đã Cấp' 
+        : (value.tinh_trang == 3 
+            ? 'Đã Khóa' 
+            : 'Chưa Rõ') }}
+  </span>
+</td>
+
                         </tr>
                     </template>
                 </tbody>
@@ -73,7 +86,7 @@ export default {
     methods: {
         loadData() {
             baseRequest
-                .get('chung-chi/data')
+                .get('admin/quan-ly-chung-chi/data')
                 .then((res) => {
                     this.list_chung_chi = res.data.data;
                 });

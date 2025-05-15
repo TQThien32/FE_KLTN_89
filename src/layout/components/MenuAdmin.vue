@@ -59,7 +59,7 @@
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="/admin/danh-sach-hoc-vien">
+                            <router-link to="/admin/ds-chung-chi-da-cap">
                                 <a class="dropdown-item" href="index.html"><i class="fa-solid fa-right-long"></i>NFT Đã Cấp</a>
                             </router-link>
                         </li>
