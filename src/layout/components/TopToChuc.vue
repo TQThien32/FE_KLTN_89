@@ -20,48 +20,7 @@
                         <li class="nav-item mobile-search-icon">
                             <a class="nav-link" href="#"> <i class='bx bx-search'></i>
                             </a>
-                        </li>
-
-<<<<<<< HEAD
-                                                    <div style="width: 70px;" class="text-end">
-                                                        <p class="mb-0 email-time ">5:54 PM</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </a> -->
-                                </div>
-                            </div>
-                       </li>
-                   </ul>
-               </div>
-               <div class="user-box dropdown">
-                   <a class="d-flex align-items-center dropdown-toggle dropdown-toggle-nocaret" href="#"
-                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                       <img src="../../assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
-                       <div class="user-info ps-3">
-                           <p class="user-name mb-0">{{ten_to_chuc}}</p>
-                           <p class="designattion mb-0">Tổ Chức Cấp Chứng Chỉ</p>
-                       </div>
-                   </a>
-                   <ul class="dropdown-menu dropdown-menu-end">
-                       <li><a class="dropdown-item" href="/to-chuc-cap-chung-chi/thong-tin-to-chuc"><i
-                                   class="bx bx-user"></i><span>Thông Tin Tổ Chức</span></a>
-                       </li>
-                       <li><a class="dropdown-item" href="/to-chuc-cap-chung-chi/doi-mat-khau"><i
-                                   class="bx bx-cog"></i><span>Đổi Mật Khẩu</span></a>
-                       </li>
-                       <li>
-                           <div class="dropdown-divider mb-0"></div>
-                       </li>
-                       <li><a class="dropdown-item" href="javascript:;" v-on:click="dangXuat()"><i class='bx bx-log-out-circle'></i><span>Đăng Xuất</span></a>
-                       </li>
-                   </ul>
-               </div>
-           </nav>
-       </div>
-   </header>   
-=======
+                        </li> 
                         <li class="nav-item dropdown dropdown-large">
                             <a  class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="/to-chuc-cap-chung-chi/xem-thong-bao">
                                 <i class='bx bx-bell' style="font-size: 30px"></i>
