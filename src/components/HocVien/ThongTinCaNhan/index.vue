@@ -11,14 +11,13 @@
             <div class="col-lg-4">
               <div class="card " style="box-shadow: none;">
                 <div class="card-body text-center">
-                  <img :src="profile.hinh_anh || defaultImage" alt="Selected Image"
-                    v-if="profile.hinh_anh || selectedImage" class="rounded-circle p-1 bg-gradient-scooter"
-                    width="150" />
+                  <img :src="profile.hinh_anh || defaultImage" alt="Selected Image" v-if="profile.hinh_anh"
+                    class="rounded-circle p-1 bg-gradient-scooter" width="150" />
                   <div class="mt-3">
                     <h3>{{ profile.ho_ten }}</h3>
                     <p class="text-secondary">Người Dùng</p>
 
-                    <button class="btn btn-inverse-info mt-3" data-bs-toggle="modal" data-bs-target="#imageModal">Chọn
+                    <button class="btn btn-inverse-info " data-bs-toggle="modal" data-bs-target="#imageModal">Chọn
                       ảnh</button>
 
                   </div>
@@ -224,7 +223,7 @@ export default {
     return {
       profile: {},
       update_profile: {},
-      selectedImage: null,
+
       defaultImage: 'https://jbagy.me/wp-content/uploads/2025/03/Hinh-anh-avatar-nam-cute-2.jpg ',
       images: [
 
@@ -239,19 +238,18 @@ export default {
 
   },
   methods: {
-     selectImage(image) {
-    this.selectedImage = image;
-    baseRequest.post('hoc-vien/chon-avt', { hinh_anh: image })
-      .then((response) => {
-        this.getProfile();
-        const modalElement = document.getElementById('imageModal');
-        if (modalElement) {
-          const modal = bootstrap.Modal.getInstance(modalElement);
-          if (modal) modal.hide();
-        }
-      })
-      .catch((error) => console.error('Lỗi khi cập nhật hình ảnh:', error));
-  },
+    selectImage(image) {
+      this.selectedImage = image;
+      baseRequest.post('hoc-vien/chon-avt', { hinh_anh: image })
+        .then((response) => {
+          if (response.data.status) {
+            this.getProfile();
+            this.reloadPage()
+
+          }
+        })
+        .catch((error) => console.error('Lỗi khi cập nhật hình ảnh:', error));
+    },
 
     getProfile() {
       baseRequest
@@ -271,6 +269,9 @@ export default {
             this.$toast.error(res.data.message);
           }
         })
+    },
+    reloadPage() {
+      window.location.reload();
     }
   }
 };

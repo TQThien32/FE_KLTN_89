@@ -18,7 +18,7 @@
                             <a class="nav-link" href="#"> <i class='bx bx-search'></i>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item dropdown dropdown-large">
                             <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
                                 href="/hoc-vien/quan-ly-vi-NFT">
@@ -32,12 +32,14 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown dropdown-large">
-                            <a  class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="/hoc-vien/xem-thong-bao">
+                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                                href="/hoc-vien/xem-thong-bao">
                                 <i class='bx bx-bell' style="font-size: 30px"></i>
                             </a>
                         </li>
                         <li class="nav-item dropdown dropdown-large">
-                            <a  class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="/hoc-vien/NFT-gui-den">
+                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                                href="/hoc-vien/NFT-gui-den">
                                 <i class="bx bx-comment" style="font-size: 30px"></i>
                             </a>
                         </li>
@@ -46,9 +48,9 @@
                 <div class="user-box dropdown">
                     <a class="d-flex align-items-center  dropdown-toggle dropdown-toggle-nocaret" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <img :src="hinh_anh_hoc_vien" class="user-img" alt="user avatar">
+                        <img :src="profile.hinh_anh" class="user-img" alt="user avatar">
                         <div class="user-info ps-3">
-                            <p class="user-name mb-0">{{ten_hoc_vien}}</p>
+                            <p class="user-name mb-0">{{ ten_hoc_vien }}</p>
                             <p class="designattion mb-0">Người Dùng</p>
                         </div>
                     </a>
@@ -62,7 +64,8 @@
                         <li>
                             <div class="dropdown-divider mb-0"></div>
                         </li>
-                        <li v-on:click="dangXuat()"><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Đăng
+                        <li v-on:click="dangXuat()"><a class="dropdown-item" href="javascript:;"><i
+                                    class='bx bx-log-out-circle'></i><span>Đăng
                                     Xuất</span></a>
                         </li>
                     </ul>
@@ -78,22 +81,22 @@ export default {
     data() {
         return {
             ten_hoc_vien: '',
-            hinh_anh_hoc_vien:'',
+            
+            profile: {},
             auth: false,
         }
     },
     computed: {
         getTenQTV() {
-            return localStorage.getItem('ten_hoc_vien');
+            return localStorage.getItem('ten_hoc_vien');    
         },
-        getHinhAnh() {
-            return localStorage.getItem('hinh_anh_hoc_vien');
-        },
+       
     },
     mounted() {
         this.checkLogin();
         this.ten_hoc_vien = localStorage.getItem('ten_hoc_vien')
-        this.hinh_anh_hoc_vien = localStorage.getItem('hinh_anh_hoc_vien')
+      
+        this.getProfile()
     },
     methods: {
         checkLogin() {
@@ -105,6 +108,13 @@ export default {
                     }
                 })
         },
+        getProfile() {
+            baseRequest
+                .get('hoc-vien/profile')
+                .then((res) => {
+                    this.profile = res.data.data
+                })
+        },
         dangXuat() {
             baseRequest
                 .get('hoc-vien/dang-xuat-all')
@@ -113,16 +123,17 @@ export default {
                         this.$toast.success('Thông báo<br>' + res.data.message);
                         window.localStorage.removeItem('chia_khoa_so1');
                         window.localStorage.removeItem('ten_hoc_vien');
-                        window.localStorage.removeItem('hinh_anh_hoc_vien');
+                        
                         this.$router.push('/');
                         this.mounted();
-                       
+
                     } else {
                         this.$toast.error('Thông báo<br>' + res.data.message);
                     }
                 })
         },
-    }}
+    }
+}
 </script>
 <style scoped>
 .navbar-nav .nav-link {
