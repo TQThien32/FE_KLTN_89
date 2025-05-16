@@ -5,8 +5,8 @@
             <div class="col-lg-4">
                 <div class="card" style="box-shadow: none;">
                     <div class="card-body text-center">
-                        <img src="../../../assets/images/avatars/avatar-1.png" alt="Avatar"
-                            class="rounded-circle p-1 bg-primary" width="110">
+                        <img src="https://img.freepik.com/free-vector/xaillustration-businessman-celebrating-success-by-raising-his-hands_10045-817.jpg?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid&w=740" alt="Avatar"
+                            class="rounded-circle p-1 bg-gradient-scooter" width="150">
                         <div class="mt-3">
                             <p class="text-secondary mb-1">Chức Vụ: {{ profile.ten_chuc_vu }}</p>
                         </div>

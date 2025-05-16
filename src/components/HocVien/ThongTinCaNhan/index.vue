@@ -224,11 +224,15 @@ export default {
       profile: {},
       update_profile: {},
 
-      defaultImage: 'https://jbagy.me/wp-content/uploads/2025/03/Hinh-anh-avatar-nam-cute-2.jpg ',
+      defaultImage: 'https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100279.jpg?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid&w=740',
       images: [
 
-        'https://jbagy.me/wp-content/uploads/2025/03/Hinh-anh-avatar-nam-cute-2.jpg',
-        'https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/Image%20FP_2024/hinh-anh-avatar-ca-tinh-nu-24.png',
+        'https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100279.jpg?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100149.jpg?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100227.jpg?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100151.jpg?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100249.jpg?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100246.jpg?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid&w=740'
 
       ]
     }

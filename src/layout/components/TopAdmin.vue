@@ -24,13 +24,14 @@
                         </li>
                     </ul>
                 </div>
+                <div class="border-end border-2 border-dark" style="height: 61px;"></div>
                 <div class="user-box dropdown">
                     <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="../../assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
+                        <img src="https://img.freepik.com/free-vector/xaillustration-businessman-celebrating-success-by-raising-his-hands_10045-817.jpg?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid&w=740" class="user-img" alt="user avatar">
                         <div class="user-info ps-3">
                             <p class="user-name mb-0">{{ ten_qtv }}</p>
-                            <p class="designattion mb-0">Admin</p>
+                           
                         </div>
                     </a>
                     

@@ -29,12 +29,13 @@
                         
                     </ul>
                 </div>
+                <div class="border-end border-2 border-dark" style="height: 61px;"></div>
                 <div class="user-box dropdown">
                     <a class="d-flex align-items-center dropdown-toggle dropdown-toggle-nocaret" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img :src="profile.hinh_anh" class="user-img" alt="user avatar">
                         <div class="user-info ps-3">
-                            <p class="user-name mb-0">{{ profile.ten_to_chuc }}</p>
+                            <p class="user-name mb-0">{{ ten_to_chuc }}</p>
                             <p class="designattion mb-0">Tổ Chức</p>
                         </div>
                     </a>
@@ -56,7 +57,7 @@
             </nav>
         </div>
     </header>
->>>>>>> 859ffb6e5c829fa6fcac2d810024e0d03bc8831e
+
 </template>
 <script>
 import baseRequest from '../../core/baseRequest'
@@ -65,7 +66,7 @@ export default {
     data() {
         return {
             ten_to_chuc: '',
-            profile:{},
+            profile: {},
             auth: false,
         }
     },
@@ -76,7 +77,8 @@ export default {
     },
     mounted() {
         this.checkLogin();
-        this.ten_to_chuc = localStorage.getItem('ten_to_chuc')
+        this.ten_to_chuc = localStorage.getItem('ten_to_chuc');
+        this.getProfile()
     },
     methods: {
         checkLogin() {
