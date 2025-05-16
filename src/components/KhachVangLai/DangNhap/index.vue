@@ -205,6 +205,8 @@
 </template>
 <script>
 import baseRequest from '../../../core/baseRequest';
+import { createToaster } from "@meforma/vue-toaster";
+const toaster = createToaster({ position: "top-right" });
 export default {
     data() {
 		return {
@@ -223,14 +225,14 @@ export default {
 				.post('hoc-vien/dang-nhap', this.hoc_Vien_Dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
-						this.$toast.success(res.data.message) 
+						toaster.success(res.data.message)
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
 						
                         this.$router.push('/hoc-vien/trang-chu');
 					}
 					else {
-						this.$toast.error(res.data.message)
+						toaster.error(res.data.message)
 					}
 				})
 		},
@@ -239,14 +241,13 @@ export default {
 				.post('admin/dang-nhap', this.admin_Dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
-						this.$toast.success(res.data.message);
-						
+						toaster.success(res.data.message);
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_admin', res.data.ten_admin);
                         this.$router.push('/admin/danh-sach-nhan-vien');
 					}
 					else {
-						this.$toast.error(res.data.message);
+						toaster.error(res.data.message);
 					}
 				})
 		},

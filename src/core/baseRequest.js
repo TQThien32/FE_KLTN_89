@@ -1,5 +1,7 @@
 import axios from "axios";
 const apiUrl = 'http://127.0.0.1:8000/api/';
+import { createToaster } from "@meforma/vue-toaster";
+const toaster = createToaster({ position: "top-right" });
 export default {
     getHeader() {
         let token   =   window.localStorage.getItem('chia_khoa_so1');

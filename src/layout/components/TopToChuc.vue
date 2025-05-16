@@ -20,8 +20,7 @@
                         <li class="nav-item mobile-search-icon">
                             <a class="nav-link" href="#"> <i class='bx bx-search'></i>
                             </a>
-                        </li>
-
+                        </li> 
                         <li class="nav-item dropdown dropdown-large">
                             <a  class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="/to-chuc-cap-chung-chi/xem-thong-bao">
                                 <i class='bx bx-bell' style="font-size: 30px"></i>
@@ -57,6 +56,7 @@
             </nav>
         </div>
     </header>
+>>>>>>> 859ffb6e5c829fa6fcac2d810024e0d03bc8831e
 </template>
 <script>
 import baseRequest from '../../core/baseRequest'
