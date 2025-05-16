@@ -68,7 +68,7 @@ export default {
 	},
 	methods: {
 		dangNhap() {
-			axios
+			ba
 				.post('http://127.0.0.1:8000/api/hoc-vien/dang-nhap', this.dang_Nhap)
 				.then((res) => {
 					if (res.data.status) {
@@ -76,7 +76,6 @@ export default {
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_hoc_vien', res.data.ten_hoc_vien);
                         this.$router.push('/hoc-vien/chi-tiet-thanh-toan');
-
 					}
 					else {
 						this.$toast.error(res.data.message)
