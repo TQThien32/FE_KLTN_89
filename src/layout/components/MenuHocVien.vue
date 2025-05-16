@@ -21,6 +21,14 @@
                         <div class="menu-title">Trang Chủ</div>
                     </router-link>
                 </li>
+               
+                <li class="nav-item">
+                    <router-link to="/hoc-vien/yeu-cau-cap-nft" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-code-pull-request"></i>
+                        </div>
+                        <div class="menu-title">Gửi Yêu Cầu</div>
+                    </router-link>
+                </li>
                 <li class="nav-item">
                     <router-link to="/hoc-vien/gioi-thieu" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-circle-user"></i>
@@ -28,12 +36,11 @@
                         <div class="menu-title">Giới Thiệu</div>
                     </router-link>
                 </li>
-               
                 <li class="nav-item">
-                    <router-link to="/hoc-vien/yeu-cau-cap-nft" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-code-pull-request"></i>
+                    <router-link to="/hoc-vien/lien-he" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-phone"></i>
                         </div>
-                        <div class="menu-title">Gửi Yêu Cầu</div>
+                        <div class="menu-title">Liên Hệ</div>
                     </router-link>
                 </li>
             </ul>

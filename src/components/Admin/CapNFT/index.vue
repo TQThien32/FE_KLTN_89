@@ -29,16 +29,38 @@
                                     <td class="align-middle text-center">{{ value.so_hieu_chung_chi }}</td>
                                     <td class="align-middle text-center">{{ value.created_at }}</td>
                                     <td class="align-middle text-center">
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                            v-on:click="Object.assign(hien_thi_yeu_cau, value)"><i class="fa-solid fa-circle-info ms-1"></i></button>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#infoModal"
+                                            v-on:click="Object.assign(hien_thi_yeu_cau, value)"><i
+                                                class="fa-solid fa-circle-info ms-1"></i></button>
                                     </td>
                                     <td class="align-middle text-center">
-                                        <button type="button" class="btn btn-chinh" v-on:click="createNFT(value)">NFT</button>
+                                        <button v-on:click="Object.assign(truyen,value)" type="button"
+                                            class="btn btn-chinh" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
+                                            Mint NFT
+                                        </button>
                                     </td>
                                 </tr>
                             </template>
                         </tbody>
                     </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Bạn có muốn mint NFT cho {{
+                        truyen.ho_ten }} không?</h1>
+                    <button type="button" class="btn-close"  aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-chinh" data-bs-dismiss="modal">Close</button>
+                    <button v-on:click="createNFT(truyen)" type="button" data-bs-dismiss="modal" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -54,7 +76,8 @@ export default {
             hien_thi_yeu_cau: {},
             chung_chi: {},
             isShowResult: false,
-            chung_chi_true: {}
+            chung_chi_true: {},
+            truyen:{}
         }
     },
     mounted() {
@@ -74,6 +97,8 @@ export default {
                 .then((res) => {
                     this.chung_chi = res.data.data
                     this.isShowResult = true
+                    this.$toast.success("Đúc NFT Thành Công");
+                    this.load_yeu_cau();
                 })
         },
     },

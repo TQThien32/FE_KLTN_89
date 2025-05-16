@@ -14,6 +14,16 @@
                 <div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
                 <div class="search-bar flex-grow-1">          
                 </div>
+                <div class="top-menu ms-auto">
+                    <ul class="navbar-nav align-items-center">
+
+                        <li class="nav-item dropdown dropdown-large">
+                            <a  class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="/admin/tin-nhan">
+                                <i class='bx bx-comment' style="font-size: 30px"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="user-box dropdown">
                     <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,6 +33,7 @@
                             <p class="designattion mb-0">Admin</p>
                         </div>
                     </a>
+                    
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="/admin/thong-tin-admin"><i class="bx bx-user"></i><span>Thông
                                     Tin Tài Khoản</span></a>

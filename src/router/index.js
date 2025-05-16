@@ -104,22 +104,15 @@ const routes = [
         beforeEnter: kiemTraAdmin,
         props: true
     },
-
-
-
-
     {
-        path: '/hoc-vien/trang-chu',
-        component: () => import('../components/HocVien/TrangChu/index.vue'),
-        meta: { layout: 'HocVien' },
-        beforeEnter: kiemTraHocVien,
+        path: '/admin/tin-nhan',
+        component: () => import('../components/Admin/TinNhan/index.vue'),
+        meta: { layout: 'Admin' },
+        beforeEnter: kiemTraAdmin,
     },
-    {
-        path: '/hoc-vien/gioi-thieu',
-        component: () => import('../components/HocVien/TrangChu/gioithieu.vue'),
-        meta: { layout: 'HocVien' },
-        beforeEnter: kiemTraHocVien,
-    },
+
+// học viên
+
     
     {
         path: '/hoc-vien/yeu-cau-cap-nft',
@@ -211,6 +204,12 @@ const routes = [
     {
         path: '/hoc-vien/gioi-thieu',
         component: () => import('../components/HocVien/TrangChu/gioithieu.vue'),
+        meta: { layout: 'HocVien' },
+        beforeEnter: kiemTraHocVien,
+    },
+    {
+        path: '/hoc-vien/lien-he',
+        component: () => import('../components/HocVien/TrangChu/lienhe.vue'),
         meta: { layout: 'HocVien' },
         beforeEnter: kiemTraHocVien,
     },
