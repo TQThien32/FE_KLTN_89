@@ -1,7 +1,7 @@
 <template>
 
     <b>
-        <h2 class="text-light"><i class="fa-solid fa-book-open-reader" style="font-size: 35px;"></i> DANH SÁCH TIN NHẬN
+        <h2 class="text-light"><i class="fa-solid fa-book-open-reader" style="font-size: 35px;"></i> DANH SÁCH LIÊN HỆ
         </h2>
     </b>
     <div class="card mt-3" style="box-shadow: none;">

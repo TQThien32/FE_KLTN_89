@@ -1,9 +1,15 @@
 <template>
-    <div class="row">
+    <div class="d-flex justify-content-start text-light">
+      <i class="fa-solid fa-code-pull-request me-2" style="font-size: 35px;"></i>
+      <b>
+         <h3 class="text-light">QUẢN LÝ YÊU CẦU</h3>
+      </b>
+   </div>
+    <div class="row mt-3">
         <div class="col-lg-12 col-md-12">
             <div class="card" style="box-shadow: none;">
                 <div class="card-header">
-                    <h4>Danh Sách Yêu Cầu Cấp Gửi Đến</h4>
+                    <h4 class="mt-2 text-dark"><i class="fa-solid fa-list-ol"></i> Danh Sách Yêu Cầu Gửi Đến</h4>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-hover">

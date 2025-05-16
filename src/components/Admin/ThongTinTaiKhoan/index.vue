@@ -18,7 +18,7 @@
             <div class="col-lg-8">
                 <div class="card" style="box-shadow: none;">
                     <div class="card-header bg-gradient-scooter">
-                        <h4 class="text-white mt-2 text-center">{{ profile.ten_chuc_vu }}</h4>
+                        <h4 class="text-white mt-2 text-center">Thông tin tài khoản</h4>
                     </div>
                     <div class="card-body">
                         <div class="row mb-3">

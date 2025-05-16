@@ -5,7 +5,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-lg-6">
-                            Danh Sách Chức Vụ
+                            <h4 class="mt-2 text-dark">Danh Sách Chức Vụ</h4>
                         </div>
                         <div class="col-lg-6 text-end">
                             <button class="btn btn-chinh" data-bs-toggle="modal" data-bs-target="#themMoiModal">Thêm
@@ -16,7 +16,7 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm Mới Chúc Vụ</h1>
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm Mới Chức Vụ</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
@@ -56,14 +56,14 @@
                                         <td>{{ value.ten_chuc_vu }}</td>
                                         <td class="text-center">
                                             <button v-on:click="Object.assign(chucVu, value), loadChiTietChucNang()"
-                                                class="btn btn-chinh text-white">Phân Quyền</button>
+                                                class="btn btn-chinh ">Phân Quyền</button>
                                         </td>
                                         <td class="text-center">
                                             <i v-on:click="Object.assign(update_chuc_vu, value)"
-                                                class="fa-solid fa-square-pen fa-3x text-chinh me-2"
+                                                class="fa-solid fa-square-pen fa-2x text-chinh me-3"
                                                 data-bs-toggle="modal" data-bs-target="#updateModal"></i>
                                             <i v-on:click="Object.assign(delete_chuc_vu, value)"
-                                                class="fa-solid fa-trash fa-3x text-danger" data-bs-toggle="modal"
+                                                class="fa-solid fa-trash fa-2x text-danger" data-bs-toggle="modal"
                                                 data-bs-target="#xoaModal"></i>
                                         </td>
                                     </tr>
@@ -89,7 +89,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Close</button>
-                                    <button v-on:click="updateChucVu()" type="button" class="btn btn-primary"
+                                    <button v-on:click="updateChucVu()" type="button" class="btn btn-chinh"
                                         data-bs-dismiss="modal">Xác
                                         Nhận</button>
                                 </div>
@@ -142,7 +142,7 @@
         <div class="col-lg-4">
             <div class="card">
                 <div class="card-header">
-                    Danh Sách Chức Năng
+                    <h4 class="text-dark mt-2">Danh Sách Chức Năng</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -175,7 +175,7 @@
         <div class="col-lg-4">
             <div class="card">
                 <div class="card-header">
-                    Đang Phân Quyền Cho <b class="text-danger">{{ chucVu.ten_chuc_vu }}</b>
+                    <h4 class="text-dark mt-2">Đang Phân Quyền Cho <b class="text-info">{{ chucVu.ten_chuc_vu }}</b></h4>
                 </div>
                 <div class="card-body">
                     <div class="row">

@@ -11,13 +11,14 @@
             <div class="col-lg-4">
               <div class="card " style="box-shadow: none;">
                 <div class="card-body text-center">
-                  <img :src="selectedImage" alt="Selected" v-if="selectedImage"
-                    class="rounded-circle p-1 bg-gradient-scooter" width="150">
+                  <img :src="profile.hinh_anh || defaultImage" alt="Selected Image"
+                    v-if="profile.hinh_anh || selectedImage" class="rounded-circle p-1 bg-gradient-scooter"
+                    width="150" />
                   <div class="mt-3">
                     <h3>{{ profile.ho_ten }}</h3>
                     <p class="text-secondary">Người Dùng</p>
 
-                    <button class="btn btn-inverse-info" data-bs-toggle="modal" data-bs-target="#imageModal">Chọn
+                    <button class="btn btn-inverse-info mt-3" data-bs-toggle="modal" data-bs-target="#imageModal">Chọn
                       ảnh</button>
 
                   </div>
@@ -26,23 +27,23 @@
             </div>
             <!-- ĐỔi AVATAR -->
             <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 rounded-3 shadow-lg">
+                  <div class="modal-header bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
                     <h5 class="modal-title" id="imageModalLabel">Chọn ảnh</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <div class="row g-2">
                       <div v-for="image in images" :key="image" class="col-4">
                         <img :src="image" alt="Option" @click="selectImage(image)"
-                          class="img-fluid rounded cursor-pointer" />
+                          class="img-fluid rounded-lg cursor-pointer border border-light shadow-sm hover:shadow-lg transition-all duration-200" />
                       </div>
                     </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-
                   </div>
                 </div>
               </div>
@@ -91,7 +92,10 @@
                       <h6 class="mb-0">Giới Tính</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <div class="form-control bg-white">{{ profile.gioi_tinh }}</div>
+                      <div class="form-control bg-white">
+                        {{ profile.gioi_tinh == 0 ? 'Nam' :
+                          (profile.gioi_tinh == 1 ? 'Nữ' : 'Không rõ') }}
+                      </div>
                     </div>
                   </div>
                   <div class="row mb-3">
@@ -221,10 +225,11 @@ export default {
       profile: {},
       update_profile: {},
       selectedImage: null,
+      defaultImage: 'https://jbagy.me/wp-content/uploads/2025/03/Hinh-anh-avatar-nam-cute-2.jpg ',
       images: [
 
         'https://jbagy.me/wp-content/uploads/2025/03/Hinh-anh-avatar-nam-cute-2.jpg',
-        'https://jbagy.me/wp-content/uploads/2025/03/Hinh-anh-avatar-nam-cute-2.jpg',
+        'https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/Image%20FP_2024/hinh-anh-avatar-ca-tinh-nu-24.png',
 
       ]
     }
@@ -234,11 +239,20 @@ export default {
 
   },
   methods: {
-    selectImage(image) {
-      this.selectedImage = image;
-      const modal = bootstrap.Modal.getInstance(document.getElementById('imageModal'));
-      modal.hide();
-    },
+     selectImage(image) {
+    this.selectedImage = image;
+    baseRequest.post('hoc-vien/chon-avt', { hinh_anh: image })
+      .then((response) => {
+        this.getProfile();
+        const modalElement = document.getElementById('imageModal');
+        if (modalElement) {
+          const modal = bootstrap.Modal.getInstance(modalElement);
+          if (modal) modal.hide();
+        }
+      })
+      .catch((error) => console.error('Lỗi khi cập nhật hình ảnh:', error));
+  },
+
     getProfile() {
       baseRequest
         .get('hoc-vien/profile')
@@ -268,10 +282,12 @@ export default {
 }
 
 .modal-body img {
-  transition: transform 0.2s;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
 .modal-body img:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 </style>

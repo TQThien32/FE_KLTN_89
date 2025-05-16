@@ -46,7 +46,7 @@
                 <div class="user-box dropdown">
                     <a class="d-flex align-items-center  dropdown-toggle dropdown-toggle-nocaret" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="../../assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
+                        <img :src="hinh_anh_hoc_vien" class="user-img" alt="user avatar">
                         <div class="user-info ps-3">
                             <p class="user-name mb-0">{{ten_hoc_vien}}</p>
                             <p class="designattion mb-0">Người Dùng</p>
@@ -78,6 +78,7 @@ export default {
     data() {
         return {
             ten_hoc_vien: '',
+            hinh_anh_hoc_vien:'',
             auth: false,
         }
     },
@@ -85,10 +86,14 @@ export default {
         getTenQTV() {
             return localStorage.getItem('ten_hoc_vien');
         },
+        getHinhAnh() {
+            return localStorage.getItem('hinh_anh_hoc_vien');
+        },
     },
     mounted() {
         this.checkLogin();
         this.ten_hoc_vien = localStorage.getItem('ten_hoc_vien')
+        this.hinh_anh_hoc_vien = localStorage.getItem('hinh_anh_hoc_vien')
     },
     methods: {
         checkLogin() {
@@ -108,6 +113,7 @@ export default {
                         this.$toast.success('Thông báo<br>' + res.data.message);
                         window.localStorage.removeItem('chia_khoa_so1');
                         window.localStorage.removeItem('ten_hoc_vien');
+                        window.localStorage.removeItem('hinh_anh_hoc_vien');
                         this.$router.push('/');
                         this.mounted();
                        

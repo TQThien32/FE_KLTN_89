@@ -10,7 +10,7 @@
         <div class="col-lg-8">
             <div class="card table-responsive" style="box-shadow: none;">
                 <div class="card-header">
-                    <h4>Thêm Tài Khoản</h4>
+                    <h4 class="text-dark mt-2">Thêm Tài Khoản</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
