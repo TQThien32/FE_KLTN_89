@@ -1,15 +1,13 @@
 <template>
    <div class="d-flex justify-content-start text-light">
-      <i class="fa-solid fa-list me-2" style="font-size: 35px;"></i>
+      <i class="fa-solid fa-upload me-2" style="font-size: 35px;"></i>
       <b>
-         <h2 class="text-light">DỮ LIỆU CHỨNG CHỈ HỌC VIÊN</h2>
+         <h3 class="text-light">UPLOAD CHỨNG CHỈ</h3>
       </b>
    </div>
    <div class="col-lg-12 mt-2">
       <div class="card table-responsive">
-         <div class="card-header">
-            <h4 class="mt-2">Danh Sách Chứng Chỉ</h4>
-         </div>
+         
          <div class="card-body table-responsive">
             <div class="row">
                <div class="col-lg-3"></div>
@@ -51,6 +49,8 @@
 
                </div>
             </div>
+            <hr>
+            <h4 class="mt-3"><i class="fa-solid fa-list-ol"></i> Danh Sách Chứng Chỉ</h4>
             <table class="table table-hover table-bordered mt-3">
                <thead>
                   <tr>
@@ -146,7 +146,9 @@ export default {
 
          try {
             await baseRequest.post("upload-folder", formData);
+            this.fetchData()
             this.$toast.success("Tải Lên Thành Công")
+            
          } catch (error) {
             this.$toast.error("Có Lỗi Xảy Ra")
          } finally {
@@ -156,7 +158,7 @@ export default {
       async fetchData() {
          try {
             let response = await baseRequest.get("get-data");
-            this.dataList = response.data[0];
+            this.dataList = response.data.data;
          } catch (error) {
             this.$toast.error("Có Lỗi Xảy Ra")
          }

@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="topbar d-flex align-items-center">
-            <nav class="navbar navbar-expand ">
+            <nav class="navbar navbar-expand bg-light-primary">
                 <div class="topbar-logo-header">
                     <div class="">
                         <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
@@ -14,6 +14,16 @@
                 <div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
                 <div class="search-bar flex-grow-1">          
                 </div>
+                <div class="top-menu ms-auto">
+                    <ul class="navbar-nav align-items-center">
+
+                        <li class="nav-item dropdown dropdown-large">
+                            <a  class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="/admin/tin-nhan">
+                                <i class='bx bx-comment' style="font-size: 30px"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="user-box dropdown">
                     <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,6 +33,7 @@
                             <p class="designattion mb-0">Admin</p>
                         </div>
                     </a>
+                    
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="/admin/thong-tin-admin"><i class="bx bx-user"></i><span>Thông
                                     Tin Tài Khoản</span></a>
@@ -71,7 +82,7 @@ export default {
         },
         dangXuat() {
             baseRequest
-                .get('admin/dang-xuat')
+                .get('admin/dang-xuat-all')
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success('Thông báo<br>' + res.data.message);
@@ -97,7 +108,5 @@ export default {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.nav-link:hover {
-    transform: scale(1.2);
-}
+
 </style>

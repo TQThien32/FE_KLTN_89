@@ -53,7 +53,8 @@
               <textarea v-model="create_thong_bao.noi_dung" id="message" class="form-control" rows="9"
                 placeholder="Nhập nội dung thông báo" required></textarea>
             </div>
-            <div class="d-flex justify-content-end"><button type="button" class="btn btn-danger px-5 radius-30 me-2">Hủy
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn btn-danger  me-3">Hủy
                 <i class="fa-solid fa-trash-can ms-2"></i></button>
               <button v-on:click="guiThongBao()" type="button" class="btn btn-chinh">Gửi<i
                   class="fa-solid fa-share-from-square ms-2 "></i></button>

@@ -243,7 +243,7 @@ export default {
 						toaster.success(res.data.message);
 						localStorage.setItem('chia_khoa_so1', res.data.chia_khoa);
 						localStorage.setItem('ten_admin', res.data.ten_admin);
-                        this.$router.push('/admin/trang-chu');
+                        this.$router.push('/admin/danh-sach-nhan-vien');
 					}
 					else {
 						toaster.error(res.data.message);

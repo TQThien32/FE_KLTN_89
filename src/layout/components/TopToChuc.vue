@@ -1,99 +1,28 @@
 <template>
     <header>
-       <div class="topbar d-flex align-items-center">
-           <nav class="navbar navbar-expand ">
-               <div class="topbar-logo-header">
-                   <div class="">
-                       <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid" style="height: 50px; width: 50px;" class="logo-icon" alt="logo icon">
-                   </div>
-                   <div class="">
-                       <h4 class="logo-text text-dark"><b>NFT CERTIFICATE</b></h4>
-                   </div>
-               </div>
-               <div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
-               <div class="search-bar flex-grow-1">
-                    
+        <div class="topbar d-flex align-items-center">
+            <nav class="navbar navbar-expand bg-light-primary">
+                <div class="topbar-logo-header">
+                    <div class="">
+                        <img src="https://cdn-icons-png.freepik.com/256/8523/8523899.png?ga=GA1.1.1642455953.1744362054&semt=ais_hybrid"
+                            style="height: 50px; width: 50px;" class="logo-icon" alt="logo icon">
+                    </div>
+                    <div class="">
+                        <h4 class="logo-text text-dark"><b>NFT CERTIFICATE</b></h4>
+                    </div>
                 </div>
-               <div class="top-menu ms-auto">
-                   <ul class="navbar-nav align-items-center">
-                       <li class="nav-item mobile-search-icon">
-                           <a class="nav-link" href="#"> <i class='bx bx-search'></i>
-                           </a>
-                       </li>
-                       
-                       <li class="nav-item dropdown dropdown-large">
-                           <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
-                               role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
-                                   class="alert-count">2</span>
-                               <i class='bx bx-bell'></i>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-end dropdown-wide">
-                                <a href="javascript:;">
-                                    <div class="msg-header">
-                                        <p class="msg-header-title"><b>Thông báo</b></p>
-                                        <a href="/to-chuc-cap-chung-chi/xem-thong-bao" class="ms-auto">Xem tất cả</a>
-                                    </div>
-                                </a>
-                                <div class="header-notifications-list">
-                                    <a class="dropdown-item" href="javascript:;">
-                                        <div class="d-flex align-items-center w-100">
-                                            <a href="/to-chuc-cap-chung-chi/xem-thong-bao/chi-tiet-thong-bao" class="w-100 text-decoration-none">
-                                                <div class="d-flex align-items-start py-2 w-100">
-                                                    <!-- Tiêu đề -->
-                                                    <div class="me-2" style="width: 100px;">
-                                                        <p class="mb-0 text-dark"><b>Wordpress</b></p>
-                                                    </div>
-                                                    <!-- Nội dung -->
-                                                    <div class="me-2 flex-grow-1">
-                                                        <p class="mb-0 text-muted text-truncate"
-                                                            style="max-width: 400px;">
-                                                            It is a long established fact that a reader will be
-                                                            distracted by the readable...
-                                                        </p>
-                                                    </div>
-                                                    <!-- Thời gian -->
-                                                    <div style="width: 80px;" class="text-end">
-                                                        <p class="mb-0 email-time">5:56 PM</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </a>
+                <div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
+                <div class="search-bar flex-grow-1">
 
-                                    <a class="dropdown-item" href="javascript:;">
-                                        <div class="d-flex align-items-center w-100">
-                                            <a href="app-emailread.html" class="w-100 text-decoration-none">
-                                                <div class="d-flex align-items-start py-2 w-100">
-                                                    <!-- Tiêu đề -->
-                                                    <div class="me-2" style="width: 100px;">
-                                                        <p class="mb-0 text-dark"><b>Locanto</b></p>
-                                                    </div>
-                                                    <!-- Nội dung -->
-                                                    <div class="me-2 flex-grow-1">
-                                                        <p class="mb-0 text-muted text-truncate"
-                                                            style="max-width: 400px;">
-                                                            It is a long established fact that a reader will be
-                                                            distracted by the readable...
-                                                        </p>
-                                                    </div>
-                                                    <!-- Thời gian -->
-                                                    <div style="width: 80px;" class="text-end">
-                                                        <p class="mb-0 email-time">5:56 PM</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </a>
-                                    
-                                    <!-- <a class="dropdown-item" href="javascript:;">
-                                        <div class="d-flex align-items-center">
-                                            <a href="app-emailread.html">
-                                                <div class="d-md-flex align-items-center email-message py-1">
-                                                    <p class="mb-0 text-dark me-3"><b>Locanto</b>
-                                                    </p>
-                                                    <p class="mb-0 me-2">The point of using Lorem Ipsum is that it has a
-                                                        more-or-less normal...</p>
+                </div>
+                <div class="top-menu ms-auto">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item mobile-search-icon">
+                            <a class="nav-link" href="#"> <i class='bx bx-search'></i>
+                            </a>
+                        </li>
 
+<<<<<<< HEAD
                                                     <div style="width: 70px;" class="text-end">
                                                         <p class="mb-0 email-time ">5:54 PM</p>
                                                     </div>
@@ -132,6 +61,43 @@
            </nav>
        </div>
    </header>   
+=======
+                        <li class="nav-item dropdown dropdown-large">
+                            <a  class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="/to-chuc-cap-chung-chi/xem-thong-bao">
+                                <i class='bx bx-bell' style="font-size: 30px"></i>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="user-box dropdown">
+                    <a class="d-flex align-items-center dropdown-toggle dropdown-toggle-nocaret" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../../assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
+                        <div class="user-info ps-3">
+                            <p class="user-name mb-0">{{ ten_to_chuc }}</p>
+                            <p class="designattion mb-0">Tổ Chức</p>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="/to-chuc-cap-chung-chi/thong-tin-to-chuc"><i
+                                    class="bx bx-user"></i><span>Thông Tin Tổ Chức</span></a>
+                        </li>
+                        <li><a class="dropdown-item" href="/to-chuc-cap-chung-chi/doi-mat-khau"><i
+                                    class="bx bx-cog"></i><span>Đổi Mật Khẩu</span></a>
+                        </li>
+                        <li>
+                            <div class="dropdown-divider mb-0"></div>
+                        </li>
+                        <li v-on:click="dangXuat()"><a class="dropdown-item" href="javascript:;"><i
+                                    class='bx bx-log-out-circle'></i><span>Đăng Xuất</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+>>>>>>> 859ffb6e5c829fa6fcac2d810024e0d03bc8831e
 </template>
 <script>
 import baseRequest from '../../core/baseRequest'
@@ -164,7 +130,7 @@ export default {
         },
         dangXuat() {
             baseRequest
-                .get('to-chuc/dang-xuat')
+                .get('to-chuc/dang-xuat-all')
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success('Thông báo<br>' + res.data.message);
@@ -172,7 +138,7 @@ export default {
                         window.localStorage.removeItem('ten_to_chuc');
                         this.$router.push('/');
                         this.mounted();
-                       
+
                     } else {
                         this.$toast.error('Thông báo<br>' + res.data.message);
                     }
@@ -182,7 +148,6 @@ export default {
 }
 </script>
 <style scoped>
-
 .navbar-nav .nav-link {
     font-size: 18px !important;
     /* Thay đổi giá trị này để chỉnh cỡ chữ */
@@ -205,9 +170,7 @@ export default {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.nav-link:hover {
-    transform: scale(1.2);
-}
+
 
 
 .dropdown-wide {

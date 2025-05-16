@@ -345,6 +345,7 @@ export default {
                     .then((res) => {
                         if (res.data.status) {
                             this.$toast.success(res.data.message);
+                            this.$router.push('/dang-nhap');
                         } else {
                             this.$toast.error('Đăng ký thất bại.');
                         }
@@ -367,6 +368,7 @@ export default {
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success(res.data.message);
+                        this.$router.push('/dang-nhap');
                     } else {
                         this.$toast.error('Đăng ký thất bại.');
                     }

@@ -3,9 +3,11 @@
         <div class="row">
             <div class="col-lg-3 col-md-3"></div>
             <div class="col-lg-6 col-md-6">
-                <h2 class="text-light">Đổi Mật Khẩu</h2>
                 <div class="row mt-3">
-                    <div class="card" style="box-shadow: none;">
+                    <div class="col-lg">
+                        <div class="card" style="box-shadow: none;">
+                        <div class="card-header bg-light-info">
+                                <h4 class="text-black mt-2 text-center">Đổi Mật Khẩu</h4></div>
                         <div class="card-body">
                             <form>
                                 <div class="mb-3">
@@ -38,11 +40,12 @@
                                     </div><br>
                                     <span v-if="errorMessage" style="color:red">{{ errorMessage }}</span><br>
                                 </div>
-                                <div class="text-center"><button type="button" class="btn btn btn-chinh"
+                                <div class="text-center"><button type="button" class="btn btn-inverse-primary"
                                         v-on:click="doi_mk()">Đổi Mật
                                         Khẩu</button></div>
                             </form>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

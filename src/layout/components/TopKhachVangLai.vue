@@ -21,8 +21,8 @@
                         </li>
                     </ul>
                 </div>
-                <button class="btn btn-chinh me-2" @click="goDangNhap"><i class="fa-solid fa-right-to-bracket"  style="font-size: 15px;"></i> Đăng Nhập</button>
-                <button class="btn btn-secondary" @click="goDangKy"><i class="fa-solid fa-user-plus " style="font-size: 15px;"></i> Đăng Ký</button>
+                <button class="btn btn-inverse-primary me-2" @click="goDangNhap"><i class="fa-solid fa-right-to-bracket"  style="font-size: 15px;"></i> Đăng Nhập</button>
+                <button class="btn btn-inverse-dark" @click="goDangKy"><i class="fa-solid fa-user-plus " style="font-size: 15px;"></i> Đăng Ký</button>
             </nav>
         </div>
     </header>

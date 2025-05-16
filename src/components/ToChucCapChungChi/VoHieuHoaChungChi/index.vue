@@ -1,9 +1,15 @@
 <template>
-    <div class="row">
+    <div class="d-flex justify-content-start text-light">
+      <i class="fa-solid fa-ban me-2" style="font-size: 35px;"></i>
+      <b>
+         <h3 class="text-light">VÔ HIỆU HÓA CHỨNG CHỈ</h3>
+      </b>
+   </div>
+    <div class="row mt-3">
         <div class="col-lg-12 col-md-12">
             <div class="card" style="box-shadow:  none;">
                 <div class="card-header">
-                    <h4>Danh Sách Chứng Chỉ</h4>
+                    <h4 class="text-dark mt-2"><i class="fa-solid fa-list-ol"></i> Danh Sách Chứng Chỉ</h4>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-hover">
@@ -34,8 +40,8 @@
                                     <td>{{ value.ngay_cap }}</td>
                                     <td>{{ value.ghi_chu }}</td>
                                     <td class="align-middle text-center">
-                                        <button v-on:click="Object.assign(ghi_chu, value)"  v-if="value.tinh_trang == 1" type="button" class="btn btn-chinh"
-                                            data-bs-toggle="modal" data-bs-target="#vohieuhoa">Vô Hiệu Hóa</button>
+                                        <button v-on:click="Object.assign(ghi_chu, value)"  v-if="value.tinh_trang == 2" type="button" class="btn btn-chinh"
+                                            data-bs-toggle="modal" data-bs-target="#vohieuhoa">Đã Cấp</button>
                                         <button v-on:click="Object.assign(ghi_chu, value)" v-else type="button" data-bs-toggle="modal" data-bs-target="#movohieuhoa" class="btn btn-danger">Đã Vô
                                             Hiệu Hóa</button>
                                     </td>

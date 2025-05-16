@@ -190,6 +190,18 @@ a {
 	background-color: #0dceec; /* nền xanh cyan đậm */
 	border-color: #0dceec; /* viền đậm hơn */
 }
+.btn-phu2 {
+	color: white;
+	background-color: #17bed8; /* nền xanh cyan đậm */
+	border-color: #0dceec; /* viền đậm hơn */
+}
+
+.btn-phu2:hover {
+	color: #0dceec;
+	background-color: rgba(13, 206, 236, 0.18);
+	border-color: rgb(211, 246, 252);
+	transition: all 0.3s ease; /* mượt mà khi hover */
+}
 .btn-outline-primary {
 	color: #008cff;
 	border-color: #008cff
@@ -275,10 +287,10 @@ a {
 
 .dropdown-item:focus, .dropdown-item:hover {
 	color: #1e2125;
-	background-color: #0f3760
+	background-color: rgb(13 202 240 / 18%)!important
 }
 .dropdown-item.active, .dropdown-item:active {
-	color: #fff;
+	color: #000000;
 	text-decoration: none;
 	background-color: #008cff
 }

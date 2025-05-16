@@ -5,15 +5,15 @@
             <div class="card border-top border-0 border-4 border-info">
                 <div class="card-body">
                     <label class="mt-2">Họ và tên*</label>
-                    <input type="text" class="form-control mb-4 mt-2" name="" id="">
+                    <input v-model="gui_tn.ho_ten" type="text" class="form-control mb-4 mt-2" name="" id="">
                     <label>Số điện thoại*</label>
-                    <input type="tel" class="form-control mb-4 mt-2" name="" id="">
+                    <input v-model="gui_tn.sdt" type="tel" class="form-control mb-4 mt-2" name="" id="">
                     <label>Tiêu đề</label>
-                    <input type="text" class="form-control mb-4 mt-2" name="" id="">
+                    <input v-model="gui_tn.tieu_de" type="text" class="form-control mb-4 mt-2" name="" id="">
                     <label>Nội dung*</label>
-                    <textarea class="form-control form-control-lg mb-4 mt-2" rows="4" name="" id=""
+                    <textarea v-model="gui_tn.noi_dung" class="form-control form-control-lg mb-4 mt-2" rows="4" name="" id=""
                         style="width: 100%;"></textarea>
-                    <button class="btn btn-chinh">Gửi tin nhắn</button>
+                    <button v-on:click="guiTN()" class="btn btn-chinh">Gửi tin nhắn</button>
                 </div>
             </div>
         </div>
@@ -47,7 +47,14 @@
     </div>
 </template>
 <script>
+import baseRequest from '../../../core/baseRequest';
+
 export default {
+  data(){
+    return{
+      gui_tn:{}
+    }
+  },
     mounted() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -63,6 +70,19 @@ export default {
     sections.forEach(section => {
       observer.observe(section);
     });
+  },
+  methods:{
+    guiTN(){
+      baseRequest
+        .post('admin/nhan-thong-tin-lien-he/tao', this.gui_tn)
+        .then((res) => {
+          if (res.data.status) {
+            this.$toast.success(res.data.message);
+          } else {
+            this.$toast.error(res.data.message);
+          }
+        })
+    }
   }
 }
 </script>

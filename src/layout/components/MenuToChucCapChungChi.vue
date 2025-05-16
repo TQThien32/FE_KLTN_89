@@ -19,10 +19,23 @@
                         <div class="menu-title">Trang Chủ</div>
                     </router-link>
                 </li>
-                
+                <li class="nav-item">
+                    <router-link to="/to-chuc-cap-chung-chi/gioi-thieu" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div class="menu-title">Giới Thiệu</div>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/to-chuc-cap-chung-chi/lien-he" class="nav-link">
+                        <div class="parent-icon"><i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="menu-title">Liên Hệ</div>
+                    </router-link>
+                </li>
                 <li class="nav-item">
                     <router-link to="/to-chuc-cap-chung-chi/to-chuc-upload-chung-chi-hoc-vien" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-code-pull-request"></i>
+                        <div class="parent-icon"><i class="fa-solid fa-upload"></i>
                         </div>
                         <div class="menu-title">UpLoad Chứng Chỉ</div>
                     </router-link>
@@ -35,33 +48,13 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/to-chuc-cap-chung-chi/tao-chung-chi" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-folder-plus"></i>
-                        </div>
-                        <div class="menu-title">Tạo Chứng Chỉ</div>
-                    </router-link>
-                </li>
-                <li class="nav-item">
                     <router-link to="/to-chuc-cap-chung-chi/vo-hieu-hoa-chung-chi" class="nav-link">
                         <div class="parent-icon"><i class="fa-solid fa-ban"></i>
                         </div>
                         <div class="menu-title">Vô Hiệu Hóa Chứng Chỉ</div>
                     </router-link>
                 </li>
-                <li class="nav-item">
-                    <router-link to="/to-chuc-cap-chung-chi/lien-he" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="menu-title">Liên Hệ</div>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/to-chuc-cap-chung-chi/gioi-thieu" class="nav-link">
-                        <div class="parent-icon"><i class="fa-solid fa-circle-user"></i>
-                        </div>
-                        <div class="menu-title">Giới Thiệu</div>
-                    </router-link>
-                </li>
+                
             </ul>
         </nav>
     </div>
@@ -74,7 +67,7 @@ export default {
 <style scoped>
 /* Nền menu chính (nav-container) */
 .nav-container {
-  background-color: #050f2d !important; /* Đổi nền menu chính thành #050f2d */
+  background-color: #000000 !important; /* Đổi nền menu chính thành #050f2d */
 }
 
 /* Màu chữ mặc định là trắng, padding và bo góc */
@@ -96,7 +89,7 @@ export default {
 
 /* Đặt nền của dropdown menu thành #050f2d */
 .nav-container .dropdown-menu {
-  background-color: #050f2d !important;
+  background-color: #000000 !important;
 }
 
 /* Màu chữ trong dropdown mặc định là trắng */
