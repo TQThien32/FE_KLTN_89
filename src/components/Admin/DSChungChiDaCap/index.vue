@@ -41,10 +41,8 @@
                             <td class="align-middle text-center">{{ value.khoa_hoc }}</td>
                             <td class="align-middle text-center">{{ value.ket_qua }}</td>
                             <td class="align-middle text-center">{{ value.so_hieu_chung_chi }}</td>
-                            <td class="align-middle text-center">
-                                <img v-bind:src="value.hinh_anh"
-                                    style="height: 100px;">
-                            </td>
+                            <td><img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`"
+                                            style="height: 50px;" alt=""></td>
                             <td class="align-middle text-center">{{ value.ngay_cap }}</td>
                             <td class="align-middle text-center">
   <span 

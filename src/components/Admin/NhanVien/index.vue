@@ -125,8 +125,8 @@
                                 <td class="align-middle text-center">{{ value.ngay_sinh }}</td>
                                 <td class="align-middle text-center">{{ value.dia_chi }}</td>
                                 <td class="align-middle text-center">
-                                    <img v-bind:src="value.hinh_anh" alt=""
-                                        style="width: 50px; height: 50px; border-radius: 50%;">
+                                    <img v-bind:src="value.hinh_anh ? value.hinh_anh : 'https://www.svgrepo.com/show/384670/account-avatar-profile-user.svg'"
+                                        alt="" style="width: 50px; height: 50px; border-radius: 50%;">
                                 </td>
                                 <td class="align-middle text-center"><button
                                         v-on:click="Object.assign(update_chuc_vu, value)" type="button"
