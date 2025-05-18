@@ -285,11 +285,10 @@ const routes = [
         component: () => import('../components/ToChucCapChungChi/XemThongBao/index.vue'),
         meta: { layout: 'ToChucCapChungChi' },
         beforeEnter: kiemTraToChuc,
-        props: true
     },
     {
         path: '/to-chuc-cap-chung-chi/xem-thong-bao/chi-tiet-thong-bao/:id',
-        component: () => import('../components/HocVien/XemThongBao/chitietthongbao.vue'),
+        component: () => import('../components/ToChucCapChungChi/XemThongBao/chitietthongbao.vue'),
         meta: { layout: 'ToChucCapChungChi' },
         props: true,
         beforeEnter: kiemTraToChuc,
