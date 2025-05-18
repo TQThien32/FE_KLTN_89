@@ -1,11 +1,13 @@
 <template>
     <b>
-        <h2 class="text-light"><i class="fa-solid fa-book-open-reader" style="font-size: 35px;"></i> DANH SÁCH YÊU CẦU CẤP NFT</h2>
+        <h2 class="text-light"><i class="fa-solid fa-coins"></i> Tạo NFT</h2>
     </b>
     <div class="row mt-3">
         <div class="col-lg-12 col-md-12">
             <div class="card" style="box-shadow: none;">
-                
+                <div class="card-header">
+                    <h4 class="mt-2"><i class="fa-solid fa-list-ol"></i> Danh sách yêu cầu cấp NFT</h4>
+                </div>
                 <div class="card-body">
                     <table class="table table-bordered table-hover">
                         <thead>

@@ -15,15 +15,15 @@
                             </button>
                         </div>
                         <template v-for="(value, index) in emailslist" :key="index">
-                            
-                                <div class="d-md-flex align-items-center email-message px-3 py-1">
-                                    <div class="d-flex align-items-center email-actions">
-                                        <input class="form-check-input me-3" type="checkbox" v-model="value.selected">
-                                        <router-link :to="'/hoc-vien/xem-thong-bao/chi-tiet-thong-bao/' + value.id">
+                            <div class="d-md-flex align-items-center email-message px-3 py-1">
+                                
+                                <div class="d-flex align-items-center email-actions">
+                                    <input class="form-check-input me-3" type="checkbox" v-model="value.selected">
+                                    <router-link :to="'/hoc-vien/xem-thong-bao/chi-tiet-thong-bao/' + value.id">
                                         <p class="mb-0 fs-5"><b>{{ value.tieu_de }}</b></p>
-                                        </router-link>
-                                    </div>
+                                    </router-link>
                                 </div>
+                            </div>
                         </template>
                     </div>
                 </div>

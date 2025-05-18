@@ -5,7 +5,7 @@
             <div class="card mt-4">
                 <div class="card-body">
                     <div class="text-center">
-                        <h4><b>NFT Gửi Đến</b></h4>
+                        <h4><b><i class="fa-regular fa-file"></i> NFT Gửi Đến</b></h4>
                     </div>
                     <hr>
                     <div class="email-list">
@@ -15,15 +15,16 @@
                             </button>
                         </div>
                         <template v-for="(value, index) in emailslist" :key="index">
-                            
-                                <div class="d-md-flex align-items-center email-message px-3 py-1">
-                                    <div class="d-flex align-items-center email-actions">
-                                        <input class="form-check-input me-3" type="checkbox" v-model="value.selected">
-                                        <router-link :to="'/hoc-vien/chi-tiet-NFT-gui-den/' + value.id">
-                                        <p class="mb-0 fs-5"><b>{{ value.email_nguoi_gui }}</b></p>
-                                        </router-link>
-                                    </div>
+                            <div class="d-md-flex align-items-center email-message px-3 py-1 mt-3">
+                                <div class="d-flex align-items-center email-actions">
+                                    <input class="form-check-input me-3" type="checkbox" v-model="value.selected">
+                                    <router-link :to="'/hoc-vien/chi-tiet-NFT-gui-den/' + value.id">
+                                        <div class="mb-0" style="font-size: 16px;">
+                                            <b>Bạn được Chia Sẻ NFT từ: </b> <span>{{ value.email_nguoi_gui }}</span>
+                                        </div>
+                                    </router-link>
                                 </div>
+                            </div>
                         </template>
                     </div>
                 </div>
@@ -120,7 +121,7 @@ export default {
 }
 
 .email-actions i:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .email-time {

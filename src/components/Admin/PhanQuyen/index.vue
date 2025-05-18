@@ -175,7 +175,7 @@
         <div class="col-lg-4">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="text-dark mt-2">Đang Phân Quyền Cho <b class="text-info">{{ chucVu.ten_chuc_vu }}</b></h4>
+                    <h4 class="text-dark mt-2">Đang Phân Quyền Cho <b class="text-warning">{{ chucVu.ten_chuc_vu }}</b></h4>
                 </div>
                 <div class="card-body">
                     <div class="row">

@@ -1,14 +1,16 @@
 <template>
 
     <b>
-        <h2 class="text-light"><i class="fa-solid fa-book-open-reader" style="font-size: 35px;"></i> DANH SÁCH LIÊN HỆ
+        <h2 class="text-light"><i class="fa-solid fa-address-book"></i> LIÊN HỆ
         </h2>
     </b>
     <div class="card mt-3" style="box-shadow: none;">
-
+        <div class="card-header">
+            <h4 class="mt-2"><i class="fa-solid fa-list-ol"></i> Danh sách liên hệ</h4>
+        </div>
         <div class="card-body table-responsive">
 
-            
+
             <table class="table table-hover mt-3">
                 <thead>
                     <tr>
@@ -27,7 +29,7 @@
                             <td class="align-middle text-center">{{ value.sdt }}</td>
                             <td class="align-middle text-center">{{ value.tieu_de }}</td>
                             <td class="align-middle text-center">{{ value.noi_dung }}</td>
-                           
+
                         </tr>
                     </template>
                 </tbody>

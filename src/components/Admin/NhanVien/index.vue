@@ -125,20 +125,31 @@
                                 <td class="align-middle text-center">{{ value.ngay_sinh }}</td>
                                 <td class="align-middle text-center">{{ value.dia_chi }}</td>
                                 <td class="align-middle text-center">
-                                    <img v-bind:src="value.hinh_anh ? value.hinh_anh : 'https://www.svgrepo.com/show/384670/account-avatar-profile-user.svg'"
+                                    <img v-bind:src="value.hinh_anh ? value.hinh_anh : 'https://img.freepik.com/free-vector/xaillustration-businessman-celebrating-success-by-raising-his-hands_10045-817.jpg?uid=R196496169&ga=GA1.1.1642455953.1744362054&semt=ais_hybrid&w=740'"
                                         alt="" style="width: 50px; height: 50px; border-radius: 50%;">
                                 </td>
-                                <td class="align-middle text-center"><button
+                                <td class="align-middle text-center"><button v-if="value.email !== 'admin@gmail.com'"
                                         v-on:click="Object.assign(update_chuc_vu, value)" type="button"
                                         class="btn btn btn-inverse-primary" data-bs-toggle="modal"
                                         data-bs-target="#updateModal">
                                         {{ value.ten_chuc_vu }}
-                                    </button></td>
+                                    </button>
+                                    <button v-else type="button" class="btn btn btn-inverse-primary" disabled>
+                                        {{ value.ten_chuc_vu }}
+                                    </button>
+                                </td>
                                 <td class="align-middle text-center">
-                                    <button v-on:click="doiTrangThai(value)" v-if="value.is_duyet == 1"
-                                        class="btn btn-success">Hoạt động</button>
-                                    <button v-on:click="doiTrangThai(value)" v-else class="btn btn-danger">Tạm
-                                        Dừng</button>
+                                    <button v-if="value.email !== 'admin@gmail.com' && value.is_duyet == 1"
+                                        v-on:click="doiTrangThai(value)" class="btn btn-success">
+                                        Hoạt động
+                                    </button>
+                                    <button v-else-if="value.email !== 'admin@gmail.com'"
+                                        v-on:click="doiTrangThai(value)" class="btn btn-danger">
+                                        Tạm Dừng
+                                    </button>
+                                    <button v-else class="btn btn-secondary" disabled>
+                                        {{ value.is_duyet == 1 ? 'Hoạt động' : 'Tạm Dừng' }}
+                                    </button>
                                 </td>
                             </tr>
                         </template>

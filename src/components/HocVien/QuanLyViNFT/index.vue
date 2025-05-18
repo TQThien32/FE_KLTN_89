@@ -21,9 +21,11 @@
                         <img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`"
                             class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
                         <div class="card-body">
-                            <p class="card-text"><b class="me-3">Mã NFT</b> <span>{{ chung_chi_nft.token }}</span></p>
-                            <p class="card-text"><b class="me-3">Data URL</b>
-                                <span>{{ chung_chi_nft.MetaData_URL }}</span>
+                            <p class="card-text"><b class="me-3">Mã NFT</b> <span class="truncate-link ms-1">{{ value.token }}</span></p>
+                            <p class="card-text">
+                                <b class="me-3">Data URL</b>
+                                <a :href="value.MetaData_URL" target="_blank" class="truncate-link">{{
+                                    value.MetaData_URL }}</a>
                             </p>
                             <div class="d-flex justify-content-between">
                                 <button v-on:click="Object.assign(thong_tin, value)" class="btn btn-chinh"
@@ -174,4 +176,13 @@ export default {
     }
 }
 </script>
-<style></style>
+<style scoped>
+.truncate-link {
+    display: inline-block;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+</style>

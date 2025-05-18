@@ -30,15 +30,15 @@
                         <tbody>
                             <template v-for="(value, index) in list_chung_chi" :key="index">
                                 <tr class="align-middle">
-                                    <td>{{ index + 1 }}</td>
-                                    <td>{{ value.ho_ten }}</td>
-                                    <td>{{ value.so_hieu_chung_chi }}</td>
-                                    <td>{{ value.token }}</td>
-                                    <td>{{ value.trinh_do }}</td>
-                                    <td>{{ value.khoa_hoc }}</td>
-                                    <td>{{ value.ket_qua }}</td>
-                                    <td>{{ value.ngay_cap }}</td>
-                                    <td>{{ value.ghi_chu }}</td>
+                                    <td class="align-middle text-center">{{ index + 1 }}</td>
+                                    <td class="align-middle text-center">{{ value.ho_ten }}</td>
+                                    <td class="align-middle text-center">{{ value.so_hieu_chung_chi }}</td>
+                                    <td class="align-middle text-center">{{ value.token }}</td>
+                                    <td class="align-middle text-center">{{ value.trinh_do }}</td>
+                                    <td class="align-middle text-center">{{ value.khoa_hoc }}</td>
+                                    <td class="align-middle text-center">{{ value.ket_qua }}</td>
+                                    <td class="align-middle text-center">{{ value.ngay_cap }}</td>
+                                    <td class="align-middle text-center">{{ value.ghi_chu }}</td>
                                     <td class="align-middle text-center">
                                         <button v-on:click="Object.assign(ghi_chu, value)"  v-if="value.tinh_trang == 2" type="button" class="btn btn-chinh"
                                             data-bs-toggle="modal" data-bs-target="#vohieuhoa">Đã Cấp</button>
