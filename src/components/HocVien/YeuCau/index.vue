@@ -145,7 +145,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="container  p-4 bg-light rounded shadow">
+                   
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <label class="form-label fw-bold">Họ và tên:</label>
@@ -171,7 +171,7 @@
                                 <div class="form-control bg-white">{{ ct_yc.ten_to_chuc }}</div>
                             </div>
                         </div>
-                    </div>
+                    
 
                 </div>
                 <div class="modal-footer">
@@ -185,6 +185,10 @@
     <div class="modal fade" id="gui" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Gửi yêu cầu</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body">
                     <div class="alert alert-danger border-0 bg-info alert-dismissible fade show py-2 mt-2">
                         <div class="d-flex align-items-center">
@@ -201,7 +205,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-info" data-bs-dismiss="modal" v-on:click="add_yeu_cau()">Gửi</button>
+                    <button type="button" class="btn btn-phu" data-bs-dismiss="modal" v-on:click="add_yeu_cau()">Gửi</button>
                 </div>
             </div>
         </div>

@@ -81,7 +81,7 @@
               <tbody>
                 <tr v v-for="(value, index) in data_thong_bao" :key="index">
                   <td class="align-middle text-center">{{ index + 1 }}</td>
-                  <td>
+                  <td class="align-middle text-center">
                     {{
                       value.loai_nhan == 0
                         ? 'Tất Cả'
@@ -104,10 +104,11 @@
 
                   <td class="align-middle text-center">{{ value.tieu_de }}
                   </td>
+                 
                   <td class="align-middle text-center">
-                    <p data-bs-toggle="modal" data-bs-target="#ttchitiet" href="javascript:;"
-                      v-on:click="Object.assign(thong_tin, value)"><i class="fa-solid fa-indent "
-                        style="font-size: 15px;"></i> Xem</p>
+                    <div data-bs-toggle="modal" data-bs-target="#ttchitiet" href="javascript:;"
+                      v-on:click="Object.assign(thong_tin, value)"><i class="fa-solid fa-circle-info"
+                        style="font-size: 18px;"></i> </div>
                   </td>
                   <td class="align-middle text-center">{{ value.created_at }}</td>
                 </tr>

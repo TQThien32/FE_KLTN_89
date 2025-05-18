@@ -1,10 +1,11 @@
 <template>
-    <div class="row">
+    <b>
+        <h2 class="text-light"><i class="fa-solid fa-book-open-reader" style="font-size: 35px;"></i> DANH SÁCH YÊU CẦU CẤP NFT</h2>
+    </b>
+    <div class="row mt-3">
         <div class="col-lg-12 col-md-12">
             <div class="card" style="box-shadow: none;">
-                <div class="card-header">
-                    <h4>Danh Sách Yêu Cầu Cấp Gửi Đến</h4>
-                </div>
+                
                 <div class="card-body">
                     <table class="table table-bordered table-hover">
                         <thead>
@@ -29,7 +30,7 @@
                                     <td class="align-middle">{{ value.email }}</td>
                                     <td class="align-middle text-center">{{ value.so_hieu_chung_chi }}</td>
                                     <td class="align-middle text-center">{{ value.created_at }}</td>
-                                    <td><img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`"
+                                    <td class="text-center"><img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`"
                                             style="height: 50px;" alt=""></td>
                                     <td class="align-middle text-center">
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
@@ -85,9 +86,9 @@
                     <button type="button" class="btn-close" aria-label="Close"></button>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-chinh" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
                     <button v-on:click="createNFT(truyen)" type="button" data-bs-dismiss="modal"
-                        class="btn btn-primary">Save changes</button>
+                        class="btn btn-chinh">Xác nhận</button>
                 </div>
             </div>
         </div>

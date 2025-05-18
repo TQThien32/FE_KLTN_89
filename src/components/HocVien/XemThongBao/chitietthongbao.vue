@@ -5,15 +5,16 @@
             <div class="card">
                 <div class="card-body">
                     <div class="email-read-box p-3">
-                        <h4>{{ chi_tiet.tieu_de }}</h4>
+                        <h4>Tiêu đề: {{ chi_tiet.tieu_de }}</h4>
                         <hr>
                         <div class="d-flex align-items-center">
+                            <h5 class="text-dark">Nội dung:</h5>
                             <div class="flex-grow-1 ms-2">
                                 <p class="mb-0 font-weight-bold"></p>
                             </div>
-                            <p class="mb-0 chat-time ps-5 ms-auto">{{ chi_tiet.created_at}}</p>
+                            <p class="mb-0 chat-time ps-5 ms-auto"><b class="text-dark">Thời gian:</b> {{ chi_tiet.created_at}}</p>
                         </div>
-                        <div class="email-read-content px-md-5 py-5">
+                        <div class="email-read-content px-md-5 py-3">
                             <p>{{ chi_tiet.noi_dung }}</p>
                         </div>
                     </div>

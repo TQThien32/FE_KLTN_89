@@ -55,7 +55,7 @@
                     <ul class="dropdown-menu">
                         <li>
                             <router-link to="/admin/yeu-cau-cap-nft">
-                                <a class="dropdown-item" href="/admin/yeu-cau-cap-nft"><i class="fa-solid fa-right-long"></i>Yêu Cầu NFT</a>
+                                <a class="dropdown-item" href="/admin/yeu-cau-cap-nft"><i class="fa-solid fa-right-long"></i>Tạo NFT</a>
                             </router-link>
                         </li>
                         <li>

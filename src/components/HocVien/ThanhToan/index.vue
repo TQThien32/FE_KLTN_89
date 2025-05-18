@@ -14,21 +14,21 @@
                         <div class="card-body">
                             <img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`"
                                 class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
-                            <p class="text-light mt-3" style="font-size: 16px;">Phí NFT:
+                            <p class="text-dark mt-3" style="font-size: 16px;">Phí NFT:
                                 <b>{{ value.so_hieu_chung_chi }}</b>
                             </p>
-                            <p class="text-light mt-3" style="font-size: 16px;">Phí NFT:
+                            <p class="text-dark mt-3" style="font-size: 16px;">Phí NFT:
                                 <b>{{ value.so_tien }}</b>
                             </p>
 
                             <div class=" d-flex justify-content-between align-items-center gap-2">
                                 <a data-bs-toggle="modal" data-bs-target="#ttchitiet" href="javascript:;"
-                                    v-on:click="Object.assign(thong_tin, value)" class="btn btn-outline-light"><i
+                                    v-on:click="Object.assign(thong_tin, value)" class="btn btn-phu"><i
                                         class="fa-solid fa-indent " style="font-size: 15px;"></i> Thông tin chi tiết</a>
                                 <div class="form-check ms-2">
                                     <a v-on:click="themVaoThanhToan(value.id)" href="javascript:;"
-                                        class="btn btn-outline-light"><i class="fa-solid fa-indent "
-                                            style="font-size: 15px;"></i>Thêm vào thanh toán</a>
+                                        class="btn btn-chinh"><i class="fa-solid fa-plus"
+                                            style="font-size: 20px;"></i>Thêm vào Giỏ hàng</a>
                                 </div>
                             </div>
                         </div>
@@ -116,8 +116,8 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-cart-shopping"></i> Thanh
-                        Toán</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-cart-shopping"></i> Giỏ 
+                    Hàng</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -295,7 +295,7 @@ window.onload = function () {
 .card-hieuung {
     border: 2px solid transparent;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background-color: black;
+    background-color: rgb(255, 254, 254);
     box-shadow: none;
     /* bỏ viền mờ */
 }

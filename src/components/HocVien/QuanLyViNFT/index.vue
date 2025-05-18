@@ -29,7 +29,7 @@
                                 <button v-on:click="Object.assign(thong_tin, value)" class="btn btn-chinh"
                                     data-bs-toggle="modal" data-bs-target="#kiemtra">Kiểm tra
                                     thông tin</button>
-                                <button v-on:click="Object.assign(chia_se, value)" class="btn btn-chinh"
+                                <button v-on:click="Object.assign(chia_se, value)" class="btn btn-phu"
                                     data-bs-toggle="modal" data-bs-target="#chiase">Chia sẻ
                                     NFT</button>
                             </div>

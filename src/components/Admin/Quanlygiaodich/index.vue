@@ -55,15 +55,7 @@
             <h4 class="mt-2">Danh Sách Giao Dịch Gửi</h4>
         </div>
         <div class="card-body table-responsive">
-            <div class="row">
-                <div class="col-lg-11">
-                    <input type="text" class="form-control mb-2" placeholder="Tìm kiếm ...">
-                </div>
-                <div class="col-lg-1">
-                    <button class="btn btn-chinh me-2"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
-                </div>
-            </div>
-
+           
             <table class="table table-hover mt-3">
                 <thead>
                     <tr>

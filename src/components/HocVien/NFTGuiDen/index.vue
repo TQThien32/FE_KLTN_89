@@ -5,12 +5,12 @@
             <div class="card mt-4">
                 <div class="card-body">
                     <div class="text-center">
-                        <h4><b>Tin Nhắn</b></h4>
+                        <h4><b>NFT Gửi Đến</b></h4>
                     </div>
                     <hr>
                     <div class="email-list">
                         <div class="text-end">
-                            <button v-on:click="deleteSelected()" type="button" class="btn btn-chinh ms-2">
+                            <button v-on:click="deleteSelected()" type="button" class="btn btn-danger ms-2">
                                 <i class="bx bx-trash me-0"></i>
                             </button>
                         </div>
