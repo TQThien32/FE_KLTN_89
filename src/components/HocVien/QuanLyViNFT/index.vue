@@ -17,10 +17,12 @@
         <div class="row">
             <template v-for="(value, index) in chung_chi_nft" :key="index">
                 <div class="col-lg-4">
-                    <div class="card">
+                    <div class="card border-top  border-4 border-success">
                         <img v-bind:src="`http://localhost:8000/storage/uploads/images/${value.hinh_anh}`"
                             class="card-img-top" alt="ảnh chứng chỉ" style="height: 250px;">
+                           <hr>
                         <div class="card-body">
+                            
                             <p class="card-text"><b class="me-3">Mã NFT</b> <span class="truncate-link ms-1">{{ value.token }}</span></p>
                             <p class="card-text">
                                 <b class="me-3">Data URL</b>

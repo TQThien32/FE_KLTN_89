@@ -15,17 +15,19 @@
                             </button>
                         </div>
                         <template v-for="(value, index) in emailslist" :key="index">
-                            <div class="d-md-flex align-items-center email-message px-3 py-1 mt-3">
-                                <div class="d-flex align-items-center email-actions">
-                                    <input class="form-check-input me-3" type="checkbox" v-model="value.selected">
-                                    <router-link :to="'/hoc-vien/chi-tiet-NFT-gui-den/' + value.id">
-                                        <div class="mb-0" style="font-size: 16px;">
-                                            <b>Bạn được Chia Sẻ NFT từ: </b> <span>{{ value.email_nguoi_gui }}</span>
-                                        </div>
-                                    </router-link>
-                                </div>
+                            <div class="d-flex align-items-center px-3 py-2 mt-3 bg-light rounded"
+                                style="font-size: 18px; line-height: 1;">
+                                <input class="me-3" type="checkbox" v-model="value.selected"
+                                    style="width: 20px; height: 20px; vertical-align: middle; margin-top: 2px;">
+                                <span class="fw-bold me-1">Bạn được Chia Sẻ NFT từ:</span>
+                                <router-link :to="'/hoc-vien/chi-tiet-NFT-gui-den/' + value.id"
+                                    class="text-decoration-none text-dark">
+                                    <span>{{ value.email_nguoi_gui }}</span>
+                                </router-link>
                             </div>
                         </template>
+
+
                     </div>
                 </div>
             </div>
@@ -65,7 +67,7 @@ export default {
         },
         deleteSelected() {
             if (this.ds_thong_bao_can_xoa.length === 0) {
-                this.$toast.error('Vui lòng chọn thông báo để xóa!');
+                this.$toast.error('Vui lòng chọn mục để xóa!');
                 return;
             }
             baseRequest

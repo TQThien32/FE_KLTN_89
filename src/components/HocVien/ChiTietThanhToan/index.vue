@@ -75,6 +75,9 @@ export default {
             this.chi_tiet_don_hang = mathanhtoan.chi_tiet_don_hang;
         }
         this.loadDataNguoiDung();
+        setTimeout(() => {
+        this.$router.push('/hoc-vien/thanh-toan');
+    }, 300000);
     },
 
     methods: {

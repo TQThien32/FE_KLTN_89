@@ -43,8 +43,7 @@
                                         <span v-if="errorMessage" style="color:red">{{ errorMessage }}</span>
                                     </div>
                                     <div class="text-center"><button type="button" class="btn btn-inverse-primary"
-                                            v-on:click="doi_mk()">Đổi Mật
-                                            Khẩu</button></div>
+                                            v-on:click="doi_mk()">Đổi Mật Khẩu</button></div>
                                 </form>
                             </div>
                         </div>
@@ -87,6 +86,8 @@ export default {
                     .then((res) => {
                         if (res.data.status) {
                             this.$toast.success(res.data.message);
+                            this.update_mk = '';
+                            this.confirmPassword = '';
                         }
                         else {
                             this.$toast.error(res.data.message);

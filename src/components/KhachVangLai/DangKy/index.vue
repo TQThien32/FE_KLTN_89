@@ -78,7 +78,7 @@
                                                         </div>
                                                         <div class="col-12">
                                                             <label class="form-label">Số CCCD</label>
-                                                            <input type="number" class="form-control"
+                                                            <input type="text" class="form-control"
                                                                 placeholder="Nhập Số CCCD"
                                                                 v-model="create_to_chuc.so_cccd">
                                                         </div>
@@ -351,7 +351,7 @@ export default {
                         }
                     })
                     .catch(() => {
-                        this.$toast.error('Đã xảy ra lỗi trong quá trình đăng ký.');
+                        
                     });
             }
 
@@ -374,7 +374,7 @@ export default {
                     }
                 })
                 .catch(() => {
-                    this.$toast.error('Đã xảy ra lỗi trong quá trình đăng ký.');
+                    
                 });
             }
 
