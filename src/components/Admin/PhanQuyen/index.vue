@@ -291,7 +291,7 @@ export default {
                         this.$toast.success(res.data.message)
                         this.loadChiTietChucNang();
                     } else {
-                        this.$toast.success(res.data.message)
+                        this.$toast.error(res.data.message)
                     }
                 });
         },
@@ -310,7 +310,7 @@ export default {
                         this.$toast.success(res.data.message)
                         this.loadChiTietChucNang();
                     } else {
-                        this.$toast.success(res.data.message)
+                        this.$toast.error(res.data.message)
                     }
                 });
         }

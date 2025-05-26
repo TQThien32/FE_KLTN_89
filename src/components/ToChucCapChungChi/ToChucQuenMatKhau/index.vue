@@ -41,6 +41,7 @@
 
 <script>
 import axios from 'axios';
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -50,8 +51,8 @@ export default {
 
     methods: {
         laylaimk() {
-            axios
-                .post('http://127.0.0.1:8000/api/to-chuc/quen-mat-khau', this.quen_mk)
+            baseRequest
+                .post('to-chuc/quen-mat-khau', this.quen_mk)
                 .then((res) => {
                     if (res.data.status) {
                         this.$toast.success(res.data.message)

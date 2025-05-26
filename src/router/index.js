@@ -35,6 +35,7 @@ const routes = [
         path: '/admin/danh-sach-nhan-vien',
         component: () => import('../components/Admin/NhanVien/index.vue'),
         meta: { layout: 'Admin' },
+        beforeEnter: kiemTraAdmin,
     },
 
     {

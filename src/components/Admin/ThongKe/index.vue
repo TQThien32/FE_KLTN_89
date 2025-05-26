@@ -1,6 +1,5 @@
 <template>
     <div class="row">
-        <!-- Nút chuyển chế độ thống kê -->
         <div class="col-12 mb-3 text-center">
             <button @click="mode = 'revenue'" class="btn btn-primary mx-2" :class="{ active: mode === 'revenue' }">
                 Thống Kê Doanh Thu
@@ -11,23 +10,21 @@
             </button>
         </div>
 
-        <!-- Chọn năm thủ công -->
         <div class="col-12 mb-3 text-center">
             <label style="color: aliceblue;">Chọn năm: </label>
             <input v-model.number="selectedYear" @input="reloadData" type="number" min="2000" :max="currentYear"
                 class="form-control d-inline-block w-auto mx-2" placeholder="Nhập năm" />
         </div>
 
-        <!-- Biểu đồ -->
         <div class="card" v-if="loaded && mode === 'revenue'">
             <div class="card-body">
-                <Bar :data="chartDataRevenue" :options="chartOptions" />
+                <Bar :chart-data="chartDataRevenue" :chart-options="chartOptions" />
             </div>
         </div>
 
         <div class="card" v-if="loaded && mode === 'certificate'">
             <div class="card-body">
-                <Bar :data="chartDataCertificates" :options="chartOptionsQuantity" />
+                <Bar :chart-data="chartDataCertificates" :chart-options="chartOptionsQuantity" />
             </div>
         </div>
     </div>
@@ -60,7 +57,7 @@ export default {
             mode: 'revenue',
             loaded: false,
             selectedYear: currentYear,
-            currentYear: currentYear, // Store the current year
+            currentYear,
             chartDataRevenue: {
                 labels: Array.from({ length: 12 }, (_, i) => `Tháng ${i + 1}`),
                 datasets: [
@@ -104,7 +101,6 @@ export default {
     },
     methods: {
         reloadData() {
-            // Validate the year: it should be between 2000 and the current year
             if (!this.selectedYear || this.selectedYear < 2000 || this.selectedYear > this.currentYear) {
                 toaster.error(`Vui lòng nhập một năm hợp lệ (từ 2000 đến ${this.currentYear}).`);
                 return;

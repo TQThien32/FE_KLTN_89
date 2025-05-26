@@ -22,7 +22,7 @@
 										</div>
 										<div class="d-grid gap-2">
 											<button v-on:click="LayLaiMatKhau()" type="button" class="btn btn-chinh">Thay đổi mật khẩu</button>
-                                            <router-link to="/hoc-vien/dang-nhap">
+                                            <router-link to="/dang-nhap">
                                                 <button class="btn btn-secondary w-100 ">
 													Quay về trang đăng nhập
 												</button>
@@ -54,15 +54,15 @@ export default {
     methods: {
         LayLaiMatKhau() {
 	baseRequest
-		.post('/hoc-vien/lay-lai-mat-khau/' + this.$route.params.hash_reset, this.lay_lai_mat_khau)
+		.post('hoc-vien/lay-lai-mat-khau/' + this.$route.params.hash_reset, this.lay_lai_mat_khau)
 		.then((res) => {
 			if (res.data.status) {
-				toaster.success(res.data.message + ' – bạn sẽ được chuyển về trang đăng nhập trong 5 giây.');
+				this.$toast.success(res.data.message)
 				setTimeout(() => {
-					this.$router.push('/hoc-vien/dang-nhap');
-				}, 5000);
+					this.$router.push('/dang-nhap');
+				}, 10000);
 			} else {
-				toaster.error(res.data.message);
+				this.$toast.console.error(res.data.message);
 			}
 		})
 }
