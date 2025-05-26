@@ -64,8 +64,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Bảng báo cáo -->
         <div class="report-section">
           <table class="table">
             <thead>
@@ -174,15 +172,12 @@ export default {
 
       const currentYear = new Date().getFullYear();
       const currentMonth = new Date().getMonth() + 1;
-
-      // Check if the start date is greater than the end date
       if (startYear > endYear || (startYear === endYear && startMonth > endMonth)) {
         this.invalidRange = true;
         this.invalidFutureRange = false;
         this.certificateCounts = [];
         this.revenueCounts = [];
       } 
-      // Check if the start or end date exceeds the current date
       else if (
         startYear > currentYear || 
         (startYear === currentYear && startMonth > currentMonth) || 

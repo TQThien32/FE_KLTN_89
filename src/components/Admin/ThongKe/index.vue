@@ -1,206 +1,136 @@
 <template>
     <div class="row">
-        <!-- Nút chuyển chế độ thống kê -->
-        <div class="col-12 mb-3 text-center">
-            <button @click="mode = 'revenue'" class="btn btn-primary mx-2" :class="{ active: mode === 'revenue' }">
-                Thống Kê Doanh Thu
-            </button>
-            <button @click="mode = 'certificate'" class="btn btn-success mx-2"
-                :class="{ active: mode === 'certificate' }">
-                Thống Kê Số Lượng NFT Đã Cấp
-            </button>
-        </div>
-
-        <!-- Chọn năm thủ công -->
-        <div class="col-12 mb-3 text-center">
-            <label style="color: aliceblue;">Chọn năm: </label>
-            <input v-model.number="selectedYear" @input="reloadData" type="number" min="2000" :max="currentYear"
-                class="form-control d-inline-block w-auto mx-2" placeholder="Nhập năm" />
-        </div>
-
-        <!-- Biểu đồ -->
-        <div class="card" v-if="loaded && mode === 'revenue'">
+        <div class="card">
             <div class="card-body">
-                <Bar :data="chartDataRevenue" :options="chartOptions" />
-            </div>
-        </div>
-
-        <div class="card" v-if="loaded && mode === 'certificate'">
-            <div class="card-body">
-                <Bar :data="chartDataCertificates" :options="chartOptionsQuantity" />
+                <apexchart width="100%" height="350" type="line" :options="chartOptions" :series="series"></apexchart>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import { Bar } from 'vue-chartjs'
-import {
-    Chart as ChartJS,
-    Title,
-    Tooltip,
-    Legend,
-    BarElement,
-    CategoryScale,
-    LinearScale
-} from 'chart.js'
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
-
-import { createToaster } from "@meforma/vue-toaster";
-const toaster = createToaster({ position: "top-right" });
-
 import baseRequest from '../../../core/baseRequest';
+import VueApexCharts from "vue3-apexcharts";
 
 export default {
-    name: 'BarChart',
-    components: { Bar },
+    components: {
+        apexchart: VueApexCharts,
+    },
     data() {
-        const currentYear = new Date().getFullYear();
         return {
-            mode: 'revenue',
-            loaded: false,
-            selectedYear: currentYear,
-            currentYear: currentYear,
-            chartDataRevenue: {
-                labels: Array.from({ length: 12 }, (_, i) => `Tháng ${i + 1}`),
-                datasets: [
-                    {
-                        label: 'Tổng tiền thanh toán theo tháng',
-                        data: Array(12).fill(0),
-                        backgroundColor: "#2980B9",
-                        borderRadius: 10
-                    }
-                ]
-            },
-            chartDataCertificates: {
-                labels: Array.from({ length: 12 }, (_, i) => `Tháng ${i + 1}`),
-                datasets: [
-                    {
-                        label: 'Số lượng chứng chỉ theo tháng',
-                        data: Array(12).fill(0),
-                        backgroundColor: "#27AE60",
-                        borderRadius: 10
-                    }
-                ]
-            },
             chartOptions: {
-                responsive: true,
-                maintainAspectRatio: false, // Ngăn biểu đồ co nhỏ lại
-                plugins: {
-                    legend: { display: true, position: 'top' },
-                    title: { display: true, text: 'Thống kê doanh thu theo tháng' }
-                }
+                
+                stroke: {
+                    width: [0, 4]
+                },
+                plotOptions: {
+                    bar: {
+                        columnWidth: '50%'
+                    }
+                },
+                xaxis: {
+                    categories: []
+                },
+                yaxis: [
+                    {
+                        title: { text: "Doanh Thu" }
+                    },
+                    {
+                        opposite: true,
+                        title: { text: "Số Lượng NFT" }
+                    }
+                ],
+                legend: {
+                    position: 'bottom',
+                    horizontalAlign: 'center'
+                },
+                title: {
+                    text: 'THỐNG KÊ',
+                    align: 'mid'
+                },
+                colors: ['#008FFB', '#990000']
             },
-            chartOptionsQuantity: {
-                responsive: true,
-                maintainAspectRatio: false, // Ngăn biểu đồ co nhỏ lại
-                plugins: {
-                    legend: { display: true, position: 'top' },
-                    title: { display: true, text: 'Số lượng chứng chỉ được cấp theo tháng' }
+            series: [
+                {
+                    name: "Website Blog",
+                    type: "column",
+                    data: []
+                },
+                {
+                    name: "Số chứng chỉ",
+                    type: "line",
+                    data: []
                 }
-            }
+            ]
         }
     },
     mounted() {
-        this.reloadData();
+        this.loadData();
     },
     methods: {
-        reloadData() {
-            if (!this.selectedYear || this.selectedYear < 2000 || this.selectedYear > this.currentYear) {
-                toaster.error(`Vui lòng nhập một năm hợp lệ (từ 2000 đến ${this.currentYear}).`);
-                return;
+        async loadData() {
+            const doanhThuRes = await baseRequest.get("admin/thong-ke-doanh-thu/data");
+            const chungChiRes = await baseRequest.get("admin/thong-ke-nft-da-cap/data");
+            const mapDoanhThu = {};
+            let minMonth = 12, minYear = 9999, maxMonth = 1, maxYear = 1970;
+            doanhThuRes.data.data.forEach(item => {
+                const [time, date] = item.created_at.split(' ');
+                const [day, month, year] = date.split('/').map(Number);
+                if (year < minYear || (year === minYear && month < minMonth)) {
+                    minYear = year; minMonth = month;
+                }
+                if (year > maxYear || (year === maxYear && month > maxMonth)) {
+                    maxYear = year; maxMonth = month;
+                }
+                const key = `${month.toString().padStart(2, '0')}/${year}`;
+                if (!mapDoanhThu[key]) mapDoanhThu[key] = 0;
+                mapDoanhThu[key] += item.tong_tien_thanh_toan;
+            });
+            const mapChungChi = {};
+            chungChiRes.data.data.forEach(item => {
+                const [time, date] = item.created_at.split(' ');
+                const [day, month, year] = date.split('/').map(Number);
+                const key = `${month.toString().padStart(2, '0')}/${year}`;
+                if (!mapChungChi[key]) mapChungChi[key] = 0;
+                mapChungChi[key] += 1;
+                if (year < minYear || (year === minYear && month < minMonth)) {
+                    minYear = year; minMonth = month;
+                }
+                if (year > maxYear || (year === maxYear && month > maxMonth)) {
+                    maxYear = year; maxMonth = month;
+                }
+            });
+            const categories = [];
+            let y = minYear, m = minMonth;
+            const now = new Date();
+            const maxY = Math.max(maxYear, now.getFullYear());
+            const maxM = maxYear === now.getFullYear() ? Math.max(maxMonth, now.getMonth() + 1) : maxMonth;
+
+            while (y < maxY || (y === maxY && m <= maxM)) {
+                categories.push(`${m.toString().padStart(2, '0')}/${y}`);
+                m++;
+                if (m > 12) { m = 1; y++; }
             }
-
-            this.loaded = false;
-            let completed = 0;
-            const checkLoaded = () => {
-                completed++;
-                if (completed === 2) this.loaded = true;
+            this.chartOptions = {
+                ...this.chartOptions,
+                xaxis: {
+                    ...this.chartOptions.xaxis,
+                    categories: categories.map(c => `${c.split('/')[0]}/${c.split('/')[1]}`)
+                }
             };
-
-            this.loadRevenueData(checkLoaded);
-            this.loadCertificateData(checkLoaded);
-        },
-
-        loadRevenueData(callback) {
-            baseRequest.get('admin/thong-ke-doanh-thu/data')
-                .then((res) => {
-                    const rawData = res.data.data;
-                    const monthlyRevenue = Array(12).fill(0);
-
-                    rawData.forEach(item => {
-                        try {
-                            const [time, date] = item.created_at.split(" ");
-                            const [day, month, year] = date.split("/").map(Number);
-                            if (year === this.selectedYear) {
-                                monthlyRevenue[month - 1] += item.tong_tien_thanh_toan;
-                            }
-                        } catch (err) {
-                            console.warn("Lỗi phân tích ngày created_at:", item.created_at);
-                        }
-                    });
-
-                    this.$nextTick(() => {
-                        this.chartDataRevenue.datasets[0].data = monthlyRevenue;
-                    });
-                    callback();
-                })
-                .catch((err) => {
-                    toaster.error("Lỗi khi tải dữ liệu doanh thu");
-                    console.error(err);
-                });
-        },
-
-        loadCertificateData(callback) {
-            baseRequest.get('admin/thong-ke-nft-da-cap/data')
-                .then((res) => {
-                    const rawData = res.data.data;
-                    const monthlyCount = Array(12).fill(0);
-
-                    rawData.forEach(item => {
-                        try {
-                            const [time, date] = item.created_at.split(" ");
-                            const [day, month, year] = date.split("/").map(Number);
-                            if (year === this.selectedYear) {
-                                monthlyCount[month - 1]++;
-                            }
-                        } catch (err) {
-                            console.warn("Lỗi phân tích ngày created_at:", item.created_at);
-                        }
-                    });
-
-                    this.$nextTick(() => {
-                        this.chartDataCertificates.datasets[0].data = monthlyCount;
-                    });
-                    callback();
-                })
-                .catch((err) => {
-                    toaster.error("Lỗi khi tải dữ liệu chứng chỉ");
-                    console.error(err);
-                });
+            this.series = [
+                {
+                    name: "Doanh Thu",
+                    type: "column",
+                    data: categories.map(key => mapDoanhThu[key] || 0)
+                },
+                {
+                    name: "Số Lượng NFT",
+                    type: "line",
+                    data: categories.map(key => mapChungChi[key] || 0)
+                }
+            ];
         }
     }
 }
 </script>
-
-<style scoped>
-.card {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-}
-
-.card-body {
-    padding: 20px;
-    min-height: 400px;
-    max-height: 600px; /* Đảm bảo biểu đồ không bị thu nhỏ */
-}
-
-.btn.active {
-    opacity: 0.8;
-    font-weight: bold;
-}
-
-input.form-control {
-    width: 200px;
-}
-</style>
