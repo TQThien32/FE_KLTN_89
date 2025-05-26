@@ -1,5 +1,6 @@
 <template>
     <div class="row">
+        <!-- Nút chuyển chế độ thống kê -->
         <div class="col-12 mb-3 text-center">
             <button @click="mode = 'revenue'" class="btn btn-primary mx-2" :class="{ active: mode === 'revenue' }">
                 Thống Kê Doanh Thu
@@ -10,21 +11,23 @@
             </button>
         </div>
 
+        <!-- Chọn năm thủ công -->
         <div class="col-12 mb-3 text-center">
             <label style="color: aliceblue;">Chọn năm: </label>
             <input v-model.number="selectedYear" @input="reloadData" type="number" min="2000" :max="currentYear"
                 class="form-control d-inline-block w-auto mx-2" placeholder="Nhập năm" />
         </div>
 
+        <!-- Biểu đồ -->
         <div class="card" v-if="loaded && mode === 'revenue'">
             <div class="card-body">
-                <Bar :chart-data="chartDataRevenue" :chart-options="chartOptions" />
+                <Bar :data="chartDataRevenue" :options="chartOptions" />
             </div>
         </div>
 
         <div class="card" v-if="loaded && mode === 'certificate'">
             <div class="card-body">
-                <Bar :chart-data="chartDataCertificates" :chart-options="chartOptionsQuantity" />
+                <Bar :data="chartDataCertificates" :options="chartOptionsQuantity" />
             </div>
         </div>
     </div>
@@ -57,7 +60,7 @@ export default {
             mode: 'revenue',
             loaded: false,
             selectedYear: currentYear,
-            currentYear,
+            currentYear: currentYear,
             chartDataRevenue: {
                 labels: Array.from({ length: 12 }, (_, i) => `Tháng ${i + 1}`),
                 datasets: [
@@ -82,6 +85,7 @@ export default {
             },
             chartOptions: {
                 responsive: true,
+                maintainAspectRatio: false, // Ngăn biểu đồ co nhỏ lại
                 plugins: {
                     legend: { display: true, position: 'top' },
                     title: { display: true, text: 'Thống kê doanh thu theo tháng' }
@@ -89,6 +93,7 @@ export default {
             },
             chartOptionsQuantity: {
                 responsive: true,
+                maintainAspectRatio: false, // Ngăn biểu đồ co nhỏ lại
                 plugins: {
                     legend: { display: true, position: 'top' },
                     title: { display: true, text: 'Số lượng chứng chỉ được cấp theo tháng' }
@@ -135,7 +140,9 @@ export default {
                         }
                     });
 
-                    this.chartDataRevenue.datasets[0].data = monthlyRevenue;
+                    this.$nextTick(() => {
+                        this.chartDataRevenue.datasets[0].data = monthlyRevenue;
+                    });
                     callback();
                 })
                 .catch((err) => {
@@ -162,7 +169,9 @@ export default {
                         }
                     });
 
-                    this.chartDataCertificates.datasets[0].data = monthlyCount;
+                    this.$nextTick(() => {
+                        this.chartDataCertificates.datasets[0].data = monthlyCount;
+                    });
                     callback();
                 })
                 .catch((err) => {
@@ -182,6 +191,8 @@ export default {
 
 .card-body {
     padding: 20px;
+    min-height: 400px;
+    max-height: 600px; /* Đảm bảo biểu đồ không bị thu nhỏ */
 }
 
 .btn.active {
